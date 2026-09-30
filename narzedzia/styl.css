@@ -1,0 +1,166 @@
+/* Prasówka — styl strony.
+   Motyw: mapa sztabowa. Tło jak papier mapy, granat atramentu, znaczniki jak w legendzie:
+   miejsca = kółko (błękit morza), tematy = kwadrat (ochra). Jedyny mocny element: oś czasu z datami. */
+:root {
+  --papier: #EEF2F3;
+  --karta: #FFFFFF;
+  --atrament: #17243B;
+  --tekst: #1E2530;
+  --szary: #5C6673;
+  --linia: #D3DCE1;
+  --morze: #1D5F86;
+  --morze-t: #E1EEF5;
+  --ochra: #9A5B12;
+  --ochra-t: #F6ECDD;
+  --czerwien: #A8261B;
+  --czerwien-t: #FBECEA;
+  --zolty: #FFE9A3;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papier: #10161F;
+    --karta: #18212D;
+    --atrament: #DCE6F0;
+    --tekst: #D6DCE3;
+    --szary: #97A3B1;
+    --linia: #2B3746;
+    --morze: #7DB8DC;
+    --morze-t: #1B3244;
+    --ochra: #E0AA62;
+    --ochra-t: #3A2C18;
+    --czerwien: #F08A80;
+    --czerwien-t: #3A1D1B;
+    --zolty: #5A4A10;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--papier); color: var(--tekst);
+  font: 17px/1.62 var(--serif);
+}
+a { color: var(--morze); text-underline-offset: 2px; }
+a:focus-visible, input:focus-visible { outline: 3px solid var(--morze); outline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* nagłówek */
+.gora { background: var(--atrament); color: #fff; }
+@media (prefers-color-scheme: dark) { .gora { background: #0A0F16; border-bottom: 1px solid var(--linia); } }
+.gora .wrap { padding-top: 14px; padding-bottom: 10px; }
+.marka { color: #fff; text-decoration: none; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.marka-t { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+.marka-p { font: 14px/1.3 var(--sans); color: #B9C6D6; }
+.menu { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font: 14px/1.4 var(--sans); }
+.menu a { color: #D5DEE9; text-decoration: none; padding: 2px 0; border-bottom: 2px solid transparent; }
+.menu a:hover { color: #fff; }
+.menu a[aria-current="page"] { color: #fff; border-bottom-color: #C9A227; }
+
+/* winieta */
+.winieta { padding: 28px 0 8px; }
+.w-nr { margin: 0; font: 14px/1.4 var(--sans); color: var(--szary); }
+.winieta h1 { margin: 4px 0 2px; font-size: clamp(28px, 6vw, 40px); line-height: 1.12; color: var(--atrament); letter-spacing: -0.015em; }
+.winieta h1 a { color: inherit; text-decoration: none; }
+.w-stan { margin: 4px 0 0; color: var(--szary); font-size: 16px; }
+
+/* w skrócie i karty tekstowe */
+.skrot { background: var(--karta); border-left: 4px solid #C9A227; padding: 14px 18px; margin: 18px 0; }
+.skrot h2 { margin: 0 0 6px; font: 600 15px/1.4 var(--sans); color: var(--atrament); }
+.skrot p { margin: 0 0 8px; }
+.skrot p:last-child { margin-bottom: 0; }
+.dalej { font-family: var(--sans); font-size: 15px; }
+mark { background: var(--zolty); color: inherit; padding: 0 2px; border-radius: 2px; font-weight: 600; }
+
+/* paski sekcji */
+.pasek { background: var(--atrament); color: #fff; font: 600 15px/1.4 var(--sans); padding: 7px 12px; margin: 30px 0 6px; }
+@media (prefers-color-scheme: dark) { .pasek { background: #22324A; } }
+.blok { font: 600 15px/1.4 var(--sans); color: var(--atrament); margin: 18px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--linia); }
+.uwaga { color: var(--szary); font-style: italic; font-size: 15px; }
+
+/* pozycja: oś czasu */
+.poz { display: grid; grid-template-columns: 62px 1fr; gap: 0 14px; position: relative; padding: 12px 0 10px; }
+.poz::before { content: ""; position: absolute; left: 76px; top: 0; bottom: 0; border-left: 2px solid var(--linia); }
+.poz-data { font: 600 14px/1.5 var(--sans); color: var(--atrament); text-align: right; padding-top: 2px; font-variant-numeric: tabular-nums; }
+.poz-tresc { position: relative; padding-left: 12px; }
+.poz-tresc::before { content: ""; position: absolute; left: -6px; top: 9px; width: 10px; height: 10px; border-radius: 50%; background: var(--papier); border: 2px solid var(--atrament); }
+.poz-tekst { margin: 4px 0 4px; }
+.poz-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; font: 13px/1.5 var(--sans); }
+.skorygowana .poz-tresc::before { border-color: var(--czerwien); background: var(--czerwien); }
+.kor-znak { color: var(--czerwien); font: 14px/1.45 var(--sans); margin: 4px 0; }
+.z-wydania { color: var(--szary); font: 13px/1.5 var(--sans); }
+.funkcja { color: var(--szary); }
+a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--morze); text-decoration-thickness: 2px; }
+
+/* znaczniki legendy */
+.tag { display: inline-flex; align-items: center; gap: 5px; font: 13px/1.5 var(--sans); text-decoration: none; padding: 1px 8px 1px 6px; border-radius: 3px; color: var(--morze); background: var(--morze-t); }
+.tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.tag-temat { color: var(--ochra); background: var(--ochra-t); }
+.tag-temat::before { border-radius: 0; }
+.tag:hover { filter: brightness(0.95); text-decoration: underline; }
+.tag.duzy { font-size: 15px; padding: 3px 10px 3px 8px; }
+.tag span { color: var(--szary); font-variant-numeric: tabular-nums; }
+.chmura { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+
+/* odznaki */
+.odznaka { font: 600 12px/1.5 var(--sans); padding: 0 6px; border-radius: 3px; border: 1px solid; }
+.odznaka.etap { color: var(--atrament); border-color: var(--atrament); }
+.odznaka.niepotw { color: var(--ochra); border-color: var(--ochra); }
+.odznaka.sprzeczne { color: var(--czerwien); border-color: var(--czerwien); }
+
+/* źródła */
+.zrodla { margin: 2px 0 0; font: italic 13px/1.5 var(--sans); color: var(--szary); }
+.zrodla a { color: var(--szary); }
+
+/* analizy */
+.analiza { background: var(--karta); padding: 14px 18px; margin: 12px 0; border-top: 3px solid var(--morze); }
+.analiza h3 { margin: 0; font-size: 20px; line-height: 1.3; color: var(--atrament); }
+.autor { margin: 2px 0 6px; font: 14px/1.4 var(--sans); color: var(--szary); }
+.analiza p { margin: 6px 0; }
+.dla-polski { background: var(--morze-t); padding: 8px 12px; margin-left: 10px !important; border-left: 3px solid var(--morze); }
+
+/* korekta */
+.korekta { background: var(--czerwien-t); border-left: 4px solid var(--czerwien); padding: 12px 16px; margin: 18px 0; }
+.korekta h2 { margin: 0 0 6px; font: 600 15px/1.4 var(--sans); color: var(--czerwien); }
+.korekta ul { margin: 0; padding-left: 18px; }
+
+/* kalendarz, noty */
+.kal { width: 100%; border-collapse: collapse; margin: 8px 0; }
+.kal td { padding: 6px 0; border-bottom: 1px solid var(--linia); vertical-align: top; }
+.kal-d { width: 96px; font: 600 14px/1.6 var(--sans); color: var(--atrament); font-variant-numeric: tabular-nums; }
+.poza { font-size: 15px; }
+.nota { margin: 18px 0; font-size: 15px; color: var(--tekst); }
+.nota h3 { font: 600 15px/1.4 var(--sans); color: var(--atrament); margin: 0 0 4px; }
+.nota p { margin: 4px 0; }
+.nota ul { margin: 4px 0; padding-left: 18px; }
+.prog { color: var(--szary); font: 13px/1.4 var(--sans); }
+
+/* listy */
+.archiwum { list-style: none; padding: 0; margin: 6px 0 12px; }
+.archiwum li { padding: 7px 0; border-bottom: 1px solid var(--linia); display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.archiwum li > a { font-weight: 600; color: var(--atrament); text-decoration: none; }
+.archiwum li > a:hover { text-decoration: underline; }
+.a-d { display: inline-block; min-width: 72px; font: 600 14px/1.5 var(--sans); color: var(--szary); font-variant-numeric: tabular-nums; }
+.lista-watkow { list-style: none; padding: 0; margin: 8px 0; }
+.lista-watkow li { padding: 10px 0; border-bottom: 1px solid var(--linia); display: grid; gap: 4px; }
+.lista-watkow li > a { justify-self: start; }
+.lw-opis { font-size: 15px; color: var(--szary); }
+.lw-stan { font-size: 15px; }
+
+.kolejne { display: flex; justify-content: space-between; gap: 12px; margin: 30px 0 10px; font: 15px/1.4 var(--sans); }
+.szukaj { width: 100%; font: 18px/1.4 var(--sans); padding: 10px 12px; border: 2px solid var(--linia); background: var(--karta); color: var(--tekst); border-radius: 4px; margin-top: 12px; }
+
+.stopka { margin-top: 48px; padding: 18px 0 28px; border-top: 1px solid var(--linia); font: 14px/1.55 var(--sans); color: var(--szary); }
+.stopka a { color: var(--szary); }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .poz { grid-template-columns: 44px 1fr; gap: 0 10px; }
+  .poz::before { left: 54px; }
+  .poz-data { font-size: 13px; }
+  .analiza, .skrot { padding: 12px 14px; }
+}
+@media print {
+  .gora .menu, .stopka, .kolejne { display: none; }
+  body { background: #fff; }
+}

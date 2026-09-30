@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Szukaj · Prasówka</title>
+<meta name="description" content="Przegląd sytuacji międzynarodowej">
+<link rel="stylesheet" href="assets/styl.css">
+<link rel="alternate" type="application/rss+xml" title="Prasówka" href="feed.xml">
+</head>
+<body>
+<header class="gora">
+  <div class="wrap">
+    <a class="marka" href="index.html"><span class="marka-t">Prasówka</span><span class="marka-p">Przegląd sytuacji międzynarodowej</span></a>
+    <nav class="menu"><a href="index.html">Wydania</a><a href="watki/index.html">Wątki</a><a href="osoby/index.html">Kto jest kim</a><a href="pojecia/index.html">Pojęcia</a><a href="korekty.html">Korekty</a><a href="jak-weryfikujemy.html">Jak weryfikujemy</a><a href="szukaj.html" aria-current="page">Szukaj</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="winieta"><h1>Szukaj</h1><p class="w-stan">Przeszukuje wszystkie wydania, analizy, osoby i pojęcia.</p></section>
+<input id="q" class="szukaj" type="search" placeholder="np. Kaliningrad, Patriot, Fico…" autofocus>
+<p id="ile" class="uwaga"></p><div id="wyniki"></div>
+<script>
+(function(){
+  var dane=[], q=document.getElementById('q'), out=document.getElementById('wyniki'), ile=document.getElementById('ile');
+  function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ł/g,'l');}
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function szukaj(){
+    var s=norm(q.value.trim()); out.innerHTML='';
+    if(s.length<2){ile.textContent='';return;}
+    var slowa=s.split(/\s+/), wyn=dane.filter(function(x){var t=norm(x.t+' '+x.g.join(' '));return slowa.every(function(w){return t.indexOf(w)>=0;});});
+    wyn.sort(function(a,b){return (b.d||'').localeCompare(a.d||'');});
+    ile.textContent=wyn.length+' wyników';
+    out.innerHTML=wyn.slice(0,100).map(function(x){
+      var d=x.d?x.d.split('-').reverse().slice(0,2).join('.'):'';
+      return '<article class="poz"><div class="poz-data">'+d+'</div><div class="poz-tresc"><p class="poz-meta">'+x.g.map(function(g){return '<span class="tag">#'+esc(g)+'</span>';}).join('')+(x.w?' <span class="z-wydania">wyd. nr '+x.w+'</span>':'')+'</p><p><a href="'+x.u+'">'+esc(x.t)+'</a></p></div></article>';
+    }).join('');
+  }
+  fetch('szukaj.json').then(function(r){return r.json();}).then(function(j){dane=j; var p=new URLSearchParams(location.search).get('q'); if(p){q.value=p;} szukaj();});
+  q.addEventListener('input',szukaj);
+})();
+</script>
+</main>
+<footer class="stopka">
+  <div class="wrap">
+    <p>Każda pozycja ma źródło z linkiem i przeszła <a href="jak-weryfikujemy.html">procedurę weryfikacji</a>. Oceny analityczne są podpisane autorem i oddzielone od faktów. Błędy prostujemy jawnie w <a href="korekty.html">rejestrze korekt</a>.</p>
+    <p><a href="feed.xml">Kanał RSS</a> · Strona nie jest indeksowana przez wyszukiwarki.</p>
+  </div>
+</footer>
+</body>
+</html>

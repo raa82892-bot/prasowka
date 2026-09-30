@@ -1,0 +1,13 @@
+{
+  "_opis": "Słownik pojęć. W tekście wydania: {{p:id}} (albo {{p:id|tekst}}). Definicja stała; jeśli zależy od stanu rzeczy, podaj źródło i datę.",
+  "pojecia": [
+    {"id": "epf", "nazwa": "EPF", "pelna": "Europejski Instrument na rzecz Pokoju", "definicja": "Pozabudżetowy fundusz UE, z którego państwa członkowskie finansują m.in. wsparcie wojskowe dla partnerów, w tym Ukrainy. Decyzje o wypłatach wymagają jednomyślności w Radzie UE."},
+    {"id": "wrf", "nazwa": "WRF", "pelna": "Wieloletnie ramy finansowe", "definicja": "Wieloletni budżet UE ustalający pułapy wydatków na kilka lat; obecnie negocjowane są ramy na lata 2028–2034."},
+    {"id": "opl", "nazwa": "OPL", "pelna": "Obrona przeciwlotnicza", "definicja": "Systemy i procedury wykrywania oraz niszczenia celów powietrznych: samolotów, śmigłowców, dronów i pocisków."},
+    {"id": "isw", "nazwa": "ISW", "pelna": "Institute for the Study of War", "definicja": "Amerykański think tank publikujący codzienne oceny kampanii rosyjskiej w Ukrainie. Jego ustalenia to oceny analityczne, nie fakty."},
+    {"id": "osw", "nazwa": "OSW", "pelna": "Ośrodek Studiów Wschodnich im. Marka Karpia", "definicja": "Państwowy ośrodek analityczny w Warszawie, zajmujący się Rosją, Ukrainą, Białorusią, Kaukazem, Azją Centralną, Niemcami, Europą Środkową i Bałkanami."},
+    {"id": "pism", "nazwa": "PISM", "pelna": "Polski Instytut Spraw Międzynarodowych", "definicja": "Państwowy instytut analityczny w Warszawie; publikuje m.in. Biuletyny, Komentarze i raporty."},
+    {"id": "rcb", "nazwa": "RCB", "pelna": "Rządowe Centrum Bezpieczeństwa", "definicja": "Instytucja koordynująca zarządzanie kryzysowe w Polsce; wysyła alerty do mieszkańców."},
+    {"id": "do-rsz", "nazwa": "DO RSZ", "pelna": "Dowództwo Operacyjne Rodzajów Sił Zbrojnych", "definicja": "Dowództwo kierujące bieżącymi operacjami Sił Zbrojnych RP, w tym reakcją na naruszenia przestrzeni powietrznej."}
+  ]
+}
