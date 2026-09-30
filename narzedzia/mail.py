@@ -78,12 +78,39 @@ def main():
              f'<div style="font-weight:bold;color:{GRANAT};margin-bottom:4px;">W skrócie</div>' +
              "".join(f'<p style="margin:0 0 6px;">{T(z)}</p>' for z in w["w_skrocie"]) +
              f'<p style="margin:8px 0 0;"><a href="{url}" style="color:{MORZE};font-weight:bold;">Czytaj na stronie, z osią wątków i wyszukiwarką</a></p></div></td></tr>')
+    m = w.get("mapa_ciepla")
+    if m:
+        r.append(pasek("Mapa ciepła tygodnia"))
+        glowa = "".join(f'<td style="font-size:10px;color:{SZARY};text-align:center;padding:2px;">{B.DNI_KROTKO[B.data_(d).weekday()]}<br>{B.data_krotka(d)}</td>' for d in m["kolumny"])
+        wiersze = ""
+        for rw in m["wiersze"]:
+            kom = ""
+            for j, v in enumerate(rw["wartosci"]):
+                odn = (rw.get("odnosniki") or [""] * len(rw["wartosci"]))[j]
+                spr = (rw.get("sprostowane") or [False] * len(rw["wartosci"]))[j]
+                znak = '<span style="color:#F08A80;">▲</span>' if spr else ""
+                tekst = e(odn) if v >= 2 and odn else ""
+                kolor = "#fff" if v >= 2 else GRANAT
+                kom += (f'<td style="background:{B.MAPA_TLO[v]};color:{kolor};font-size:10px;font-weight:bold;'
+                        f'text-align:center;height:26px;width:40px;">{tekst}{znak}</td>')
+            wiersze += (f'<tr><td style="font-size:11px;text-align:right;padding-right:6px;white-space:nowrap;">'
+                        f'<a href="{B.BASE_URL}watki/{rw["tag"]}.html" style="color:{GRANAT};text-decoration:none;">#{e(tagi[rw["tag"]]["nazwa"])}</a></td>{kom}</tr>')
+        r.append(f'<tr><td style="padding:6px 20px;"><table role="presentation" cellpadding="0" cellspacing="2" style="font-family:Arial,sans-serif;">'
+                 f'<tr><td></td>{glowa}</tr>{wiersze}</table><div style="font-size:12px;color:{SZARY};margin-top:6px;">'
+                 f'Skala: jasne 0 nic, 1 drobny rozwój, 2 istotne zdarzenie, najciemniejsze 3 przełom; liczby = nr wydania/punkt; ▲ sprostowane w tym tygodniu.</div></td></tr>')
+    if w.get("weryfikacja"):
+        r.append(pasek("Weryfikacja tygodnia"))
+        for k in w["weryfikacja"]:
+            kol = {"POTWIERDZONE": GRANAT, "SPROSTOWANE": CZERW, "NADAL OTWARTE": OCHRA}[k["werdykt"]]
+            r.append(f'<tr><td style="padding:8px 20px;border-bottom:1px solid #EEF2F3;font-size:14px;">'
+                     f'<span style="font-size:11px;font-weight:bold;border:1px solid {kol};color:{kol};padding:0 4px;">{e(k["werdykt"])}</span>'
+                     f'<div style="margin-top:4px;"><b>Pisaliśmy:</b> {e(k["bylo"])}<br><b>Jak jest:</b> {e(k["jest"])}</div>{zrodla(k["zrodla"])}</td></tr>')
     if w.get("korekty"):
         r.append(f'<tr><td style="padding:8px 20px;"><div style="border-left:4px solid {CZERW};background:#FBECEA;padding:10px 14px;font-size:14px;">'
                  f'<b style="color:{CZERW};">Korekta</b>' +
                  "".join(f'<p style="margin:6px 0 0;"><b>Było:</b> {e(k["bylo"])}<br><b>Jest:</b> {e(k["jest"])}</p>{zrodla(k["zrodla"])}' for k in w["korekty"])
                  + "</div></td></tr>")
-    r.append(pasek("I. Zarys wydarzeń"))
+    r.append(pasek("I. Najważniejsze przesunięcia tygodnia" if w.get("typ") == "tygodniowe" else "I. Zarys wydarzeń"))
     for kod, nazwa in B.BLOKI:
         poz = sorted([it for it in w["zarys"] if it["blok"] == kod], key=lambda x: x["data"])
         if not poz:
@@ -98,7 +125,9 @@ def main():
                 odz += f'<span style="font-size:11px;font-weight:bold;border:1px solid {kol};color:{kol};padding:0 4px;margin-right:6px;">{e(it["status"])}</span>'
             r.append(f'<tr><td style="padding:10px 20px 8px;border-bottom:1px solid #EEF2F3;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
                      f'<td valign="top" style="width:50px;font-weight:bold;font-size:13px;color:{GRANAT};">{B.data_krotka(it["data"])}</td>'
-                     f'<td valign="top"><div>{tagi_html(it["tagi"])}{odz}</div><div style="margin-top:2px;">{T(it["tekst"])}</div>{zrodla(it["zrodla"])}</td></tr></table></td></tr>')
+                     f'<td valign="top"><div>{tagi_html(it["tagi"])}{odz}</div><div style="margin-top:2px;">{T(it["tekst"])}</div>'
+                     + (f'<div style="margin:4px 0 0;padding:5px 8px;background:#E1EEF5;border-left:3px solid {MORZE};font-size:14px;"><b>Dla Polski:</b> {T(it["dla_polski"])}</div>' if it.get("dla_polski") else "")
+                     + f'{zrodla(it["zrodla"])}</td></tr></table></td></tr>')
     if w.get("analizy"):
         r.append(pasek("II. Analizy"))
         r.append(f'<tr><td style="padding:4px 20px;font-size:13px;color:{SZARY};font-style:italic;">Interpretacje, nie ustalenia. Każda ma autora.</td></tr>')
@@ -106,6 +135,21 @@ def main():
             r.append(f'<tr><td style="padding:8px 20px;"><div style="font-family:Georgia,serif;font-size:17px;font-weight:bold;color:{GRANAT};">{e(x["tytul"])}</div>'
                      f'<div style="font-size:13px;color:{SZARY};">Ocena: {e(x["autor"])}</div><div style="margin-top:4px;">{T(x["tekst"])}</div>'
                      f'<div style="margin:6px 0 0 10px;padding:6px 10px;background:#E1EEF5;border-left:3px solid {MORZE};"><b>Dla Polski:</b> {T(x["dla_polski"])}</div>{zrodla(x.get("zrodla"))}</td></tr>')
+    if w.get("tracker"):
+        r.append(pasek("Tracker wątków"))
+        r.append(f'<tr><td style="padding:6px 20px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:13px;">'
+                 f'<tr><td style="color:{SZARY};font-weight:bold;">Wątek</td><td style="color:{SZARY};font-weight:bold;">Tydzień temu</td><td style="color:{SZARY};font-weight:bold;">Dziś</td><td></td></tr>' +
+                 "".join(f'<tr><td style="padding:5px 6px 5px 0;border-top:1px solid #EEF2F3;vertical-align:top;">{tagi_html([t["tag"]])}</td>'
+                         f'<td style="padding:5px 6px 5px 0;border-top:1px solid #EEF2F3;vertical-align:top;">{T(t["tydzien_temu"])}</td>'
+                         f'<td style="padding:5px 6px 5px 0;border-top:1px solid #EEF2F3;vertical-align:top;">{T(t["dzis"])}</td>'
+                         f'<td style="border-top:1px solid #EEF2F3;font-size:16px;font-weight:bold;color:{GRANAT};vertical-align:top;">{e(t["kierunek"])}</td></tr>' for t in w["tracker"])
+                 + "</table></td></tr>")
+    if w.get("czytelnia"):
+        r.append(pasek("Czytelnia OSW i PISM"))
+        for c in w["czytelnia"]:
+            r.append(f'<tr><td style="padding:6px 20px;font-size:14px;border-bottom:1px solid #EEF2F3;"><a href="{e(c["url"])}" style="color:{MORZE};font-weight:bold;">{e(c["tytul"])}</a>'
+                     f'<span style="color:{SZARY};"> · {", ".join(e(x) for x in (c.get("autor"), c.get("wydawca"), c.get("numer"), B.data_krotka(c["data"])) if x)}</span>'
+                     f'<div>{T(c["po_co"])}</div></td></tr>')
     r.append(pasek("III. Kalendarz"))
     kal = "".join(f'<tr><td style="width:60px;font-weight:bold;color:{GRANAT};padding:4px 0;border-bottom:1px solid #EEF2F3;vertical-align:top;">{B.data_krotka(k["data"])}</td>'
                   f'<td style="padding:4px 0;border-bottom:1px solid #EEF2F3;">{T(k["tekst"])}</td></tr>' for k in sorted(w.get("kalendarz", []), key=lambda k: k["data"]))

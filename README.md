@@ -56,3 +56,16 @@ Walidacja odrzuca wydanie, jeśli którakolwiek pozycja nie ma źródła z linki
 ```
 
 Przy każdym wydaniu aktualizuj też w `dane/tagi.json` pola `stan`, `stan_data`, `stan_zrodla` dla wątków, których dotyczyło.
+
+## Wydanie tygodniowe (dodatkowe pola)
+
+`"typ": "tygodniowe"`, `"okres": "26.09–02.10.2026"`; `zarys` to 5 przesunięć tygodnia, każde może mieć `"dla_polski"`.
+
+```json
+"weryfikacja": [{"dotyczy": "2026-09-29#z1", "bylo": "…", "jest": "…", "werdykt": "POTWIERDZONE|SPROSTOWANE|NADAL OTWARTE", "zrodla": [ZRODLO]}],
+"mapa_ciepla": {"kolumny": ["2026-09-26", "…"], "wiersze": [{"tag": "kaliningrad", "wartosci": [0,1,2,3,…], "odnosniki": ["", "", "9/1.2", …], "sprostowane": [false, …]}]},
+"tracker": [{"tag": "slowacja", "tydzien_temu": "…", "dzis": "…", "kierunek": "↑|↓|→"}],
+"czytelnia": [{"tytul": "…", "autor": "…", "wydawca": "OSW|PISM", "numer": "…", "data": "…", "url": "…", "po_co": "…"}]
+```
+
+Werdykt SPROSTOWANE z polem `dotyczy` oznacza oryginalną pozycję znakiem ▲ i trafia do rejestru korekt.

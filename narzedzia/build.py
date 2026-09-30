@@ -38,6 +38,8 @@ BLOKI = [
 STATUSY = {None, "NIEPOTWIERDZONE", "SPRZECZNE ŹRÓDŁA"}
 ETAPY = {None, "PROPOZYCJA", "ZAPOWIEDŹ", "PRZYJĘTE", "W TOKU"}
 PROGI = {"dokumentacja", "następstwo", "kompletność"}
+WERDYKTY = {"POTWIERDZONE", "SPROSTOWANE", "NADAL OTWARTE"}
+MAPA_TLO = ["#F1F3F6", "#C9D3E6", "#6F86B3", "#1F2A44"]
 DNI = ["poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"]
 DNI_KROTKO = ["pon", "wt", "śr", "czw", "pt", "sob", "nd"]
 MIESIACE = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca",
@@ -189,7 +191,51 @@ def waliduj(tagi, osoby, pojecia, wydania) -> Bledy:
         for i, c in enumerate(w.get("czego_nie_ma", [])):
             if c.get("prog") not in PROGI:
                 b.dodaj(f"{g0} czego_nie_ma {i+1}", f"prog musi być jednym z {sorted(PROGI)}")
+        # pola tygodniówki
+        m = w.get("mapa_ciepla")
+        if m:
+            g = f"{g0} mapa_ciepla"
+            kol = m.get("kolumny", [])
+            for d in kol:
+                try:
+                    data_(d)
+                except ValueError:
+                    b.dodaj(g, f"kolumna „{d}” nie jest datą RRRR-MM-DD")
+            for r in m.get("wiersze", []):
+                if r.get("tag") not in tagi:
+                    b.dodaj(g, f"wiersz z hashtagiem spoza słownika: {r.get('tag')}")
+                wart = r.get("wartosci", [])
+                if len(wart) != len(kol) or any(v not in (0, 1, 2, 3) for v in wart):
+                    b.dodaj(g, f"wiersz {r.get('tag')}: wartości 0–3, tyle ile kolumn")
+                for pole in ("odnosniki", "sprostowane"):
+                    if pole in r and len(r[pole]) != len(kol):
+                        b.dodaj(g, f"wiersz {r.get('tag')}: {pole} musi mieć tyle elementów, ile kolumn")
+        for i, t in enumerate(w.get("tracker", [])):
+            g = f"{g0} tracker {i+1}"
+            if t.get("tag") not in tagi:
+                b.dodaj(g, "hashtag spoza słownika")
+            if t.get("kierunek") not in ("↑", "↓", "→"):
+                b.dodaj(g, "kierunek musi być ↑, ↓ albo →")
+            for pole in ("tydzien_temu", "dzis"):
+                if not t.get(pole):
+                    b.dodaj(g, f"brak pola {pole}")
+        for i, c in enumerate(w.get("czytelnia", [])):
+            g = f"{g0} czytelnia {i+1}"
+            for pole in ("tytul", "po_co"):
+                if not c.get(pole):
+                    b.dodaj(g, f"brak pola {pole}")
+            sprawdz_zrodla([{"nazwa": c.get("wydawca", "?"), "url": c.get("url", ""), "data": c.get("data", "")}], g, b)
     for w in wydania:
+        for i, k in enumerate(w.get("weryfikacja", [])):
+            g = f"{w['_plik']} weryfikacja {i+1}"
+            if k.get("werdykt") not in WERDYKTY:
+                b.dodaj(g, f"werdykt musi być jednym z {sorted(WERDYKTY)}")
+            if k.get("dotyczy") and k["dotyczy"] not in klucze:
+                b.dodaj(g, f"dotyczy nieistniejącej pozycji {k['dotyczy']}")
+            for pole in ("bylo", "jest"):
+                if not k.get(pole):
+                    b.dodaj(g, f"brak pola {pole}")
+            sprawdz_zrodla(k.get("zrodla"), g, b)
         for i, k in enumerate(w.get("korekty", [])):
             g = f"{w['_plik']} korekta {i+1}"
             if k.get("dotyczy") and k["dotyczy"] not in klucze:
@@ -331,9 +377,53 @@ class Budowa:
         # korekty: klucz pozycji -> lista (wydanie korygujące, korekta)
         self.korekty_poz = {}
         for w in wydania:
-            for k in w.get("korekty", []):
+            for k in self.wszystkie_korekty(w):
                 if k.get("dotyczy"):
                     self.korekty_poz.setdefault(k["dotyczy"], []).append((w, k))
+
+    @staticmethod
+    def wszystkie_korekty(w):
+        """Korekty wydania dziennego plus sprostowania z weryfikacji tygodniowej."""
+        return w.get("korekty", []) + [k for k in w.get("weryfikacja", []) if k.get("werdykt") == "SPROSTOWANE"]
+
+    def mapa_html(self, w, prefix):
+        m = w.get("mapa_ciepla")
+        if not m:
+            return ""
+        glowa = "".join(f'<th>{DNI_KROTKO[data_(d).weekday()]}<br>{data_krotka(d)}</th>' for d in m["kolumny"])
+        wiersze = ""
+        for r in m["wiersze"]:
+            kom = ""
+            for j, v in enumerate(r["wartosci"]):
+                odn = (r.get("odnosniki") or [""] * len(r["wartosci"]))[j]
+                spr = (r.get("sprostowane") or [False] * len(r["wartosci"]))[j]
+                kolor = "#fff" if v >= 2 else "#17243B"
+                znak = '<span class="m-spr">▲</span>' if spr else ""
+                tekst = e(odn) if v >= 2 and odn else ""
+                kom += f'<td style="background:{MAPA_TLO[v]};color:{kolor}" title="{v}">{tekst}{znak}</td>'
+            t = self.tagi[r["tag"]]
+            wiersze += f'<tr><th class="m-tag"><a href="{prefix}watki/{t["id"]}.html">#{e(t["nazwa"])}</a></th>{kom}</tr>'
+        legenda = "".join(f'<span><i style="background:{MAPA_TLO[i]}"></i>{i} {n}</span>'
+                          for i, n in enumerate(["nic", "drobny rozwój", "istotne zdarzenie", "przełom"]))
+        return (f'<h2 class="pasek">Mapa ciepła tygodnia</h2><div class="mapa-wrap"><table class="mapa"><tr><th></th>{glowa}</tr>{wiersze}</table></div>'
+                f'<p class="m-leg">{legenda}<span><b class="m-spr">▲</b> sprostowane w tym tygodniu</span></p>'
+                f'<p class="uwaga">Im ciemniej, tym ważniejsze zdarzenie danego dnia. Liczby w ciemnych polach to numer wydania i punktu. '
+                f'Wartości przyznano tylko za zdarzenia zweryfikowane.</p>')
+
+    def tygodniowe_html(self, w, T, prefix):
+        """Sekcje tygodniówki po analizach: tracker i czytelnia."""
+        cz = []
+        if w.get("tracker"):
+            cz.append('<h2 class="pasek">Tracker wątków</h2><div class="mapa-wrap"><table class="kal tracker"><tr><th>Wątek</th><th>Tydzień temu</th><th>Dziś</th><th></th></tr>' + "".join(
+                f'<tr><td>{html_tagi([t["tag"]], self.tagi, prefix)}</td><td>{T(t["tydzien_temu"])}</td><td>{T(t["dzis"])}</td><td class="kier">{e(t["kierunek"])}</td></tr>'
+                for t in w["tracker"]) + "</table></div>")
+        if w.get("czytelnia"):
+            cz.append('<h2 class="pasek">Czytelnia OSW i PISM</h2>' + "".join(
+                f'<article class="poz"><div class="poz-data">{data_krotka(c["data"])}</div><div class="poz-tresc">'
+                f'<p class="poz-tekst"><a href="{e(c["url"])}" target="_blank" rel="noopener noreferrer"><strong>{e(c["tytul"])}</strong></a>'
+                f'{(" · " + e(c["autor"])) if c.get("autor") else ""}{(" · " + e(c["wydawca"])) if c.get("wydawca") else ""}{(", " + e(c["numer"])) if c.get("numer") else ""}</p>'
+                f'<p class="poz-tekst">{T(c["po_co"])}</p></div></article>' for c in w["czytelnia"]))
+        return "\n".join(cz)
 
     def zapisz(self, sciezka, tresc):
         p = self.out / sciezka
@@ -355,6 +445,7 @@ class Budowa:
   <div class="poz-tresc">
     <div class="poz-meta">{html_tagi(it['tagi'], self.tagi, prefix)}{html_odznaki(it)}{skad}</div>
     <p class="poz-tekst">{T(it['tekst'])}</p>
+    {('<p class="dla-polski"><strong>Dla Polski:</strong> ' + T(it['dla_polski']) + '</p>') if it.get('dla_polski') else ''}
     {kor}
     {html_zrodla(it['zrodla'])}
   </div>
@@ -386,6 +477,20 @@ class Budowa:
 </section>""")
         cz.append('<section class="skrot"><h2>W skrócie</h2>' +
                   "".join(f"<p>{T(z)}</p>" for z in w["w_skrocie"]) + "</section>")
+        cz.append(self.mapa_html(w, prefix))
+        if w.get("weryfikacja"):
+            li = ""
+            for k in w["weryfikacja"]:
+                cel = ""
+                if k.get("dotyczy"):
+                    s_, pid = k["dotyczy"].split("#")
+                    cel = f' <a href="{s_}.html#{pid}">(pozycja z {data_dluga(s_)})</a>'
+                klasa = {"POTWIERDZONE": "etap", "SPROSTOWANE": "sprzeczne", "NADAL OTWARTE": "niepotw"}[k["werdykt"]]
+                li += (f'<article class="poz{" skorygowana" if k["werdykt"] == "SPROSTOWANE" else ""}"><div class="poz-data"></div><div class="poz-tresc">'
+                       f'<p class="poz-meta"><span class="odznaka {klasa}">{e(k["werdykt"])}</span>{cel}</p>'
+                       f'<p class="poz-tekst"><strong>Pisaliśmy:</strong> {e(k["bylo"])}</p><p class="poz-tekst"><strong>Jak jest:</strong> {e(k["jest"])}</p>'
+                       f'{html_zrodla(k["zrodla"])}</div></article>')
+            cz.append(f'<h2 class="pasek" id="korekty">Weryfikacja tygodnia</h2>{li}')
         if w.get("korekty"):
             li = ""
             for k in w["korekty"]:
@@ -395,7 +500,7 @@ class Budowa:
                     cel = f' <a href="{s}.html#{pid}">(pozycja z {data_dluga(s)})</a>'
                 li += f"<li><strong>Było:</strong> {e(k['bylo'])}{cel}<br><strong>Jest:</strong> {e(k['jest'])}{html_zrodla(k['zrodla'])}</li>"
             cz.append(f'<section class="korekta" id="korekty"><h2>Korekta</h2><ul>{li}</ul></section>')
-        cz.append('<h2 class="pasek">I. Zarys wydarzeń</h2>')
+        cz.append('<h2 class="pasek">' + ("I. Najważniejsze przesunięcia tygodnia" if w.get("typ") == "tygodniowe" else "I. Zarys wydarzeń") + '</h2>')
         for kod, nazwa in BLOKI:
             poz = sorted([it for it in w["zarys"] if it["blok"] == kod], key=lambda x: x["data"])
             if not poz:
@@ -405,6 +510,7 @@ class Budowa:
         if w.get("analizy"):
             cz.append('<h2 class="pasek" id="analizy">II. Analizy</h2><p class="uwaga">Poniżej interpretacje, nie ustalenia. Każda ma autora.</p>')
             cz.extend(self.analiza(w, a, T, prefix) for a in w["analizy"])
+        cz.append(self.tygodniowe_html(w, T, prefix))
         cz.append('<h2 class="pasek">III. Kalendarz i zastrzeżenia</h2>')
         if w.get("kalendarz"):
             cz.append('<table class="kal">' + "".join(
@@ -589,7 +695,7 @@ class Budowa:
     def korekty(self):
         wiersze = []
         for w in reversed(self.wydania):
-            for k in w.get("korekty", []):
+            for k in self.wszystkie_korekty(w):
                 cel = ""
                 if k.get("dotyczy"):
                     s, pid = k["dotyczy"].split("#")
