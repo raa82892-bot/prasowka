@@ -1,0 +1,66 @@
+{
+  "nr": 7,
+  "data": "2026-09-26",
+  "godzina": "10:34",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Rosyjski atak dronami na blok mieszkalny w **Kijowie** 25.09 zabił co najmniej 7 osób; Kreml nie potwierdza udziału w trójstronnych rozmowach, a Zełenski twierdzi, że Trump zdecydował o licencji na **Patriota** dla Ukrainy.",
+    "Prokuratura bada jako sabotaż na rzecz obcego wywiadu pożar stacji **Starlink** w Woli Krobowskiej (noc 23–24.09); nikomu nie przedstawiono zarzutów.",
+    "Iran złożył USA 7-dniowy plan otwarcia **Cieśniny Ormuz**; Trump odrzucił go tego samego dnia."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {"osw": [], "pism": []},
+  "zarys": [
+    {
+      "id": "z1", "blok": "wojna", "data": "2026-09-25", "tagi": ["ukraina", "rosja"],
+      "tekst": "Rosyjski atak dronami na blok mieszkalny w Kijowie 25.09 zabił co najmniej siedem osób, w tym 14-latka; rannych jest kilkudziesięciu. Liczby ofiar rosły w ciągu dnia i różnią się w zależności od źródła.",
+      "zrodla": [
+        {"nazwa": "RFE/RL", "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "wojna", "data": "2026-09-25", "tagi": ["rozejm", "rosja", "usa"],
+      "tekst": "Rzecznik Kremla Dmitrij Pieskow powiedział, że Putin i Trump rozmawiali 8.09 o możliwym spotkaniu Ukraina–Rosja–USA, które „mogłoby wkrótce nastąpić”; Putin stwierdził, że wszystkie propozycje są „na stole”, ale nie potwierdził udziału Moskwy. Zełenski relacjonuje, że Trump powiedział mu o „ostatecznej decyzji” zezwalającej Ukrainie na produkcję pocisków Patriot – wersja ukraińska, bez potwierdzenia ze strony USA w tym źródle.",
+      "status": "NIEPOTWIERDZONE",
+      "zrodla": [
+        {"nazwa": "RFE/RL", "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html", "data": "2026-09-25"},
+        {"nazwa": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/9/26/trump-rejects-irans-seven-day-roadmap-to-reopen-strait-of-hormuz", "data": "2026-09-26"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "polska", "data": "2026-09-24", "tagi": ["hybryda", "obronnosc-polski", "rosja"],
+      "etap": "W TOKU",
+      "tekst": "Pożar stacji naziemnej Starlink w Woli Krobowskiej koło Grójca (Mazowsze) w nocy z 23 na 24.09 jest badany jako podpalenie, sabotaż i przestępstwo o charakterze terrorystycznym na rzecz obcego wywiadu; śledztwo prowadzą radomskie delegatury ABW i CBA. Do 25.09 nikomu nie przedstawiono zarzutów; śledczy dopuszczają działanie na zlecenie rosyjskich służb.",
+      "zrodla": [
+        {"nazwa": "RMF24", "url": "https://www.rmf24.pl/regiony/warszawa/news-sabotaz-przestepstwo-terrorystyczne-rosyjskie-sluzby-jest-sl,nIdn,1019237", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "polska", "data": "2026-09-23", "tagi": ["obronnosc-polski", "rosja"],
+      "tekst": "Polska poderwała myśliwce po tym, jak rosyjski śmigłowiec Mi-8 na krótko wleciał 23.09 w polską przestrzeń powietrzną. RFE/RL opisuje to na tle innych incydentów: Mołdawia zgłosiła w 2026 r. 44 naruszenia przestrzeni, a w Rumunii 24.09 spadł dron.",
+      "zrodla": [
+        {"nazwa": "RFE/RL", "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z5", "blok": "swiat", "data": "2026-09-24", "tagi": ["nordyckie", "nato", "rosja"],
+      "tekst": "Fińskie i szwedzkie myśliwce wspólnie przechwyciły 24.09 rosyjskie samoloty wojskowe nad Zatoką Fińską.",
+      "zrodla": [
+        {"nazwa": "RFE/RL", "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z6", "blok": "swiat", "data": "2026-09-26", "tagi": ["iran", "usa"],
+      "tekst": "Iran zaproponował USA plan: zniesienie blokady, sankcji na ropę i odmrożenie środków w 4–5 dni, otwarcie Cieśniny Ormuz i negocjacje do siódmego dnia. Trump odrzucił go 26.09 jako „nie do przyjęcia”. Szef MSZ Araghczi czeka na odpowiedź mediatorów.",
+      "zrodla": [
+        {"nazwa": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/9/26/trump-rejects-irans-seven-day-roadmap-to-reopen-strait-of-hormuz", "data": "2026-09-26"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Uzgodnienie warunków wypłaty 6,6 mld euro z Europejskiego Instrumentu na rzecz Pokoju, ułaskawienie 15 osób na Białorusi (24.09), Fico–Taraba, NBP i ArcelorMittal – nie udało się otworzyć czołowych źródeł z tą treścią.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie nr 7 z 26.09.2026 (stan na 10:34 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu i wysłanego maila. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach i agencjach; zakres jest znacznie węższy niż w oryginale (bez analiz, kalendarza, danych rynkowych i wykresów)."
+}
