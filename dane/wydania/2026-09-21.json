@@ -1,0 +1,39 @@
+{
+  "nr": 0,
+  "data": "2026-09-21",
+  "godzina": "21:45",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "AfD wygrała wybory w **Meklemburgii-Pomorzu Przednim** (38,2%), a CDU z 4,9% zanotowała tam najgorszy wynik w historii; w Berlinie wygrała Lewica (25,7%).",
+    "PISM: nowa Duma będzie bardziej zmilitaryzowana i ostrzejsza wobec Polski, Niemiec i Wielkiej Brytanii; ewentualna mobilizacja pojawi się najpierw w debacie w Dumie."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {
+    "osw": [],
+    "pism": [
+      {"tytul": "Russian State Duma elections: the militarisation of politics continues", "numer": "PISM Spotlight nr 48 (2026)", "autor": "Jakub Benedyczak", "data": "2026-09-21", "url": "https://pism.pl/publications/russian-state-duma-elections-the-militarisation-of-politics-continues"}
+    ]
+  },
+  "zarys": [
+    {
+      "id": "z1", "blok": "swiat", "data": "2026-09-20", "tagi": ["niemcy", "wybory"],
+      "tekst": "W wyborach krajowych 20.09 AfD wygrała w Meklemburgii-Pomorzu Przednim z 38,2% przed SPD (35,5%); CDU dostała 4,9%, najgorszy wynik w historii landu. W Berlinie wygrała Lewica (25,7%) przed CDU (18,8%) i AfD (16,3%); dotychczasowa koalicja CDU–SPD straciła większość. Kanclerz Friedrich Merz nazwał wynik CDU „katastrofą”. Premier landu Manuela Schwesig (SPD) może zostać na stanowisku, bo inne partie nie chcą współpracować z AfD.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/21/germany-the-left-triumphs-in-berlin-as-afd-surges-in-mecklenburg-western-pomerania", "data": "2026-09-21"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "swiat", "data": "2026-09-21", "tagi": ["rosja", "wybory"],
+      "tekst": "PISM (Jakub Benedyczak, Spotlight nr 48/2026, 21.09): w nowej Dumie zasiądzie od 40 do 100 weteranów wojny (9–22%), co pogłębia militaryzację polityki; należy się spodziewać jeszcze ostrzejszej retoryki wobec Polski, Niemiec i Wielkiej Brytanii, łącznie z wezwaniami do rozmieszczenia broni jądrowej i ataków rakietowych dalekiego zasięgu. Ewentualna decyzja Putina o mobilizacji pojawi się, zdaniem PISM, najpierw w debacie w Dumie. Wyniki wyborów: por. wyd. nr 6, pkt z3.",
+      "zrodla": [
+        {"nazwa": "PISM (J. Benedyczak), Spotlight nr 48/2026", "url": "https://pism.pl/publications/russian-state-duma-elections-the-militarisation-of-politics-continues", "data": "2026-09-21"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Komentarz OSW (Maślanka) o francuskim przemyśle zbrojeniowym i WRF, atak na obwód moskiewski, Trump–Zełenski, Iran, Trump–Xi, Nawrocki w Nowym Jorku, kurs złotego – nie otwarto czołowych źródeł z treścią.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie z 21.09.2026 (stan na 21:45 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu; powstało przed wprowadzeniem numeracji, dlatego ma numer 0. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach i instytucjach; zakres jest bardzo wąski w porównaniu z oryginałem (2 z ok. 15 wątków)."
+}
