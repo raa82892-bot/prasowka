@@ -108,7 +108,7 @@ class Ranking:
 
 RANKING = None
 # Od tej daty walidacja wymaga przy każdej pozycji zarysu: źródła z poziomu 1 albo dwóch niezależnych
-# źródeł z poziomów 1–3, w tym co najmniej jednego z poziomu 1–2 (poziomy 4–5 się nie liczą).
+# źródeł z poziomów 1–2 (poziomy 3–5 się nie liczą do podstawy).
 DWA_ZRODLA_OD = "2026-10-01"
 
 
@@ -118,8 +118,8 @@ def podstawa_ok(zrodla, ranking=None):
     oc = [o for o in oc if o]
     if any(o["poziom"] == 1 for o in oc):
         return True
-    niezalezne = {o["id"] for o in oc if o["poziom"] <= 3}
-    return len(niezalezne) >= 2 and any(o["poziom"] <= 2 for o in oc)
+    niezalezne = {o["id"] for o in oc if o["poziom"] <= 2}
+    return len(niezalezne) >= 2
 
 
 def wczytaj_ranking(katalog: Path):
@@ -247,8 +247,8 @@ def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
             except ValueError:
                 b.dodaj(g, "brak daty zdarzenia RRRR-MM-DD")
             if RANKING and w.get("data", "") >= DWA_ZRODLA_OD and it.get("zrodla") and not podstawa_ok(it["zrodla"]):
-                b.dodaj(g, "za słaba podstawa: potrzebne źródło urzędowe (poziom 1) albo dwa niezależne z poziomów 1–3, "
-                           "w tym co najmniej jedno z poziomu 1–2 (zob. zrodla.html)")
+                b.dodaj(g, "za słaba podstawa: potrzebne źródło urzędowe (poziom 1) albo dwa niezależne z poziomów 1–2 "
+                           "(źródła z poziomów 3–5 nie liczą się do podstawy; zob. zrodla.html)")
             if "status" in it:
                 b.dodaj(g, f"pole status ({it['status']}) — do zarysu wchodzą tylko informacje potwierdzone; "
                            "niepotwierdzone przenieś do „Czego tu nie ma” (próg: dokumentacja)")
@@ -998,7 +998,7 @@ class Budowa:
             '<p>Ranking to <strong>ocena redakcji Prasówki</strong>, nie obiektywna miara: mówi, ile potwierdzenia potrzebuje informacja z danego źródła. '
             'Poziom dotyczy typowej informacji; źródło z poziomu 5 jest rozstrzygające co do tego, co twierdzi jego rząd, a urzędowe (1) – co do decyzji instytucji, nie co do ocen.</p>'
             '<p><strong>Zasada publikacji (od 01.10.2026 sprawdzana automatycznie):</strong> pozycja zarysu wymaga źródła urzędowego (poziom 1) '
-            'albo dwóch niezależnych źródeł z poziomów 1–3, w tym co najmniej jednego z poziomu 1–2. Poziomy 4–5 nie liczą się do podstawy. '
+            'albo dwóch niezależnych źródeł z poziomów 1–2. Poziomy 3–5 mogą towarzyszyć, ale nie liczą się do podstawy. '
             'Przy przedruku depeszy kolor bierze się z agencji, którą wskazujemy w nazwie, np. „Reuters (za U.S. News)”.</p></section>')
         for p, poz in sorted(RANKING.poziomy.items()):
             lista = sorted([z for z in RANKING.zrodla if z["poziom"] == p], key=lambda z: (-uzycia.get(z["id"], 0), z["nazwa"].lower()))

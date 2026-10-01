@@ -75,7 +75,7 @@ Werdykt SPROSTOWANE z polem `dotyczy` oznacza oryginalną pozycję znakiem ▲ i
 
 `dane/zrodla.json` ocenia każde źródło w skali 1–5 (1 urzędowe – zielony, 2 wysoka wiarygodność, 3 z zastrzeżeniami, 4 niska, 5 strona zainteresowana – czerwony), z typem, krajem i uzasadnieniem. Źródło w wydaniu jest dopasowywane po początku nazwy (`wzorce`, np. „Reuters (za U.S. News)” → Reuters), a potem po domenie linku. Strona `zrodla.html` pokazuje ranking i rozkład cytowań; przy każdym źródle na stronie i w mailu jest kolorowa kropka.
 
-Walidacja odrzuca źródło spoza rankingu (nowe trzeba świadomie dopisać z poziomem i uzasadnieniem), a w wydaniach od 01.10.2026 także pozycję bez wystarczającej podstawy: źródło z poziomu 1 albo dwa niezależne z poziomów 1–3, w tym co najmniej jedno z poziomu 1–2. Do `zrodla` pozycji wpisuj wszystkie źródła, którymi ją potwierdzono.
+Walidacja odrzuca źródło spoza rankingu (nowe trzeba świadomie dopisać z poziomem i uzasadnieniem), a w wydaniach od 01.10.2026 także pozycję bez wystarczającej podstawy: źródło z poziomu 1 albo dwa niezależne z poziomów 1–2 (poziomy 3–5 nie liczą się do podstawy). Do `zrodla` pozycji wpisuj wszystkie źródła, którymi ją potwierdzono.
 
 ## Grafiki
 
