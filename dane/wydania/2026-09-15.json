@@ -1,0 +1,66 @@
+{
+  "nr": 0,
+  "data": "2026-09-15",
+  "godzina": "19:10",
+  "typ": "dzienne",
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "w_skrocie": [
+    "Trump ogłosił 14.09, że Ukraina i Rosja zgodziły się wstrzymać ataki na cele energetyczne; **Kijów i Kreml tego nie potwierdzają**.",
+    "Włoskie myśliwce NATO zestrzeliły w nocy z 14 na 15.09 dron, który wleciał z Białorusi w przestrzeń Litwy."
+  ],
+  "zrodla_analityczne": {
+    "osw": [],
+    "pism": []
+  },
+  "zarys": [
+    {
+      "id": "z1",
+      "blok": "wojna",
+      "data": "2026-09-14",
+      "tagi": [
+        "rozejm",
+        "ukraina",
+        "rosja",
+        "usa",
+        "energia"
+      ],
+      "status": "NIEPOTWIERDZONE",
+      "tekst": "Trump napisał 14.09 na Truth Social: „Ukraina zgodziła się nie uderzać w rosyjskie cele energetyczne. Rosja zgodziła się na to samo”, i obwiniał ukraińskie ataki o wzrost cen diesla. Zełenski był sceptyczny („nie jestem pewien” zobowiązań Rosji), ale zadeklarował, że jeśli partnerzy zapewnią realną rezygnację Rosji z ataków na energetykę, Ukraina zrobi to samo. Pieskow uznał ukraińskie propozycje za niewystarczające. Anonimowy wysoki ukraiński urzędnik energetyczny powiedział Kyiv Independent, że żadnego porozumienia nie ma.",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/breaking-trump-claims-ukraine-russia-agree-to-halt-strikes-on-energy-targets/",
+          "data": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "z2",
+      "blok": "swiat",
+      "data": "2026-09-15",
+      "tagi": [
+        "litwa",
+        "bialorus",
+        "nato",
+        "hybryda"
+      ],
+      "tekst": "Dron, który wleciał z Białorusi w przestrzeń Litwy, przeleciał nad Lentvaris koło Wilna i został zestrzelony koło Kowna ok. 0:20 15.09 przez włoskie myśliwce stacjonujące w Szawlach; rodzaj drona i jego cel były nieznane, szukano szczątków. Syreny alarmowe zawyły, a lotniska miały ograniczenia. Prezydent Gitanas Nausėda: gotowość ma kluczowe znaczenie, Litwa „wraz z sojusznikami będzie bronić swojej przestrzeni”.",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/nato-shoots-down-drone-over-lithuanian-airspace-that-flew-in-from-belarus/",
+          "data": "2026-09-15"
+        }
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {
+      "tekst": "Atak rosyjskiego drona na pociąg Kijów–Warszawa 13.09 (2 km od granicy), dron w Rusinowie, AfD w Saksonii-Anhalt, Iran i Ormuz, Pekin i szczyt Trump–Xi, CPI i decyzje RPP/EBC – nie otwarto czołowych źródeł z treścią.",
+      "prog": "dokumentacja"
+    }
+  ],
+  "nota": "Wydanie z 15.09.2026 (stan na 19:10 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu; powstało przed wprowadzeniem numeracji, dlatego ma numer 0. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach; zakres jest bardzo wąski w porównaniu z oryginałem (2 z ok. 12 wątków)."
+}
