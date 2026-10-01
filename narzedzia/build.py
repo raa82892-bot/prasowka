@@ -56,7 +56,7 @@ MAPA_TAGI = {
     "wielka-brytania": ["GB"], "rumunia": ["RO"], "balkany": ["RS", "BA", "ME", "MK", "AL", "XK", "HR"],
 }
 EUROPA = json.loads((Path(__file__).resolve().parent / "europa.json").read_text("utf-8"))
-GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "korekty.html",
+GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "korekty.html", "zrodla.html",
               "jak-weryfikujemy.html", "szukaj.html", "szukaj.json", "feed.xml",
               "robots.txt", ".nojekyll", "assets", "404.html"]
 
@@ -78,6 +78,79 @@ def wczytaj(katalog: Path):
     rewizje = json.loads(p.read_text("utf-8"))["rewizje"] if p.exists() else []
     return ({t["id"]: t for t in tagi}, {o["id"]: o for o in osoby},
             {x["id"]: x for x in pojecia}, wydania, rewizje)
+
+
+# ---------------------------------------------------------------- ranking źródeł
+
+class Ranking:
+    """Ranking wiarygodności z dane/zrodla.json: dopasowanie po początku nazwy, potem po domenie."""
+
+    def __init__(self, dane):
+        self.dane = dane
+        self.poziomy = {p["poziom"]: p for p in dane["poziomy"]}
+        self.zrodla = dane["zrodla"]
+        wz = [(w, z) for z in self.zrodla for w in z.get("wzorce", [])]
+        wz.sort(key=lambda x: -len(x[0]))
+        self.wzorce = [(re.compile(r"^" + re.escape(w) + r"(?![\w])"), z) for w, z in wz]
+        self.domeny = sorted(((d, z) for z in self.zrodla for d in z.get("domeny", [])), key=lambda x: -len(x[0]))
+
+    def ocen(self, nazwa, url):
+        nazwa = (nazwa or "").strip()
+        for r, z in self.wzorce:
+            if r.match(nazwa):
+                return z
+        host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*$", r"\1", url or "")).lower()
+        for d, z in self.domeny:
+            if host == d or host.endswith("." + d):
+                return z
+        return None
+
+
+RANKING = None
+# Od tej daty walidacja wymaga przy każdej pozycji zarysu: źródła z poziomu 1 albo dwóch niezależnych
+# źródeł z poziomów 1–3, w tym co najmniej jednego z poziomu 1–2 (poziomy 4–5 się nie liczą).
+DWA_ZRODLA_OD = "2026-10-01"
+
+
+def podstawa_ok(zrodla, ranking=None):
+    r = ranking or RANKING
+    oc = [r.ocen(z.get("nazwa"), z.get("url")) for z in zrodla]
+    oc = [o for o in oc if o]
+    if any(o["poziom"] == 1 for o in oc):
+        return True
+    niezalezne = {o["id"] for o in oc if o["poziom"] <= 3}
+    return len(niezalezne) >= 2 and any(o["poziom"] <= 2 for o in oc)
+
+
+def wczytaj_ranking(katalog: Path):
+    p = katalog / "zrodla.json"
+    return Ranking(json.loads(p.read_text("utf-8"))) if p.exists() else None
+
+
+def kropka(z, prefix="", ranking=None):
+    """Kolorowy znacznik wiarygodności przed nazwą źródła."""
+    r = ranking or RANKING
+    if not r:
+        return ""
+    o = r.ocen(z.get("nazwa"), z.get("url"))
+    if not o:
+        return ""
+    p = r.poziomy[o["poziom"]]
+    return (f'<span class="wz wz{o["poziom"]}" title="Wiarygodność {o["poziom"]}/5 – {e(p["nazwa"])} ({e(o["nazwa"])})" '
+            f'aria-label="wiarygodność {o["poziom"]} z 5: {e(p["nazwa"])}"></span>')
+
+
+def wszystkie_zrodla(o):
+    """Generator wszystkich źródeł (słowników z url) w strukturze danych."""
+    if isinstance(o, dict):
+        if "url" in o and ("nazwa" in o or "tytul" in o):
+            yield {"nazwa": o.get("nazwa") or o.get("wydawca") or "", "url": o["url"]}
+        for k, v in o.items():
+            if k not in ("bylo_zrodla", "pozycja"):
+                yield from wszystkie_zrodla(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from wszystkie_zrodla(v)
 
 
 def data_(s):
@@ -173,6 +246,9 @@ def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
                 data_(it.get("data", ""))
             except ValueError:
                 b.dodaj(g, "brak daty zdarzenia RRRR-MM-DD")
+            if RANKING and w.get("data", "") >= DWA_ZRODLA_OD and it.get("zrodla") and not podstawa_ok(it["zrodla"]):
+                b.dodaj(g, "za słaba podstawa: potrzebne źródło urzędowe (poziom 1) albo dwa niezależne z poziomów 1–3, "
+                           "w tym co najmniej jedno z poziomu 1–2 (zob. zrodla.html)")
             if "status" in it:
                 b.dodaj(g, f"pole status ({it['status']}) — do zarysu wchodzą tylko informacje potwierdzone; "
                            "niepotwierdzone przenieś do „Czego tu nie ma” (próg: dokumentacja)")
@@ -257,6 +333,15 @@ def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
                 if not k.get(pole):
                     b.dodaj(g, f"brak pola {pole}")
             sprawdz_zrodla(k.get("zrodla"), g, b)
+    if RANKING:
+        braki = {}
+        for nazwa_pliku, dane in ([(w["_plik"], w) for w in wydania] + [("tagi.json", list(tagi.values())),
+                                  ("osoby.json", list(osoby.values())), ("rewizje.json", list(rewizje))]):
+            for z in wszystkie_zrodla(dane):
+                if not RANKING.ocen(z["nazwa"], z["url"]):
+                    braki.setdefault((z["nazwa"], re.sub(r"^https?://([^/]+).*$", r"\1", z["url"])), nazwa_pliku)
+        for (n, d), f in sorted(braki.items()):
+            b.dodaj(f, f"źródło spoza rankingu: „{n}” ({d}) — dodaj je do dane/zrodla.json z poziomem i uzasadnieniem")
     slugi = {w["_slug"] for w in wydania}
     for i, r in enumerate(rewizje):
         g = f"rewizje.json {i+1}"
@@ -337,7 +422,7 @@ def czysty(s, osoby, pojecia):
 def html_zrodla(zrodla, etykieta="Źródła"):
     if not zrodla:
         return ""
-    czesci = [f'<a href="{e(z["url"])}" rel="noopener noreferrer" target="_blank">{e(z["nazwa"])}, {data_krotka(z["data"])}</a>'
+    czesci = [f'{kropka(z)}<a href="{e(z["url"])}" rel="noopener noreferrer" target="_blank">{e(z["nazwa"])}, {data_krotka(z["data"])}</a>'
               for z in zrodla]
     return f'<p class="zrodla">{etykieta}: ' + "; ".join(czesci) + "</p>"
 
@@ -357,7 +442,7 @@ def html_odznaki(it):
 def strona(tytul, tresc, prefix="", opis="", aktywne=""):
     nav = [("index.html", "Wydania", "wydania"), ("watki/index.html", "Wątki", "watki"),
            ("osoby/index.html", "Kto jest kim", "osoby"), ("pojecia/index.html", "Pojęcia", "pojecia"),
-           ("korekty.html", "Korekty", "korekty"), ("jak-weryfikujemy.html", "Jak weryfikujemy", "jak"),
+           ("korekty.html", "Korekty", "korekty"), ("zrodla.html", "Źródła", "zrodla"), ("jak-weryfikujemy.html", "Jak weryfikujemy", "jak"),
            ("szukaj.html", "Szukaj", "szukaj")]
     akt = ' aria-current="page"'
     menu = "".join(f'<a href="{prefix}{h}"{akt if k == aktywne else ""}>{n}</a>' for h, n, k in nav)
@@ -385,6 +470,7 @@ def strona(tytul, tresc, prefix="", opis="", aktywne=""):
 <footer class="stopka">
   <div class="wrap">
     <p>Każda pozycja ma źródło z linkiem i przeszła <a href="{prefix}jak-weryfikujemy.html">procedurę weryfikacji</a>. Oceny analityczne są podpisane autorem i oddzielone od faktów. Błędy prostujemy jawnie w <a href="{prefix}korekty.html">rejestrze korekt</a>.</p>
+    <p class="wz-leg">Kolor przy źródle to jego wiarygodność według <a href="{prefix}zrodla.html">rankingu źródeł</a>: <span class="wz wz1"></span>urzędowe <span class="wz wz2"></span>wysoka <span class="wz wz3"></span>z zastrzeżeniami <span class="wz wz4"></span>niska <span class="wz wz5"></span>strona zainteresowana</p>
     <p><a href="{prefix}feed.xml">Kanał RSS</a> · Strona nie jest indeksowana przez wyszukiwarki.</p>
   </div>
 </footer>
@@ -886,6 +972,42 @@ class Budowa:
                  + ("".join(wiersze) if wiersze else '<p class="uwaga">Brak korekt.</p>'))
         self.zapisz("korekty.html", strona("Korekty", tresc, "", "", "korekty"))
 
+    def ranking_strona(self):
+        if not RANKING:
+            return
+        uzycia = {}
+        for w in self.wydania:
+            for z in wszystkie_zrodla(w):
+                o = RANKING.ocen(z["nazwa"], z["url"])
+                if o:
+                    uzycia[o["id"]] = uzycia.get(o["id"], 0) + 1
+        razem = sum(uzycia.values()) or 1
+        cz = ['<section class="winieta"><h1>Ranking źródeł</h1><p class="w-stan">Na jakich źródłach opiera się Prasówka i jak bardzo im ufamy. '
+              'Kolor przy każdym źródle w wydaniach odpowiada poziomowi z tej strony.</p></section>']
+        # rozkład cytowań
+        rozklad = {p: 0 for p in RANKING.poziomy}
+        for zid, n in uzycia.items():
+            rozklad[next(z for z in RANKING.zrodla if z["id"] == zid)["poziom"]] += n
+        pasek = "".join(f'<span class="rk-seg wzt{p}" style="flex:{n}" title="Poziom {p}: {n} cytowań"></span>' for p, n in rozklad.items() if n)
+        leg = "".join(f'<span><span class="wz wz{p}"></span>{p}. {e(RANKING.poziomy[p]["nazwa"])}: <strong>{n}</strong> ({round(100 * n / razem)}%)</span>'
+                      for p, n in rozklad.items())
+        cz.append(f'<section class="skrot"><h2>Na czym stoją wydania · {razem} cytowań źródeł</h2><div class="rk-pasek">{pasek}</div>'
+                  f'<p class="m-leg">{leg}</p></section>')
+        cz.append('<h2 class="pasek">Jak oceniamy</h2><section class="skrot">' + "".join(
+            f'<p><strong>{e(n)}:</strong> {e(o)}.</p>' for n, o in RANKING.dane["kryteria"]) +
+            '<p>Ranking to <strong>ocena redakcji Prasówki</strong>, nie obiektywna miara: mówi, ile potwierdzenia potrzebuje informacja z danego źródła. '
+            'Poziom dotyczy typowej informacji; źródło z poziomu 5 jest rozstrzygające co do tego, co twierdzi jego rząd, a urzędowe (1) – co do decyzji instytucji, nie co do ocen.</p>'
+            '<p><strong>Zasada publikacji (od 01.10.2026 sprawdzana automatycznie):</strong> pozycja zarysu wymaga źródła urzędowego (poziom 1) '
+            'albo dwóch niezależnych źródeł z poziomów 1–3, w tym co najmniej jednego z poziomu 1–2. Poziomy 4–5 nie liczą się do podstawy. '
+            'Przy przedruku depeszy kolor bierze się z agencji, którą wskazujemy w nazwie, np. „Reuters (za U.S. News)”.</p></section>')
+        for p, poz in sorted(RANKING.poziomy.items()):
+            lista = sorted([z for z in RANKING.zrodla if z["poziom"] == p], key=lambda z: (-uzycia.get(z["id"], 0), z["nazwa"].lower()))
+            cz.append(f'<h2 class="pasek rk-nag wzb{p}" id="poziom-{p}"><span class="wz wz{p}"></span>{p}. {e(poz["nazwa"])}</h2><p class="uwaga">{e(poz["opis"])}</p>'
+                      '<div class="mapa-wrap"><table class="kal rk"><tr><th>Źródło</th><th>Typ · kraj</th><th>Cytowań</th><th>Dlaczego ten poziom</th></tr>' + "".join(
+                          f'<tr id="{e(z["id"])}"><td><span class="wz wz{p}"></span><strong>{e(z["nazwa"])}</strong></td><td>{e(z["typ"])} · {e(z["kraj"])}</td>'
+                          f'<td class="rk-n">{uzycia.get(z["id"], 0) or "–"}</td><td>{e(z["uzasadnienie"])}</td></tr>' for z in lista) + "</table></div>")
+        self.zapisz("zrodla.html", strona("Ranking źródeł", "\n".join(cz), "", "Ranking wiarygodności źródeł", "zrodla"))
+
     def jak_weryfikujemy(self):
         tresc = """<section class="winieta"><h1>Jak weryfikujemy</h1>
 <p class="w-stan">Co musi się stać, żeby informacja trafiła do przeglądu, i jak czytać oznaczenia.</p></section>
@@ -998,6 +1120,7 @@ class Budowa:
         self.osoby_strony()
         self.pojecia_strony()
         self.korekty()
+        self.ranking_strona()
         self.jak_weryfikujemy()
         self.szukaj()
         self.rss()
@@ -1010,6 +1133,8 @@ def main():
     ap.add_argument("--wyjscie", type=Path, default=REPO)
     ap.add_argument("--sprawdz", action="store_true")
     a = ap.parse_args()
+    global RANKING
+    RANKING = wczytaj_ranking(a.dane)
     tagi, osoby, pojecia, wydania, rewizje = wczytaj(a.dane)
     bledy = waliduj(tagi, osoby, pojecia, wydania, rewizje)
     if bledy:

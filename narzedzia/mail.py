@@ -22,8 +22,9 @@ def main():
     ap.add_argument("--dane", type=Path, default=B.REPO / "dane")
     ap.add_argument("--wyjscie", type=Path, default=Path("build"))
     a = ap.parse_args()
+    B.RANKING = B.wczytaj_ranking(a.dane)
     tagi, osoby, pojecia, wydania, rewizje = B.wczytaj(a.dane)
-    bledy = B.waliduj(tagi, osoby, pojecia, wydania)
+    bledy = B.waliduj(tagi, osoby, pojecia, wydania, rewizje)
     if bledy:
         print("WALIDACJA NIE PRZESZŁA:\n  - " + "\n  - ".join(bledy), file=sys.stderr)
         sys.exit(1)
@@ -59,12 +60,28 @@ def main():
                     f'text-decoration:none;margin-right:8px;">#{e(tagi[t]["nazwa"])}</a>')
         return out
 
+    def kropka(z):
+        o = B.RANKING.ocen(z.get("nazwa"), z.get("url")) if B.RANKING else None
+        if not o:
+            return ""
+        p = B.RANKING.poziomy[o["poziom"]]
+        return (f'<span title="Wiarygodność {o["poziom"]}/5 – {e(p["nazwa"])}" style="display:inline-block;width:9px;height:9px;'
+                f'border-radius:5px;background:{p["kolor"]};margin:0 4px 0 1px;"></span>')
+
     def zrodla(lista):
         if not lista:
             return ""
         return (f'<div style="font-size:12px;font-style:italic;color:{SZARY};margin-top:3px;">Źródła: ' +
-                "; ".join(f'<a href="{e(z["url"])}" style="color:{SZARY};">{e(z["nazwa"])}, {B.data_krotka(z["data"])}</a>' for z in lista)
+                "; ".join(f'{kropka(z)}<a href="{e(z["url"])}" style="color:{SZARY};">{e(z["nazwa"])}, {B.data_krotka(z["data"])}</a>' for z in lista)
                 + "</div>")
+
+    def legenda_wz():
+        if not B.RANKING:
+            return ""
+        return ('<tr><td style="padding:6px 20px 0;font-size:12px;color:' + SZARY + ';">Kolor przy źródle: wiarygodność wg '
+                f'<a href="{B.BASE_URL}zrodla.html" style="color:{SZARY};">rankingu źródeł</a> – ' +
+                " ".join(f'<span style="display:inline-block;width:9px;height:9px;border-radius:5px;background:{p["kolor"]};margin:0 3px 0 6px;"></span>{e(p["nazwa"].lower())}'
+                         for _, p in sorted(B.RANKING.poziomy.items())) + "</td></tr>")
 
     def pasek(t):
         return (f'<tr><td style="padding:16px 20px 4px;"><div style="background:{GRANAT};color:#fff;font-weight:bold;'
@@ -111,6 +128,7 @@ def main():
                  "".join(f'<p style="margin:6px 0 0;"><b>Było:</b> {e(k["bylo"])}<br><b>Jest:</b> {e(k["jest"])}</p>{zrodla(k["zrodla"])}' for k in w["korekty"])
                  + "</div></td></tr>")
     r.append(pasek("I. Najważniejsze przesunięcia tygodnia" if w.get("typ") == "tygodniowe" else "I. Zarys wydarzeń"))
+    r.append(legenda_wz())
     for kod, nazwa in B.BLOKI:
         poz = sorted([it for it in w["zarys"] if it["blok"] == kod], key=lambda x: x["data"])
         if not poz:

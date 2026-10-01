@@ -232,3 +232,22 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .poz:target { background: var(--morze-t); }
 .rew-znak { color: var(--szary); font: 13px/1.45 var(--sans); margin: 4px 0; }
 .wycofane { border-left: 4px solid var(--czerwien); padding-left: 12px; }
+
+/* ranking wiarygodności źródeł: zielony (1) → czerwony (5) */
+:root { --wz1: #1E7B34; --wz2: #5E9E2F; --wz3: #A88300; --wz4: #C8641B; --wz5: #B3261E; }
+@media (prefers-color-scheme: dark) { :root { --wz1: #4CC27A; --wz2: #9BD45A; --wz3: #E3C04A; --wz4: #F0954E; --wz5: #F07A70; } }
+.wz { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin: 0 5px 0 1px; vertical-align: 0; flex: none; }
+.wz1 { background: var(--wz1); } .wz2 { background: var(--wz2); } .wz3 { background: var(--wz3); }
+.wz4 { background: var(--wz4); } .wz5 { background: var(--wz5); }
+.wzt1 { background: var(--wz1); } .wzt2 { background: var(--wz2); } .wzt3 { background: var(--wz3); } .wzt4 { background: var(--wz4); } .wzt5 { background: var(--wz5); }
+.zrodla a { text-decoration-color: var(--linia); }
+.wz-leg .wz { margin-left: 6px; }
+.rk-pasek { display: flex; height: 14px; gap: 2px; margin: 8px 0 6px; }
+.rk-seg { display: block; min-width: 4px; }
+.pasek.rk-nag { display: flex; align-items: center; gap: 4px; }
+.pasek.rk-nag .wz { width: 12px; height: 12px; box-shadow: 0 0 0 2px #fff; }
+.rk td { font-size: 15px; padding: 7px 8px 7px 0; }
+.rk th { text-align: left; font: 600 13px/1.4 var(--sans); color: var(--szary); padding: 4px 8px 4px 0; border-bottom: 1px solid var(--linia); }
+.rk td:first-child { white-space: nowrap; }
+.rk-n { font: 600 14px/1.5 var(--sans); font-variant-numeric: tabular-nums; text-align: center; }
+@media (max-width: 520px) { .rk td:first-child { white-space: normal; } .rk td { font-size: 14px; } }
