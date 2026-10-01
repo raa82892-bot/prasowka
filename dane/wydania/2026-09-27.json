@@ -1,0 +1,83 @@
+{
+  "nr": 8,
+  "data": "2026-09-27",
+  "godzina": "20:30",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Trump odrzucił 26.09 irański plan otwarcia **Cieśniny Ormuz**; Iran czeka na odpowiedź przez mediatorów, a prezydent Pezeszkian mówi, że nie ufa rozmowom z Waszyngtonem.",
+    "Prezydent Serbii **Vučić zrezygnował** 27.09, by startować na premiera w wyborach 25.10; obowiązki przejęła Ana Brnabić.",
+    "Premier Słowacji **Fico** zapowiedział gotowość do wyborów w styczniu, jeśli Danko i Taraba nie dadzą gwarancji większości.",
+    "Pięciu mężczyzn zatrzymano 27.09 przy bazie **RAF Fairford** (materiały wybuchowe, terroryzm); Szwajcarzy odrzucili w referendum ograniczenie sankcji."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {"osw": [], "pism": []},
+  "zarys": [
+    {
+      "id": "z1", "blok": "swiat", "data": "2026-09-26", "tagi": ["iran", "usa"],
+      "tekst": "Trump odrzucił 26.09 irański plan 7-dniowy (otwarcie Cieśniny Ormuz w zamian za zniesienie blokady morskiej, sankcji na ropę i odmrożenie środków), mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”, a propozycja jest „nie do przyjęcia”. Szef MSZ Iranu Abbas Araghczi odpowiedział, że Iran „nie ustąpi” i czeka na „ostateczne stanowisko” przekazane przez mediatorów; prezydent Masud Pezeszkian powiedział Al Jazeera, że Teheran nie ufa stronie amerykańskiej. Axios (27.09): Trump spodziewa się rozmów w tym tygodniu, a pośredniczy Katar.",
+      "zrodla": [
+        {"nazwa": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/9/26/trump-rejects-irans-seven-day-roadmap-to-reopen-strait-of-hormuz", "data": "2026-09-26"},
+        {"nazwa": "Axios", "url": "https://www.axios.com/2026/09/27/trump-iran-war-hormuz-blockade-negotiations", "data": "2026-09-27"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "swiat", "data": "2026-09-27", "tagi": ["balkany", "wybory"],
+      "tekst": "Aleksandar Vučić ogłosił 27.09 rezygnację z funkcji prezydenta Serbii, powołując się na zakaz trzeciej kadencji, i będzie kandydował na premiera w wyborach parlamentarnych 25.10. Obowiązki głowy państwa przejęła Ana Brnabić; wybory prezydenckie muszą odbyć się najpóźniej do końca roku. Przed odejściem Vučić ułaskawił 49 osób, w tym 23 sądzone w związku z protestami. Opozycja to ruch studencki, który powstał po zawaleniu dworca w Nowym Sadzie w 2024 r.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/28/serbias-president-aleksandar-vucic-resigns-to-run-for-prime-minister-in-snap-elections", "data": "2026-09-28"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "swiat", "data": "2026-09-27", "tagi": ["slowacja", "wybory"],
+      "tekst": "Premier Robert Fico powiedział 27.09 w TA3, że jest gotów na przedterminowe wybory w styczniu (ustawą konstytucyjną skracającą kadencję) i że do nich dojdzie, jeśli szef SNS Andrej Danko i minister środowiska Tomáš Taraba nie dadzą parlamentarnych gwarancji, a rząd upadnie. Preferują oni regularny termin wyborów we wrześniu 2027 r.",
+      "zrodla": [
+        {"nazwa": "TASR (agencja państwowa)", "url": "https://newsnow.tasr.sk/premier-ready-to-go-to-snap-election-in-january/", "data": "2026-09-27"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "swiat", "data": "2026-09-27", "tagi": ["sankcje", "ue"],
+      "tekst": "W referendum w Szwajcarii około 70% głosujących odrzuciło inicjatywę ograniczającą sankcje do tych zatwierdzonych przez Radę Bezpieczeństwa ONZ; przyjęcie jej uniemożliwiłoby Szwajcarii sankcje wobec Rosji. Minister spraw zagranicznych Ignazio Cassis: polityka neutralności się nie zmienia.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/27/how-neutral-should-switzerland-be-voters-deliver-decisive-verdict", "data": "2026-09-27"}
+      ]
+    },
+    {
+      "id": "z5", "blok": "swiat", "data": "2026-09-27", "tagi": ["wielka-brytania", "hybryda", "iran"],
+      "etap": "W TOKU",
+      "tekst": "Pięciu mężczyzn zatrzymano 27.09 (ok. 0:45) w okolicy wsi Whelford, ok. 3 km od bazy RAF Fairford, gdzie stacjonują amerykańskie bombowce B-1 i B-52, pod zarzutem przygotowania aktu terroru i przestępstw wybuchowych; policja ogłosiła „poważny incydent” i ewakuowała domy. Do 29.09 nie znaleziono ładunków wybuchowych, zabezpieczono benzynę; zatrzymani wyszli za kaucją. ABC News: władze nie potwierdziły związku z Iranem.",
+      "zrodla": [
+        {"nazwa": "ABC News", "url": "https://abcnews.com/International/uk-police-arrest-explosives-act-major-incident-us/story?id=136793301", "data": "2026-09-27"},
+        {"nazwa": "Brytyjska policja antyterrorystyczna", "url": "https://www.counterterrorism.police.uk/news/update-on-raf-fairford-investigation-1600-28-september-2026/", "data": "2026-09-29"}
+      ]
+    },
+    {
+      "id": "z6", "blok": "swiat", "data": "2026-09-27", "tagi": ["iran", "sankcje", "usa"],
+      "tekst": "Sekretarz skarbu USA Scott Bessent oświadczył, że Turcja i Oman wstrzymały loty irańskiego Mahan Air, ZEA zatrzymały loty irańskich linii, a ich bank centralny zablokował transakcje z Bankiem Melli; Turcja cofnęła licencję Bankowi Mellat. To dane strony amerykańskiej; mniejsze irańskie linie nadal latają, zwłaszcza do Chin.",
+      "zrodla": [
+        {"nazwa": "Times of Israel", "url": "https://www.timesofisrael.com/liveblog_entry/us-treasury-secretary-claims-successes-in-sanctions-campaign-to-isolate-iran/", "data": "2026-09-27"}
+      ]
+    },
+    {
+      "id": "z7", "blok": "polska", "data": "2026-09-25", "tagi": ["dyplomacja-rp", "usa"],
+      "tekst": "Szef Biura Polityki Międzynarodowej Prezydenta Marcin Przydacz (Polsat News, 25.09): Pałacowi nie podoba się zaproszenie Putina na szczyt G20 w Miami, ale prezydent Karol Nawrocki pojedzie, bo zaprosili go gospodarze; udział Putina jest niepewny. Przydacz mówił też o politycznej zgodzie Białego Domu na stałą bazę USA w Polsce (jego relacja, bez potwierdzenia w tym źródle).",
+      "zrodla": [
+        {"nazwa": "Polsat News", "url": "https://www.polsatnews.pl/gosc-wydarzen/2026-09-25/nawrocki-poda-reke-putinowi-na-szczycie-g20-kazdy-bedzie-mial-problem/", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z8", "blok": "instytucje", "data": "2026-09-23", "tagi": ["ue", "ukraina"],
+      "etap": "ZAPOWIEDŹ",
+      "tekst": "Komisja Europejska (von der Leyen i rzecznik Guillaume Mercier, 23.09) uzależniła uwolnienie ok. 20 mld euro wsparcia budżetowego dla Ukrainy od przyjęcia w 2026 r. reform (praworządność, antykorupcja, administracja); w tym roku dostępne jest łącznie ok. 37 mld euro.",
+      "zrodla": [
+        {"nazwa": "Eunews", "url": "https://www.eunews.it/en/2026/09/23/ukraine-eu-funds-are-tied-to-reforms-if-kyiv-implements-them-we-will-release-20-billion/", "data": "2026-09-23"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Eksplozje koło Keszmu (media irańskie), wypowiedź Perdue o pomocy Chin dla Iranu i ćwiczenia OUBZ w Czebarkule – nie otwarto czołowych źródeł.", "prog": "dokumentacja"},
+    {"tekst": "Publikacje OSW i PISM z 25–27.09 – nie sprawdzano ponownie, więc nie ma sekcji o stanie źródeł analitycznych.", "prog": "kompletność"}
+  ],
+  "nota": "Wydanie nr 8 z 27.09.2026 (stan na 20:30 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu i wysłanego maila. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach, agencjach i instytucjach; zakres jest węższy niż w oryginale (bez analiz i kalendarza). Pozycja o referendum w Szwajcarii podaje wynik (ok. 70% przeciw) – w oryginale był to sondaż."
+}
