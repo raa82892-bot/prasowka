@@ -4,7 +4,7 @@
   "godzina": "20:30",
   "typ": "dzienne",
   "w_skrocie": [
-    "Ujawniono rosyjską **notę do NATO w sprawie Kaliningradu**: w razie próby izolacji obwodu Moskwa grozi użyciem „całego arsenału, w tym broni jądrowej”; Kreml potwierdził jej istnienie, NATO ją odrzuciło.",
+    "Ujawniono rosyjską **notę do NATO w sprawie Królewca**: w razie próby izolacji obwodu Moskwa grozi użyciem „całego arsenału, w tym broni jądrowej”; Kreml potwierdził jej istnienie, NATO ją odrzuciło.",
     "W nocy 29/30.09 Rosja zaatakowała Ukrainę 188 dronami i pociskami (celem była energetyka Kijowa); w Polsce poderwano myśliwce, a od 1.10 obowiązują **nowe procedury obrony powietrznej** (identyfikacja pozytywna zamiast wizualnej).",
     "Wstępna **inflacja CPI za wrzesień wzrosła do 4,0% r/r** (GUS; paliwa +36,1% r/r).",
     "W Rumunii parlament odrzucił rząd Siegfrieda Mureșana (trzecia nieudana próba od maja), co otwiera drogę do rozwiązania parlamentu."
@@ -43,11 +43,11 @@
       "blok": "wojna",
       "data": "2026-09-30",
       "tagi": [
-        "kaliningrad",
+        "krolewiec",
         "nato",
         "rosja"
       ],
-      "tekst": "Rosja przekazała NATO pisemne ostrzeżenie: jeśli Sojusz spróbuje odizolować **obwód kaliningradzki**, Moskwa użyje „całego arsenału, w tym broni jądrowej”, i zastrzega możliwość uderzeń na „ośrodki decyzyjne” państw członkowskich. Dmitrij Pieskow, rzecznik Kremla, potwierdził: dyplomaci „przypominają gorącym głowom w Europie” o rosyjskich dokumentach doktrynalnych. Rzeczniczka NATO Allison Hart potwierdziła otrzymanie wiadomości i odpowiedź Sojuszu: „stanowczo potępiamy groźbę użycia siły, w tym nieodpowiedzialną retorykę jądrową”. Podobne ostrzeżenie wydała ambasada Rosji w Irlandii.",
+      "tekst": "Rosja przekazała NATO pisemne ostrzeżenie: jeśli Sojusz spróbuje odizolować **obwód królewiecki**, Moskwa użyje „całego arsenału, w tym broni jądrowej”, i zastrzega możliwość uderzeń na „ośrodki decyzyjne” państw członkowskich. Dmitrij Pieskow, rzecznik Kremla, potwierdził: dyplomaci „przypominają gorącym głowom w Europie” o rosyjskich dokumentach doktrynalnych. Rzeczniczka NATO Allison Hart potwierdziła otrzymanie wiadomości i odpowiedź Sojuszu: „stanowczo potępiamy groźbę użycia siły, w tym nieodpowiedzialną retorykę jądrową”. Podobne ostrzeżenie wydała ambasada Rosji w Irlandii.",
       "zrodla": [
         {
           "nazwa": "Reuters za Moscow Times",
@@ -213,11 +213,11 @@
       "autor": "PISM (Anna Maria Dyner), Biuletyn nr 65 (2697), 28.09",
       "tagi": [
         "rosja",
-        "kaliningrad",
+        "krolewiec",
         "hybryda"
       ],
-      "tekst": "Wynik wyborów do {{p:duma|Dumy}} pokazuje, że Moskwa wybiera eskalację – należy oczekiwać większej liczby uderzeń na ukraińską infrastrukturę i operacji hybrydowych wobec państw NATO; autorka zaleca zwiększenie pomocy dla Ukrainy, ochrony infrastruktury krytycznej i koordynacji wywiadowczej. Nota o Kaliningradzie z 30.09 wpisuje się w tę ocenę – to wniosek redakcji, nie PISM.",
-      "dla_polski": "Polska jako państwo graniczące z obwodem kaliningradzkim jest bezpośrednim adresatem rosyjskiej presji; Warszawa powinna zabiegać o wspólną, jawną odpowiedź NATO na notę i nie dopuścić, by groźba zniechęciła sojuszników do ćwiczeń i obecności na wschodniej flance.",
+      "tekst": "Wynik wyborów do {{p:duma|Dumy}} pokazuje, że Moskwa wybiera eskalację – należy oczekiwać większej liczby uderzeń na ukraińską infrastrukturę i operacji hybrydowych wobec państw NATO; autorka zaleca zwiększenie pomocy dla Ukrainy, ochrony infrastruktury krytycznej i koordynacji wywiadowczej. Nota o Królewcu z 30.09 wpisuje się w tę ocenę – to wniosek redakcji, nie PISM.",
+      "dla_polski": "Polska jako państwo graniczące z obwodem królewieckim jest bezpośrednim adresatem rosyjskiej presji; Warszawa powinna zabiegać o wspólną, jawną odpowiedź NATO na notę i nie dopuścić, by groźba zniechęciła sojuszników do ćwiczeń i obecności na wschodniej flance.",
       "zrodla": [
         {
           "nazwa": "PISM",

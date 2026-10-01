@@ -50,7 +50,7 @@ MIESIACE_MIAN = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "
                  "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"]
 # mapa wątków: hashtag-miejsce -> kontury z narzedzia/europa.json (pierwszy kod = miejsce etykiety)
 MAPA_TAGI = {
-    "ukraina": ["UA"], "rosja": ["RU"], "kaliningrad": ["KAL"], "bialorus": ["BY"], "niemcy": ["DE"],
+    "ukraina": ["UA"], "rosja": ["RU"], "krolewiec": ["KAL"], "bialorus": ["BY"], "niemcy": ["DE"],
     "czechy": ["CZ"], "slowacja": ["SK"], "wegry": ["HU"], "litwa": ["LT"], "lotwa": ["LV"],
     "estonia": ["EE"], "nordyckie": ["SE", "NO", "FI", "DK", "IS"], "francja": ["FR"],
     "wielka-brytania": ["GB"], "rumunia": ["RO"], "balkany": ["RS", "BA", "ME", "MK", "AL", "XK", "HR"],
@@ -566,7 +566,7 @@ class Budowa:
         warstwa, znaczniki = "", ""
         for t, kody in MAPA_TAGI.items():
             n, cel = na_mapie.get(t, 0), t
-            if t == "kaliningrad" and not n and na_mapie.get("rosja"):
+            if t == "krolewiec" and not n and na_mapie.get("rosja"):
                 n, cel = na_mapie["rosja"], "rosja"  # obwód bez własnych pozycji dziedziczy kolor Rosji
             sciezki = "".join(f'<path d="{kontury[k]}"/>' for k in kody if k in kontury)
             if not sciezki:
@@ -1059,7 +1059,7 @@ class Budowa:
             idx.append({"t": f"{p['nazwa']} – {p['pelna']}: {p['definicja']}", "d": "", "g": ["Pojęcia"], "u": f"pojecia/{p['id']}.html", "w": ""})
         self.zapisz("szukaj.json", json.dumps(idx, ensure_ascii=False))
         tresc = """<section class="winieta"><h1>Szukaj</h1><p class="w-stan">Przeszukuje wszystkie wydania, analizy, osoby i pojęcia.</p></section>
-<input id="q" class="szukaj" type="search" placeholder="np. Kaliningrad, Patriot, Fico…" autofocus>
+<input id="q" class="szukaj" type="search" placeholder="np. Królewiec, Patriot, Fico…" autofocus>
 <p id="ile" class="uwaga"></p><div id="wyniki"></div>
 <script>
 (function(){
