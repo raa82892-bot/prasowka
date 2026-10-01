@@ -36,7 +36,10 @@ BLOKI = [
     ("swiat", "Świat"),
     ("gospodarka", "Gospodarka"),
 ]
+# Do zarysu wchodzą wyłącznie informacje potwierdzone. Pole „status” zostało tylko w wydaniach
+# sprzed tej daty (archiwum); od niej walidacja je odrzuca — niepotwierdzone idzie do „Czego tu nie ma”.
 STATUSY = {None, "NIEPOTWIERDZONE", "SPRZECZNE ŹRÓDŁA"}
+TYLKO_POTWIERDZONE_OD = "2026-10-01"
 ETAPY = {None, "PROPOZYCJA", "ZAPOWIEDŹ", "PRZYJĘTE", "W TOKU"}
 PROGI = {"dokumentacja", "następstwo", "kompletność"}
 WERDYKTY = {"POTWIERDZONE", "SPROSTOWANE", "NADAL OTWARTE"}
@@ -168,7 +171,10 @@ def waliduj(tagi, osoby, pojecia, wydania) -> Bledy:
                 data_(it.get("data", ""))
             except ValueError:
                 b.dodaj(g, "brak daty zdarzenia RRRR-MM-DD")
-            if it.get("status") not in STATUSY:
+            if it.get("status") and w.get("data", "") >= TYLKO_POTWIERDZONE_OD:
+                b.dodaj(g, f"pozycja ze statusem {it['status']} — do zarysu wchodzą tylko informacje potwierdzone; "
+                           "przenieś ją do „Czego tu nie ma” (próg: dokumentacja)")
+            elif it.get("status") not in STATUSY:
                 b.dodaj(g, f"status musi być jednym z {sorted(s for s in STATUSY if s)}")
             if it.get("etap") not in ETAPY:
                 b.dodaj(g, f"etap musi być jednym z {sorted(s for s in ETAPY if s)}")
@@ -558,8 +564,11 @@ class Budowa:
             cz.append(f'<g><title>{e(tytul)}</title><path class="k-kal" d="M{xx},{y - 7} L{xx + 7},{y} L{xx},{y + 7} L{xx - 7},{y} Z"/></g>')
         svg = (f'<svg class="os-czasu" width="{round(szer)}" height="{wys}" viewBox="0 0 {round(szer)} {wys}" role="img" '
                f'aria-label="Oś czasu wątku: {len(wystapienia)} pozycji od {data_dluga(start.isoformat())}">{"".join(cz)}</svg>')
-        legenda = ('<p class="m-leg"><span><i class="k-ok"></i>potwierdzone</span><span><i class="k-niep"></i>niepotwierdzone lub sprzeczne</span>'
-                   '<span><i class="k-spr"></i>sprostowane później</span><span><i class="k-kal"></i>termin z kalendarza</span></p>')
+        leg = ['<span><i class="k-ok"></i>pozycja</span>']
+        if any(it.get("status") and f"{w['_slug']}#{it['id']}" not in self.korekty_poz for w, it in wystapienia):
+            leg.append('<span><i class="k-niep"></i>oznaczona w archiwum jako niepotwierdzona</span>')
+        leg += ['<span><i class="k-spr"></i>sprostowana później</span>', '<span><i class="k-kal"></i>termin z kalendarza</span>']
+        legenda = '<p class="m-leg">' + "".join(leg) + "</p>"
         return (f'<h2 class="pasek">Oś czasu</h2><div class="os-wrap" data-na-koniec>{svg}</div>{legenda}'
                 '<p class="uwaga">Każda kropka to pozycja z wydania w dniu zdarzenia; kliknij, żeby przejść do niej na liście poniżej.</p>'
                 "<script>document.querySelectorAll('[data-na-koniec]').forEach(function(el){el.scrollLeft=el.scrollWidth;});</script>")
@@ -870,8 +879,8 @@ class Budowa:
 </section>
 <h2 class="pasek">Oznaczenia</h2>
 <section class="skrot">
-<p><span class="odznaka niepotw">NIEPOTWIERDZONE</span> tylko jedno źródło; podajemy, bo sprawa jest istotna, ale traktuj ostrożnie.</p>
-<p><span class="odznaka sprzeczne">SPRZECZNE ŹRÓDŁA</span> źródła podają różne wersje; przytaczamy obie z atrybucją.</p>
+<p><strong>Tylko informacje potwierdzone.</strong> Do zarysu nie wchodzą informacje z jednego źródła ani takie, których nie da się udokumentować; trafiają do noty „Czego tu nie ma” z podaniem powodu. Wypowiedź strony zainteresowanej podajemy tylko jako udokumentowany fakt, że padła, z atrybucją w treści („według Kremla…”).</p>
+<p><span class="odznaka niepotw">NIEPOTWIERDZONE</span> <span class="odznaka sprzeczne">SPRZECZNE ŹRÓDŁA</span> oznaczenia używane do 30.09.2026; widoczne już tylko w archiwum.</p>
 <p><span class="odznaka etap">PROPOZYCJA</span> <span class="odznaka etap">ZAPOWIEDŹ</span> <span class="odznaka etap">PRZYJĘTE</span> etap decyzji.</p>
 <p><strong>Ocena: autor</strong> przy analizach oznacza interpretację (OSW, PISM, ISW jako think tank albo redakcja), nie ustalenie.</p>
 <p><span class="kor-znak">▲</span> pozycja sprostowana później; link prowadzi do sprostowania.</p>
