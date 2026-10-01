@@ -1,0 +1,72 @@
+{
+  "nr": 3,
+  "data": "2026-09-23",
+  "godzina": "20:15",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Zełenski po spotkaniu z Trumpem w ONZ (22.09): Ukraina jest gotowa na **rozejm energetyczny**, jeśli przystanie na niego Rosja; omawiano też licencje na produkcję **Patriotów**.",
+    "USA i Iran odbyły w Nowym Jorku trzygodzinne pośrednie rozmowy; Sikorski spotkał się w ONZ z szefem MSZ Białorusi – pierwszy raz od dekady.",
+    "Komisja Europejska proponuje odblokowanie **4,2 mld euro** dla Węgier; OSW zapowiada zwycięstwo Zjednoczonej Listy premiera Kulbergsa w wyborach na Łotwie 3.10."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [
+    {"data": "2026-10-03", "tekst": "Wybory parlamentarne na Łotwie.", "tagi": ["lotwa", "wybory"]},
+    {"data": "2026-10-13", "tekst": "Rada ds. Ogólnych UE może zagłosować nad odblokowaniem 4,2 mld euro dla Węgier (wg Euronews „prawdopodobnie”).", "tagi": ["wegry", "ue"]}
+  ],
+  "zrodla_analityczne": {
+    "osw": [
+      {"tytul": "Latvian parliamentary election: Prime Minister seeks re-election", "autor": "Bartosz Chmielewski", "data": "2026-09-23", "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-23/latvian-parliamentary-election-prime-minister-seeks-re-election"}
+    ],
+    "pism": []
+  },
+  "zarys": [
+    {
+      "id": "z1", "blok": "wojna", "data": "2026-09-22", "tagi": ["rozejm", "ukraina", "usa", "uzbrojenie"],
+      "tekst": "Zełenski po spotkaniu z Trumpem w ONZ 22.09: „jesteśmy gotowi na każdy format rozejmu energetycznego”, ale zadziała on tylko, jeśli Rosja przyjmie te same warunki, a jej stanowiska nie zna. Rozmawiano o licencjach na produkcję pocisków Patriot – Zełenski: „nie na dziś”, Raytheon jest gotów dostarczyć licencje. Trump: relacje są „bardzo silne”, „myślę, że zawrzemy umowę”, ukraińskie uderzenia w rafinerie to „poważny cios” dla Rosji; mówił też o nowych uprawnieniach taryfowych wobec Rosji.",
+      "zrodla": [
+        {"nazwa": "Kyiv Independent", "url": "https://kyivindependent.com/zelensky-meets-trump-at-un-amid-push-for-russia-ukraine-energy-truce/", "data": "2026-09-22"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "swiat", "data": "2026-09-22", "tagi": ["iran", "usa"],
+      "tekst": "Wysłannicy USA Steve Witkoff i Jared Kushner prowadzili 22.09 w ONZ trzygodzinne pośrednie rozmowy z szefem MSZ Iranu Abbasem Araghczim; Trump nazwał je „bardzo dobrymi” i „produktywnymi”, a równocześnie groził „unicestwieniem” Iranu. Po załamaniu czerwcowego 60-dniowego memorandum Iran przedstawił nowe warunki. Al Jazeera przytacza sceptycyzm ekspertów (negocjacje trwają ponad dwa lata, dwukrotnie kończyły się wojną); mediują Katar i Oman, a każde porozumienie musi zaakceptować Korpus Strażników Rewolucji.",
+      "zrodla": [
+        {"nazwa": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/9/23/flurry-of-diplomacy-trumps-fiery-threats-us-iran-war-deal-still-elusive", "data": "2026-09-23"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "polska", "data": "2026-09-23", "tagi": ["dyplomacja-rp", "bialorus"],
+      "tekst": "Szef MSZ Radosław Sikorski spotkał się 23.09 w ONZ z szefem MSZ Białorusi Maksimem Ryżenkowem – pierwsze takie rozmowy od dekady; tematy: granica, bezpieczeństwo regionalne, uwolnienia więźniów politycznych i stabilizacja stosunków. Sikorski: „gdy sąsiad chce odwilży, Polska zawsze pierwsza się zgadza”, zastrzegł jednak, że Polska „uznaje państwa, nie rządy”. Polska zapowiedziała otwarcie nowego budynku ambasady w Mińsku.",
+      "zrodla": [
+        {"nazwa": "Kyiv Independent", "url": "https://kyivindependent.com/polish-foreign-minister-meets-belarusian-counterpart-at-un-discusses-regional-security-2/", "data": "2026-09-23"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "instytucje", "data": "2026-09-23", "tagi": ["ue", "wegry"],
+      "etap": "PROPOZYCJA",
+      "tekst": "Komisja Europejska zaproponowała 23.09 odblokowanie 4,2 mld euro funduszy spójności dla Węgier, uznając, że rząd Pétera Magyara usunął naruszenia praworządności (von der Leyen: „ważne kroki”). Zamrożone pozostaje 12,2 mld euro (m.in. 2,2 mld – wolność akademicka, 500 mln – ograniczenia LGBTIQ+). Rada ds. Ogólnych ma głosować większością kwalifikowaną prawdopodobnie 13.10 – to jeszcze nie decyzja.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/23/von-der-leyen-says-hungary-strengthened-rule-of-law-unlocks-42bn-in-eu-funding", "data": "2026-09-23"}
+      ]
+    },
+    {
+      "id": "z5", "blok": "swiat", "data": "2026-09-23", "tagi": ["lotwa", "wybory"],
+      "tekst": "OSW (Bartosz Chmielewski, 23.09) przewiduje zwycięstwo Zjednoczonej Listy premiera Andrisa Kulbergsa w wyborach do 100-osobowego Saeimy 3.10; kampanię zdominowały sprawy socjoekonomiczne (airBaltic, Rail Baltica, finansowanie NGO), a najbardziej prawdopodobny rząd to Zjednoczona Lista, Sojusz Narodowy i Związek Zielonych i Rolników, o ile przekroczą próg 5%. Prawicowe partie chcą wykluczyć ugrupowania rosyjskojęzyczne z koalicji; NATO wsparło wybory niemieckimi myśliwcami. To ocena OSW, nie wynik.",
+      "zrodla": [
+        {"nazwa": "OSW (B. Chmielewski), Analiza", "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-23/latvian-parliamentary-election-prime-minister-seeks-re-election", "data": "2026-09-23"}
+      ]
+    },
+    {
+      "id": "z6", "blok": "swiat", "data": "2026-09-18", "tagi": ["sankcje", "usa", "rosja", "chiny"],
+      "tekst": "Trump podpisał 18.09 ustawę Lindseya Grahama o sankcjach wobec Rosji i Iranu: upoważnia prezydenta do ceł do 100% na pięciu największych nabywców rosyjskiej ropy i gazu (głównie Chiny i Indie), przewiduje sankcje wobec Putina, urzędników, oligarchów i instytucji finansowych oraz przedłuża sankcje energetyczne i zbrojeniowe wobec Iranu. Senat uchwalił ją w sierpniu, Izba Reprezentantów we wrześniu.",
+      "zrodla": [
+        {"nazwa": "CBS News", "url": "https://www.cbsnews.com/news/trump-signs-russia-sanctions-bill-lindsey-graham/", "data": "2026-09-18"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Wystąpienie Nawrockiego w ONZ (23.09), rozmowa Rubio–Ławrow, spór o ambasadorów, ISW, Rutte w USA, Fico i ceny paliw, Niemcy, złoty i kurs ropy – nie otwarto czołowych źródeł z treścią.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie nr 3 z 23.09.2026 (stan na 20:15 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach, agencjach i instytucjach; zakres jest znacznie węższy niż w oryginale (6 z ok. 14 wątków, bez analiz Dla Polski i danych rynkowych). Ustawa Grahama podpisana 18.09 – opisana tu dla kontekstu z późniejszego wydania."
+}
