@@ -32,8 +32,18 @@
         "nato",
         "nordyckie"
       ],
-      "tekst": "Trump, premier Danii Mette Frederiksen i premier Grenlandii Jens-Frederik Nielsen podpisali 22.09 umowę bezpieczeństwa: USA mogą rozbudować bazę Pituffik i budować nowe bazy w Narsarsuaq i Mestersvig, a ich samoloty mogą przelatywać i lądować na całej wyspie; państwa spoza NATO nie mogą tworzyć tam instalacji wojskowych bez zgody wszystkich trzech stron. Umowa jest bezterminowa i wiąże także niepodległą Grenlandię. Rutte i Costa ją poparli; ocenę umowy przez OSW opisano w wydaniu nr 5 (pkt z1).",
+      "tekst": "Trump, premier Danii Mette Frederiksen i premier Grenlandii Jens-Frederik Nielsen podpisali 22.09 w siedzibie ONZ umowę bezpieczeństwa: USA mogą rozbudować bazę Pituffik i budować nowe bazy w Narsarsuaq i Mestersvig; państwa spoza NATO nie mogą mieć tam baz ani wrażliwych inwestycji bez zgody (według komunikatu Białego Domu: bez zgody USA). Umowa jest bezterminowa i uzupełnia traktat obronny z 1951 r.; według PISM potwierdza duńskie zwierzchnictwo nad wyspą. Ocenę umowy przez OSW opisano w wydaniu nr 5 (pkt z1).",
       "zrodla": [
+        {
+          "nazwa": "Biały Dom (komunikat)",
+          "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-inks-historic-arctic-security-agreement/",
+          "data": "2026-09-22"
+        },
+        {
+          "nazwa": "PISM (A. Dąbrowski, T. Zduńczyk), Komentarz nr 50/2026",
+          "url": "https://www.pism.pl/publikacje/nowe-porozumienie-obronne-miedzy-dania-grenlandia-i-usa",
+          "data": "2026-09-23"
+        },
         {
           "nazwa": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/9/22/us-signs-tremendous-arctic-security-deal-with-denmark-greenland",

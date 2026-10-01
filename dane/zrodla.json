@@ -1309,6 +1309,21 @@
         "CGTN"
       ],
       "uzasadnienie": "Media partyjno-państwowe ChRL; wiarygodne wyłącznie co do stanowiska Pekinu."
+    },
+    {
+      "id": "bialy-dom",
+      "nazwa": "Biały Dom (komunikaty)",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "USA",
+      "domeny": [
+        "whitehouse.gov"
+      ],
+      "wzorce": [
+        "Biały Dom",
+        "White House"
+      ],
+      "uzasadnienie": "Oficjalny komunikat strony umowy o jej treści i terminie podpisania; co do ocen i skutków – to wersja strony (por. Kreml)."
     }
   ]
 }
