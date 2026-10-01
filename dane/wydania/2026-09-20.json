@@ -1,0 +1,56 @@
+{
+  "nr": 0,
+  "data": "2026-09-20",
+  "godzina": "22:15",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "OSW (Menkiszak): Rosja przygotowuje dalsze wyniszczanie Ukrainy, zastraszanie Europy wojną hybrydową i „przekupywanie” administracji USA.",
+    "Dowództwo irańskich sił zbrojnych grozi „ciągłymi, skutecznymi i bolesnymi” atakami na wszystkie bazy USA w regionie, jeśli USA wznowią uderzenia; Trump rozważa opcje wojskowe.",
+    "USA zatwierdziły potencjalną sprzedaż Ukrainie sprzętu obrony powietrznej za 2,68 mld USD; Reuters: wysłannik Kremla Dmitrijew szykuje rozmowy z AfD o wznowieniu dostaw gazu."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {
+    "osw": [
+      {"tytul": "Rosyjski plan wojny: podporządkować Ukrainę, zastraszyć Europę, przekupić USA", "autor": "Marek Menkiszak", "data": "2026-09-18", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe"}
+    ],
+    "pism": []
+  },
+  "zarys": [
+    {
+      "id": "z1", "blok": "wojna", "data": "2026-09-18", "tagi": ["rosja", "ukraina", "hybryda", "usa"],
+      "tekst": "OSW (Marek Menkiszak, 18.09): Rosja, nie mogąc osiągnąć celów militarnych i mierząc się z problemami wewnętrznymi (według OSW ukraińskie ataki o połowę zmniejszyły jej zdolności rafineryjne), realizuje trzy zadania – dalsze wyniszczanie Ukrainy do jej faktycznej kapitulacji, zastraszanie Europy coraz intensywniejszą wojną hybrydową (dezinformacja, sabotaż, cyberataki, drony nad infrastrukturą krytyczną) oraz „przekupywanie” administracji Trumpa ofertami biznesowymi w zamian za wycofanie pomocy dla Kijowa i zniesienie sankcji. OSW zaleca stanowczą komunikację strategiczną, asymetryczne środki polityczne i gospodarcze oraz większą obecność NATO przy granicach Rosji. To ocena OSW.",
+      "zrodla": [
+        {"nazwa": "OSW (M. Menkiszak), Analiza", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe", "data": "2026-09-18"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "swiat", "data": "2026-09-21", "tagi": ["iran", "usa"],
+      "tekst": "Korpus Strażników Rewolucji zapowiada gotowość do „długotrwałej wojny” z dotąd nieużywaną bronią strategiczną, a dowództwo Chatam al-Anbija grozi, że jeśli USA wznowią uderzenia, wszystkie bazy USA w regionie zostaną poddane „ciągłym, skutecznym i bolesnym” atakom. Trump mówił Fox News, że rozważa opcje wojskowe, a Departament Stanu wezwał Amerykanów w Iranie do natychmiastowego wyjazdu. Euronews (relacja z 21.09) łączy to z atakami Huti na Rijad i Janbu; Trump rozważa uderzenia na dużą skalę, zaostrzenie blokady lub dyplomację w ONZ.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/21/us-and-iran-trade-threats-as-fears-of-return-to-all-out-war-mount", "data": "2026-09-21"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "wojna", "data": "2026-09-19", "tagi": ["ukraina", "usa", "uzbrojenie"],
+      "tekst": "Departament Stanu USA zatwierdził 19.09 potencjalną sprzedaż Ukrainie sprzętu obrony powietrznej (m.in. rakiety i radary) za 2,68 mld USD, finansowaną z europejskich środków i amerykańskiego programu FMF; zgoda nie zmienia „podstawowego układu sił w regionie”. UPI wiąże to z atakiem 174 dronów, który zabił osiem osób; to dopiero potencjalna sprzedaż, a nie dostawa.",
+      "etap": "ZAPOWIEDŹ",
+      "zrodla": [
+        {"nazwa": "UPI", "url": "https://www.upi.com/Top_News/US/2026/09/19/state-department-equipment-sale-ukraine/4001789851439/", "data": "2026-09-19"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "swiat", "data": "2026-09-18", "tagi": ["niemcy", "rosja", "energia"],
+      "tekst": "Reuters (18.09): szef Rosyjskiego Funduszu Inwestycji Bezpośrednich Kirył Dmitrijew i współprzewodniczący AfD Alice Weidel i Tino Chrupalla przygotowują spotkanie o wznowieniu dostaw rosyjskiego gazu, w tym uruchomieniu Nord Stream; mogłoby się odbyć najwcześniej w marcu 2027 r., pod warunkiem ustalenia ram pokoju w Ukrainie. Posłowie Zielonych i CDU (Michael Kellner, Roderich Kiesewetter) krytykują plan jako „zdradę” i „katastrofę”; AfD nie rządzi na szczeblu federalnym, więc spotkanie ma charakter w dużej mierze symboliczny.",
+      "status": "NIEPOTWIERDZONE",
+      "zrodla": [
+        {"nazwa": "Reuters (za Meduzą)", "url": "https://meduza.io/en/news/2026/09/18/reuters-germany-s-afd-party-and-kremlin-envoy-prepare-for-talks-on-restarting-russian-gas-supplies", "data": "2026-09-18"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Wybory do Dumy (por. wyd. z 21.09 i nr 6), wyniki wyborów w Niemczech (por. wyd. z 21.09), sankcje UE i Usmanow (por. nr 2), MSZ o „pseudowyborach”, Nawrocki w USA, SAFE, drony nad NATO, ropa i paliwa – nie otwarto czołowych źródeł z treścią.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie z 20.09.2026 (stan na 22:15 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu; powstało przed wprowadzeniem numeracji, dlatego ma numer 0. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach i instytucjach; zakres jest bardzo wąski w porównaniu z oryginałem (4 z ok. 15 wątków). Pozycja o Dmitrijewie i AfD to doniesienie Reuters, którego nie potwierdziły dalsze źródła."
+}
