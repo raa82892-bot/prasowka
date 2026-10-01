@@ -1,0 +1,64 @@
+{
+  "nr": 6,
+  "data": "2026-09-25",
+  "godzina": "20:30",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Szczyt **Trump–Xi** zakończył się przedłużeniem rozejmu handlowego do 10.01.2027 i niewielkimi postępami poza tym.",
+    "Macron ostrzegł, że po wyborach do Dumy Rosja **szykuje mobilizację** ok. 300 tys. ludzi; Jedna Rosja ma w Dumie rekordowe 355 mandatów.",
+    "Rosyjski atak na Kijów 25.09 zabił co najmniej siedem osób; premier Słowacji Fico mówi, że rząd może stracić większość."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {"osw": [], "pism": []},
+  "zarys": [
+    {
+      "id": "z1", "blok": "swiat", "data": "2026-09-25", "tagi": ["chiny", "usa", "gospodarka"],
+      "tekst": "Wizyta Xi Jinpinga w USA zakończyła się 25.09 przedłużeniem rozejmu handlowego USA–Chiny do 10.01.2027 (wcześniej wygasał w listopadzie); przedstawiciel handlowy USA Jamieson Greer zapowiedział ponowną ocenę, czy kontynuować „okres względnego pokoju”. Ogłoszono też listopadowy szczyt w Shenzhen o bezpieczeństwie sztucznej inteligencji i mechanizm powiadamiania o incydentach AI. Yahoo Finance ocenia, że poza krótką zwłoką wizyta przyniosła niewiele; w tym źródle nie ma ustaleń o Tajwanie ani Iranie.",
+      "zrodla": [
+        {"nazwa": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/article/us-china-summit-ends-with-little-progress-on-trade-and-ai--other-than-2-new-deadlines-174257772.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "wojna", "data": "2026-09-24", "tagi": ["rosja", "ukraina", "francja"],
+      "tekst": "Prezydent Emmanuel Macron powiedział 24.09, że widać „kilka sygnałów”, iż po wyborach Rosja zmobilizuje ok. 300 tys. ludzi; pytanie, czy ogłosi to publicznie, czy zrobi po cichu. Powołał się na raporty służb europejskich i amerykańskich oraz dane ukraińskie; Kancelaria Prezydenta Ukrainy ostrzegała w sierpniu przed 600 tys. mobilizowanych w latach 2026–2027. Reakcji Kremla w tym źródle nie ma.",
+      "zrodla": [
+        {"nazwa": "Kyiv Independent", "url": "https://kyivindependent.com/macron-cites-several-signs-russia-is-preparing-to-mobilize-300-000-people/", "data": "2026-09-24"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "swiat", "data": "2026-09-21", "tagi": ["rosja", "wybory"],
+      "tekst": "W wyborach do Dumy (18–20.09) Jedna Rosja zdobyła rekordowe 355 z 450 mandatów, czyli większość konstytucyjną (frekwencja ponad 59%); Komuniści mają 40, LDPR 25, Nowi Ludzie 20. Euronews zaznacza, że pierwsze wybory po inwazji z 2022 r. odbyły się bez partii krytycznych wobec Putina, a krytyka wojny jest zakazana.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/21/russians-vote-in-final-day-of-parliamentary-elections", "data": "2026-09-21"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "wojna", "data": "2026-09-25", "tagi": ["ukraina", "rosja"],
+      "tekst": "Rosyjski atak dronami na blok mieszkalny w Kijowie 25.09 zabił co najmniej siedem osób, w tym 14-latka, a rannych jest kilkudziesięciu; liczby rosły w ciągu dnia i w pierwszych relacjach były niższe.",
+      "zrodla": [
+        {"nazwa": "RFE/RL", "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z5", "blok": "instytucje", "data": "2026-09-24", "tagi": ["onz", "inne"],
+      "tekst": "Kilkadziesiąt delegacji opuściło salę Zgromadzenia Ogólnego ONZ 24.09 na początku przemówienia premiera Izraela Benjamina Netanjahu, w tle krytyka wojny w Gazie, którą Al Jazeera nazywa ludobójczą (to sformułowanie portalu, nie ustalenie sądowe).",
+      "zrodla": [
+        {"nazwa": "Al Jazeera", "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/delegates-walk-out-of-netanyahus-un-speech", "data": "2026-09-24"}
+      ]
+    },
+    {
+      "id": "z6", "blok": "swiat", "data": "2026-09-25", "tagi": ["slowacja"],
+      "tekst": "Premier Robert Fico powiedział 25.09, że rząd może stracić większość z powodu sporu w koalicji (według tytułu depeszy Reuters/U.S. News); treść artykułu nie była dostępna, więc szczegóły sporu SNS–Taraba opisano w wydaniach nr 8 i 9.",
+      "status": "NIEPOTWIERDZONE",
+      "zrodla": [
+        {"nazwa": "Reuters (za U.S. News; tytuł)", "url": "https://www.usnews.com/news/world/articles/2026-09-25/slovak-pm-fico-says-government-may-lose-majority-over-spat-in-coalition-partner", "data": "2026-09-25"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Wypowiedź Sikorskiego o „czymś dużym” szykowanym przez Rosję, rozejm UE–Chiny i szczegóły szczytu Trump–Xi (Tajwan), instrukcja MSWiA, cyberataki na dane medyczne, kurs złotego i decyzje banków centralnych – nie otwarto czołowych źródeł z treścią artykułu.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie nr 6 z 25.09.2026 (stan na 20:30 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach i agencjach; zakres jest znacznie węższy niż w oryginale (bez analiz, kalendarza i danych rynkowych). Tytuł „Rosja szykuje mobilizację” to ocena Macrona, nie fakt."
+}
