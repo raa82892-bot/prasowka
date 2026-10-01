@@ -179,3 +179,54 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .tracker th { text-align: left; font: 600 13px/1.4 var(--sans); color: var(--szary); padding: 4px 6px 4px 0; border-bottom: 1px solid var(--linia); }
 .tracker td { padding: 6px 8px 6px 0; font-size: 15px; }
 .kier { font: 700 18px/1 var(--sans); color: var(--atrament); text-align: center; }
+
+/* mapa Europy (wydanie, strona główna) */
+:root {
+  --m-morze: #E3ECF2; --m-lad: #F7F8F9; --m-granica: #AEB9C3;
+  --m1: #A9C6DD; --m2: #6E9CC2; --m3: #1D5F86; --m-pl: #F3E3C2; --m-pl-linia: #9A5B12;
+  --k-ok: #17243B; --k-niep: #9A5B12; --k-spr: #A8261B; --k-kal: #C9A227;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --m-morze: #0F1A26; --m-lad: #1C2633; --m-granica: #3A4858;
+    --m1: #2A4A66; --m2: #3F78A6; --m3: #7DB8DC; --m-pl: #3A2C18; --m-pl-linia: #E0AA62;
+    --k-ok: #DCE6F0; --k-niep: #E0AA62; --k-spr: #F08A80; --k-kal: #C9A227;
+  }
+}
+.mapa-eu { margin: 10px 0 4px; }
+.europa { display: block; width: 100%; height: auto; background: var(--m-morze); border: 1px solid var(--linia); }
+.europa .morze { fill: var(--m-morze); }
+.europa path { stroke: var(--m-granica); stroke-width: 0.6; stroke-linejoin: round; }
+.europa .lad path, .europa .m0 path { fill: var(--m-lad); }
+.europa .m1 path { fill: var(--m1); }
+.europa .m2 path { fill: var(--m2); }
+.europa .m3 path { fill: var(--m3); }
+.europa .pl path { fill: var(--m-pl); stroke: var(--m-pl-linia); stroke-width: 1.4; }
+.europa a:hover path, .europa a:focus path { stroke: var(--atrament); stroke-width: 1.6; }
+.europa .lic circle { fill: var(--karta); stroke: var(--atrament); stroke-width: 1.2; }
+.europa .lic-pl circle { stroke: var(--m-pl-linia); }
+.europa .lic text { font: 700 14px/1 var(--sans); fill: var(--atrament); text-anchor: middle; pointer-events: none; }
+.europa .lic { pointer-events: none; }
+.m-leg i.m1 { background: var(--m1); } .m-leg i.m2 { background: var(--m2); } .m-leg i.m3 { background: var(--m3); }
+.m-leg i.pl { background: var(--m-pl); border-color: var(--m-pl-linia); }
+
+/* oś czasu wątku */
+.os-wrap { overflow-x: auto; margin: 8px 0 2px; background: var(--karta); border: 1px solid var(--linia); -webkit-overflow-scrolling: touch; }
+.os-czasu { display: block; }
+.os-linia { stroke: var(--atrament); stroke-width: 1.5; }
+.os-tik { stroke: var(--szary); stroke-width: 1; }
+.os-data { font: 11px/1 var(--sans); fill: var(--szary); text-anchor: middle; font-variant-numeric: tabular-nums; }
+.os-dzis { stroke: var(--morze); stroke-width: 1.2; stroke-dasharray: 4 3; }
+.os-dzis-t { font: 600 10px/1 var(--sans); fill: var(--morze); text-anchor: end; }
+.os-wiecej { font: 600 11px/1 var(--sans); fill: var(--szary); text-anchor: middle; }
+.os-czasu circle { stroke-width: 2; }
+.os-czasu .k-ok { fill: var(--k-ok); stroke: var(--k-ok); }
+.os-czasu .k-niep { fill: var(--karta); stroke: var(--k-niep); }
+.os-czasu .k-spr { fill: var(--k-spr); stroke: var(--k-spr); }
+.os-czasu .k-kal { fill: var(--k-kal); }
+.os-czasu a:hover circle, .os-czasu a:focus circle { stroke: var(--morze); stroke-width: 3.5; }
+.m-leg i.k-ok { background: var(--k-ok); border-radius: 50%; border-color: var(--k-ok); }
+.m-leg i.k-niep { background: transparent; border: 2px solid var(--k-niep); border-radius: 50%; }
+.m-leg i.k-spr { background: var(--k-spr); border-radius: 50%; border-color: var(--k-spr); }
+.m-leg i.k-kal { background: var(--k-kal); transform: rotate(45deg) scale(0.8); border-color: var(--k-kal); }
+.poz:target { background: var(--morze-t); }

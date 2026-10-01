@@ -69,3 +69,12 @@ Przy każdym wydaniu aktualizuj też w `dane/tagi.json` pola `stan`, `stan_data`
 ```
 
 Werdykt SPROSTOWANE z polem `dotyczy` oznacza oryginalną pozycję znakiem ▲ i trafia do rejestru korekt.
+
+## Grafiki
+
+`build.py` rysuje dwie grafiki SVG z tych samych danych (bez JavaScriptu poza przewinięciem osi do końca):
+
+- **Mapa Europy** — na stronie głównej (pozycje z 7 dni) i w każdym wydaniu. Kraj z hashtagiem-miejscem jest zabarwiony liczbą pozycji (1 / 2–3 / 4+) i prowadzi do strony wątku; Polska liczy pozycje z bloku „Polska”. Przypisanie hashtagów do krajów: `MAPA_TAGI` w `build.py`; miejsca poza kadrem (USA, Iran, Chiny) są wymienione pod mapą.
+- **Oś czasu wątku** — na każdej stronie `watki/<tag>.html`: kropka = pozycja w dniu zdarzenia (pełna – potwierdzona, pusta – niepotwierdzona lub sprzeczna, czerwona – sprostowana), romb = termin z kalendarza; kliknięcie przenosi do pozycji na liście.
+
+Kontury (`narzedzia/europa.json`, Natural Earth 1:50m, Krym w granicach Ukrainy) generuje jednorazowo `narzedzia/mapa_dane.py`; nowy hashtag-miejsce w Europie wymaga dopisania do `MAPA_TAGI` (i ewentualnie etykiety w `mapa_dane.py`).

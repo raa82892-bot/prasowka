@@ -17,6 +17,7 @@ import argparse
 import datetime as dt
 import html
 import json
+import math
 import re
 import shutil
 import sys
@@ -46,6 +47,14 @@ MIESIACE = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca
             "sierpnia", "września", "października", "listopada", "grudnia"]
 MIESIACE_MIAN = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec",
                  "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"]
+# mapa wątków: hashtag-miejsce -> kontury z narzedzia/europa.json (pierwszy kod = miejsce etykiety)
+MAPA_TAGI = {
+    "ukraina": ["UA"], "rosja": ["RU"], "kaliningrad": ["KAL"], "bialorus": ["BY"], "niemcy": ["DE"],
+    "czechy": ["CZ"], "slowacja": ["SK"], "wegry": ["HU"], "litwa": ["LT"], "lotwa": ["LV"],
+    "estonia": ["EE"], "nordyckie": ["SE", "NO", "FI", "DK", "IS"], "francja": ["FR"],
+    "wielka-brytania": ["GB"], "rumunia": ["RO"], "balkany": ["RS", "BA", "ME", "MK", "AL", "XK", "HR"],
+}
+EUROPA = json.loads((Path(__file__).resolve().parent / "europa.json").read_text("utf-8"))
 GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "korekty.html",
               "jak-weryfikujemy.html", "szukaj.html", "szukaj.json", "feed.xml",
               "robots.txt", ".nojekyll", "assets", "404.html"]
@@ -430,9 +439,134 @@ class Budowa:
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(tresc, "utf-8")
 
+    # ---- grafiki
+
+    @staticmethod
+    def stopien(n):
+        return 0 if n <= 0 else 1 if n == 1 else 2 if n <= 3 else 3
+
+    def mapa_europy(self, pozycje, prefix, naglowek, opis):
+        """Mapa Europy: kraje z hashtagów-miejsc zabarwione liczbą pozycji, klikalne do stron wątków."""
+        licz = {}
+        for it in pozycje:
+            for t in it["tagi"]:
+                licz[t] = licz.get(t, 0) + 1
+        polska = sum(1 for it in pozycje if it["blok"] == "polska")
+        na_mapie = {t: n for t, n in licz.items() if t in MAPA_TAGI}
+        poza = {t: n for t, n in licz.items() if t not in MAPA_TAGI and self.tagi[t]["grupa"] == "miejsce"}
+        if not na_mapie and not poza:
+            return ""
+        kontury, ety = EUROPA["kraje"], EUROPA["etykiety"]
+        zajete = {k for t in MAPA_TAGI for k in MAPA_TAGI[t]} | {"PL"}
+        tlo = "".join(f'<path d="{d}"/>' for k, d in kontury.items() if k not in zajete)
+        warstwa, znaczniki = "", ""
+        for t, kody in MAPA_TAGI.items():
+            n, cel = na_mapie.get(t, 0), t
+            if t == "kaliningrad" and not n and na_mapie.get("rosja"):
+                n, cel = na_mapie["rosja"], "rosja"  # obwód bez własnych pozycji dziedziczy kolor Rosji
+            sciezki = "".join(f'<path d="{kontury[k]}"/>' for k in kody if k in kontury)
+            if not sciezki:
+                continue
+            nazwa = self.tagi[cel]["nazwa"]
+            if n:
+                opis_ = f"#{nazwa}: {n} poz."
+                warstwa += (f'<a href="{prefix}watki/{cel}.html" aria-label="{e(opis_)}"><title>{e(opis_)}</title>'
+                            f'<g class="m{self.stopien(n)}">{sciezki}</g></a>')
+                if cel == t and kody[0] in ety:
+                    x, y = ety[kody[0]]
+                    znaczniki += (f'<g class="lic" aria-hidden="true"><circle cx="{x}" cy="{y}" r="12"/>'
+                                  f'<text x="{x}" y="{y + 5}">{n}</text></g>')
+            else:
+                warstwa += f'<g class="m0">{sciezki}</g>'
+        if "PL" in kontury:
+            px_, py_ = ety["PL"]
+            warstwa += f'<g class="pl"><title>Polska: {polska} poz. w bloku „Polska”</title><path d="{kontury["PL"]}"/></g>'
+            if polska:
+                znaczniki += (f'<g class="lic lic-pl" aria-hidden="true"><circle cx="{px_}" cy="{py_}" r="12"/>'
+                              f'<text x="{px_}" y="{py_ + 5}">{polska}</text></g>')
+        svg = (f'<svg class="europa" viewBox="0 0 {EUROPA["szer"]} {EUROPA["wys"]}" role="img" aria-label="{e(naglowek)}">'
+               f'<rect class="morze" width="100%" height="100%"/><g class="lad">{tlo}</g>{warstwa}{znaczniki}</svg>')
+        ranking = sorted(list(na_mapie.items()) + list(poza.items()), key=lambda x: (-x[1], self.tagi[x[0]]["nazwa"]))
+        lista = "".join(f'<a class="tag tag-miejsce" href="{prefix}watki/{t}.html">#{e(self.tagi[t]["nazwa"])} <span>{n}</span></a>'
+                        for t, n in ranking)
+        poza_txt = ""
+        if poza:
+            poza_txt = ('<p class="uwaga">Poza kadrem: ' + ", ".join(f'#{e(self.tagi[t]["nazwa"])} ({n})' for t, n in
+                        sorted(poza.items(), key=lambda x: -x[1])) + ".</p>")
+        legenda = "".join(f'<span><i class="m{i}"></i>{n}</span>' for i, n in
+                          ((1, "1 poz."), (2, "2–3"), (3, "4 i więcej")))
+        return (f'<h2 class="pasek">{e(naglowek)}</h2><figure class="mapa-eu">{svg}'
+                f'<figcaption class="m-leg">{legenda}<span><i class="pl"></i>Polska (blok „Polska”)</span></figcaption></figure>'
+                f'<p class="uwaga">{e(opis)} Kliknij kraj, żeby zobaczyć historię wątku.</p>'
+                f'<div class="chmura">{lista}</div>{poza_txt}')
+
+    def os_czasu(self, wystapienia, przyszle, dzis, prefix):
+        """Oś czasu wątku: kropka = pozycja z wydania (stos w dniu zdarzenia), romb = termin z kalendarza."""
+        if not wystapienia:
+            return ""
+        daty = [data_(it["data"]) for _, it in wystapienia]
+        start = min(daty)
+        koniec = max([dzis] + daty + [data_(k["data"]) for k in przyszle])
+        start = min(start, koniec - dt.timedelta(days=6))
+        dni = (koniec - start).days + 1
+        krok, lewy, prawy = 24, 18, 24
+        szer = max(560, lewy + prawy + (dni - 1) * krok)
+        krok = (szer - lewy - prawy) / max(dni - 1, 1)
+        stosy = {}
+        for w, it in wystapienia:
+            stosy.setdefault(it["data"], []).append((w, it))
+        wys_stosu = min(max(len(v) for v in stosy.values()), 6)
+        r, odstep = 7, 17
+        os_y = 30 + wys_stosu * odstep
+        wys = os_y + 52
+
+        def x(d):
+            return round(lewy + (d - start).days * krok, 1)
+
+        cz = [f'<line class="os-linia" x1="{lewy - 8}" y1="{os_y}" x2="{szer - prawy + 8}" y2="{os_y}"/>']
+        co = max(1, math.ceil(dni / 10))
+        for i in range(dni):
+            d = start + dt.timedelta(days=i)
+            xx = x(d)
+            dlugi = i % co == 0 or d == dzis
+            cz.append(f'<line class="os-tik" x1="{xx}" y1="{os_y}" x2="{xx}" y2="{os_y + (6 if dlugi else 3)}"/>')
+            if dlugi:
+                cz.append(f'<text class="os-data" x="{xx}" y="{os_y + 20}">{d.day:02d}.{d.month:02d}</text>')
+        xd = x(dzis)
+        cz.append(f'<line class="os-dzis" x1="{xd}" y1="16" x2="{xd}" y2="{os_y + 8}"/>'
+                  f'<text class="os-dzis-t" x="{xd - 4}" y="12">ostatnie wydanie</text>')
+        for dzien, lista in stosy.items():
+            xx = x(data_(dzien))
+            lista = sorted(lista, key=lambda p: p[0]["data"])
+            for j, (w, it) in enumerate(lista[:6]):
+                y = os_y - 12 - j * odstep
+                klucz = f"{w['_slug']}#{it['id']}"
+                if klucz in self.korekty_poz:
+                    klasa, stan = "k-spr", "sprostowane"
+                elif it.get("status"):
+                    klasa, stan = "k-niep", it["status"].lower()
+                else:
+                    klasa, stan = "k-ok", "potwierdzone"
+                tytul = f"{data_krotka(it['data'])} · {czysty(it['tekst'], self.osoby, self.pojecia)[:140]} ({stan}; wyd. nr {w['nr']})"
+                cz.append(f'<a href="#{w["_slug"]}-{it["id"]}"><title>{e(tytul)}</title>'
+                          f'<circle class="{klasa}" cx="{xx}" cy="{y}" r="{r}"/></a>')
+            if len(lista) > 6:
+                cz.append(f'<text class="os-wiecej" x="{xx}" y="{os_y - 12 - 6 * odstep + 4}">+{len(lista) - 6}</text>')
+        for k in przyszle:
+            xx, y = x(data_(k["data"])), os_y + 36
+            tytul = f"{data_dluga(k['data'])} · {czysty(k['tekst'], self.osoby, self.pojecia)[:140]}"
+            cz.append(f'<g><title>{e(tytul)}</title><path class="k-kal" d="M{xx},{y - 7} L{xx + 7},{y} L{xx},{y + 7} L{xx - 7},{y} Z"/></g>')
+        svg = (f'<svg class="os-czasu" width="{round(szer)}" height="{wys}" viewBox="0 0 {round(szer)} {wys}" role="img" '
+               f'aria-label="Oś czasu wątku: {len(wystapienia)} pozycji od {data_dluga(start.isoformat())}">{"".join(cz)}</svg>')
+        legenda = ('<p class="m-leg"><span><i class="k-ok"></i>potwierdzone</span><span><i class="k-niep"></i>niepotwierdzone lub sprzeczne</span>'
+                   '<span><i class="k-spr"></i>sprostowane później</span><span><i class="k-kal"></i>termin z kalendarza</span></p>')
+        return (f'<h2 class="pasek">Oś czasu</h2><div class="os-wrap" data-na-koniec>{svg}</div>{legenda}'
+                '<p class="uwaga">Każda kropka to pozycja z wydania w dniu zdarzenia; kliknij, żeby przejść do niej na liście poniżej.</p>'
+                "<script>document.querySelectorAll('[data-na-koniec]').forEach(function(el){el.scrollLeft=el.scrollWidth;});</script>")
+
     # ---- elementy
 
-    def pozycja(self, w, it, T, prefix, z_wydaniem=False):
+    def pozycja(self, w, it, T, prefix, z_wydaniem=False, kotwica=None):
         klucz = f"{w['_slug']}#{it['id']}"
         kor = ""
         for (wk, k) in self.korekty_poz.get(klucz, []):
@@ -440,7 +574,7 @@ class Budowa:
                     f'({data_dluga(wk["data"])})</a>: {e(k["jest"])}</p>')
         skad = (f'<a class="z-wydania" href="{prefix}wydania/{w["_slug"]}.html#{it["id"]}">wyd. nr {w["nr"]}</a>'
                 if z_wydaniem else "")
-        return f"""<article class="poz{' skorygowana' if kor else ''}" id="{e(it['id'])}">
+        return f"""<article class="poz{' skorygowana' if kor else ''}" id="{e(kotwica or it['id'])}">
   <div class="poz-data">{data_krotka(it['data'])}</div>
   <div class="poz-tresc">
     <div class="poz-meta">{html_tagi(it['tagi'], self.tagi, prefix)}{html_odznaki(it)}{skad}</div>
@@ -478,6 +612,8 @@ class Budowa:
         cz.append('<section class="skrot"><h2>W skrócie</h2>' +
                   "".join(f"<p>{T(z)}</p>" for z in w["w_skrocie"]) + "</section>")
         cz.append(self.mapa_html(w, prefix))
+        cz.append(self.mapa_europy(w["zarys"], prefix, "Mapa wydania",
+                                   "Liczba przy kraju to liczba pozycji zarysu z hashtagiem tego miejsca."))
         if w.get("weryfikacja"):
             li = ""
             for k in w["weryfikacja"]:
@@ -554,6 +690,10 @@ class Budowa:
 </section>
 <section class="skrot"><h2>W skrócie</h2>{''.join(f'<p>{T(z)}</p>' for z in w['w_skrocie'])}
 <p class="dalej"><a href="wydania/{w['_slug']}.html">Czytaj całe wydanie</a></p></section>""")
+            koniec = data_(w["data"])
+            ostatnie = [it for x in self.wydania for it in x["zarys"] if 0 <= (koniec - data_(it["data"])).days < 7]
+            cz.append(self.mapa_europy(ostatnie, "", "Mapa wątków z ostatnich 7 dni",
+                                       f"Pozycje z wydań z datą zdarzenia od {data_dluga((koniec - dt.timedelta(days=6)).isoformat())} do {data_dluga(w['data'])}."))
             gorace = self.gorace_watki(7)
             if gorace:
                 cz.append('<h2 class="pasek">Gorące wątki z ostatnich 7 dni</h2><div class="chmura">' + "".join(
@@ -625,9 +765,10 @@ class Budowa:
                 cz.append('<div class="nota"><h3>Najbliższe terminy</h3><table class="kal">' + "".join(
                     f'<tr><td class="kal-d">{data_dluga(k["data"])}</td><td>{T(k["tekst"])}</td></tr>' for k in przyszle) + "</table></div>")
             if wystapienia[t]:
-                cz.append(f'<h2 class="pasek">Oś wątku · {len(wystapienia[t])} poz.</h2><div class="os">')
+                cz.append(self.os_czasu(wystapienia[t], przyszle, dzis, prefix))
+                cz.append(f'<h2 class="pasek">Wszystkie pozycje · {len(wystapienia[t])}</h2><div class="os">')
                 for w, it in sorted(wystapienia[t], key=lambda x: (x[1]["data"], x[0]["data"]), reverse=True):
-                    cz.append(self.pozycja(w, it, T, prefix, z_wydaniem=True))
+                    cz.append(self.pozycja(w, it, T, prefix, z_wydaniem=True, kotwica=f"{w['_slug']}-{it['id']}"))
                 cz.append("</div>")
             else:
                 cz.append('<p class="uwaga">W wydaniach nie ma jeszcze pozycji z tym hashtagiem.</p>')
