@@ -230,3 +230,5 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .m-leg i.k-spr { background: var(--k-spr); border-radius: 50%; border-color: var(--k-spr); }
 .m-leg i.k-kal { background: var(--k-kal); transform: rotate(45deg) scale(0.8); border-color: var(--k-kal); }
 .poz:target { background: var(--morze-t); }
+.rew-znak { color: var(--szary); font: 13px/1.45 var(--sans); margin: 4px 0; }
+.wycofane { border-left: 4px solid var(--czerwien); padding-left: 12px; }

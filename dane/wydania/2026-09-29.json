@@ -149,23 +149,6 @@
       ]
     },
     {
-      "id": "z8",
-      "blok": "instytucje",
-      "data": "2026-09-29",
-      "tagi": [
-        "mfw",
-        "ukraina"
-      ],
-      "tekst": "Według szacunku MFW, podanego przez Bloomberga 29.09, Ukraina będzie miała do końca 2029 r. **lukę finansowania zewnętrznego rzędu 54 mld USD**.",
-      "zrodla": [
-        {
-          "nazwa": "Bloomberg (tytuł; treść zablokowana dla robotów)",
-          "url": "https://www.bloomberg.com/news/articles/2026-09-29/ukraine-to-have-54-billion-funding-gap-by-2029-imf-predicts",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
       "id": "z9",
       "blok": "instytucje",
       "data": "2026-09-29",
@@ -173,10 +156,20 @@
         "ukraina",
         "uzbrojenie"
       ],
-      "tekst": "Zełenski: **Belgia przekaże Ukrainie trzy myśliwce F-16** do końca 2026 r.",
+      "tekst": "Prezydent Wołodymyr Zełenski powiedział 29.09 o porozumieniu z Belgią: przekaże ona Ukrainie **trzy myśliwce F-16** do końca 2026 r. w przyspieszonej procedurze.",
       "zrodla": [
         {
-          "nazwa": "Reuters (za U.S. News; tytuł)",
+          "nazwa": "The Aviationist",
+          "url": "https://theaviationist.com/2026/09/30/ukraine-f-16-update/",
+          "data": "2026-09-30"
+        },
+        {
+          "nazwa": "UNN",
+          "url": "https://unn.ua/en/news/belgium-will-deliver-three-f-16-fighter-jets-to-ukraine-by-the-end-of-the-year-zelenskyy",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Reuters (za U.S. News)",
           "url": "https://www.usnews.com/news/world/articles/2026-09-29/belgium-to-transfer-three-f-16s-to-ukraine-this-year-zelenskiy-says",
           "data": "2026-09-29"
         }

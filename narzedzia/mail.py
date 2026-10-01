@@ -22,7 +22,7 @@ def main():
     ap.add_argument("--dane", type=Path, default=B.REPO / "dane")
     ap.add_argument("--wyjscie", type=Path, default=Path("build"))
     a = ap.parse_args()
-    tagi, osoby, pojecia, wydania = B.wczytaj(a.dane)
+    tagi, osoby, pojecia, wydania, rewizje = B.wczytaj(a.dane)
     bledy = B.waliduj(tagi, osoby, pojecia, wydania)
     if bledy:
         print("WALIDACJA NIE PRZESZŁA:\n  - " + "\n  - ".join(bledy), file=sys.stderr)
@@ -120,9 +120,6 @@ def main():
             odz = ""
             if it.get("etap"):
                 odz += f'<span style="font-size:11px;font-weight:bold;border:1px solid {GRANAT};color:{GRANAT};padding:0 4px;margin-right:6px;">{e(it["etap"])}</span>'
-            if it.get("status"):
-                kol = CZERW if it["status"].startswith("SPRZECZNE") else OCHRA
-                odz += f'<span style="font-size:11px;font-weight:bold;border:1px solid {kol};color:{kol};padding:0 4px;margin-right:6px;">{e(it["status"])}</span>'
             r.append(f'<tr><td style="padding:10px 20px 8px;border-bottom:1px solid #EEF2F3;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
                      f'<td valign="top" style="width:50px;font-weight:bold;font-size:13px;color:{GRANAT};">{B.data_krotka(it["data"])}</td>'
                      f'<td valign="top"><div>{tagi_html(it["tagi"])}{odz}</div><div style="margin-top:2px;">{T(it["tekst"])}</div>'
@@ -184,7 +181,7 @@ def main():
     t += [C(z) for z in w["w_skrocie"]]
     t += ["", f"Całe wydanie na stronie: {url}", "", "ZARYS WYDARZEŃ"]
     for it in sorted(w["zarys"], key=lambda x: (dict((k, i) for i, (k, _) in enumerate(B.BLOKI))[x["blok"]], x["data"])):
-        ozn = " ".join(x for x in (it.get("etap"), it.get("status")) if x)
+        ozn = it.get("etap") or ""
         t.append(f"{B.data_krotka(it['data'])} {' '.join('#' + tagi[g]['nazwa'] for g in it['tagi'])}{(' [' + ozn + ']') if ozn else ''}: {C(it['tekst'])}")
         t.append("   Źródła: " + "; ".join(f"{z['nazwa']} {z['url']}" for z in it["zrodla"]))
     if w.get("analizy"):

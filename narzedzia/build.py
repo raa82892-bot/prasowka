@@ -36,10 +36,8 @@ BLOKI = [
     ("swiat", "Świat"),
     ("gospodarka", "Gospodarka"),
 ]
-# Do zarysu wchodzą wyłącznie informacje potwierdzone. Pole „status” zostało tylko w wydaniach
-# sprzed tej daty (archiwum); od niej walidacja je odrzuca — niepotwierdzone idzie do „Czego tu nie ma”.
-STATUSY = {None, "NIEPOTWIERDZONE", "SPRZECZNE ŹRÓDŁA"}
-TYLKO_POTWIERDZONE_OD = "2026-10-01"
+# Do zarysu wchodzą wyłącznie informacje potwierdzone; pola „status” nie ma (walidacja je odrzuca).
+# Pozycje oznaczone tak przed 01.10.2026 przeszły rewizję — zapis w dane/rewizje.json.
 ETAPY = {None, "PROPOZYCJA", "ZAPOWIEDŹ", "PRZYJĘTE", "W TOKU"}
 PROGI = {"dokumentacja", "następstwo", "kompletność"}
 WERDYKTY = {"POTWIERDZONE", "SPROSTOWANE", "NADAL OTWARTE"}
@@ -76,8 +74,10 @@ def wczytaj(katalog: Path):
         w["_slug"] = p.stem
         wydania.append(w)
     wydania.sort(key=lambda w: (w["data"], w.get("godzina", "")))
+    p = katalog / "rewizje.json"
+    rewizje = json.loads(p.read_text("utf-8"))["rewizje"] if p.exists() else []
     return ({t["id"]: t for t in tagi}, {o["id"]: o for o in osoby},
-            {x["id"]: x for x in pojecia}, wydania)
+            {x["id"]: x for x in pojecia}, wydania, rewizje)
 
 
 def data_(s):
@@ -103,6 +103,8 @@ def sprawdz_zrodla(zrodla, gdzie, b: Bledy, wymagane=True):
     for i, z in enumerate(zrodla):
         if not z.get("nazwa"):
             b.dodaj(gdzie, f"źródło {i+1}: brak nazwy serwisu")
+        elif "tytuł" in z["nazwa"].lower():
+            b.dodaj(gdzie, f"źródło {i+1} ({z['nazwa']}): sam tytuł nie jest źródłem — otwórz artykuł albo znajdź inne")
         if not URL_RE.match(z.get("url", "")):
             b.dodaj(gdzie, f"źródło {i+1}: brak poprawnego linku (http/https)")
         try:
@@ -131,7 +133,7 @@ def sprawdz_tagi(lista, gdzie, tagi, b: Bledy, wymagane=True):
             b.dodaj(gdzie, f"hashtag „{t}” spoza słownika dane/tagi.json")
 
 
-def waliduj(tagi, osoby, pojecia, wydania) -> Bledy:
+def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
     b = Bledy()
     for t in tagi.values():
         if t.get("stan"):
@@ -171,18 +173,14 @@ def waliduj(tagi, osoby, pojecia, wydania) -> Bledy:
                 data_(it.get("data", ""))
             except ValueError:
                 b.dodaj(g, "brak daty zdarzenia RRRR-MM-DD")
-            if it.get("status") and w.get("data", "") >= TYLKO_POTWIERDZONE_OD:
-                b.dodaj(g, f"pozycja ze statusem {it['status']} — do zarysu wchodzą tylko informacje potwierdzone; "
-                           "przenieś ją do „Czego tu nie ma” (próg: dokumentacja)")
-            elif it.get("status") not in STATUSY:
-                b.dodaj(g, f"status musi być jednym z {sorted(s for s in STATUSY if s)}")
+            if "status" in it:
+                b.dodaj(g, f"pole status ({it['status']}) — do zarysu wchodzą tylko informacje potwierdzone; "
+                           "niepotwierdzone przenieś do „Czego tu nie ma” (próg: dokumentacja)")
             if it.get("etap") not in ETAPY:
                 b.dodaj(g, f"etap musi być jednym z {sorted(s for s in ETAPY if s)}")
             sprawdz_tagi(it.get("tagi"), g, tagi, b)
             sprawdz_tekst(it.get("tekst"), g, osoby, pojecia, b)
             sprawdz_zrodla(it.get("zrodla"), g, b)
-            if it.get("status") == "SPRZECZNE ŹRÓDŁA" and len(it.get("zrodla", [])) < 2:
-                b.dodaj(g, "SPRZECZNE ŹRÓDŁA wymagają co najmniej dwóch źródeł")
         for i, a in enumerate(w.get("analizy", [])):
             g = f"{g0} analiza {i+1}"
             for pole in ("tytul", "autor", "tekst", "dla_polski"):
@@ -259,6 +257,21 @@ def waliduj(tagi, osoby, pojecia, wydania) -> Bledy:
                 if not k.get(pole):
                     b.dodaj(g, f"brak pola {pole}")
             sprawdz_zrodla(k.get("zrodla"), g, b)
+    slugi = {w["_slug"] for w in wydania}
+    for i, r in enumerate(rewizje):
+        g = f"rewizje.json {i+1}"
+        wycofane = r.get("wynik") == "WYCOFANE"
+        if wycofane:
+            if (r.get("dotyczy") or "#").split("#")[0] not in slugi or r.get("dotyczy") in klucze:
+                b.dodaj(g, "wycofana pozycja musi wskazywać istniejące wydanie i nie może już być w jego zarysie")
+        elif r.get("dotyczy") not in klucze:
+            b.dodaj(g, f"dotyczy nieistniejącej pozycji {r.get('dotyczy')}")
+        if r.get("wynik") not in ("POTWIERDZONE PO REWIZJI", "WYCOFANE"):
+            b.dodaj(g, "wynik musi być POTWIERDZONE PO REWIZJI albo WYCOFANE")
+        for pole in ("data", "bylo", "zmiana") + (() if wycofane else ("jest",)):
+            if not r.get(pole):
+                b.dodaj(g, f"brak pola {pole}")
+        sprawdz_zrodla(r.get("zrodla"), g, b)
     return b
 
 
@@ -338,9 +351,6 @@ def html_odznaki(it):
     s = ""
     if it.get("etap"):
         s += f'<span class="odznaka etap">{e(it["etap"])}</span>'
-    if it.get("status"):
-        klasa = "sprzeczne" if it["status"].startswith("SPRZECZNE") else "niepotw"
-        s += f'<span class="odznaka {klasa}">{e(it["status"])}</span>'
     return s
 
 
@@ -386,8 +396,10 @@ def strona(tytul, tresc, prefix="", opis="", aktywne=""):
 # ---------------------------------------------------------------- budowa
 
 class Budowa:
-    def __init__(self, tagi, osoby, pojecia, wydania, wyjscie: Path):
+    def __init__(self, tagi, osoby, pojecia, wydania, wyjscie: Path, rewizje=()):
         self.tagi, self.osoby, self.pojecia, self.wydania = tagi, osoby, pojecia, wydania
+        self.rewizje = list(rewizje)
+        self.rewizje_poz = {r["dotyczy"]: r for r in self.rewizje}
         self.out = wyjscie
         # korekty: klucz pozycji -> lista (wydanie korygujące, korekta)
         self.korekty_poz = {}
@@ -549,8 +561,6 @@ class Budowa:
                 klucz = f"{w['_slug']}#{it['id']}"
                 if klucz in self.korekty_poz:
                     klasa, stan = "k-spr", "sprostowane"
-                elif it.get("status"):
-                    klasa, stan = "k-niep", it["status"].lower()
                 else:
                     klasa, stan = "k-ok", "potwierdzone"
                 tytul = f"{data_krotka(it['data'])} · {czysty(it['tekst'], self.osoby, self.pojecia)[:140]} ({stan}; wyd. nr {w['nr']})"
@@ -565,8 +575,6 @@ class Budowa:
         svg = (f'<svg class="os-czasu" width="{round(szer)}" height="{wys}" viewBox="0 0 {round(szer)} {wys}" role="img" '
                f'aria-label="Oś czasu wątku: {len(wystapienia)} pozycji od {data_dluga(start.isoformat())}">{"".join(cz)}</svg>')
         leg = ['<span><i class="k-ok"></i>pozycja</span>']
-        if any(it.get("status") and f"{w['_slug']}#{it['id']}" not in self.korekty_poz for w, it in wystapienia):
-            leg.append('<span><i class="k-niep"></i>oznaczona w archiwum jako niepotwierdzona</span>')
         leg += ['<span><i class="k-spr"></i>sprostowana później</span>', '<span><i class="k-kal"></i>termin z kalendarza</span>']
         legenda = '<p class="m-leg">' + "".join(leg) + "</p>"
         return (f'<h2 class="pasek">Oś czasu</h2><div class="os-wrap" data-na-koniec>{svg}</div>{legenda}'
@@ -581,9 +589,13 @@ class Budowa:
         for (wk, k) in self.korekty_poz.get(klucz, []):
             kor += (f'<p class="kor-znak">▲ Sprostowano w wydaniu <a href="{prefix}wydania/{wk["_slug"]}.html#korekty">nr {wk["nr"]} '
                     f'({data_dluga(wk["data"])})</a>: {e(k["jest"])}</p>')
+        r = self.rewizje_poz.get(klucz)
+        if r:
+            kor += (f'<p class="rew-znak">Zweryfikowano ponownie {data_dluga(r["data"])}: {e(r["zmiana"])}. '
+                    f'<a href="{prefix}korekty.html#rewizja">Wersja pierwotna</a></p>')
         skad = (f'<a class="z-wydania" href="{prefix}wydania/{w["_slug"]}.html#{it["id"]}">wyd. nr {w["nr"]}</a>'
                 if z_wydaniem else "")
-        return f"""<article class="poz{' skorygowana' if kor else ''}" id="{e(kotwica or it['id'])}">
+        return f"""<article class="poz{' skorygowana' if klucz in self.korekty_poz else ''}" id="{e(kotwica or it['id'])}">
   <div class="poz-data">{data_krotka(it['data'])}</div>
   <div class="poz-tresc">
     <div class="poz-meta">{html_tagi(it['tagi'], self.tagi, prefix)}{html_odznaki(it)}{skad}</div>
@@ -652,6 +664,11 @@ class Budowa:
                 continue
             cz.append(f'<h3 class="blok">{nazwa}</h3>')
             cz.extend(self.pozycja(w, it, T, prefix) for it in poz)
+        wyc = [r for r in self.rewizje if r.get("wynik") == "WYCOFANE" and r["dotyczy"].split("#")[0] == w["_slug"]]
+        if wyc:
+            cz.append('<div class="nota wycofane"><h3>Wycofane po rewizji</h3><ul>' + "".join(
+                f'<li id="{e(r["dotyczy"].split("#")[1])}">{data_dluga(r["data"])}: wycofano pozycję o treści „{e(czysty(r["bylo"], self.osoby, self.pojecia))}” – '
+                f'{e(r["zmiana"])}. <a href="{prefix}korekty.html#rewizja">Rejestr korekt</a></li>' for r in wyc) + "</ul></div>")
         if w.get("analizy"):
             cz.append('<h2 class="pasek" id="analizy">II. Analizy</h2><p class="uwaga">Poniżej interpretacje, nie ustalenia. Każda ma autora.</p>')
             cz.extend(self.analiza(w, a, T, prefix) for a in w["analizy"])
@@ -853,6 +870,17 @@ class Budowa:
                 wiersze.append(f"""<article class="poz skorygowana"><div class="poz-data">{data_krotka(w['data'])}</div><div class="poz-tresc">
 <p class="poz-meta">Sprostowanie w <a href="wydania/{w['_slug']}.html#korekty">wyd. nr {w['nr']}</a>{(' · dotyczy: ' + cel) if cel else ''}</p>
 <p><strong>Było:</strong> {e(k['bylo'])}</p><p><strong>Jest:</strong> {e(k['jest'])}</p>{html_zrodla(k['zrodla'])}</div></article>""")
+        if self.rewizje:
+            wiersze.append('<h2 class="pasek" id="rewizja">Rewizja archiwum · tylko informacje potwierdzone</h2>'
+                           '<p class="uwaga">Od 01.10.2026 do zarysu wchodzą wyłącznie informacje potwierdzone. Pozycje oznaczone wcześniej '
+                           'jako NIEPOTWIERDZONE lub SPRZECZNE ŹRÓDŁA oraz oparte na samych tytułach sprawdzono ponownie; w wydaniu została wersja potwierdzona, '
+                           'tu – pierwotna. Czego nie dało się potwierdzić, wycofano.</p>')
+            for r in sorted(self.rewizje, key=lambda r: r["dotyczy"], reverse=True):
+                s_, pid = r["dotyczy"].split("#")
+                wiersze.append(f"""<article class="poz"><div class="poz-data">{data_krotka(r['data'])}</div><div class="poz-tresc">
+<p class="poz-meta"><span class="odznaka {'sprzeczne' if r['wynik'] == 'WYCOFANE' else 'etap'}">{e(r['wynik'])}</span> <a href="wydania/{s_}.html#{pid}">pozycja z {data_dluga(s_)}</a> · pierwotnie: {e(r.get('pierwotny_status', ''))}</p>
+<p><strong>Było:</strong> {e(czysty(r['bylo'], self.osoby, self.pojecia))}</p>{html_zrodla(r.get('bylo_zrodla'), 'Źródła pierwotne')}
+{('<p><strong>Jest:</strong> ' + e(czysty(r['jest'], self.osoby, self.pojecia)) + '</p>') if r.get('jest') else '<p><strong>Jest:</strong> pozycja wycofana z wydania.</p>'}<p class="poz-tekst"><strong>{'Powód' if r['wynik'] == 'WYCOFANE' else 'Zmiana'}:</strong> {e(r['zmiana'])}</p>{html_zrodla(r['zrodla'], 'Źródła rewizji')}</div></article>""")
         tresc = ('<section class="winieta"><h1>Rejestr korekt</h1><p class="w-stan">Każdy wykryty błąd: co napisaliśmy, jak jest naprawdę i na jakiej podstawie. '
                  'Sprostowana pozycja zostaje w wydaniu z wyraźnym znakiem ▲.</p></section>'
                  + ("".join(wiersze) if wiersze else '<p class="uwaga">Brak korekt.</p>'))
@@ -880,7 +908,7 @@ class Budowa:
 <h2 class="pasek">Oznaczenia</h2>
 <section class="skrot">
 <p><strong>Tylko informacje potwierdzone.</strong> Do zarysu nie wchodzą informacje z jednego źródła ani takie, których nie da się udokumentować; trafiają do noty „Czego tu nie ma” z podaniem powodu. Wypowiedź strony zainteresowanej podajemy tylko jako udokumentowany fakt, że padła, z atrybucją w treści („według Kremla…”).</p>
-<p><span class="odznaka niepotw">NIEPOTWIERDZONE</span> <span class="odznaka sprzeczne">SPRZECZNE ŹRÓDŁA</span> oznaczenia używane do 30.09.2026; widoczne już tylko w archiwum.</p>
+<p><strong>Rewizja archiwum.</strong> Do 30.09.2026 używaliśmy oznaczeń NIEPOTWIERDZONE i SPRZECZNE ŹRÓDŁA. 01.10.2026 wszystkie takie pozycje, a także oparte na samych tytułach, sprawdzono ponownie: zostawiono tylko część potwierdzoną, a niepotwierdzone wycofano; wersje pierwotne są w <a href="korekty.html#rewizja">rejestrze korekt</a>.</p>
 <p><span class="odznaka etap">PROPOZYCJA</span> <span class="odznaka etap">ZAPOWIEDŹ</span> <span class="odznaka etap">PRZYJĘTE</span> etap decyzji.</p>
 <p><strong>Ocena: autor</strong> przy analizach oznacza interpretację (OSW, PISM, ISW jako think tank albo redakcja), nie ustalenie.</p>
 <p><span class="kor-znak">▲</span> pozycja sprostowana później; link prowadzi do sprostowania.</p>
@@ -982,8 +1010,8 @@ def main():
     ap.add_argument("--wyjscie", type=Path, default=REPO)
     ap.add_argument("--sprawdz", action="store_true")
     a = ap.parse_args()
-    tagi, osoby, pojecia, wydania = wczytaj(a.dane)
-    bledy = waliduj(tagi, osoby, pojecia, wydania)
+    tagi, osoby, pojecia, wydania, rewizje = wczytaj(a.dane)
+    bledy = waliduj(tagi, osoby, pojecia, wydania, rewizje)
     if bledy:
         print("WALIDACJA NIE PRZESZŁA — strona nie została zbudowana:", file=sys.stderr)
         for x in bledy:
@@ -993,7 +1021,7 @@ def main():
           f"{len(tagi)} hashtagów, {len(osoby)} osób, {len(pojecia)} pojęć.")
     if a.sprawdz:
         return
-    Budowa(tagi, osoby, pojecia, wydania, a.wyjscie).wszystko()
+    Budowa(tagi, osoby, pojecia, wydania, a.wyjscie, rewizje).wszystko()
     print(f"Strona zbudowana w {a.wyjscie}")
 
 

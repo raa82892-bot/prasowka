@@ -26,12 +26,21 @@
         "usa",
         "energia"
       ],
-      "status": "NIEPOTWIERDZONE",
-      "tekst": "Trump napisał 14.09 na Truth Social: „Ukraina zgodziła się nie uderzać w rosyjskie cele energetyczne. Rosja zgodziła się na to samo”, i obwiniał ukraińskie ataki o wzrost cen diesla. Zełenski był sceptyczny („nie jestem pewien” zobowiązań Rosji), ale zadeklarował, że jeśli partnerzy zapewnią realną rezygnację Rosji z ataków na energetykę, Ukraina zrobi to samo. Pieskow uznał ukraińskie propozycje za niewystarczające. Anonimowy wysoki ukraiński urzędnik energetyczny powiedział Kyiv Independent, że żadnego porozumienia nie ma.",
+      "tekst": "Prezydent USA Donald Trump napisał 14.09 na Truth Social: „Ukraina zgodziła się nie uderzać w rosyjskie cele energetyczne. Rosja zgodziła się na to samo”, i obwiniał wojnę o wzrost światowych cen diesla. Ani Kijów, ani Moskwa nie potwierdziły porozumienia. Prezydent Wołodymyr Zełenski zadeklarował, że jeśli partnerzy zapewnią realną rezygnację Rosji z uderzeń w energetykę i infrastrukturę krytyczną, Ukraina wstrzyma swoje ataki.",
       "zrodla": [
         {
           "nazwa": "Kyiv Independent",
           "url": "https://kyivindependent.com/breaking-trump-claims-ukraine-russia-agree-to-halt-strikes-on-energy-targets/",
+          "data": "2026-09-14"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/14/trump-says-ukraine-and-russia-agree-to-halt-strikes-on-energy-targets",
+          "data": "2026-09-14"
+        },
+        {
+          "nazwa": "S&P Global",
+          "url": "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/091426-russia-and-ukraine-agree-not-to-strike-each-others-energy-facilities-trump",
           "data": "2026-09-14"
         }
       ]

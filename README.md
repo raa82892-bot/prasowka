@@ -30,9 +30,9 @@ python3 narzedzia/mail.py RRRR-MM-DD  # build/mail-RRRR-MM-DD.html i .txt
 git add -A && git commit -m "Wydanie nr N, RRRR-MM-DD" && git push
 ```
 
-Do zarysu wchodzą **wyłącznie informacje potwierdzone** (komunikat instytucji, dane urzędowe albo dwa niezależne serwisy). Niepotwierdzone i sporne idą do `czego_nie_ma` z progiem `dokumentacja`; pola `status` nie ma (walidacja odrzuca je w wydaniach od 01.10.2026).
+Do zarysu wchodzą **wyłącznie informacje potwierdzone** (komunikat instytucji, dane urzędowe albo dwa niezależne serwisy). Niepotwierdzone i sporne idą do `czego_nie_ma` z progiem `dokumentacja`; pola `status` nie ma (walidacja je odrzuca). Pozycje oznaczone tak przed 01.10.2026 oraz oparte na samych tytułach przeszły rewizję: `dane/rewizje.json` (`wynik`: POTWIERDZONE PO REWIZJI z wersją pierwotną i potwierdzoną albo WYCOFANE z powodem), widoczną w rejestrze korekt i w wydaniach.
 
-Walidacja odrzuca wydanie, jeśli którakolwiek pozycja nie ma źródła z linkiem i datą, ma hashtag spoza słownika, osobę bez karty albo analizę bez autora.
+Walidacja odrzuca wydanie, jeśli którakolwiek pozycja nie ma źródła z linkiem i datą, ma źródło opisane jako sam tytuł, ma hashtag spoza słownika, osobę bez karty albo analizę bez autora.
 
 ## Format wydania (dane/wydania/RRRR-MM-DD.json)
 
@@ -76,6 +76,6 @@ Werdykt SPROSTOWANE z polem `dotyczy` oznacza oryginalną pozycję znakiem ▲ i
 `build.py` rysuje dwie grafiki SVG z tych samych danych (bez JavaScriptu poza przewinięciem osi do końca):
 
 - **Mapa Europy** — na stronie głównej (pozycje z 7 dni) i w każdym wydaniu. Kraj z hashtagiem-miejscem jest zabarwiony liczbą pozycji (1 / 2–3 / 4+) i prowadzi do strony wątku; Polska liczy pozycje z bloku „Polska”. Przypisanie hashtagów do krajów: `MAPA_TAGI` w `build.py`; miejsca poza kadrem (USA, Iran, Chiny) są wymienione pod mapą.
-- **Oś czasu wątku** — na każdej stronie `watki/<tag>.html`: kropka = pozycja w dniu zdarzenia (pełna – pozycja, czerwona – sprostowana; pusta tylko w archiwum sprzed 01.10.2026), romb = termin z kalendarza; kliknięcie przenosi do pozycji na liście.
+- **Oś czasu wątku** — na każdej stronie `watki/<tag>.html`: kropka = pozycja w dniu zdarzenia (pełna – pozycja, czerwona – sprostowana), romb = termin z kalendarza; kliknięcie przenosi do pozycji na liście.
 
 Kontury (`narzedzia/europa.json`, Natural Earth 1:50m, Krym w granicach Ukrainy) generuje jednorazowo `narzedzia/mapa_dane.py`; nowy hashtag-miejsce w Europie wymaga dopisania do `MAPA_TAGI` (i ewentualnie etykiety w `mapa_dane.py`).
