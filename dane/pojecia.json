@@ -1,13 +1,137 @@
 {
   "_opis": "Słownik pojęć. W tekście wydania: {{p:id}} (albo {{p:id|tekst}}). Definicja stała; jeśli zależy od stanu rzeczy, podaj źródło i datę.",
   "pojecia": [
-    {"id": "epf", "nazwa": "EPF", "pelna": "Europejski Instrument na rzecz Pokoju", "definicja": "Pozabudżetowy fundusz UE, z którego państwa członkowskie finansują m.in. wsparcie wojskowe dla partnerów, w tym Ukrainy. Decyzje o wypłatach wymagają jednomyślności w Radzie UE."},
-    {"id": "wrf", "nazwa": "WRF", "pelna": "Wieloletnie ramy finansowe", "definicja": "Wieloletni budżet UE ustalający pułapy wydatków na kilka lat; obecnie negocjowane są ramy na lata 2028–2034."},
-    {"id": "opl", "nazwa": "OPL", "pelna": "Obrona przeciwlotnicza", "definicja": "Systemy i procedury wykrywania oraz niszczenia celów powietrznych: samolotów, śmigłowców, dronów i pocisków."},
-    {"id": "isw", "nazwa": "ISW", "pelna": "Institute for the Study of War", "definicja": "Amerykański think tank publikujący codzienne oceny kampanii rosyjskiej w Ukrainie. Jego ustalenia to oceny analityczne, nie fakty."},
-    {"id": "osw", "nazwa": "OSW", "pelna": "Ośrodek Studiów Wschodnich im. Marka Karpia", "definicja": "Państwowy ośrodek analityczny w Warszawie, zajmujący się Rosją, Ukrainą, Białorusią, Kaukazem, Azją Centralną, Niemcami, Europą Środkową i Bałkanami."},
-    {"id": "pism", "nazwa": "PISM", "pelna": "Polski Instytut Spraw Międzynarodowych", "definicja": "Państwowy instytut analityczny w Warszawie; publikuje m.in. Biuletyny, Komentarze i raporty."},
-    {"id": "rcb", "nazwa": "RCB", "pelna": "Rządowe Centrum Bezpieczeństwa", "definicja": "Instytucja koordynująca zarządzanie kryzysowe w Polsce; wysyła alerty do mieszkańców."},
-    {"id": "do-rsz", "nazwa": "DO RSZ", "pelna": "Dowództwo Operacyjne Rodzajów Sił Zbrojnych", "definicja": "Dowództwo kierujące bieżącymi operacjami Sił Zbrojnych RP, w tym reakcją na naruszenia przestrzeni powietrznej."}
+    {
+      "id": "epf",
+      "nazwa": "EPF",
+      "pelna": "Europejski Instrument na rzecz Pokoju",
+      "definicja": "Pozabudżetowy fundusz UE, z którego państwa członkowskie finansują m.in. wsparcie wojskowe dla partnerów, w tym Ukrainy. Decyzje o wypłatach wymagają jednomyślności w Radzie UE."
+    },
+    {
+      "id": "wrf",
+      "nazwa": "WRF",
+      "pelna": "Wieloletnie ramy finansowe",
+      "definicja": "Wieloletni budżet UE ustalający pułapy wydatków na kilka lat; obecnie negocjowane są ramy na lata 2028–2034."
+    },
+    {
+      "id": "opl",
+      "nazwa": "OPL",
+      "pelna": "Obrona przeciwlotnicza",
+      "definicja": "Systemy i procedury wykrywania oraz niszczenia celów powietrznych: samolotów, śmigłowców, dronów i pocisków."
+    },
+    {
+      "id": "isw",
+      "nazwa": "ISW",
+      "pelna": "Institute for the Study of War",
+      "definicja": "Amerykański think tank publikujący codzienne oceny kampanii rosyjskiej w Ukrainie. Jego ustalenia to oceny analityczne, nie fakty."
+    },
+    {
+      "id": "osw",
+      "nazwa": "OSW",
+      "pelna": "Ośrodek Studiów Wschodnich im. Marka Karpia",
+      "definicja": "Państwowy ośrodek analityczny w Warszawie, zajmujący się Rosją, Ukrainą, Białorusią, Kaukazem, Azją Centralną, Niemcami, Europą Środkową i Bałkanami."
+    },
+    {
+      "id": "pism",
+      "nazwa": "PISM",
+      "pelna": "Polski Instytut Spraw Międzynarodowych",
+      "definicja": "Państwowy instytut analityczny w Warszawie; publikuje m.in. Biuletyny, Komentarze i raporty."
+    },
+    {
+      "id": "rcb",
+      "nazwa": "RCB",
+      "pelna": "Rządowe Centrum Bezpieczeństwa",
+      "definicja": "Instytucja koordynująca zarządzanie kryzysowe w Polsce; wysyła alerty do mieszkańców."
+    },
+    {
+      "id": "do-rsz",
+      "nazwa": "DO RSZ",
+      "pelna": "Dowództwo Operacyjne Rodzajów Sił Zbrojnych",
+      "definicja": "Dowództwo kierujące bieżącymi operacjami Sił Zbrojnych RP, w tym reakcją na naruszenia przestrzeni powietrznej."
+    },
+    {
+      "id": "ormuz",
+      "nazwa": "Cieśnina Ormuz",
+      "pelna": "Cieśnina Ormuz",
+      "definicja": "Wąski przesmyk między Iranem a Półwyspem Arabskim, łączący Zatokę Perską z Oceanem Indyjskim. Przepływa nim duża część światowego handlu ropą naftową, więc jej blokada od razu wpływa na ceny ropy i gazu."
+    },
+    {
+      "id": "fomc",
+      "nazwa": "FOMC",
+      "pelna": "Federal Open Market Committee",
+      "definicja": "Komitet Rezerwy Federalnej USA, który ustala stopy procentowe. Publikuje też prognozy swoich członków (m.in. medianę oczekiwanych stóp)."
+    },
+    {
+      "id": "pb",
+      "nazwa": "pb",
+      "pelna": "punkt bazowy",
+      "definicja": "Setna część punktu procentowego; 25 pb to 0,25 pp, np. zmiana stóp z 3,50% do 3,75%."
+    },
+    {
+      "id": "cpi",
+      "nazwa": "CPI",
+      "pelna": "Consumer Price Index",
+      "definicja": "Wskaźnik cen towarów i usług konsumpcyjnych, podstawowa miara inflacji. W Polsce GUS publikuje szybki szacunek pod koniec miesiąca, a pełne dane kilka tygodni później."
+    },
+    {
+      "id": "saeima",
+      "nazwa": "Saeima",
+      "pelna": "Saeima",
+      "definicja": "Jednoizbowy parlament Łotwy (100 posłów), wybierany co cztery lata; powołuje rząd i wybiera prezydenta."
+    },
+    {
+      "id": "duma",
+      "nazwa": "Duma Państwowa",
+      "pelna": "Duma Państwowa",
+      "definicja": "Niższa izba rosyjskiego parlamentu (450 deputowanych). Większość konstytucyjna pozwala partii władzy zmieniać konstytucję bez poparcia innych ugrupowań."
+    },
+    {
+      "id": "wotum-nieufnosci",
+      "nazwa": "wotum nieufności",
+      "pelna": "wotum nieufności",
+      "definicja": "Głosowanie parlamentu, którego przyjęcie odwołuje rząd albo ministra. Wymagana większość zależy od ustroju (w Czechach to bezwzględna większość 101 z 200 posłów)."
+    },
+    {
+      "id": "immunitet",
+      "nazwa": "immunitet parlamentarny",
+      "pelna": "immunitet",
+      "definicja": "Ochrona posła lub ministra przed ściganiem karnym bez zgody parlamentu. Jego uchylenie umożliwia postawienie zarzutów i zatrzymanie."
+    },
+    {
+      "id": "edip",
+      "nazwa": "EDIP",
+      "pelna": "European Defence Industry Programme",
+      "definicja": "Unijny program wzmacniający europejski przemysł obronny: finansuje wspólne projekty zbrojeniowe państw członkowskich."
+    },
+    {
+      "id": "fmf",
+      "nazwa": "FMF",
+      "pelna": "Foreign Military Financing",
+      "definicja": "Amerykański program, w którym rząd USA finansuje zakup sprzętu wojskowego przez państwa partnerskie."
+    },
+    {
+      "id": "patriot",
+      "nazwa": "Patriot",
+      "pelna": "Patriot",
+      "definicja": "Amerykański system obrony przeciwlotniczej i przeciwrakietowej średniego i dalekiego zasięgu (producent: Raytheon); używają go m.in. Polska i Ukraina."
+    },
+    {
+      "id": "pituffik",
+      "nazwa": "Pituffik",
+      "pelna": "Pituffik Space Base",
+      "definicja": "Amerykańska baza lotnicza i kosmiczna (dawniej Thule) w północno-zachodniej Grenlandii, kluczowa dla systemów ostrzegania przed rakietami."
+    },
+    {
+      "id": "dorsz",
+      "nazwa": "Dowództwo Operacyjne",
+      "pelna": "Dowództwo Operacyjne Rodzajów Sił Zbrojnych (DORSZ)",
+      "definicja": "Dowództwo prowadzące na co dzień operacje Sił Zbrojnych RP, w tym obronę przestrzeni powietrznej; wydaje komunikaty o incydentach i poderwaniu myśliwców."
+    },
+    {
+      "id": "fundusze-spojnosci",
+      "nazwa": "fundusze spójności",
+      "pelna": "fundusze spójności",
+      "definicja": "Środki UE na wyrównywanie różnic w rozwoju regionów. Komisja Europejska może je wstrzymać, gdy państwo łamie praworządność, i odblokować po usunięciu naruszeń."
+    }
   ]
 }

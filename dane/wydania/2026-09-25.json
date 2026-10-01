@@ -4,8 +4,7 @@
   "godzina": "20:30",
   "typ": "dzienne",
   "w_skrocie": [
-    "Szczyt **Trump–Xi** zakończył się przedłużeniem rozejmu handlowego do 10.01.2027 i niewielkimi postępami poza tym.",
-    "Macron ostrzegł, że po wyborach do Dumy Rosja **szykuje mobilizację** ok. 300 tys. ludzi; Jedna Rosja ma w Dumie rekordowe 355 mandatów.",
+    "Macron ostrzegł, że po wyborach do {{p:duma|Dumy}} Rosja **szykuje mobilizację** ok. 300 tys. ludzi; Jedna Rosja ma w Dumie rekordowe 355 mandatów.",
     "Rosyjski atak na Kijów 25.09 zabił co najmniej siedem osób; premier Słowacji Fico mówi, że rząd może stracić większość."
   ],
   "korekty": [],
@@ -25,7 +24,7 @@
         "ukraina",
         "francja"
       ],
-      "tekst": "Prezydent Emmanuel Macron powiedział 24.09, że widać „kilka sygnałów”, iż po wyborach Rosja zmobilizuje ok. 300 tys. ludzi; pytanie, czy ogłosi to publicznie, czy zrobi po cichu. Powołał się na raporty służb europejskich i amerykańskich oraz dane ukraińskie; Kancelaria Prezydenta Ukrainy ostrzegała w sierpniu przed 600 tys. mobilizowanych w latach 2026–2027. Reakcji Kremla w tym źródle nie ma.",
+      "tekst": "Prezydent {{o:emmanuel-macron|Emmanuel Macron}} powiedział 24.09, że widać „kilka sygnałów”, iż po wyborach Rosja zmobilizuje ok. 300 tys. ludzi; pytanie, czy ogłosi to publicznie, czy zrobi po cichu. Powołał się na raporty służb europejskich i amerykańskich oraz dane ukraińskie; Kancelaria Prezydenta Ukrainy ostrzegała w sierpniu przed 600 tys. mobilizowanych w latach 2026–2027. Reakcji Kremla w tym źródle nie ma.",
       "zrodla": [
         {
           "nazwa": "Kyiv Independent",
@@ -47,7 +46,7 @@
         "rosja",
         "wybory"
       ],
-      "tekst": "W wyborach do Dumy (18–20.09) Jedna Rosja zdobyła rekordowe 355 z 450 mandatów, czyli większość konstytucyjną (frekwencja ponad 59%); Komuniści mają 40, LDPR 25, Nowi Ludzie 20. Euronews zaznacza, że pierwsze wybory po inwazji z 2022 r. odbyły się bez partii krytycznych wobec Putina, a krytyka wojny jest zakazana.",
+      "tekst": "W wyborach do {{p:duma|Dumy}} (18–20.09) Jedna Rosja zdobyła rekordowe 355 z 450 mandatów, czyli większość konstytucyjną (frekwencja ponad 59%); Komuniści mają 40, LDPR 25, Nowi Ludzie 20. Euronews zaznacza, że pierwsze wybory po inwazji z 2022 r. odbyły się bez partii krytycznych wobec Putina, a krytyka wojny jest zakazana.",
       "zrodla": [
         {
           "nazwa": "Euronews",
@@ -90,7 +89,7 @@
       "tagi": [
         "slowacja"
       ],
-      "tekst": "Premier Robert Fico powiedział 25.09, że decyzja SNS o odwołaniu ministra środowiska Tomáša Taraby „prowadzi do utraty większości” parlamentarnej: Taraba zagroził utworzeniem nowego klubu z innymi posłami koalicji, co odebrałoby rządowi trzymandatową większość w 150-osobowej Radzie Narodowej. Fico zażądał od przewodniczącego SNS Andreja Danka i od Taraby gwarancji utrzymania większości i dopuścił wycofanie wniosku o odwołanie.",
+      "tekst": "Premier {{o:robert-fico|Robert Fico}} powiedział 25.09, że decyzja SNS o odwołaniu ministra środowiska Tomáša Taraby „prowadzi do utraty większości” parlamentarnej: Taraba zagroził utworzeniem nowego klubu z innymi posłami koalicji, co odebrałoby rządowi trzymandatową większość w 150-osobowej Radzie Narodowej. Fico zażądał od przewodniczącego SNS Andreja Danka i od Taraby gwarancji utrzymania większości i dopuścił wycofanie wniosku o odwołanie.",
       "zrodla": [
         {
           "nazwa": "Reuters (za ThePrint)",

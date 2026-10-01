@@ -5,7 +5,7 @@
   "typ": "dzienne",
   "w_skrocie": [
     "AfD wygrała wybory w **Meklemburgii-Pomorzu Przednim** (38,2%), a CDU z 4,9% zanotowała tam najgorszy wynik w historii; w Berlinie wygrała Lewica (25,7%).",
-    "PISM: nowa Duma będzie bardziej zmilitaryzowana i ostrzejsza wobec Polski, Niemiec i Wielkiej Brytanii; ewentualna mobilizacja pojawi się najpierw w debacie w Dumie."
+    "PISM: nowa {{p:duma|Duma}} będzie bardziej zmilitaryzowana i ostrzejsza wobec Polski, Niemiec i Wielkiej Brytanii; ewentualna mobilizacja pojawi się najpierw w debacie w Dumie."
   ],
   "korekty": [],
   "analizy": [],
@@ -31,7 +31,7 @@
         "niemcy",
         "wybory"
       ],
-      "tekst": "W wyborach krajowych 20.09 AfD wygrała w Meklemburgii-Pomorzu Przednim z 38,2% przed SPD (35,5%); CDU dostała 4,9%, najgorszy wynik w historii landu. W Berlinie wygrała Lewica (25,7%) przed CDU (18,8%) i AfD (16,3%). Kanclerz Friedrich Merz nazwał wynik CDU „katastrofą”.",
+      "tekst": "W wyborach krajowych 20.09 AfD wygrała w Meklemburgii-Pomorzu Przednim z 38,2% przed SPD (35,5%); CDU dostała 4,9%, najgorszy wynik w historii landu. W Berlinie wygrała Lewica (25,7%) przed CDU (18,8%) i AfD (16,3%). Kanclerz {{o:friedrich-merz|Friedrich Merz}} nazwał wynik CDU „katastrofą”.",
       "zrodla": [
         {
           "nazwa": "Euronews",
@@ -53,7 +53,7 @@
         "rosja",
         "wybory"
       ],
-      "tekst": "PISM (Jakub Benedyczak, Spotlight nr 48/2026, 21.09): w nowej Dumie zasiądzie od 40 do 100 weteranów wojny (9–22%), co pogłębia militaryzację polityki; należy się spodziewać jeszcze ostrzejszej retoryki wobec Polski, Niemiec i Wielkiej Brytanii, łącznie z wezwaniami do rozmieszczenia broni jądrowej i ataków rakietowych dalekiego zasięgu. Ewentualna decyzja Putina o mobilizacji pojawi się, zdaniem PISM, najpierw w debacie w Dumie. Wyniki wyborów: por. wyd. nr 6, pkt z3.",
+      "tekst": "PISM (Jakub Benedyczak, Spotlight nr 48/2026, 21.09): w nowej {{p:duma|Dumie}} zasiądzie od 40 do 100 weteranów wojny (9–22%), co pogłębia militaryzację polityki; należy się spodziewać jeszcze ostrzejszej retoryki wobec Polski, Niemiec i Wielkiej Brytanii, łącznie z wezwaniami do rozmieszczenia broni jądrowej i ataków rakietowych dalekiego zasięgu. Ewentualna decyzja Putina o mobilizacji pojawi się, zdaniem PISM, najpierw w debacie w Dumie. Wyniki wyborów: por. wyd. nr 6, pkt z3.",
       "zrodla": [
         {
           "nazwa": "PISM (J. Benedyczak), Spotlight nr 48/2026",

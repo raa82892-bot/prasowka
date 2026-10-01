@@ -4,9 +4,9 @@
   "godzina": "10:34",
   "typ": "dzienne",
   "w_skrocie": [
-    "Rosyjski atak dronami na blok mieszkalny w **Kijowie** 25.09 zabił co najmniej 7 osób; Kreml nie potwierdza udziału w trójstronnych rozmowach, a Zełenski twierdzi, że Trump zdecydował o licencji na **Patriota** dla Ukrainy.",
+    "Rzecznik Kremla Pieskow potwierdził rozmowę telefoniczną Putina z Trumpem z 8.09 o możliwym spotkaniu Rosja–USA–Ukraina; Zełenski twierdzi, że Trump przekazał mu „ostateczną decyzję” o licencjach na **Patriota** dla Ukrainy (relacja Zełenskiego).",
     "Prokuratura bada jako sabotaż na rzecz obcego wywiadu pożar stacji **Starlink** w Woli Krobowskiej (noc 23–24.09); nikomu nie przedstawiono zarzutów.",
-    "Iran złożył USA 7-dniowy plan otwarcia **Cieśniny Ormuz**; Trump odrzucił go tego samego dnia."
+    "Iran złożył USA 7-dniowy plan otwarcia **{{p:ormuz|Cieśniny Ormuz}}**; Trump odrzucił go tego samego dnia."
   ],
   "korekty": [],
   "analizy": [],
@@ -25,7 +25,7 @@
         "rosja",
         "usa"
       ],
-      "tekst": "Rzecznik Kremla Dmitrij Pieskow potwierdził 25.09, że Putin i Trump rozmawiali w rozmowie telefonicznej 8.09 o możliwym spotkaniu Rosja–USA–Ukraina „w najbliższym czasie”, bez podania szczegółów. Prezydent Wołodymyr Zełenski powiedział 25.09, że Trump przekazał mu „ostateczną decyzję” o licencjach dla Ukrainy na produkcję pocisków Patriot; to relacja Zełenskiego.",
+      "tekst": "Rzecznik Kremla Dmitrij Pieskow potwierdził 25.09, że Putin i Trump rozmawiali w rozmowie telefonicznej 8.09 o możliwym spotkaniu Rosja–USA–Ukraina „w najbliższym czasie”, bez podania szczegółów. Prezydent {{o:wolodymyr-zelenski|Wołodymyr Zełenski}} powiedział 25.09, że Trump przekazał mu „ostateczną decyzję” o licencjach dla Ukrainy na produkcję pocisków {{p:patriot|Patriot}}; to relacja Zełenskiego.",
       "zrodla": [
         {
           "nazwa": "TASS (strona rosyjska)",
@@ -76,7 +76,7 @@
         "iran",
         "usa"
       ],
-      "tekst": "Iran zaproponował USA plan: zniesienie blokady, sankcji na ropę i odmrożenie środków w 4–5 dni, otwarcie Cieśniny Ormuz i rozmowy (m.in. nuklearne) od siódmego dnia. Trump odrzucił go 26.09 jako „nie do przyjęcia”. Szef MSZ Araghczi czeka na odpowiedź mediatorów.",
+      "tekst": "Iran zaproponował USA plan: zniesienie blokady, sankcji na ropę i odmrożenie środków w 4–5 dni, otwarcie {{p:ormuz|Cieśniny Ormuz}} i rozmowy (m.in. nuklearne) od siódmego dnia. Trump odrzucił go 26.09 jako „nie do przyjęcia”. Szef MSZ Araghczi czeka na odpowiedź mediatorów.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
@@ -86,6 +86,11 @@
         {
           "nazwa": "CBS",
           "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-7-day-proposal/",
+          "data": "2026-09-26"
+        },
+        {
+          "nazwa": "CNN (za ABC17 News)",
+          "url": "https://abc17news.com/news/national-world/cnn-world/2026/09/26/trump-rejects-irans-latest-proposal-to-reopen-the-strait-of-hormuz/",
           "data": "2026-09-26"
         }
       ]

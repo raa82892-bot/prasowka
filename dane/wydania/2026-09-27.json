@@ -4,10 +4,10 @@
   "godzina": "20:30",
   "typ": "dzienne",
   "w_skrocie": [
-    "Trump odrzucił 26.09 irański plan otwarcia **Cieśniny Ormuz**; Iran czeka na odpowiedź przez mediatorów, a prezydent Pezeszkian mówi, że nie ufa rozmowom z Waszyngtonem.",
-    "Prezydent Serbii **Vučić zrezygnował** 27.09, by startować na premiera w wyborach 25.10; obowiązki przejęła Ana Brnabić.",
+    "Trump odrzucił 26.09 irański plan otwarcia **{{p:ormuz|Cieśniny Ormuz}}**; Iran czeka na odpowiedź przez mediatorów, a prezydent Pezeszkian mówi, że nie ufa rozmowom z Waszyngtonem.",
+    "Prezydent Serbii **Vučić zrezygnował** 27.09, by startować na premiera w wyborach 25.10; obowiązki przejęła {{o:ana-brnabic|Ana Brnabić}}.",
     "Premier Słowacji **Fico** zapowiedział gotowość do wyborów w styczniu, jeśli Danko i Taraba nie dadzą gwarancji większości.",
-    "Pięciu mężczyzn zatrzymano 27.09 przy bazie **RAF Fairford** (materiały wybuchowe, terroryzm); Szwajcarzy odrzucili w referendum ograniczenie sankcji."
+    "Pięciu mężczyzn zatrzymano 27.09 przy bazie **RAF Fairford** (materiały wybuchowe, terroryzm)."
   ],
   "korekty": [],
   "analizy": [],
@@ -25,7 +25,7 @@
         "iran",
         "usa"
       ],
-      "tekst": "Trump odrzucił 26.09 irański plan 7-dniowy (otwarcie Cieśniny Ormuz w zamian za zniesienie blokady morskiej, sankcji na ropę i odmrożenie środków), mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”, a propozycja jest „nie do przyjęcia”. Szef MSZ Iranu Abbas Araghczi powiedział, że Iran jest gotowy na dyplomację, ale i na wznowienie wojny; prezydent Masud Pezeszkian powiedział Al Jazeera, że Teheran nie ufa stronie amerykańskiej. Axios (27.09): Trump spodziewa się rozmów w tym tygodniu, a pośredniczy Katar.",
+      "tekst": "Trump odrzucił 26.09 irański plan 7-dniowy (otwarcie {{p:ormuz|Cieśniny Ormuz}} w zamian za zniesienie blokady morskiej, sankcji na ropę i odmrożenie środków), mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”, a propozycja jest „nie do przyjęcia”. Szef MSZ Iranu {{o:abbas-araghczi|Abbas Araghczi}} powiedział, że Iran jest gotowy na dyplomację, ale i na wznowienie wojny; prezydent {{o:masud-pezeszkian|Masud Pezeszkian}} powiedział Al Jazeera, że Teheran nie ufa stronie amerykańskiej. Axios (27.09): Trump spodziewa się rozmów w tym tygodniu, a pośredniczy Katar.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
@@ -41,6 +41,11 @@
           "nazwa": "CBS",
           "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-7-day-proposal/",
           "data": "2026-09-27"
+        },
+        {
+          "nazwa": "CNN (za ABC17 News)",
+          "url": "https://abc17news.com/news/national-world/cnn-world/2026/09/26/trump-rejects-irans-latest-proposal-to-reopen-the-strait-of-hormuz/",
+          "data": "2026-09-26"
         }
       ]
     },
@@ -52,7 +57,7 @@
         "balkany",
         "wybory"
       ],
-      "tekst": "Aleksandar Vučić ogłosił 27.09 rezygnację z funkcji prezydenta Serbii, powołując się na zakaz trzeciej kadencji, i będzie kandydował na premiera w wyborach parlamentarnych 25.10. Obowiązki głowy państwa przejęła Ana Brnabić; wybory prezydenckie muszą odbyć się najpóźniej do końca roku. Przed odejściem Vučić ułaskawił 49 osób, w tym 23 sądzone w związku z protestami. Opozycja to ruch studencki, który powstał po zawaleniu dworca w Nowym Sadzie w 2024 r.",
+      "tekst": "{{o:aleksandar-vucic|Aleksandar Vučić}} ogłosił 27.09 rezygnację z funkcji prezydenta Serbii, powołując się na zakaz trzeciej kadencji, i będzie kandydował na premiera w wyborach parlamentarnych 25.10. Obowiązki głowy państwa przejęła {{o:ana-brnabic|Ana Brnabić}}; wybory prezydenckie muszą odbyć się najpóźniej do końca roku. Przed odejściem Vučić ułaskawił 49 osób, w tym 23 sądzone w związku z protestami. Opozycja to ruch studencki, który powstał po zawaleniu dworca w Nowym Sadzie w 2024 r.",
       "zrodla": [
         {
           "nazwa": "Euronews",
@@ -74,7 +79,7 @@
         "slowacja",
         "wybory"
       ],
-      "tekst": "Premier Robert Fico powiedział 27.09 w TA3, że jest gotów na przedterminowe wybory w styczniu (ustawą konstytucyjną skracającą kadencję) i że do nich dojdzie, jeśli szef SNS Andrej Danko i minister środowiska Tomáš Taraba nie dadzą parlamentarnych gwarancji, a rząd upadnie. Preferują oni regularny termin wyborów we wrześniu 2027 r.",
+      "tekst": "Premier {{o:robert-fico|Robert Fico}} powiedział 27.09 w TA3, że jest gotów na przedterminowe wybory w styczniu (ustawą konstytucyjną skracającą kadencję) i że do nich dojdzie, jeśli szef SNS Andrej Danko i minister środowiska Tomáš Taraba nie dadzą parlamentarnych gwarancji, a rząd upadnie. Preferują oni regularny termin wyborów we wrześniu 2027 r.",
       "zrodla": [
         {
           "nazwa": "TASR (agencja państwowa)",
@@ -120,7 +125,7 @@
         "dyplomacja-rp",
         "usa"
       ],
-      "tekst": "Szef Biura Polityki Międzynarodowej Prezydenta Marcin Przydacz (Polsat News, 25.09): Pałacowi nie podoba się zaproszenie Putina na szczyt G20 w Miami, ale prezydent Karol Nawrocki pojedzie, bo zaprosili go gospodarze; udział Putina jest niepewny. Przydacz mówił też o politycznej zgodzie Białego Domu na stałą bazę USA w Polsce (jego relacja, bez potwierdzenia w tym źródle).",
+      "tekst": "Szef Biura Polityki Międzynarodowej Prezydenta {{o:marcin-przydacz|Marcin Przydacz}} (Polsat News, 25.09): Pałacowi nie podoba się zaproszenie Putina na szczyt G20 w Miami, ale prezydent {{o:karol-nawrocki|Karol Nawrocki}} pojedzie, bo zaprosili go gospodarze; udział Putina jest niepewny. Przydacz mówił też o politycznej zgodzie Białego Domu na stałą bazę USA w Polsce (jego relacja, bez potwierdzenia w tym źródle).",
       "zrodla": [
         {
           "nazwa": "Polsat News",
@@ -143,7 +148,7 @@
         "ukraina"
       ],
       "etap": "ZAPOWIEDŹ",
-      "tekst": "Komisja Europejska (von der Leyen i rzecznik Guillaume Mercier, 23.09) uzależniła uwolnienie ok. 20 mld euro wsparcia budżetowego dla Ukrainy od przyjęcia w 2026 r. reform (praworządność, antykorupcja, administracja); w tym roku dostępne jest łącznie ok. 37 mld euro.",
+      "tekst": "Komisja Europejska uzależnia wypłatę ok. 20 mld euro wsparcia budżetowego dla Ukrainy (ok. 13,5 mld z pożyczki wsparcia i 6,45 mld z Ukraine Facility) od przeprowadzenia reform; rzecznik KE powtórzył to 25.09 (Euronews), a wcześniej wynikało to z listu komisarzy Valdisa Dombrovskisa i Marty Kos (Kyiv Independent, 14.09).",
       "zrodla": [
         {
           "nazwa": "Eunews",
@@ -154,6 +159,11 @@
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/25/brussels-dials-up-pressure-on-kyiv-to-speed-up-reforms-amid-budget-crunch",
           "data": "2026-09-25"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/ukraines-parliament-can-fill-zelenskys-budget-black-hole-if-it-does-the-reforms-eu-letter-reminds/",
+          "data": "2026-09-14"
         }
       ]
     }

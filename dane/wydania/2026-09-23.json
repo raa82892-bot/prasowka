@@ -4,8 +4,7 @@
   "godzina": "20:15",
   "typ": "dzienne",
   "w_skrocie": [
-    "Zełenski po spotkaniu z Trumpem w ONZ (22.09): Ukraina jest gotowa na **rozejm energetyczny**, jeśli przystanie na niego Rosja; omawiano też licencje na produkcję **Patriotów**.",
-    "USA i Iran odbyły w Nowym Jorku trzygodzinne pośrednie rozmowy; Sikorski spotkał się w ONZ z szefem MSZ Białorusi – pierwszy raz od dekady.",
+    "Sikorski spotkał się w ONZ z szefem MSZ Białorusi – pierwszy raz od dekady.",
     "Komisja Europejska proponuje odblokowanie **4,2 mld euro** dla Węgier; OSW zapowiada zwycięstwo Zjednoczonej Listy premiera Kulbergsa w wyborach na Łotwie 3.10."
   ],
   "korekty": [],
@@ -48,7 +47,7 @@
         "dyplomacja-rp",
         "bialorus"
       ],
-      "tekst": "Szef MSZ Radosław Sikorski spotkał się 23.09 w ONZ z szefem MSZ Białorusi Maksimem Ryżenkowem – pierwsze takie rozmowy od dekady.",
+      "tekst": "Szef MSZ {{o:radoslaw-sikorski|Radosław Sikorski}} spotkał się 23.09 w ONZ z szefem MSZ Białorusi Maksimem Ryżenkowem – pierwsze takie rozmowy od dekady.",
       "zrodla": [
         {
           "nazwa": "Kyiv Independent",
@@ -71,7 +70,7 @@
         "wegry"
       ],
       "etap": "PROPOZYCJA",
-      "tekst": "Komisja Europejska zaproponowała 23.09 odblokowanie 4,2 mld euro funduszy spójności dla Węgier, uznając, że rząd Pétera Magyara usunął naruszenia praworządności (von der Leyen: „ważne kroki”). Zamrożone pozostaje 12,2 mld euro (m.in. 2,2 mld – wolność akademicka, 500 mln – ograniczenia LGBTIQ+). Rada ds. Ogólnych ma głosować większością kwalifikowaną prawdopodobnie 13.10 – to jeszcze nie decyzja.",
+      "tekst": "Komisja Europejska zaproponowała 23.09 odblokowanie 4,2 mld euro {{p:fundusze-spojnosci|funduszy spójności}} dla Węgier, uznając, że rząd {{o:peter-magyar|Pétera Magyara}} usunął naruszenia praworządności (von der Leyen: „ważne kroki”). Zamrożone pozostaje 12,2 mld euro (m.in. 2,2 mld – wolność akademicka, 500 mln – ograniczenia LGBTIQ+). Rada ds. Ogólnych ma głosować większością kwalifikowaną prawdopodobnie 13.10 – to jeszcze nie decyzja.",
       "zrodla": [
         {
           "nazwa": "Euronews",
@@ -93,7 +92,7 @@
         "lotwa",
         "wybory"
       ],
-      "tekst": "OSW (Bartosz Chmielewski, 23.09) przewiduje zwycięstwo Zjednoczonej Listy premiera Andrisa Kulbergsa w wyborach do 100-osobowego Saeimy 3.10; kampanię zdominowały sprawy socjoekonomiczne (airBaltic, Rail Baltica, finansowanie NGO), a najbardziej prawdopodobny rząd to Zjednoczona Lista, Sojusz Narodowy i Związek Zielonych i Rolników, o ile przekroczą próg 5%. Prawicowe partie chcą wykluczyć ugrupowania rosyjskojęzyczne z koalicji; NATO wsparło wybory niemieckimi myśliwcami. To ocena OSW, nie wynik.",
+      "tekst": "OSW (Bartosz Chmielewski, 23.09) przewiduje zwycięstwo Zjednoczonej Listy premiera {{o:andris-kulbergs|Andrisa Kulbergsa}} w wyborach do 100-osobowego {{p:saeima|Saeimy}} 3.10; kampanię zdominowały sprawy socjoekonomiczne (airBaltic, Rail Baltica, finansowanie NGO), a najbardziej prawdopodobny rząd to Zjednoczona Lista, Sojusz Narodowy i Związek Zielonych i Rolników, o ile przekroczą próg 5%. Prawicowe partie chcą wykluczyć ugrupowania rosyjskojęzyczne z koalicji; NATO wsparło wybory niemieckimi myśliwcami. To ocena OSW, nie wynik.",
       "zrodla": [
         {
           "nazwa": "OSW (B. Chmielewski), Analiza",

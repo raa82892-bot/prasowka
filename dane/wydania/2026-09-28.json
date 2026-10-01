@@ -4,10 +4,8 @@
   "godzina": "20:20",
   "typ": "dzienne",
   "w_skrocie": [
-    "Trump odrzucił 26.09 irański plan otwarcia **Cieśniny Ormuz** w 7 dni, ale zapowiedział rozmowy w tym tygodniu; mediatorem jest Katar.",
-    "Rosyjski atak na **Narodową Akademię Nauk** w Kijowie 28.09 zabił co najmniej dwie osoby; ukraińska operacja **Vivaldi** koło Łymanu zakończyła trzecią fazę (176 km² według dowódcy 3. Korpusu).",
-    "Wiceminister Sobkowiak-Czarnecka podtrzymała ofertę **produkcji pocisków Patriot w Polsce**; Rada UE ds. obrony przyjęła pierwsze pięć projektów EDIP.",
-    "Na Węgrzech parlament uchylił immunitet premierowi Magyarowi i dwóm ministrom z czasów Orbána; w Serbii prezydent Vučić zrezygnował, a obowiązki przejęła Brnabić."
+    "Rada UE ds. obrony przyjęła pierwsze pięć projektów **EDIP**.",
+    "Na Węgrzech parlament uchylił immunitet premierowi Magyarowi i dwóm ministrom z czasów Orbána."
   ],
   "korekty": [],
   "analizy": [],
@@ -32,12 +30,27 @@
         "ukraina",
         "dyplomacja-rp"
       ],
-      "tekst": "Po ataku nożownika na opactwo benedyktynek w Jarosławiu 24.09 (31-letni obywatel Ukrainy; zginął ksiądz, czworo rannych) sprawa zostaje wątkiem polsko-ukraińskim. Polsat News podał ustalenia policji i prokuratury z dnia zdarzenia; szef MSWiA Marcin Kierwiński komentował zatrzymanie sprawcy.",
+      "tekst": "Po ataku nożownika na opactwo benedyktynek w Jarosławiu 24.09 (zatrzymano 31-letniego obywatela Ukrainy; pięć osób zaatakowanych, według AFP zmarł ksiądz; zarzuty zabójstwa i usiłowania zabójstwa) sprawa nabiera wymiaru polsko-ukraińskiego: AFP opisuje nastroje antyukraińskie i wykorzystywanie sprawy przez skrajną prawicę.",
       "zrodla": [
         {
           "nazwa": "Polsat News",
           "url": "https://www.polsatnews.pl/wiadomosc/2026-09-24/atak-w-klasztorze-piec-osob-rannych-wsrod-nich-ksieza/",
           "data": "2026-09-24"
+        },
+        {
+          "nazwa": "AFP (za Yahoo News)",
+          "url": "https://sg.news.yahoo.com/deadly-abbey-attack-feeds-anti-145840067.html",
+          "data": "2026-09-26"
+        },
+        {
+          "nazwa": "Policja Podkarpacka (komunikat)",
+          "url": "https://podkarpacka.policja.gov.pl/rze/aktualnosci/153876,Policjanci-zatrzymali-31-latka-ktory-ranil-5-osob.html",
+          "data": "2026-09-24"
+        },
+        {
+          "nazwa": "Prokuratura Okręgowa w Przemyślu (gov.pl)",
+          "url": "https://www.gov.pl/web/po-przemysl/zdarzenie-w-opactwie-siostr-benedyktynek-w-jaroslawiu2",
+          "data": "2026-09-25"
         },
         {
           "nazwa": "AFP (za Yahoo News)",
@@ -55,7 +68,7 @@
         "obronnosc-polski",
         "ukraina"
       ],
-      "tekst": "Rada ds. Zagranicznych w formacie obrony (28.09) przyjęła pierwsze pięć projektów wspólnego zainteresowania w ramach programu EDIP, omówiła obronę przeciwlotniczą Ukrainy jako priorytet (Kallas), mobilizację 6,6 mld euro z Europejskiego Instrumentu na rzecz Pokoju i przedłużenie mandatu EUMAM Ukraine na dwa lata oraz reakcję na rosyjskie sabotaże i naruszenia przestrzeni powietrznej.",
+      "tekst": "Rada ds. Zagranicznych w formacie obrony (28.09) przyjęła pierwsze pięć projektów wspólnego zainteresowania w ramach programu {{p:edip|EDIP}}, omówiła obronę przeciwlotniczą Ukrainy jako priorytet (Kallas), mobilizację 6,6 mld euro z Europejskiego Instrumentu na rzecz Pokoju i przedłużenie mandatu EUMAM Ukraine na dwa lata oraz reakcję na rosyjskie sabotaże i naruszenia przestrzeni powietrznej.",
       "zrodla": [
         {
           "nazwa": "Rada UE (Consilium), FAC Obrona 28.09.2026",
@@ -72,7 +85,7 @@
         "wegry",
         "wybory"
       ],
-      "tekst": "Parlament Węgier uchylił 28.09 przytłaczającą większością głosów immunitet premierowi Péterowi Magyarowi (sprawa kradzieży telefonu z 2024 r.) oraz byłym ministrom Balázsowi Hankó (zarzut defraudacji ponad 40 mln euro) i Miklósowi Seszták (zarzut przyjęcia łapówek). Fidesz i KDNP zbojkotowały głosowanie.",
+      "tekst": "Parlament Węgier uchylił 28.09 {{p:immunitet|immunitet}} premierowi {{o:peter-magyar|Péterowi Magyarowi}} (sprawa kradzieży telefonu z 2024 r.) oraz byłym ministrom Balázsowi Hankó (zarzut defraudacji ponad 40 mln euro) i Miklósowi Seszták (zarzut przyjęcia łapówek). Fidesz i KDNP zbojkotowały głosowanie.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
@@ -82,6 +95,11 @@
         {
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/28/hungarian-parliament-lifts-immunity-of-pm-and-orban-era-ministers-in-separate-criminal-cas",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "AP (za WRAL)",
+          "url": "https://www.wral.com/news/ap/5e424-hungarys-parliament-suspends-immunity-for-prime-minister-magyar-and-two-orb-n-era-ministers/",
           "data": "2026-09-28"
         }
       ]

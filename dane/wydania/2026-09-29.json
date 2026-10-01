@@ -4,10 +4,9 @@
   "godzina": "20:30",
   "typ": "dzienne",
   "w_skrocie": [
-    "Na Słowacji **SNS razem z opozycją odwołała 29.09 ministra Tarabę** 77 głosami; premier Fico zwołuje na 30.09 prezydium Smeru, a opozycja żąda przedterminowych wyborów.",
-    "Iran rozmawiał w Nowym Jorku z mediatorami z Kataru; USA uzależniają porozumienie od kwestii programu jądrowego, a Cieśnina Ormuz pozostaje zamknięta.",
-    "Putin podpisał 28.09 czwarty w tym roku **dekret zwiększający armię** (do 2,44 mln etatów); projekt budżetu Rosji zakłada wydatki na obronę o 27% wyższe niż wcześniejszy plan.",
-    "Po uderzeniu rosyjskiego drona ok. 2 km od Dorohuska MON zapowiedział **zestrzeliwanie po identyfikacji pozytywnej**; Ławrow na polskie plany produkcji pocisków Patriot odpowiedział odesłaniem do rosyjskiej doktryny wojennej."
+    "Iran rozmawiał w Nowym Jorku z mediatorami z Kataru; USA uzależniają porozumienie od kwestii programu jądrowego, a {{p:ormuz|Cieśnina Ormuz}} pozostaje zamknięta.",
+    "Putin podpisał 28.09 czwarty w tym roku **dekret zwiększający armię** (do 2,44 mln etatów).",
+    "Po uderzeniu rosyjskiego drona ok. 2 km od Dorohuska MON zapowiedział **zestrzeliwanie po identyfikacji pozytywnej**."
   ],
   "korekty": [],
   "zarys": [
@@ -19,7 +18,7 @@
         "iran",
         "usa"
       ],
-      "tekst": "Minister spraw zagranicznych Iranu Abbas Araghczi spotkał się 28.09 w Nowym Jorku z mediatorami z Kataru podczas Zgromadzenia Ogólnego ONZ i czeka na oficjalną odpowiedź USA na irański **plan otwarcia Cieśniny Ormuz w 7 dni** (w zamian za zniesienie sankcji, odmrożenie aktywów i regionalne zawieszenie broni). USA chcą rozstrzygnąć w jednym pakiecie wszystkie sporne sprawy, w tym program jądrowy Iranu; Iran chce kolejności: najpierw Ormuz. Cieśnina jest blokowana przez obie strony.",
+      "tekst": "Minister spraw zagranicznych Iranu {{o:abbas-araghczi|Abbas Araghczi}} czeka na odpowiedź USA na irański **plan otwarcia {{p:ormuz|Cieśniny Ormuz}} w 7 dni** (w zamian za zniesienie amerykańskiej blokady portów, odmrożenie aktywów i zwolnienie z sankcji naftowych). USA oczekują ustępstw w sprawie programu jądrowego, a Araghczi zapowiada, że 7 dni liczyłoby się od przyjęcia planu. Mediatorzy (Katar, według AP także Pakistan) nadal pracują nad porozumieniem.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
@@ -30,6 +29,11 @@
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/26/trump-reportedly-rejects-iranian-plan-to-reopen-strait-of-hormuz",
           "data": "2026-09-26"
+        },
+        {
+          "nazwa": "AP (za PBS NewsHour)",
+          "url": "https://www.pbs.org/newshour/world/mediators-still-working-on-u-s-iran-deal-after-trump-rejected-latest-tehran-proposal",
+          "data": "2026-09-28"
         }
       ]
     },
@@ -40,7 +44,7 @@
       "tagi": [
         "rosja"
       ],
-      "tekst": "Prezydent Władimir Putin podpisał dekret zwiększający liczebność sił zbrojnych Rosji do **2 441 630 etatów**, w tym 1 550 500 wojskowych (ok. 15,5 tys. więcej niż od lipca). To czwarte takie zwiększenie w 2026 r. Prezydent Ukrainy Wołodymyr Zełenski ostrzega, że Rosja rozpoczęła już dodatkową mobilizację i przygotowuje wysłanie ok. 10 tys. żołnierzy z Korei Północnej.",
+      "tekst": "Prezydent {{o:wladimir-putin|Władimir Putin}} podpisał dekret zwiększający liczebność sił zbrojnych Rosji do **2 441 630 etatów**, w tym 1 550 500 wojskowych (ok. 15,5 tys. więcej niż od lipca). To czwarte takie zwiększenie w 2026 r. Prezydent Ukrainy {{o:wolodymyr-zelenski|Wołodymyr Zełenski}} ostrzega, że Rosja rozpoczęła już dodatkową mobilizację i przygotowuje wysłanie ok. 10 tys. żołnierzy z Korei Północnej.",
       "zrodla": [
         {
           "nazwa": "Kyiv Independent",
@@ -68,7 +72,7 @@
         "ukraina",
         "obronnosc-polski"
       ],
-      "tekst": "Rosyjski dron odrzutowy uderzył 28.09 ok. **2 km od polsko-ukraińskiego przejścia granicznego w Dorohusku** (po stronie ukraińskiej, rejon Jagodzina). Informację potwierdził wicepremier, minister obrony narodowej Władysław Kosiniak-Kamysz; naruszenia polskiej przestrzeni powietrznej nie było. Przejścia w Dorohusku i Zosinie ewakuowano i ok. 17:20 otwarto ponownie.",
+      "tekst": "Rosyjski dron odrzutowy uderzył 28.09 ok. **2 km od polsko-ukraińskiego przejścia granicznego w Dorohusku** (po stronie ukraińskiej, rejon Jagodzina). Informację potwierdził wicepremier, minister obrony narodowej {{o:wladyslaw-kosiniak-kamysz|Władysław Kosiniak-Kamysz}}; naruszenia polskiej przestrzeni powietrznej nie było. Przejścia w Dorohusku i Zosinie ewakuowano i ok. 17:20 otwarto ponownie.",
       "zrodla": [
         {
           "nazwa": "RMF24",
@@ -90,7 +94,7 @@
         "obronnosc-polski"
       ],
       "etap": "ZAPOWIEDŹ",
-      "tekst": "Wiceminister obrony narodowej Cezary Tomczyk zapowiedział, że MON zmieni procedury użycia broni przez polskie samoloty i śmigłowce wobec obiektów wlatujących od strony Rosji: **identyfikacja pozytywna** (m.in. dane z radarów) zamiast wizualnej. Zmiana nie wymaga, by pilot widział cel przed strzałem.",
+      "tekst": "Wiceminister obrony narodowej {{o:cezary-tomczyk|Cezary Tomczyk}} zapowiedział, że MON zmieni procedury użycia broni przez polskie samoloty i śmigłowce wobec obiektów wlatujących od strony Rosji: **identyfikacja pozytywna** (m.in. dane z radarów) zamiast wizualnej. Zmiana nie wymaga, by pilot widział cel przed strzałem.",
       "zrodla": [
         {
           "nazwa": "RMF24",
@@ -100,6 +104,11 @@
         {
           "nazwa": "PAP (za Gość Niedzielny)",
           "url": "https://www.gosc.pl/doc/9906121.MON-Zmieniamy-procedury-dotyczace-uzywania-sil-powietrznych",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "AFP (za Insider Paper)",
+          "url": "https://insiderpaper.com/poland-to-allow-fighter-pilots-to-shoot-down-foreign-aircraft-defense-minister-says",
           "data": "2026-09-28"
         }
       ]
@@ -112,7 +121,7 @@
         "ukraina",
         "uzbrojenie"
       ],
-      "tekst": "Prezydent Wołodymyr Zełenski powiedział 29.09 o porozumieniu z Belgią: przekaże ona Ukrainie **trzy myśliwce F-16** do końca 2026 r. w przyspieszonej procedurze.",
+      "tekst": "Prezydent {{o:wolodymyr-zelenski|Wołodymyr Zełenski}} powiedział 29.09 o porozumieniu z Belgią: przekaże ona Ukrainie **trzy myśliwce F-16** do końca 2026 r. w przyspieszonej procedurze.",
       "zrodla": [
         {
           "nazwa": "The Aviationist",
@@ -143,7 +152,7 @@
       "tagi": [
         "wegry"
       ],
-      "tekst": "Węgry: 28.09 zatrzymano byłych ministrów rządu Viktora Orbána: **Balázsa Hankó** (kultury i innowacji; podejrzenie sprzeniewierzenia 17 mld forintów z Narodowego Funduszu Kultury) i **Miklósa Sesztáka** (rozwoju narodowego; podejrzenie przyjęcia ok. 12,6 mld forintów łapówek przy zamówieniach na autobusy) oraz b. sekretarz stanu Veronikę Varga-Bajusz. Sąd zdecydował o areszcie Sesztáka 30.09, wniosek o areszt Hankó trafił do sądu (por. wyd. nr 11).",
+      "tekst": "Węgry: po uchyleniu {{p:immunitet|immunitetu}} zatrzymano (28–29.09) byłych ministrów rządu Viktora Orbána: **Balázsa Hankó** (kultury i innowacji; podejrzenie sprzeniewierzenia środków Narodowego Funduszu Kultury) i **Miklósa Sesztáka** (rozwoju narodowego; podejrzenie łapówkarstwa przy zamówieniach na autobusy). Wnioski o areszt trafiają do sądu (por. wyd. nr 11).",
       "zrodla": [
         {
           "nazwa": "444.hu",
@@ -158,6 +167,11 @@
         {
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/29/with-two-orban-era-ministers-detained-magyars-operation-purge-takes-shape",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Reuters (za Internazionale)",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/29/former-hungarian-culture-minister-detained-after-allegations-of-misappropriation",
           "data": "2026-09-29"
         }
       ]

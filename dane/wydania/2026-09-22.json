@@ -4,8 +4,8 @@
   "godzina": "20:05",
   "typ": "dzienne",
   "w_skrocie": [
-    "Trump w ONZ: stoi przed decyzją, czy zawrzeć układ z Iranem, czy „unicestwić” Republikę Islamską; tego samego dnia podpisał umowę z Danią i Grenlandią.",
-    "OSW: 20.09 Ukraina przeprowadziła największy nalot od początku wojny (1300–1600 dronów), a Rosja z 52 rakiet z 15–22.09 zestrzelono 1–2.",
+    "Trump, Frederiksen i Nielsen podpisali 22.09 w siedzibie ONZ umowę bezpieczeństwa o Grenlandii (bazy USA, ograniczenia dla państw spoza NATO).",
+    "Ukraina przeprowadziła 20.09 największy dotąd atak dronami na Moskwę; uszkodzono rafinerię w Kapotni.",
     "UE przedłużyła sankcje wobec Rosji na trzy lata; Usmanow zniknął z listy."
   ],
   "korekty": [],
@@ -32,7 +32,7 @@
         "nato",
         "nordyckie"
       ],
-      "tekst": "Trump, premier Danii Mette Frederiksen i premier Grenlandii Jens-Frederik Nielsen podpisali 22.09 w siedzibie ONZ umowę bezpieczeństwa: USA mogą rozbudować bazę Pituffik i budować nowe bazy w Narsarsuaq i Mestersvig; państwa spoza NATO nie mogą mieć tam baz ani wrażliwych inwestycji bez zgody (według komunikatu Białego Domu: bez zgody USA). Umowa jest bezterminowa i uzupełnia traktat obronny z 1951 r.; według PISM potwierdza duńskie zwierzchnictwo nad wyspą. Ocenę umowy przez OSW opisano w wydaniu nr 5 (pkt z1).",
+      "tekst": "Trump, premier Danii {{o:mette-frederiksen|Mette Frederiksen}} i premier Grenlandii {{o:jens-frederik-nielsen|Jens-Frederik Nielsen}} podpisali 22.09 w siedzibie ONZ umowę bezpieczeństwa: USA mogą rozbudować bazę {{p:pituffik|Pituffik}} i budować nowe bazy w Narsarsuaq i Mestersvig; państwa spoza NATO nie mogą mieć tam baz ani wrażliwych inwestycji bez zgody (według komunikatu Białego Domu: bez zgody USA). Umowa jest bezterminowa i uzupełnia traktat obronny z 1951 r.; według PISM potwierdza duńskie zwierzchnictwo nad wyspą. Ocenę umowy przez OSW opisano w wydaniu nr 5 (pkt z1).",
       "zrodla": [
         {
           "nazwa": "Biały Dom (komunikat)",

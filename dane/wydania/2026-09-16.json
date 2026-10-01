@@ -7,7 +7,7 @@
   "analizy": [],
   "kalendarz": [],
   "w_skrocie": [
-    "Fed podniósł stopy o 25 pb do 3,75–4,00% – pierwsza podwyżka od 2023 r.",
+    "Fed podniósł stopy o 25 {{p:pb|pb}} do 3,75–4,00% – pierwsza podwyżka od 2023 r.",
     "Białoruś uwolniła 25 więźniów politycznych w zamian za zniesienie amerykańskich sankcji na dwie firmy; wysłannik USA liczy na „setki” kolejnych uwolnień."
   ],
   "zrodla_analityczne": {
@@ -23,7 +23,7 @@
         "gospodarka",
         "usa"
       ],
-      "tekst": "Fed podniósł 16.09 jednogłośnie stopy o 25 pb do 3,75–4,00% – pierwsza podwyżka od 2023 r. Mediana prognoz FOMC wskazuje na jeszcze jedną podwyżkę w 2026 r. (średnia stopa 4,125%). Przewodniczący Kevin Warsh: inflacja jest „za wysoka od zbyt dawna”.",
+      "tekst": "Fed podniósł 16.09 jednogłośnie stopy o 25 {{p:pb|pb}} do 3,75–4,00% – pierwsza podwyżka od 2023 r. Mediana prognoz {{p:fomc|FOMC}} wskazuje na jeszcze jedną podwyżkę w 2026 r. (średnia stopa 4,125%). Przewodniczący Kevin Warsh: inflacja jest „za wysoka od zbyt dawna”.",
       "zrodla": [
         {
           "nazwa": "Yahoo Finance",
@@ -57,6 +57,11 @@
         {
           "nazwa": "RFE/RL",
           "url": "https://www.rferl.org/a/belarus-us-prisoners-release-sanctions/33857455.html",
+          "data": "2026-09-16"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/my-europe/2026/09/16/belarus-releases-25-political-prisoners-in-exchange-for-lifting-of-us-sanctions-on-two-com",
           "data": "2026-09-16"
         }
       ]

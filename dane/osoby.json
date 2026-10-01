@@ -1,4 +1,476 @@
 {
   "_opis": "Karty osób. W tekście wydania: {{o:id}} (albo {{o:id|tekst}}). Funkcja to twierdzenie typu A: zawsze ze źródłem i datą weryfikacji; przy zmianie funkcji dopisz poprzednią do historia.",
-  "osoby": []
+  "osoby": [
+    {
+      "id": "donald-trump",
+      "imie": "Donald Trump",
+      "funkcja": "Prezydent Stanów Zjednoczonych.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Biały Dom (wystąpienie na Zgromadzeniu Ogólnym ONZ)",
+          "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-at-the-united-nations-while-others-have-talked-i-have-acted/",
+          "data": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "id": "wolodymyr-zelenski",
+      "imie": "Wołodymyr Zełenski",
+      "funkcja": "Prezydent Ukrainy.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Prezydent Ukrainy (president.gov.ua), wystąpienia",
+          "url": "https://www.president.gov.ua/en/news/speeches",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "wladimir-putin",
+      "imie": "Władimir Putin",
+      "funkcja": "Prezydent Federacji Rosyjskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Meduza",
+          "url": "https://meduza.io/en/news/2026/09/28/putin-orders-fourth-expansion-of-russia-s-armed-forces-this-year",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "emmanuel-macron",
+      "imie": "Emmanuel Macron",
+      "funkcja": "Prezydent Republiki Francuskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Pałac Elizejski (wywiad dla TF1 i France 2)",
+          "url": "https://www.elysee.fr/emmanuel-macron/2026/09/24/interview-du-president-de-la-republique-sur-tf1-et-france-2",
+          "data": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "friedrich-merz",
+      "imie": "Friedrich Merz",
+      "funkcja": "Kanclerz Republiki Federalnej Niemiec (CDU).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Federalny (bundesregierung.de)",
+          "url": "https://www.bundesregierung.de/breg-de/aktuelles/deutscher-schulpreis-2026-2454634",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "robert-fico",
+      "imie": "Robert Fico",
+      "funkcja": "Premier Słowacji (Smer-SD).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "TASR (za Teraz.sk)",
+          "url": "https://www.teraz.sk/slovensko/v-piatok-by-mala-rokovat-koalicna-rad/996439-clanok.html",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "andrej-babis",
+      "imie": "Andrej Babiš",
+      "funkcja": "Premier Republiki Czeskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Republiki Czeskiej (vlada.gov.cz)",
+          "url": "https://vlada.gov.cz/",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "peter-magyar",
+      "imie": "Péter Magyar",
+      "funkcja": "Premier Węgier (lider partii Tisza).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "AP (za WRAL)",
+          "url": "https://www.wral.com/news/ap/5e424-hungarys-parliament-suspends-immunity-for-prime-minister-magyar-and-two-orb-n-era-ministers/",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "radoslaw-sikorski",
+      "imie": "Radosław Sikorski",
+      "funkcja": "Wicepremier i minister spraw zagranicznych RP.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Ministerstwo Spraw Zagranicznych (gov.pl)",
+          "url": "https://www.gov.pl/web/dyplomacja",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "wladyslaw-kosiniak-kamysz",
+      "imie": "Władysław Kosiniak-Kamysz",
+      "funkcja": "Wicepremier i minister obrony narodowej RP.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Polska Zbrojna (MON)",
+          "url": "https://polska-zbrojna.pl/home/articleshow/47316?title=Obrona-powietrzna-bedzie-strzelac-szybciej",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "cezary-tomczyk",
+      "imie": "Cezary Tomczyk",
+      "funkcja": "Wiceminister obrony narodowej RP.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "PAP (za Gość Niedzielny)",
+          "url": "https://www.gosc.pl/doc/9906121.MON-Zmieniamy-procedury-dotyczace-uzywania-sil-powietrznych",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "magdalena-sobkowiak-czarnecka",
+      "imie": "Magdalena Sobkowiak-Czarnecka",
+      "funkcja": "Sekretarz stanu w Ministerstwie Obrony Narodowej (wiceministra obrony).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Ministerstwo Obrony Narodowej (gov.pl)",
+          "url": "https://www.gov.pl/web/national-defence/magdalena-sobkowiak-czarnecka-secretary-of-state",
+          "data": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "id": "karol-nawrocki",
+      "imie": "Karol Nawrocki",
+      "funkcja": "Prezydent Rzeczypospolitej Polskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "PAP (za Rzeczpospolitą)",
+          "url": "https://www.rp.pl/polityka/art45194991-putin-zaproszony-na-szczyt-g20-palac-prezydencki-nam-sie-to-nie-podoba",
+          "data": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "marcin-przydacz",
+      "imie": "Marcin Przydacz",
+      "funkcja": "Szef Biura Polityki Międzynarodowej Kancelarii Prezydenta RP.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "PAP (za Rzeczpospolitą)",
+          "url": "https://www.rp.pl/polityka/art45194991-putin-zaproszony-na-szczyt-g20-palac-prezydencki-nam-sie-to-nie-podoba",
+          "data": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "mark-rutte",
+      "imie": "Mark Rutte",
+      "funkcja": "Sekretarz Generalny NATO.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "NATO (nato.int)",
+          "url": "https://www.nato.int/en/news-and-events/articles/news/2026/09/29/secretary-general-and-lithuanian-prime-minister-discuss-eastern-flank-defence-drones-and-support-for-ukraine",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "ursula-von-der-leyen",
+      "imie": "Ursula von der Leyen",
+      "funkcja": "Przewodnicząca Komisji Europejskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Komisja Europejska (State of the Union 2026)",
+          "url": "https://commission.europa.eu/strategy-and-policy/state-union_en",
+          "data": "2026-09-16"
+        }
+      ]
+    },
+    {
+      "id": "antonio-costa",
+      "imie": "António Costa",
+      "funkcja": "Przewodniczący Rady Europejskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rada UE (oświadczenie prasowe)",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/09/17/press-statement-by-president-costa-following-the-meeting-with-ireland-s-taoiseach-micheal-martin/",
+          "data": "2026-09-17"
+        }
+      ]
+    },
+    {
+      "id": "aleksandar-vucic",
+      "imie": "Aleksandar Vučić",
+      "funkcja": "Były prezydent Serbii (ustąpił 27.09.2026); według OSW chce kierować rządem po przedterminowych wyborach parlamentarnych 25.10.2026.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "OSW (J. Nowinowski), Serbia's President Vučić resigns: a one-man show",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-28/serbias-president-vucic-resigns-a-one-man-show",
+          "data": "2026-09-28"
+        }
+      ],
+      "historia": [
+        "Prezydent Republiki Serbii do rezygnacji 27.09.2026."
+      ]
+    },
+    {
+      "id": "ana-brnabic",
+      "imie": "Ana Brnabić",
+      "funkcja": "Przewodnicząca Zgromadzenia Narodowego Serbii, od 27–28.09.2026 pełniąca obowiązki prezydenta Republiki.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Serbii (srbija.gov.rs)",
+          "url": "https://www.srbija.gov.rs/vest/en/288494/vucic-hands-over-duty-of-president-of-republic-to-national-assembly-speaker.php",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "mette-frederiksen",
+      "imie": "Mette Frederiksen",
+      "funkcja": "Premier Danii.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Biały Dom (komunikat o umowie)",
+          "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-inks-historic-arctic-security-agreement/",
+          "data": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "id": "jens-frederik-nielsen",
+      "imie": "Jens-Frederik Nielsen",
+      "funkcja": "Premier Grenlandii.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Biały Dom (komunikat o umowie)",
+          "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-inks-historic-arctic-security-agreement/",
+          "data": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "id": "abbas-araghczi",
+      "imie": "Abbas Araghczi",
+      "funkcja": "Minister spraw zagranicznych Islamskiej Republiki Iranu.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "AP (za PBS NewsHour)",
+          "url": "https://www.pbs.org/newshour/world/mediators-still-working-on-u-s-iran-deal-after-trump-rejected-latest-tehran-proposal",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "masud-pezeszkian",
+      "imie": "Masud Pezeszkian",
+      "funkcja": "Prezydent Islamskiej Republiki Iranu.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "CBS News (Face the Nation, transkrypt)",
+          "url": "https://www.cbsnews.com/news/transcript-iranian-president-masoud-pezeshkian-face-the-nation-transcript-09-27-2026/",
+          "data": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "id": "steve-witkoff",
+      "imie": "Steve Witkoff",
+      "funkcja": "Specjalny wysłannik prezydenta USA.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/exclusive-ukraine-russia-are-done-with-steve-witkoff-trump-sees-no-problem/",
+          "data": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "siergiej-lawrow",
+      "imie": "Siergiej Ławrow",
+      "funkcja": "Minister spraw zagranicznych Federacji Rosyjskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "ONZ (UN News)",
+          "url": "https://news.un.org/en/story/2026/09/1168457",
+          "data": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "scott-bessent",
+      "imie": "Scott Bessent",
+      "funkcja": "Sekretarz skarbu Stanów Zjednoczonych.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Departament Skarbu USA (komunikat)",
+          "url": "https://home.treasury.gov/news/press-releases/sb0638/",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "andris-kulbergs",
+      "imie": "Andris Kulbergs",
+      "funkcja": "Premier Łotwy, lider Zjednoczonej Listy (przed wyborami do Saeimy 3.10.2026).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "OSW (B. Chmielewski), Latvian parliamentary election: Prime Minister seeks re-election",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-23/latvian-parliamentary-election-prime-minister-seeks-re-election",
+          "data": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "id": "gitanas-nauseda",
+      "imie": "Gitanas Nausėda",
+      "funkcja": "Prezydent Republiki Litewskiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "LRT",
+          "url": "https://www.lrt.lt/en/news-in-english/19/3068362/lithuanian-president-says-anti-muslim-incidents-may-be-orchestrated",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "mindaugas-sinkevicius",
+      "imie": "Mindaugas Sinkevičius",
+      "funkcja": "Premier Litwy.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "NATO (konferencja prasowa z Markiem Rutte)",
+          "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "kristen-michal",
+      "imie": "Kristen Michal",
+      "funkcja": "Premier Estonii.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Estonii (valitsus.ee)",
+          "url": "https://valitsus.ee/en",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "peter-pellegrini",
+      "imie": "Peter Pellegrini",
+      "funkcja": "Prezydent Republiki Słowackiej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "TASR (za Teraz.sk)",
+          "url": "https://www.teraz.sk/slovensko/pellegrini-svet-je-v-ovela-horsej-sit/994234-clanok.html",
+          "data": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "id": "siegfried-muresan",
+      "imie": "Siegfried Mureșan",
+      "funkcja": "Kandydat na premiera Rumunii (premier-desygnat); 30.09.2026 parlament odmówił mu wotum zaufania.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Reuters (za Internazionale)",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/30/romanian-pm-designate-muresan-loses-confidence-vote",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "ilham-alijew",
+      "imie": "Ilham Alijew",
+      "funkcja": "Prezydent Republiki Azerbejdżanu.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Prezydent Azerbejdżanu (president.az)",
+          "url": "https://president.az/en/",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "xi-jinping",
+      "imie": "Xi Jinping",
+      "funkcja": "Prezydent Chińskiej Republiki Ludowej.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Biały Dom (fact sheet o wizycie państwowej)",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+          "data": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "jamieson-greer",
+      "imie": "Jamieson Greer",
+      "funkcja": "Przedstawiciel Handlowy Stanów Zjednoczonych (USTR).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "USTR (komunikat)",
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-delivers-opening-remarks-2026-g20-trade-ministerial",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "manuela-schwesig",
+      "imie": "Manuela Schwesig",
+      "funkcja": "Premierka Meklemburgii-Pomorza Przedniego (SPD).",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "OSW (Germany: victory for Die Linke in Berlin and AfD in Mecklenburg-Western Pomerania)",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-21/germany-victory-die-linke-berlin-and-afd-mecklenburg-western",
+          "data": "2026-09-21"
+        }
+      ]
+    }
+  ]
 }

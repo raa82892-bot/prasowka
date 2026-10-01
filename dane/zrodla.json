@@ -1324,6 +1324,81 @@
         "White House"
       ],
       "uzasadnienie": "Oficjalny komunikat strony umowy o jej treści i terminie podpisania; co do ocen i skutków – to wersja strony (por. Kreml)."
+    },
+    {
+      "id": "cnn",
+      "nazwa": "CNN",
+      "poziom": 2,
+      "typ": "telewizja informacyjna",
+      "kraj": "USA",
+      "domeny": [
+        "cnn.com"
+      ],
+      "wzorce": [
+        "CNN"
+      ],
+      "uzasadnienie": "Wiodąca amerykańska redakcja z własną siecią korespondentów; przedruki na portalach lokalnych podpisujemy „CNN (za …)”."
+    },
+    {
+      "id": "usa-administracja",
+      "nazwa": "Administracja USA (Skarb, Departament Stanu, USTR)",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "USA",
+      "domeny": [
+        "treasury.gov",
+        "state.gov",
+        "ustr.gov",
+        "defense.gov",
+        "war.gov"
+      ],
+      "wzorce": [
+        "Departament Skarbu",
+        "Departament Stanu",
+        "USTR",
+        "Pentagon"
+      ],
+      "uzasadnienie": "Komunikaty urzędów o własnych decyzjach i obsadzie; co do ocen i skutków – wersja strony."
+    },
+    {
+      "id": "rzady-obce",
+      "nazwa": "Rządy i urzędy państw obcych",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "różne",
+      "domeny": [
+        "president.gov.ua",
+        "elysee.fr",
+        "bundesregierung.de",
+        "vlada.gov.cz",
+        "srbija.gov.rs",
+        "valitsus.ee",
+        "president.az"
+      ],
+      "wzorce": [
+        "Prezydent Ukrainy",
+        "Pałac Elizejski",
+        "Rząd Federalny",
+        "Rząd Republiki Czeskiej",
+        "Rząd Serbii",
+        "Rząd Estonii",
+        "Prezydent Azerbejdżanu"
+      ],
+      "uzasadnienie": "Strony urzędowe prezydentów i rządów: potwierdzają ich obsadę, decyzje i komunikaty; wypowiedzi to wersja strony."
+    },
+    {
+      "id": "onz",
+      "nazwa": "ONZ (UN News, dokumenty)",
+      "poziom": 1,
+      "typ": "organizacja międzynarodowa",
+      "kraj": "międzynarodowa",
+      "domeny": [
+        "un.org"
+      ],
+      "wzorce": [
+        "ONZ"
+      ],
+      "uzasadnienie": "Oficjalne serwisy i dokumenty Organizacji Narodów Zjednoczonych."
     }
   ]
 }

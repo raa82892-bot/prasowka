@@ -6,8 +6,8 @@
   "w_skrocie": [
     "Ujawniono rosyjską **notę do NATO w sprawie Kaliningradu**: w razie próby izolacji obwodu Moskwa grozi użyciem „całego arsenału, w tym broni jądrowej”; Kreml potwierdził jej istnienie, NATO ją odrzuciło.",
     "W nocy 29/30.09 Rosja zaatakowała Ukrainę 188 dronami i pociskami (celem była energetyka Kijowa); w Polsce poderwano myśliwce, a od 1.10 obowiązują **nowe procedury obrony powietrznej** (identyfikacja pozytywna zamiast wizualnej).",
-    "Rząd przyjął 29.09 projekt budżetu na 2027 r. z deficytem 281,2 mld zł i wydatkami obronnymi 198,1 mld zł; wstępna **inflacja CPI za wrzesień wzrosła do 4,0% r/r** (paliwa +36,1% r/r).",
-    "W Rumunii parlament odrzucił rząd Siegfrieda Mureșana (trzecia nieudana próba od maja), co otwiera drogę do rozwiązania parlamentu; na Słowacji prezydent formalnie odwołał ministra Tarabę, na Węgrzech sąd aresztował b. ministra Sesztáka."
+    "Wstępna **inflacja CPI za wrzesień wzrosła do 4,0% r/r** (GUS; paliwa +36,1% r/r).",
+    "W Rumunii parlament odrzucił rząd Siegfrieda Mureșana (trzecia nieudana próba od maja), co otwiera drogę do rozwiązania parlamentu."
   ],
   "korekty": [],
   "zarys": [
@@ -19,7 +19,7 @@
         "ukraina",
         "energia"
       ],
-      "tekst": "Noc 29/30.09: według Sił Powietrznych Ukrainy Rosja użyła **188 dronów** (w tym 86 odrzutowych) oraz pocisków przeciwokrętowych 3M22 Cyrkon i P-800 Oniks i balistycznych Iskander-M i S-400; strącono lub zneutralizowano 160 celów, trafienia w 18 miejscach. Prezydent Wołodymyr Zełenski: głównym celem była **energetyka Kijowa** i obwodu. Zginęły co najmniej 4 osoby, w tym dziecko w Wyszhorodzie. Rosyjskie MO podało, że celem były węzły łączności i energetyka „wspierająca produkcję wojskową”.",
+      "tekst": "Noc 29/30.09: według Sił Powietrznych Ukrainy Rosja użyła **188 dronów** (w tym 86 odrzutowych) oraz pocisków przeciwokrętowych 3M22 Cyrkon i P-800 Oniks i balistycznych Iskander-M i S-400; strącono lub zneutralizowano 160 celów, trafienia w 18 miejscach. Prezydent {{o:wolodymyr-zelenski|Wołodymyr Zełenski}}: głównym celem była **energetyka Kijowa** i obwodu. Zginęły co najmniej 4 osoby, w tym dziecko w Wyszhorodzie. Rosyjskie MO podało, że celem były węzły łączności i energetyka „wspierająca produkcję wojskową”.",
       "zrodla": [
         {
           "nazwa": "Kyiv Post",
@@ -74,7 +74,7 @@
         "iran",
         "usa"
       ],
-      "tekst": "Iran: USA przekazały przez Katar **odpowiedź na irański plan 7-dniowy**; minister spraw zagranicznych Abbas Araghczi odebrał ją w Dosze. Według urzędników strony zgadzają się co do kroków, ale nie co do kolejności; Axios: mediacja katarska dała „niewiele”, Iran żąda powrotu do czerwcowego memorandum. Blokada cieśniny Ormuz trwa.",
+      "tekst": "Iran: USA przekazały przez mediatorów z Kataru oficjalną **odpowiedź na irański plan 7-dniowy**; Araghczi przedstawił ją prezydentowi Masudowi Pezeszkianowi na posiedzeniu rządu (AP). Według Reutersa strony zgadzają się co do kroków, ale nie co do kolejności, a Iran żąda powrotu do czerwcowego memorandum; Axios ocenia, że mediacja dała „niewiele”.",
       "zrodla": [
         {
           "nazwa": "Axios",
@@ -84,6 +84,11 @@
         {
           "nazwa": "Reuters (za Investing.com)",
           "url": "https://www.investing.com/news/commodities-news/iran-receives-us-feedback-on-sevenday-trustbuilding-plan-4924251",
+          "data": "2026-09-30"
+        },
+        {
+          "nazwa": "AP (za Boston Globe)",
+          "url": "https://www.bostonglobe.com/2026/09/30/world/iran-us-response-end-war/",
           "data": "2026-09-30"
         }
       ]
@@ -95,7 +100,7 @@
       "tagi": [
         "obronnosc-polski"
       ],
-      "tekst": "Wicepremier, minister obrony narodowej Władysław Kosiniak-Kamysz: procedury są gotowe, od 1.10 piloci i {{p:opl|obrona powietrzna}} stosują **identyfikację pozytywną** (radary, systemy elektroniczne, informacje m.in. z Ukrainy) zamiast identyfikacji wizualnej. Zmiana rozkazami wojskowymi, bez nowelizacji ustawy. Zamyka to zapowiedź wiceministra Cezarego Tomczyka z 24 i 28.09.",
+      "tekst": "Wicepremier, minister obrony narodowej {{o:wladyslaw-kosiniak-kamysz|Władysław Kosiniak-Kamysz}}: procedury są gotowe, od 1.10 piloci i {{p:opl|obrona powietrzna}} stosują **identyfikację pozytywną** (radary, systemy elektroniczne, informacje m.in. z Ukrainy) zamiast identyfikacji wizualnej. Zmiana rozkazami wojskowymi, bez nowelizacji ustawy. Zamyka to zapowiedź wiceministra Cezarego Tomczyka z 24 i 28.09.",
       "zrodla": [
         {
           "nazwa": "Dziennik.pl / Gazeta Prawna",
@@ -116,7 +121,7 @@
       "tagi": [
         "rumunia"
       ],
-      "tekst": "Rumunia: parlament **nie udzielił wotum zaufania rządowi Siegfrieda Mureșana** – 182 głosy za przy wymaganych 233 (15 przeciw); AUR zbojkotowała głosowanie, posłowie PSD byli obecni, ale nie głosowali. To trzecia nieudana próba od upadku rządu Ilie Bolojana w maju; według Agerpres art. 89 konstytucji pozwala teraz prezydentowi rozwiązać parlament. USR (Dominic Fritz) żąda przedterminowych wyborów, PSD (Sorin Grindeanu) domaga się rządu „z pełnią władzy” i stanowiska premiera dla siebie; prezydent Nicușor Dan ostrzegał, że przedterminowe wybory nie rozwiążą kryzysu.",
+      "tekst": "Rumunia: parlament **nie udzielił {{p:wotum-nieufnosci|wotum zaufania}} rządowi {{o:siegfried-muresan|Siegfrieda Mureșana}}** – 182 głosy za przy wymaganych 233 (15 przeciw); AUR zbojkotowała głosowanie, posłowie PSD byli obecni, ale nie głosowali. To trzecia nieudana próba od upadku rządu Ilie Bolojana w maju; według Agerpres art. 89 konstytucji pozwala teraz prezydentowi rozwiązać parlament. USR (Dominic Fritz) żąda przedterminowych wyborów, PSD (Sorin Grindeanu) domaga się rządu „z pełnią władzy” i stanowiska premiera dla siebie; prezydent Nicușor Dan ostrzegał, że przedterminowe wybory nie rozwiążą kryzysu.",
       "zrodla": [
         {
           "nazwa": "Agerpres (agencja państwowa)",
@@ -143,7 +148,7 @@
         "estonia",
         "hybryda"
       ],
-      "tekst": "Estonia: premier Kristen Michal i dyrektor generalny Policji Bezpieczeństwa (KAPO) Margo Palloson **przypisali rosyjskim służbom podpalenie zakładu Milrem Robotics** (producent bezzałogowych pojazdów lądowych) z 15.08; wezwano rosyjskiego chargé d’affaires.",
+      "tekst": "Estonia: premier {{o:kristen-michal|Kristen Michal}} i dyrektor generalny Policji Bezpieczeństwa (KAPO) Margo Palloson **przypisali rosyjskim służbom podpalenie zakładu Milrem Robotics** (producent bezzałogowych pojazdów lądowych) z 15.08; wezwano rosyjskiego chargé d’affaires.",
       "zrodla": [
         {
           "nazwa": "ERR (estońska telewizja publiczna)",
@@ -165,7 +170,7 @@
         "gospodarka",
         "energia"
       ],
-      "tekst": "GUS, szybki szacunek: **CPI we wrześniu 4,0% r/r** (0,7% m/m; sierpień 3,4%) – nieco poniżej konsensusu PAP Biznes (4,1%), ale wyraźnie powyżej celu NBP (2,5% ±1 pkt proc.). Paliwa +36,1% r/r, energia +4,9%, żywność −0,5%. Ropa Brent 30.09 ok. 98,5 USD (TradingEconomics), +8,8% w miesiącu.",
+      "tekst": "GUS, szybki szacunek: **{{p:cpi|CPI}} we wrześniu 4,0% r/r** (0,7% m/m; sierpień 3,4%) – nieco poniżej konsensusu PAP Biznes (4,1%), ale wyraźnie powyżej celu NBP (2,5% ±1 pkt proc.). Paliwa +36,1% r/r, energia +4,9%, żywność −0,5%. Ropa Brent 30.09 ok. 98,5 USD (TradingEconomics), +8,8% w miesiącu.",
       "zrodla": [
         {
           "nazwa": "GUS / stat.gov.pl",
@@ -211,7 +216,7 @@
         "kaliningrad",
         "hybryda"
       ],
-      "tekst": "Wynik wyborów do Dumy pokazuje, że Moskwa wybiera eskalację – należy oczekiwać większej liczby uderzeń na ukraińską infrastrukturę i operacji hybrydowych wobec państw NATO; autorka zaleca zwiększenie pomocy dla Ukrainy, ochrony infrastruktury krytycznej i koordynacji wywiadowczej. Nota o Kaliningradzie z 30.09 wpisuje się w tę ocenę – to wniosek redakcji, nie PISM.",
+      "tekst": "Wynik wyborów do {{p:duma|Dumy}} pokazuje, że Moskwa wybiera eskalację – należy oczekiwać większej liczby uderzeń na ukraińską infrastrukturę i operacji hybrydowych wobec państw NATO; autorka zaleca zwiększenie pomocy dla Ukrainy, ochrony infrastruktury krytycznej i koordynacji wywiadowczej. Nota o Kaliningradzie z 30.09 wpisuje się w tę ocenę – to wniosek redakcji, nie PISM.",
       "dla_polski": "Polska jako państwo graniczące z obwodem kaliningradzkim jest bezpośrednim adresatem rosyjskiej presji; Warszawa powinna zabiegać o wspólną, jawną odpowiedź NATO na notę i nie dopuścić, by groźba zniechęciła sojuszników do ćwiczeń i obecności na wschodniej flance.",
       "zrodla": [
         {
