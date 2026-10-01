@@ -113,42 +113,6 @@
       ]
     },
     {
-      "id": "z6",
-      "blok": "polska",
-      "data": "2026-09-29",
-      "tagi": [
-        "uzbrojenie",
-        "rosja",
-        "dyplomacja-rp"
-      ],
-      "tekst": "Minister spraw zagranicznych Rosji Siergiej Ławrow, pytany na forum Klubu Wałdajskiego o polskie plany produkcji rakiet do systemu Patriot we współpracy z USA, odpowiedział: „Mamy doktrynę wojenną w tej sprawie, na którą prezydent wielokrotnie się powoływał”.",
-      "zrodla": [
-        {
-          "nazwa": "TASS (wypowiedź Ławrowa, strona rosyjska)",
-          "url": "https://tass.com/politics/2194529",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
-      "id": "z7",
-      "blok": "instytucje",
-      "data": "2026-09-29",
-      "tagi": [
-        "nato",
-        "litwa",
-        "hybryda"
-      ],
-      "tekst": "Sekretarz generalny NATO Mark Rutte po spotkaniu z premierem Litwy Mindaugasem Sinkevičiusem: Sojusz wzmocni **tańszą obronę przeciwdronową**, by nie używać „wysokiej klasy samolotów przeciw tanim zagrożeniom” (inicjatywa „Drone Edge”). Kontekst: włoskie myśliwce NATO z bazy w Szawlach zestrzeliły dwa tygodnie wcześniej dron naruszający litewską przestrzeń; Litwa przeznacza w tym roku 5,38% PKB na obronę.",
-      "zrodla": [
-        {
-          "nazwa": "NATO",
-          "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
       "id": "z9",
       "blok": "instytucje",
       "data": "2026-09-29",
@@ -171,22 +135,6 @@
         {
           "nazwa": "Reuters (za U.S. News)",
           "url": "https://www.usnews.com/news/world/articles/2026-09-29/belgium-to-transfer-three-f-16s-to-ukraine-this-year-zelenskiy-says",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
-      "id": "z10",
-      "blok": "instytucje",
-      "data": "2026-09-29",
-      "tagi": [
-        "slowacja"
-      ],
-      "tekst": "Słowacja: parlament **odwołał ministra środowiska Tomáša Tarabę 77 głosami**; za odwołaniem głosowali posłowie opozycji i część posłów koalicyjnej Słowackiej Partii Narodowej (SNS). Premier Robert Fico zwołał na środę (30.09) spotkanie kierownictwa Smeru i SNS; opozycja żąda przedterminowych wyborów.",
-      "zrodla": [
-        {
-          "nazwa": "TASR / teraz.sk",
-          "url": "https://www.teraz.sk/slovensko/poslanci-budu-rokovat-o-odvolavani-t/995968-clanok.html",
           "data": "2026-09-29"
         }
       ]

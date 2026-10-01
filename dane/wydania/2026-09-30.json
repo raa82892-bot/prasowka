@@ -67,25 +67,6 @@
       ]
     },
     {
-      "id": "z3",
-      "blok": "wojna",
-      "data": "2026-09-29",
-      "tagi": [
-        "sankcje",
-        "usa",
-        "iran"
-      ],
-      "etap": "PRZYJĘTE",
-      "tekst": "Departament Skarbu i Departament Stanu USA objęły **sankcjami 13 osób i podmiotów** za pomoc w zakupach uzbrojenia przez Iran, m.in. rosyjskie OKB Jakowlew i MG-Flot oraz irańskie linie Saha Airlines. Sekretarz skarbu Scott Bessent: „Skarb nie będzie tolerował żadnego wsparcia dla reżimu”.",
-      "zrodla": [
-        {
-          "nazwa": "Kyiv Independent",
-          "url": "https://kyivindependent.com/us-imposes-sanctions-against-russian-companies-tied-to-iran-weapons-procurement/",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
       "id": "z4",
       "blok": "swiat",
       "data": "2026-09-30",
@@ -174,43 +155,6 @@
         {
           "nazwa": "AFP (za Arab News)",
           "url": "https://www.arabnews.com/world/romanian-parliament-rejects-pro-eu-pm-candidate-amid-political-deadlock-3003917",
-          "data": "2026-09-30"
-        }
-      ]
-    },
-    {
-      "id": "z10",
-      "blok": "instytucje",
-      "data": "2026-09-30",
-      "tagi": [
-        "slowacja"
-      ],
-      "tekst": "Słowacja: prezydent Peter Pellegrini **formalnie odwołał ministra środowiska Tomáša Tarabę** (parlament 29.09); resortem tymczasowo kieruje premier Robert Fico. SNS wskazuje sekretarza stanu Filipa Kuffę. Prezydium Smeru (30.09) nie ogłosiło decyzji; poseł Richard Glück: klub „absolútne stabilný”, przedterminowych wyborów nie oczekuje.",
-      "zrodla": [
-        {
-          "nazwa": "TASR / teraz.sk",
-          "url": "https://www.teraz.sk/slovensko/prezident-odvolal-z-funkcie-ministra-zi/996247-clanok.html",
-          "data": "2026-09-30"
-        }
-      ]
-    },
-    {
-      "id": "z11",
-      "blok": "instytucje",
-      "data": "2026-09-30",
-      "tagi": [
-        "wegry"
-      ],
-      "tekst": "Węgry: sąd **aresztował na 30 dni Miklósa Sesztáka** (minister rozwoju narodowego 2014–18) – decyzja nieprawomocna, złożono zażalenie; kwota szkody podawana różnie: ok. 11 lub ok. 12 mld Ft (Portfolio w dwóch artykułach, premier Péter Magyar – 12 mld). Prokuratura wnioskuje o areszt dla b. ministra Balázsa Hankó; sąd rejonowy w Kecskemét rozstrzygnie 1.10.",
-      "zrodla": [
-        {
-          "nazwa": "Index.hu",
-          "url": "https://index.hu/belfold/2026/09/30/sesztak-miklos-volt-miniszter-orban-kormany-letartoztatas-fellebbezes/",
-          "data": "2026-09-30"
-        },
-        {
-          "nazwa": "Portfolio.hu",
-          "url": "https://www.portfolio.hu/gazdasag/20260930/hanko-balazs-letartoztatasat-inditvanyozta-az-ugyeszseg-sesztak-miklosrol-mar-a-birosag-dontott-866310",
           "data": "2026-09-30"
         }
       ]

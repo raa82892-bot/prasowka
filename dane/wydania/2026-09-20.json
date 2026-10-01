@@ -43,23 +43,6 @@
       ]
     },
     {
-      "id": "z2",
-      "blok": "swiat",
-      "data": "2026-09-21",
-      "tagi": [
-        "iran",
-        "usa"
-      ],
-      "tekst": "Korpus Strażników Rewolucji zapowiada gotowość do „długotrwałej wojny” z dotąd nieużywaną bronią strategiczną, a dowództwo Chatam al-Anbija grozi, że jeśli USA wznowią uderzenia, wszystkie bazy USA w regionie zostaną poddane „ciągłym, skutecznym i bolesnym” atakom. Trump mówił Fox News, że rozważa opcje wojskowe, a Departament Stanu wezwał Amerykanów w Iranie do natychmiastowego wyjazdu. Euronews (relacja z 21.09) łączy to z atakami Huti na Rijad i Janbu; Trump rozważa uderzenia na dużą skalę, zaostrzenie blokady lub dyplomację w ONZ.",
-      "zrodla": [
-        {
-          "nazwa": "Euronews",
-          "url": "https://www.euronews.com/2026/09/21/us-and-iran-trade-threats-as-fears-of-return-to-all-out-war-mount",
-          "data": "2026-09-21"
-        }
-      ]
-    },
-    {
       "id": "z3",
       "blok": "wojna",
       "data": "2026-09-19",

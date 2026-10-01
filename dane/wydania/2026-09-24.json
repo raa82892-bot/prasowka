@@ -48,43 +48,6 @@
       ]
     },
     {
-      "id": "z2",
-      "blok": "swiat",
-      "data": "2026-09-23",
-      "tagi": [
-        "francja",
-        "sankcje",
-        "balkany"
-      ],
-      "tekst": "Prezydent Azerbejdżanu Ilham Alijew ułaskawił 23.09 obywatela Francji Martina Ryana, skazanego na 10 lat za szpiegostwo. OSW ocenia, że to wymiana: Francja zgodziła się na zdjęcie z unijnej listy sankcyjnej oligarchy Alishera Usmanowa, o co zabiegał Baku; OSW widzi w tym szansę na normalizację relacji, ale zastrzega, że Azerbejdżan nadal będzie traktował krytykę spraw wewnętrznych jako ingerencję.",
-      "zrodla": [
-        {
-          "nazwa": "OSW, Analiza",
-          "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/azerbejdzan-francja-szansa-na-nowe-otwarcie",
-          "data": "2026-09-24"
-        }
-      ]
-    },
-    {
-      "id": "z3",
-      "blok": "instytucje",
-      "data": "2026-09-24",
-      "tagi": [
-        "ue",
-        "sankcje",
-        "francja",
-        "rosja"
-      ],
-      "tekst": "Rada UE objęła 24.09 sankcjami (zamrożenie aktywów, zakaz wjazdu) Ksenię Fiodorową, byłą szefową RT France; wniosek złożyły Francja i Niemcy, a francuskie MSZ nazwało ją „aktywnym agentem rosyjskich wpływów”. Zarzuty UE: rozpowszechnianie prorosyjskich narracji, m.in. że pomoc dla Ukrainy przedłuża wojnę, i podważanie relacji o deportacjach ukraińskich dzieci.",
-      "zrodla": [
-        {
-          "nazwa": "Euronews",
-          "url": "https://www.euronews.com/2026/09/24/eu-sanctions-former-rt-france-chief-xenia-fedorova-over-pro-russian-propaganda",
-          "data": "2026-09-24"
-        }
-      ]
-    },
-    {
       "id": "z4",
       "blok": "swiat",
       "data": "2026-09-24",
@@ -128,22 +91,6 @@
           "nazwa": "Defence24",
           "url": "https://defence24.pl/polityka-obronna/rosyjski-smiglowiec-naruszyl-polska-przestrzen-powietrzna",
           "data": "2026-09-23"
-        }
-      ]
-    },
-    {
-      "id": "z6",
-      "blok": "swiat",
-      "data": "2026-09-16",
-      "tagi": [
-        "balkany"
-      ],
-      "tekst": "Specjalne Izby dla Kosowa w Hadze skazały 16.09 byłego prezydenta Kosowa Hashima Thaçiego na 25 lat więzienia za zbrodnie wojenne (morderstwa, tortury, okrutne traktowanie, bezprawne zatrzymania); skazano też Jakupa Krasniqiego (25 lat), Kadriego Veselego (18) i Rexhepa Selimiego (13), a od zarzutów zbrodni przeciwko ludzkości uniewinniono. Szef MSZ Kosowa nazwał wyrok niesprawiedliwym.",
-      "zrodla": [
-        {
-          "nazwa": "Euronews",
-          "url": "https://www.euronews.com/2026/09/16/kosovos-former-president-thaci-convicted-of-war-crimes-at-hague-court",
-          "data": "2026-09-16"
         }
       ]
     }
