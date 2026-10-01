@@ -17,24 +17,6 @@
   },
   "zarys": [
     {
-      "id": "z1",
-      "blok": "swiat",
-      "data": "2026-09-25",
-      "tagi": [
-        "chiny",
-        "usa",
-        "gospodarka"
-      ],
-      "tekst": "Wizyta Xi Jinpinga w USA zakończyła się 25.09 przedłużeniem rozejmu handlowego USA–Chiny do 10.01.2027 (wcześniej wygasał w listopadzie); przedstawiciel handlowy USA Jamieson Greer zapowiedział ponowną ocenę, czy kontynuować „okres względnego pokoju”. Ogłoszono też listopadowy szczyt w Shenzhen o bezpieczeństwie sztucznej inteligencji i mechanizm powiadamiania o incydentach AI. Yahoo Finance ocenia, że poza krótką zwłoką wizyta przyniosła niewiele; w tym źródle nie ma ustaleń o Tajwanie ani Iranie.",
-      "zrodla": [
-        {
-          "nazwa": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/us-china-summit-ends-with-little-progress-on-trade-and-ai--other-than-2-new-deadlines-174257772.html",
-          "data": "2026-09-25"
-        }
-      ]
-    },
-    {
       "id": "z2",
       "blok": "wojna",
       "data": "2026-09-24",
@@ -48,6 +30,11 @@
         {
           "nazwa": "Kyiv Independent",
           "url": "https://kyivindependent.com/macron-cites-several-signs-russia-is-preparing-to-mobilize-300-000-people/",
+          "data": "2026-09-24"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/24/french-president-emmanuel-macron-denies-claims-the-cia-informed-france-of-a-possible-russi",
           "data": "2026-09-24"
         }
       ]
@@ -66,6 +53,11 @@
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/21/russians-vote-in-final-day-of-parliamentary-elections",
           "data": "2026-09-21"
+        },
+        {
+          "nazwa": "Meduza",
+          "url": "https://meduza.io/en/news/2026/09/21/united-russia-secures-constitutional-majority-in-state-duma-with-355-seats-as-election-officials-report-record-59-turnout",
+          "data": "2026-09-21"
         }
       ]
     },
@@ -82,6 +74,11 @@
         {
           "nazwa": "RFE/RL",
           "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html",
+          "data": "2026-09-25"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/russian-overnight-attack-on-kyiv-sets-fires-damages-buildings/",
           "data": "2026-09-25"
         }
       ]

@@ -55,11 +55,16 @@
         "nato",
         "hybryda"
       ],
-      "tekst": "Dron, który wleciał z Białorusi w przestrzeń Litwy, przeleciał nad Lentvaris koło Wilna i został zestrzelony koło Kowna ok. 0:20 15.09 przez włoskie myśliwce stacjonujące w Szawlach; rodzaj drona i jego cel były nieznane, szukano szczątków. Syreny alarmowe zawyły, a lotniska miały ograniczenia. Prezydent Gitanas Nausėda: gotowość ma kluczowe znaczenie, Litwa „wraz z sojusznikami będzie bronić swojej przestrzeni”.",
+      "tekst": "Dron, który wleciał z Białorusi w przestrzeń Litwy, przeleciał nad Lentvaris koło Wilna i został zestrzelony ok. 0:20 15.09 w rejonie Kowna przez włoskie myśliwce stacjonujące w Szawlach; prezydent Nausėda uznał go za rosyjskiego drona Gerbera, który zboczył z kursu do Ukrainy. Syreny alarmowe zawyły, a lotniska miały ograniczenia.",
       "zrodla": [
         {
           "nazwa": "Kyiv Independent",
           "url": "https://kyivindependent.com/nato-shoots-down-drone-over-lithuanian-airspace-that-flew-in-from-belarus/",
+          "data": "2026-09-15"
+        },
+        {
+          "nazwa": "LRT",
+          "url": "https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine",
           "data": "2026-09-15"
         }
       ]

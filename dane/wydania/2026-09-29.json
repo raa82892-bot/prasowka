@@ -25,6 +25,11 @@
           "nazwa": "Al Jazeera",
           "url": "https://aljazeera.com/news/2026/9/29/us-iran-talks-in-new-york-whats-the-latest",
           "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/26/trump-reportedly-rejects-iranian-plan-to-reopen-strait-of-hormuz",
+          "data": "2026-09-26"
         }
       ]
     },
@@ -55,29 +60,6 @@
       ]
     },
     {
-      "id": "z3",
-      "blok": "wojna",
-      "data": "2026-09-28",
-      "tagi": [
-        "rosja",
-        "uzbrojenie",
-        "gospodarka"
-      ],
-      "tekst": "Według dokumentów rządu rosyjskiego (Reuters) projekt budżetu na 2027 r. przewiduje **wydatki obronne 17,1 bln rubli**, czyli 27% więcej niż wcześniej planowane 13,5 bln; na lata 2027–29 łącznie ok. 50 bln rubli. Dla porównania: w budżecie 2026 na obronę przeznaczono 12,93 bln rubli.",
-      "zrodla": [
-        {
-          "nazwa": "Meduza za Reuters",
-          "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
-          "data": "2026-09-28"
-        },
-        {
-          "nazwa": "Moscow Times",
-          "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
-          "data": "2026-09-28"
-        }
-      ]
-    },
-    {
       "id": "z4",
       "blok": "polska",
       "data": "2026-09-28",
@@ -91,6 +73,11 @@
         {
           "nazwa": "RMF24",
           "url": "https://www.rmf24.pl/fakty/swiat/news-rosyjski-dron-uderzyl-tuz-przy-polskiej-granicy-incydent-w-p,nIdn,1019550",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/russian-drone-strikes-near-ukraine-poland-border-crossing-in-volyn-oblast/",
           "data": "2026-09-28"
         }
       ]
@@ -108,6 +95,11 @@
         {
           "nazwa": "RMF24",
           "url": "https://www.rmf24.pl/fakty/polska/news-tomczyk-mon-zmieni-procedury-strzelania-do-obiektow-wlatujac,nIdn,1019454",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "PAP (za Gość Niedzielny)",
+          "url": "https://www.gosc.pl/doc/9906121.MON-Zmieniamy-procedury-dotyczace-uzywania-sil-powietrznych",
           "data": "2026-09-28"
         }
       ]
@@ -136,22 +128,10 @@
           "nazwa": "Reuters (za U.S. News)",
           "url": "https://www.usnews.com/news/world/articles/2026-09-29/belgium-to-transfer-three-f-16s-to-ukraine-this-year-zelenskiy-says",
           "data": "2026-09-29"
-        }
-      ]
-    },
-    {
-      "id": "z11",
-      "blok": "instytucje",
-      "data": "2026-09-29",
-      "tagi": [
-        "czechy"
-      ],
-      "etap": "W TOKU",
-      "tekst": "Czechy: Izba Poselska debatuje nad **wotum nieufności dla rządu Andreja Babiša** (wniosek ODS, STAN, Piratów, TOP 09 i chadeków; zarzuty: deficyt budżetu 386 mld koron, konflikt interesów premiera, niezależność sądów, ataki na media). Opozycja ma 92 z 200 mandatów, do obalenia rządu potrzeba 101 głosów.",
-      "zrodla": [
+        },
         {
-          "nazwa": "Washington Post",
-          "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/belgium-to-transfer-3-f-16-fighter-jets-to-ukraine-by-end-of-2026-zelensky-says/",
           "data": "2026-09-29"
         }
       ]
@@ -174,6 +154,11 @@
           "nazwa": "Portfolio.hu",
           "url": "https://www.portfolio.hu/gazdasag/20260930/hanko-balazs-letartoztatasat-inditvanyozta-az-ugyeszseg-sesztakorol-mar-a-birosag-dontott-866310",
           "data": "2026-09-30"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/29/with-two-orban-era-ministers-detained-magyars-operation-purge-takes-shape",
+          "data": "2026-09-29"
         }
       ]
     }

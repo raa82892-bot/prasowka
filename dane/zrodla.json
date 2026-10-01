@@ -1,110 +1,1314 @@
 {
   "opis": "Ranking wiarygodności źródeł Prasówki: ocena redakcji według kryteriów opisanych na stronie zrodla.html. Dopasowanie: najpierw początek nazwy źródła (wzorce), potem domena linku. Źródło spoza listy nie przejdzie walidacji.",
   "kryteria": [
-    ["Pierwotność", "czy źródło samo ustala fakty (komunikat, dokument, własny reporter), czy przedrukowuje innych"],
-    ["Niezależność", "od rządu, partii i stron konfliktu, o których pisze; własność i finansowanie"],
-    ["Standardy i korekty", "jawne zasady redakcyjne, oddzielanie faktów od opinii, publiczne sprostowania"],
-    ["Historia w Prasówce", "czy informacje z tego źródła musieliśmy prostować lub wycofywać"]
+    [
+      "Pierwotność",
+      "czy źródło samo ustala fakty (komunikat, dokument, własny reporter), czy przedrukowuje innych"
+    ],
+    [
+      "Niezależność",
+      "od rządu, partii i stron konfliktu, o których pisze; własność i finansowanie"
+    ],
+    [
+      "Standardy i korekty",
+      "jawne zasady redakcyjne, oddzielanie faktów od opinii, publiczne sprostowania"
+    ],
+    [
+      "Historia w Prasówce",
+      "czy informacje z tego źródła musieliśmy prostować lub wycofywać"
+    ]
   ],
   "poziomy": [
-    {"poziom": 1, "nazwa": "Urzędowe", "kolor": "#1E7B34", "kolor_ciemny": "#4CC27A",
-     "opis": "Komunikat, dokument lub dane instytucji, której sprawa dotyczy. Rozstrzygające co do tego, co instytucja postanowiła lub opublikowała; nie co do ocen i twierdzeń o innych."},
-    {"poziom": 2, "nazwa": "Wysoka wiarygodność", "kolor": "#5E9E2F", "kolor_ciemny": "#9BD45A",
-     "opis": "Agencje i redakcje z własnymi ustaleniami, jawnymi standardami i praktyką sprostowań. Wystarczają dwie niezależne."},
-    {"poziom": 3, "nazwa": "Wiarygodne z zastrzeżeniami", "kolor": "#A88300", "kolor_ciemny": "#E3C04A",
-     "opis": "Rzetelne w większości, ale z wyraźną perspektywą jednej strony, mniejszą redakcją, częstym przedrukiem albo ocenami zamiast ustaleń. Potrzebne potwierdzenie z poziomu 1–2."},
-    {"poziom": 4, "nazwa": "Niska wiarygodność", "kolor": "#C8641B", "kolor_ciemny": "#F0954E",
-     "opis": "Pośrednicy i agregatory bez własnych ustaleń, media o słabych standardach lub ograniczonej niezależności. Nie mogą być podstawą pozycji; najwyżej wskazówką, gdzie szukać źródła pierwotnego."},
-    {"poziom": 5, "nazwa": "Strona zainteresowana", "kolor": "#B3261E", "kolor_ciemny": "#F07A70",
-     "opis": "Media państwowe państw autorytarnych i aparat propagandowy. Wiarygodne wyłącznie co do tego, co twierdzi ich rząd; przytaczane tylko z oznaczeniem jako wersja strony, nigdy jako fakt."}
+    {
+      "poziom": 1,
+      "nazwa": "Urzędowe",
+      "kolor": "#1E7B34",
+      "kolor_ciemny": "#4CC27A",
+      "opis": "Komunikat, dokument lub dane instytucji, której sprawa dotyczy. Rozstrzygające co do tego, co instytucja postanowiła lub opublikowała; nie co do ocen i twierdzeń o innych."
+    },
+    {
+      "poziom": 2,
+      "nazwa": "Wysoka wiarygodność",
+      "kolor": "#5E9E2F",
+      "kolor_ciemny": "#9BD45A",
+      "opis": "Agencje i redakcje z własnymi ustaleniami, jawnymi standardami i praktyką sprostowań. Wystarczają dwie niezależne."
+    },
+    {
+      "poziom": 3,
+      "nazwa": "Wiarygodne z zastrzeżeniami",
+      "kolor": "#A88300",
+      "kolor_ciemny": "#E3C04A",
+      "opis": "Rzetelne w większości, ale z wyraźną perspektywą jednej strony, mniejszą redakcją, częstym przedrukiem albo ocenami zamiast ustaleń. Potrzebne potwierdzenie z poziomu 1–2."
+    },
+    {
+      "poziom": 4,
+      "nazwa": "Niska wiarygodność",
+      "kolor": "#C8641B",
+      "kolor_ciemny": "#F0954E",
+      "opis": "Pośrednicy i agregatory bez własnych ustaleń, media o słabych standardach lub ograniczonej niezależności. Nie mogą być podstawą pozycji; najwyżej wskazówką, gdzie szukać źródła pierwotnego."
+    },
+    {
+      "poziom": 5,
+      "nazwa": "Strona zainteresowana",
+      "kolor": "#B3261E",
+      "kolor_ciemny": "#F07A70",
+      "opis": "Media państwowe państw autorytarnych i aparat propagandowy. Wiarygodne wyłącznie co do tego, co twierdzi ich rząd; przytaczane tylko z oznaczeniem jako wersja strony, nigdy jako fakt."
+    }
   ],
   "zrodla": [
-    {"id": "nato", "nazwa": "NATO", "poziom": 1, "typ": "instytucja", "kraj": "—", "domeny": ["nato.int"], "wzorce": ["NATO"], "uzasadnienie": "Komunikaty i dokumenty Sojuszu."},
-    {"id": "rada-ue", "nazwa": "Rada UE i Komisja Europejska", "poziom": 1, "typ": "instytucja", "kraj": "UE", "domeny": ["consilium.europa.eu", "ec.europa.eu", "europa.eu"], "wzorce": ["Rada UE", "Komisja Europejska", "KE"], "uzasadnienie": "Konkluzje, decyzje i kalendarz instytucji UE."},
-    {"id": "gus", "nazwa": "GUS", "poziom": 1, "typ": "instytucja", "kraj": "Polska", "domeny": ["stat.gov.pl"], "wzorce": ["GUS"], "uzasadnienie": "Oficjalna statystyka publiczna."},
-    {"id": "nbp", "nazwa": "NBP", "poziom": 1, "typ": "instytucja", "kraj": "Polska", "domeny": ["nbp.pl"], "wzorce": ["NBP"], "uzasadnienie": "Decyzje RPP i tabele kursów."},
-    {"id": "gov-pl", "nazwa": "Rząd RP (gov.pl), MON, DO RSZ", "poziom": 1, "typ": "instytucja", "kraj": "Polska", "domeny": ["gov.pl", "wojsko-polskie.pl"], "wzorce": ["KPRM", "MON", "MSZ", "DO RSZ", "Dowództwo Operacyjne"], "uzasadnienie": "Komunikaty organów państwa o ich własnych decyzjach."},
-    {"id": "imf", "nazwa": "MFW", "poziom": 1, "typ": "instytucja", "kraj": "—", "domeny": ["imf.org"], "wzorce": ["MFW", "IMF"], "uzasadnienie": "Raporty i komunikaty Funduszu."},
-    {"id": "banki-centralne", "nazwa": "Fed i EBC", "poziom": 1, "typ": "instytucja", "kraj": "USA / UE", "domeny": ["federalreserve.gov", "ecb.europa.eu"], "wzorce": ["Fed", "EBC", "ECB"], "uzasadnienie": "Decyzje i kalendarze banków centralnych."},
-    {"id": "policja-uk", "nazwa": "Brytyjska policja antyterrorystyczna", "poziom": 1, "typ": "instytucja", "kraj": "Wielka Brytania", "domeny": ["counterterrorism.police.uk", "police.uk"], "wzorce": ["Brytyjska policja"], "uzasadnienie": "Komunikat organu prowadzącego sprawę."},
-    {"id": "volby-cz", "nazwa": "Czeski Urząd Statystyczny (wybory)", "poziom": 1, "typ": "instytucja", "kraj": "Czechy", "domeny": ["volby.gov.cz", "volby.cz"], "wzorce": ["volby"], "uzasadnienie": "Oficjalne terminy i wyniki wyborów."},
-
-    {"id": "reuters", "nazwa": "Reuters", "poziom": 2, "typ": "agencja", "kraj": "Wielka Brytania", "domeny": ["reuters.com"], "wzorce": ["Reuters"], "uzasadnienie": "Własne ustalenia na całym świecie, jawne zasady (Trust Principles), praktyka sprostowań. Depesze czytamy często u przedrukowujących serwisów — ocena dotyczy treści depeszy."},
-    {"id": "ap", "nazwa": "Associated Press (AP)", "poziom": 2, "typ": "agencja", "kraj": "USA", "domeny": ["apnews.com"], "wzorce": ["AP", "Associated Press"], "uzasadnienie": "Spółdzielnia redakcji, własni korespondenci, jawne standardy i sprostowania."},
-    {"id": "afp", "nazwa": "AFP", "poziom": 2, "typ": "agencja", "kraj": "Francja", "domeny": ["afp.com"], "wzorce": ["AFP"], "uzasadnienie": "Globalna sieć korespondentów, statut gwarantujący niezależność redakcyjną."},
-    {"id": "pap", "nazwa": "PAP", "poziom": 2, "typ": "agencja", "kraj": "Polska", "domeny": ["pap.pl"], "wzorce": ["PAP"], "uzasadnienie": "Agencja publiczna z własnymi korespondentami; wiarygodna co do faktów i komunikatów, ostrożnie z doborem tematów w sprawach politycznych."},
-    {"id": "bloomberg", "nazwa": "Bloomberg", "poziom": 2, "typ": "redakcja", "kraj": "USA", "domeny": ["bloomberg.com"], "wzorce": ["Bloomberg"], "uzasadnienie": "Silne własne ustalenia w gospodarce i polityce. Uwaga: treść często niedostępna dla naszych narzędzi, a sam tytuł nie jest źródłem."},
-    {"id": "washington-post", "nazwa": "Washington Post", "poziom": 2, "typ": "redakcja", "kraj": "USA", "domeny": ["washingtonpost.com"], "wzorce": ["Washington Post"], "uzasadnienie": "Duża redakcja z własnymi ustaleniami i rubryką sprostowań."},
-    {"id": "npr", "nazwa": "NPR", "poziom": 2, "typ": "media publiczne", "kraj": "USA", "domeny": ["npr.org"], "wzorce": ["NPR"], "uzasadnienie": "Publiczny nadawca z jawnymi standardami."},
-    {"id": "cbs", "nazwa": "CBS News", "poziom": 2, "typ": "redakcja", "kraj": "USA", "domeny": ["cbsnews.com"], "wzorce": ["CBS"], "uzasadnienie": "Ogólnokrajowa redakcja z własnymi korespondentami."},
-    {"id": "abc", "nazwa": "ABC News (USA i Australia)", "poziom": 2, "typ": "redakcja", "kraj": "USA / Australia", "domeny": ["abcnews.com", "abcnews.go.com", "abc.net.au"], "wzorce": ["ABC"], "uzasadnienie": "Duże redakcje z jawnymi standardami."},
-    {"id": "cnbc", "nazwa": "CNBC", "poziom": 2, "typ": "redakcja", "kraj": "USA", "domeny": ["cnbc.com"], "wzorce": ["CNBC"], "uzasadnienie": "Redakcja ekonomiczna z własnymi korespondentami."},
-    {"id": "bbc", "nazwa": "BBC", "poziom": 2, "typ": "media publiczne", "kraj": "Wielka Brytania", "domeny": ["bbc.com", "bbc.co.uk"], "wzorce": ["BBC"], "uzasadnienie": "Publiczny nadawca z rozbudowanymi standardami i weryfikacją (BBC Verify)."},
-    {"id": "ft", "nazwa": "Financial Times", "poziom": 2, "typ": "redakcja", "kraj": "Wielka Brytania", "domeny": ["ft.com"], "wzorce": ["Financial Times", "FT"], "uzasadnienie": "Własne ustalenia, jawne sprostowania."},
-    {"id": "france24", "nazwa": "France 24", "poziom": 2, "typ": "media publiczne", "kraj": "Francja", "domeny": ["france24.com"], "wzorce": ["France 24"], "uzasadnienie": "Publiczny nadawca, w depeszach opiera się na AFP."},
-    {"id": "dw", "nazwa": "Deutsche Welle", "poziom": 2, "typ": "media publiczne", "kraj": "Niemcy", "domeny": ["dw.com"], "wzorce": ["DW", "Deutsche Welle"], "uzasadnienie": "Publiczny nadawca z jawnymi standardami."},
-    {"id": "euronews", "nazwa": "Euronews", "poziom": 2, "typ": "redakcja", "kraj": "UE", "domeny": ["euronews.com"], "wzorce": ["Euronews"], "uzasadnienie": "Własne relacje z instytucji UE; w innych tematach często opiera się na agencjach."},
-    {"id": "ansa", "nazwa": "ANSA", "poziom": 2, "typ": "agencja", "kraj": "Włochy", "domeny": ["ansa.it"], "wzorce": ["ANSA"], "uzasadnienie": "Główna włoska agencja prasowa, spółdzielnia wydawców."},
-    {"id": "sp-global", "nazwa": "S&P Global Commodity Insights", "poziom": 2, "typ": "redakcja branżowa", "kraj": "USA", "domeny": ["spglobal.com"], "wzorce": ["S&P Global"], "uzasadnienie": "Wyspecjalizowana redakcja rynków energii z własnymi danymi."},
-    {"id": "err", "nazwa": "ERR", "poziom": 2, "typ": "media publiczne", "kraj": "Estonia", "domeny": ["err.ee"], "wzorce": ["ERR"], "uzasadnienie": "Estoński nadawca publiczny, niezależny statutowo."},
-    {"id": "lsm", "nazwa": "LSM", "poziom": 2, "typ": "media publiczne", "kraj": "Łotwa", "domeny": ["lsm.lv"], "wzorce": ["LSM"], "uzasadnienie": "Łotewski nadawca publiczny."},
-    {"id": "lrt", "nazwa": "LRT", "poziom": 2, "typ": "media publiczne", "kraj": "Litwa", "domeny": ["lrt.lt"], "wzorce": ["LRT"], "uzasadnienie": "Litewski nadawca publiczny."},
-    {"id": "tasr", "nazwa": "TASR", "poziom": 2, "typ": "agencja", "kraj": "Słowacja", "domeny": ["tasr.sk", "teraz.sk"], "wzorce": ["TASR"], "uzasadnienie": "Publiczna agencja prasowa; rzetelna co do przebiegu wydarzeń w parlamencie i rządzie."},
-    {"id": "dennik-n", "nazwa": "Denník N", "poziom": 2, "typ": "redakcja", "kraj": "Słowacja", "domeny": ["dennikn.sk"], "wzorce": ["Denník N", "Deník N"], "uzasadnienie": "Niezależna redakcja z własnymi ustaleniami; krytyczna wobec rządu Fico — przy ocenach zaznaczać autora."},
-    {"id": "meduza", "nazwa": "Meduza", "poziom": 2, "typ": "redakcja", "kraj": "Rosja (na emigracji)", "domeny": ["meduza.io"], "wzorce": ["Meduza"], "uzasadnienie": "Niezależna rosyjska redakcja na emigracji, staranna w atrybucji; często relacjonuje cudze depesze — wtedy liczy się źródło pierwotne."},
-    {"id": "kyiv-independent", "nazwa": "Kyiv Independent", "poziom": 2, "typ": "redakcja", "kraj": "Ukraina", "domeny": ["kyivindependent.com"], "wzorce": ["Kyiv Independent"], "uzasadnienie": "Niezależna redakcja z jawnymi standardami i sprostowaniami. Perspektywa ukraińska: dane o stratach i skutkach ataków podaje za stroną ukraińską."},
-    {"id": "rferl", "nazwa": "Radio Wolna Europa (RFE/RL)", "poziom": 2, "typ": "media publiczne", "kraj": "USA", "domeny": ["rferl.org", "svoboda.org"], "wzorce": ["RFE/RL", "Radio Wolna Europa"], "uzasadnienie": "Rozbudowana sieć korespondentów w Europie Wschodniej, jawne standardy. Finansowane przez rząd USA — przy tematach dotyczących polityki USA ostrożniej."},
-    {"id": "osw", "nazwa": "OSW", "poziom": 2, "typ": "think tank", "kraj": "Polska", "domeny": ["osw.waw.pl"], "wzorce": ["OSW"], "uzasadnienie": "Państwowy ośrodek analityczny ze starannym udokumentowaniem; publikuje głównie oceny — zawsze z autorem."},
-    {"id": "pism", "nazwa": "PISM", "poziom": 2, "typ": "think tank", "kraj": "Polska", "domeny": ["pism.pl"], "wzorce": ["PISM"], "uzasadnienie": "Państwowy instytut analityczny; publikuje głównie oceny — zawsze z autorem."},
-    {"id": "agence-europe", "nazwa": "Agence Europe", "poziom": 2, "typ": "redakcja branżowa", "kraj": "UE", "domeny": ["agenceurope.eu"], "wzorce": ["Agence Europe"], "uzasadnienie": "Wyspecjalizowany serwis o instytucjach UE z własnymi ustaleniami."},
-
-    {"id": "al-jazeera", "nazwa": "Al Jazeera", "poziom": 3, "typ": "redakcja", "kraj": "Katar", "domeny": ["aljazeera.com"], "wzorce": ["Al Jazeera"], "uzasadnienie": "Duża sieć korespondentów i dobre relacje na żywo; finansowana przez państwo Katar, z wyraźną linią w sprawach Bliskiego Wschodu."},
-    {"id": "moscow-times", "nazwa": "The Moscow Times", "poziom": 3, "typ": "redakcja", "kraj": "Rosja (na emigracji)", "domeny": ["themoscowtimes.com"], "wzorce": ["Moscow Times"], "uzasadnienie": "Niezależna, ale mała redakcja na emigracji; wiele tekstów to opracowania depesz — wtedy liczy się źródło pierwotne."},
-    {"id": "kyiv-post", "nazwa": "Kyiv Post", "poziom": 3, "typ": "redakcja", "kraj": "Ukraina", "domeny": ["kyivpost.com"], "wzorce": ["Kyiv Post"], "uzasadnienie": "Szybkie relacje za komunikatami ukraińskimi; mniejsza staranność niż Kyiv Independent (rozbieżne liczby w wydaniu z 30.09)."},
-    {"id": "ukrainska-pravda", "nazwa": "Ukraińska Prawda / Eurointegration", "poziom": 3, "typ": "redakcja", "kraj": "Ukraina", "domeny": ["pravda.com.ua", "eurointegration.com.ua"], "wzorce": ["Ukraińska Prawda", "Ukrainska Pravda", "Eurointegration"], "uzasadnienie": "Znana redakcja śledcza, ale w wiadomościach dużo przedruku i perspektywa ukraińska."},
-    {"id": "unn", "nazwa": "UNN", "poziom": 3, "typ": "agencja", "kraj": "Ukraina", "domeny": ["unn.ua"], "wzorce": ["UNN"], "uzasadnienie": "Ukraińska agencja; szybka, ale głównie przekazuje komunikaty władz i cudze doniesienia."},
-    {"id": "axios", "nazwa": "Axios", "poziom": 3, "typ": "redakcja", "kraj": "USA", "domeny": ["axios.com"], "wzorce": ["Axios"], "uzasadnienie": "Wiele pierwszych doniesień o dyplomacji USA, ale często oparte na anonimowych źródłach — wymaga potwierdzenia."},
-    {"id": "times-of-israel", "nazwa": "Times of Israel", "poziom": 3, "typ": "redakcja", "kraj": "Izrael", "domeny": ["timesofisrael.com"], "wzorce": ["Times of Israel"], "uzasadnienie": "Rzetelna w faktach, perspektywa izraelska w sprawach regionu."},
-    {"id": "isw", "nazwa": "ISW (Institute for the Study of War)", "poziom": 3, "typ": "think tank", "kraj": "USA", "domeny": ["understandingwar.org", "criticalthreats.org"], "wzorce": ["ISW"], "uzasadnienie": "Codzienne oceny frontu z jawną metodą, ale to oceny think tanku, nie ustalenia; zawsze jako OCENA."},
-    {"id": "defence24", "nazwa": "Defence24", "poziom": 3, "typ": "redakcja branżowa", "kraj": "Polska", "domeny": ["defence24.pl", "defence24.com"], "wzorce": ["Defence24"], "uzasadnienie": "Dobra znajomość sprzętu; powiązania z branżą zbrojeniową — fakty o zamówieniach potwierdzać w MON."},
-    {"id": "aviationist", "nazwa": "The Aviationist", "poziom": 3, "typ": "redakcja branżowa", "kraj": "Włochy", "domeny": ["theaviationist.com"], "wzorce": ["The Aviationist"], "uzasadnienie": "Specjalistyczny serwis lotniczy; trafny w szczegółach technicznych, polityczne fakty przejmuje z innych mediów."},
-    {"id": "rmf24", "nazwa": "RMF24", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["rmf24.pl"], "wzorce": ["RMF24", "RMF FM"], "uzasadnienie": "Własni reporterzy, ale szybkie, skrótowe relacje i przedruk PAP."},
-    {"id": "polsat-news", "nazwa": "Polsat News", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["polsatnews.pl"], "wzorce": ["Polsat News"], "uzasadnienie": "Komercyjny nadawca; relacje często za PAP."},
-    {"id": "money-pl", "nazwa": "Money.pl", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["money.pl"], "wzorce": ["Money.pl"], "uzasadnienie": "Portal ekonomiczny; dane rządowe przekazuje za komunikatami — weryfikować w źródle urzędowym."},
-    {"id": "prawo-pl", "nazwa": "Prawo.pl", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["prawo.pl"], "wzorce": ["Prawo.pl"], "uzasadnienie": "Serwis prawniczy; wiadomości głównie za PAP i komunikatami."},
-    {"id": "gazeta-prawna", "nazwa": "Dziennik Gazeta Prawna", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["gazetaprawna.pl", "dziennik.pl"], "wzorce": ["Gazeta Prawna", "Dziennik.pl"], "uzasadnienie": "Gazeta z własnymi ustaleniami w gospodarce; portal dziennik.pl w dużej mierze przedrukowy."},
-    {"id": "portfolio-hu", "nazwa": "Portfolio.hu", "poziom": 3, "typ": "redakcja", "kraj": "Węgry", "domeny": ["portfolio.hu"], "wzorce": ["Portfolio"], "uzasadnienie": "Rzetelny serwis ekonomiczny; w polityce zależny od komunikatów."},
-    {"id": "index-hu", "nazwa": "Index.hu", "poziom": 3, "typ": "redakcja", "kraj": "Węgry", "domeny": ["index.hu"], "wzorce": ["Index"], "uzasadnienie": "Duży portal; od zmiany właściciela w 2020 r. zarzuty utraty niezależności."},
-    {"id": "444-hu", "nazwa": "444.hu", "poziom": 3, "typ": "redakcja", "kraj": "Węgry", "domeny": ["444.hu"], "wzorce": ["444"], "uzasadnienie": "Niezależny, ale publicystyczny portal; fakty potwierdzać."},
-    {"id": "agerpres", "nazwa": "Agerpres", "poziom": 3, "typ": "agencja", "kraj": "Rumunia", "domeny": ["agerpres.ro"], "wzorce": ["Agerpres"], "uzasadnienie": "Państwowa agencja kraju UE; rzetelna co do przebiegu oficjalnych wydarzeń, ostrożnie z ocenami politycznymi."},
-    {"id": "eunews", "nazwa": "Eunews", "poziom": 3, "typ": "redakcja branżowa", "kraj": "Włochy", "domeny": ["eunews.it"], "wzorce": ["Eunews"], "uzasadnienie": "Mały serwis o UE; dobre przecieki z negocjacji, potwierdzać w Radzie lub KE."},
-    {"id": "upi", "nazwa": "UPI", "poziom": 3, "typ": "agencja", "kraj": "USA", "domeny": ["upi.com"], "wzorce": ["UPI"], "uzasadnienie": "Mała agencja, dużo opracowań cudzych doniesień."},
-    {"id": "trading-economics", "nazwa": "TradingEconomics", "poziom": 3, "typ": "agregator danych", "kraj": "USA", "domeny": ["tradingeconomics.com"], "wzorce": ["TradingEconomics"], "uzasadnienie": "Wygodne zestawienia notowań i wskaźników; liczby potwierdzać u źródła (GUS, NBP, giełda)."},
-    {"id": "yahoo-finance", "nazwa": "Yahoo Finance", "poziom": 3, "typ": "agregator", "kraj": "USA", "domeny": ["finance.yahoo.com"], "wzorce": ["Yahoo Finance"], "uzasadnienie": "Agregator; wiarygodność zależy od pierwotnego wydawcy tekstu — podawać go, jeśli znany."},
-    {"id": "notes-from-poland", "nazwa": "Notes from Poland", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["notesfrompoland.com"], "wzorce": ["Notes from Poland"], "uzasadnienie": "Anglojęzyczny serwis o Polsce, głównie opracowania polskich mediów."},
-    {"id": "belsat", "nazwa": "Biełsat", "poziom": 3, "typ": "redakcja", "kraj": "Polska / Białoruś", "domeny": ["belsat.eu"], "wzorce": ["Belsat", "Biełsat"], "uzasadnienie": "Najlepiej poinformowany o Białorusi, ale z wyraźną perspektywą opozycji białoruskiej."},
-    {"id": "interia", "nazwa": "Interia", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["interia.pl"], "wzorce": ["Interia"], "uzasadnienie": "Portal z działem własnych ustaleń; w wiadomościach dużo przedruku."},
-    {"id": "wnp", "nazwa": "WNP.pl", "poziom": 3, "typ": "redakcja", "kraj": "Polska", "domeny": ["wnp.pl", "portalsamorzadowy.pl"], "wzorce": ["WNP", "wnp.pl"], "uzasadnienie": "Portal gospodarczy; wiadomości często za PAP."},
-    {"id": "fontanka", "nazwa": "Fontanka", "poziom": 3, "typ": "redakcja", "kraj": "Rosja", "domeny": ["fontanka.ru"], "wzorce": ["Fontanka"], "uzasadnienie": "Petersburska redakcja działająca w Rosji, pod presją cenzury wojennej; fakty o dekretach potwierdzać w publikacjach urzędowych."},
-
-    {"id": "przedruk-wire", "nazwa": "Serwisy przedrukowujące depesze (U.S. News, ThePrint, CP24, Arab News, Devdiscourse itp.)", "poziom": 4, "typ": "pośrednik", "kraj": "—", "domeny": ["usnews.com", "theprint.in", "cp24.com", "arabnews.com", "arabnews.pk", "devdiscourse.com", "933thedrive.com", "staradvertiser.com", "krdo.com"], "wzorce": ["U.S. News", "ThePrint", "CP24", "Arab News"], "uzasadnienie": "Same nic nie ustalają. Gdy przytaczamy przez nie depeszę, w nazwie podajemy agencję (np. „Reuters (za U.S. News)”) i kolor bierze się z agencji; bez wskazania agencji — poziom 4."},
-    {"id": "sweden-herald", "nazwa": "Sweden Herald", "poziom": 4, "typ": "pośrednik", "kraj": "Szwecja", "domeny": ["swedenherald.com"], "wzorce": ["Sweden Herald"], "uzasadnienie": "Opracowania cudzych doniesień bez własnych ustaleń."},
-    {"id": "strefa-biznesu", "nazwa": "Strefa Biznesu", "poziom": 4, "typ": "pośrednik", "kraj": "Polska", "domeny": ["strefabiznesu.pl"], "wzorce": ["Strefa Biznesu"], "uzasadnienie": "Portal przedrukowy; kursy i dane brać z NBP."},
-    {"id": "mezha", "nazwa": "Mezha", "poziom": 4, "typ": "pośrednik", "kraj": "Ukraina", "domeny": ["mezha.net", "mezha.media"], "wzorce": ["Mezha"], "uzasadnienie": "Agregator wiadomości, brak własnych ustaleń."},
-    {"id": "mediafax", "nazwa": "Mediafax", "poziom": 4, "typ": "agencja", "kraj": "Rumunia", "domeny": ["mediafax.ro"], "wzorce": ["Mediafax"], "uzasadnienie": "Komercyjna agencja o osłabionej redakcji; potwierdzać w Agerpres lub agencjach międzynarodowych."},
-    {"id": "brussels-signal", "nazwa": "Brussels Signal", "poziom": 4, "typ": "redakcja", "kraj": "Belgia", "domeny": ["brusselssignal.eu"], "wzorce": ["Brussels Signal"], "uzasadnienie": "Serwis o wyraźnym profilu ideowym, mieszający informację z publicystyką."},
-    {"id": "goniec", "nazwa": "Goniec", "poziom": 4, "typ": "pośrednik", "kraj": "Polska", "domeny": ["goniec.pl"], "wzorce": ["Goniec"], "uzasadnienie": "Portal o słabych standardach redakcyjnych, głównie przedruk."},
-    {"id": "nasza-polska", "nazwa": "Nasza Polska", "poziom": 4, "typ": "redakcja", "kraj": "Polska", "domeny": ["naszapolska.pl"], "wzorce": ["Nasza Polska"], "uzasadnienie": "Tygodnik publicystyczny; informacje wymagają potwierdzenia."},
-    {"id": "rio-times", "nazwa": "Rio Times", "poziom": 4, "typ": "pośrednik", "kraj": "Brazylia", "domeny": ["riotimesonline.com"], "wzorce": ["Rio Times"], "uzasadnienie": "Odległy agregator, brak własnych ustaleń o Europie."},
-    {"id": "wiedomosti", "nazwa": "Wiedomosti", "poziom": 4, "typ": "redakcja", "kraj": "Rosja", "domeny": ["vedomosti.ru"], "wzorce": ["Wiedomosti", "Vedomosti"], "uzasadnienie": "Dawniej niezależny dziennik; od 2020 r. właściciele bliscy Kremlowi, działa pod cenzurą wojenną."},
-    {"id": "interfax", "nazwa": "Interfax", "poziom": 4, "typ": "agencja", "kraj": "Rosja", "domeny": ["interfax.ru", "interfax.com"], "wzorce": ["Interfax"], "uzasadnienie": "Prywatna agencja działająca pod rosyjską cenzurą wojenną; przekazuje stanowisko władz."},
-    {"id": "agregatory", "nazwa": "Agregatory i serwisy niskiej jakości (Wikipedia, NewsBeep, Vocal, Archyde, Time.news, Head Topics itp.)", "poziom": 4, "typ": "agregator", "kraj": "—", "domeny": ["wikipedia.org", "newsbeep.com", "vocal.media", "archyde.com", "time.news", "headtopics.com", "world-today-journal.com", "northeasttimes.com", "tfiglobalnews.com", "finchannel.com", "yournews.com", "moderndiplomacy.eu", "logos-pres.md", "ua.news", "eualive.net", "pkb24.pl", "kredytowyporadnik.pl", "112.ua"], "wzorce": ["Wikipedia"], "uzasadnienie": "Wskazówka, gdzie szukać źródła pierwotnego — nigdy podstawa pozycji."},
-
-    {"id": "tass", "nazwa": "TASS", "poziom": 5, "typ": "agencja państwowa", "kraj": "Rosja", "domeny": ["tass.com", "tass.ru"], "wzorce": ["TASS"], "uzasadnienie": "Państwowa agencja Rosji. Wiarygodna wyłącznie co do tego, co mówią rosyjskie władze; zawsze z oznaczeniem „strona rosyjska”."},
-    {"id": "ria", "nazwa": "RIA Nowosti, RT, Sputnik", "poziom": 5, "typ": "media państwowe", "kraj": "Rosja", "domeny": ["ria.ru", "rt.com", "sputnikglobe.com", "sputniknews.com"], "wzorce": ["RIA", "RT", "Sputnik"], "uzasadnienie": "Aparat propagandowy państwa rosyjskiego, objęty sankcjami UE."},
-    {"id": "izwiestia", "nazwa": "Izwiestia, Rossijskaja Gazieta, Kommiersant", "poziom": 5, "typ": "media prokremlowskie", "kraj": "Rosja", "domeny": ["iz.ru", "rg.ru", "kommersant.ru"], "wzorce": ["Izwiestia", "Rossijskaja Gazieta", "Kommiersant"], "uzasadnienie": "Media państwowe lub kontrolowane przez otoczenie Kremla."},
-    {"id": "belta", "nazwa": "BiełTA", "poziom": 5, "typ": "agencja państwowa", "kraj": "Białoruś", "domeny": ["belta.by", "eng.belta.by"], "wzorce": ["BiełTA", "BelTA"], "uzasadnienie": "Państwowa agencja reżimu Łukaszenki."},
-    {"id": "iran-state", "nazwa": "IRNA, Press TV, Tasnim, Fars", "poziom": 5, "typ": "media państwowe", "kraj": "Iran", "domeny": ["irna.ir", "presstv.ir", "tasnimnews.com", "farsnews.ir"], "wzorce": ["IRNA", "Press TV", "Tasnim", "Fars"], "uzasadnienie": "Media państwowe i powiązane z Korpusem Strażników Rewolucji."},
-    {"id": "china-state", "nazwa": "Xinhua, Global Times, CGTN", "poziom": 5, "typ": "media państwowe", "kraj": "Chiny", "domeny": ["xinhuanet.com", "news.cn", "globaltimes.cn", "cgtn.com"], "wzorce": ["Xinhua", "Global Times", "CGTN"], "uzasadnienie": "Media partyjno-państwowe ChRL; wiarygodne wyłącznie co do stanowiska Pekinu."}
+    {
+      "id": "nato",
+      "nazwa": "NATO",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "—",
+      "domeny": [
+        "nato.int"
+      ],
+      "wzorce": [
+        "NATO"
+      ],
+      "uzasadnienie": "Komunikaty i dokumenty Sojuszu."
+    },
+    {
+      "id": "rada-ue",
+      "nazwa": "Rada UE i Komisja Europejska",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "UE",
+      "domeny": [
+        "consilium.europa.eu",
+        "ec.europa.eu",
+        "europa.eu"
+      ],
+      "wzorce": [
+        "Rada UE",
+        "Komisja Europejska",
+        "KE"
+      ],
+      "uzasadnienie": "Konkluzje, decyzje i kalendarz instytucji UE."
+    },
+    {
+      "id": "gus",
+      "nazwa": "GUS",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "Polska",
+      "domeny": [
+        "stat.gov.pl"
+      ],
+      "wzorce": [
+        "GUS"
+      ],
+      "uzasadnienie": "Oficjalna statystyka publiczna."
+    },
+    {
+      "id": "nbp",
+      "nazwa": "NBP",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "Polska",
+      "domeny": [
+        "nbp.pl"
+      ],
+      "wzorce": [
+        "NBP"
+      ],
+      "uzasadnienie": "Decyzje RPP i tabele kursów."
+    },
+    {
+      "id": "gov-pl",
+      "nazwa": "Rząd RP (gov.pl), MON, DO RSZ",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "Polska",
+      "domeny": [
+        "gov.pl",
+        "wojsko-polskie.pl",
+        "polska-zbrojna.pl"
+      ],
+      "wzorce": [
+        "KPRM",
+        "MON",
+        "MSZ",
+        "DO RSZ",
+        "Dowództwo Operacyjne",
+        "Polska Zbrojna"
+      ],
+      "uzasadnienie": "Komunikaty organów państwa o ich własnych decyzjach. Polska Zbrojna to pismo resortu obrony, publikuje jego komunikaty i wypowiedzi kierownictwa."
+    },
+    {
+      "id": "imf",
+      "nazwa": "MFW",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "—",
+      "domeny": [
+        "imf.org"
+      ],
+      "wzorce": [
+        "MFW",
+        "IMF"
+      ],
+      "uzasadnienie": "Raporty i komunikaty Funduszu."
+    },
+    {
+      "id": "banki-centralne",
+      "nazwa": "Fed i EBC",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "USA / UE",
+      "domeny": [
+        "federalreserve.gov",
+        "ecb.europa.eu"
+      ],
+      "wzorce": [
+        "Fed",
+        "EBC",
+        "ECB"
+      ],
+      "uzasadnienie": "Decyzje i kalendarze banków centralnych."
+    },
+    {
+      "id": "policja-uk",
+      "nazwa": "Brytyjska policja antyterrorystyczna",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "Wielka Brytania",
+      "domeny": [
+        "counterterrorism.police.uk",
+        "police.uk"
+      ],
+      "wzorce": [
+        "Brytyjska policja"
+      ],
+      "uzasadnienie": "Komunikat organu prowadzącego sprawę."
+    },
+    {
+      "id": "volby-cz",
+      "nazwa": "Czeski Urząd Statystyczny (wybory)",
+      "poziom": 1,
+      "typ": "instytucja",
+      "kraj": "Czechy",
+      "domeny": [
+        "volby.gov.cz",
+        "volby.cz"
+      ],
+      "wzorce": [
+        "volby"
+      ],
+      "uzasadnienie": "Oficjalne terminy i wyniki wyborów."
+    },
+    {
+      "id": "reuters",
+      "nazwa": "Reuters",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Wielka Brytania",
+      "domeny": [
+        "reuters.com"
+      ],
+      "wzorce": [
+        "Reuters"
+      ],
+      "uzasadnienie": "Własne ustalenia na całym świecie, jawne zasady (Trust Principles), praktyka sprostowań. Depesze czytamy często u przedrukowujących serwisów — ocena dotyczy treści depeszy."
+    },
+    {
+      "id": "ap",
+      "nazwa": "Associated Press (AP)",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "USA",
+      "domeny": [
+        "apnews.com"
+      ],
+      "wzorce": [
+        "AP",
+        "Associated Press"
+      ],
+      "uzasadnienie": "Spółdzielnia redakcji, własni korespondenci, jawne standardy i sprostowania."
+    },
+    {
+      "id": "afp",
+      "nazwa": "AFP",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Francja",
+      "domeny": [
+        "afp.com"
+      ],
+      "wzorce": [
+        "AFP"
+      ],
+      "uzasadnienie": "Globalna sieć korespondentów, statut gwarantujący niezależność redakcyjną."
+    },
+    {
+      "id": "pap",
+      "nazwa": "PAP",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Polska",
+      "domeny": [
+        "pap.pl"
+      ],
+      "wzorce": [
+        "PAP"
+      ],
+      "uzasadnienie": "Agencja publiczna z własnymi korespondentami; wiarygodna co do faktów i komunikatów, ostrożnie z doborem tematów w sprawach politycznych."
+    },
+    {
+      "id": "bloomberg",
+      "nazwa": "Bloomberg",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "USA",
+      "domeny": [
+        "bloomberg.com"
+      ],
+      "wzorce": [
+        "Bloomberg"
+      ],
+      "uzasadnienie": "Silne własne ustalenia w gospodarce i polityce. Uwaga: treść często niedostępna dla naszych narzędzi, a sam tytuł nie jest źródłem."
+    },
+    {
+      "id": "washington-post",
+      "nazwa": "Washington Post",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "USA",
+      "domeny": [
+        "washingtonpost.com"
+      ],
+      "wzorce": [
+        "Washington Post"
+      ],
+      "uzasadnienie": "Duża redakcja z własnymi ustaleniami i rubryką sprostowań."
+    },
+    {
+      "id": "npr",
+      "nazwa": "NPR",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "USA",
+      "domeny": [
+        "npr.org"
+      ],
+      "wzorce": [
+        "NPR"
+      ],
+      "uzasadnienie": "Publiczny nadawca z jawnymi standardami."
+    },
+    {
+      "id": "cbs",
+      "nazwa": "CBS News",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "USA",
+      "domeny": [
+        "cbsnews.com"
+      ],
+      "wzorce": [
+        "CBS"
+      ],
+      "uzasadnienie": "Ogólnokrajowa redakcja z własnymi korespondentami."
+    },
+    {
+      "id": "abc",
+      "nazwa": "ABC News (USA i Australia)",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "USA / Australia",
+      "domeny": [
+        "abcnews.com",
+        "abcnews.go.com",
+        "abc.net.au"
+      ],
+      "wzorce": [
+        "ABC"
+      ],
+      "uzasadnienie": "Duże redakcje z jawnymi standardami."
+    },
+    {
+      "id": "cnbc",
+      "nazwa": "CNBC",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "USA",
+      "domeny": [
+        "cnbc.com"
+      ],
+      "wzorce": [
+        "CNBC"
+      ],
+      "uzasadnienie": "Redakcja ekonomiczna z własnymi korespondentami."
+    },
+    {
+      "id": "bbc",
+      "nazwa": "BBC",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Wielka Brytania",
+      "domeny": [
+        "bbc.com",
+        "bbc.co.uk"
+      ],
+      "wzorce": [
+        "BBC"
+      ],
+      "uzasadnienie": "Publiczny nadawca z rozbudowanymi standardami i weryfikacją (BBC Verify)."
+    },
+    {
+      "id": "ft",
+      "nazwa": "Financial Times",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Wielka Brytania",
+      "domeny": [
+        "ft.com"
+      ],
+      "wzorce": [
+        "Financial Times",
+        "FT"
+      ],
+      "uzasadnienie": "Własne ustalenia, jawne sprostowania."
+    },
+    {
+      "id": "france24",
+      "nazwa": "France 24",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Francja",
+      "domeny": [
+        "france24.com"
+      ],
+      "wzorce": [
+        "France 24"
+      ],
+      "uzasadnienie": "Publiczny nadawca, w depeszach opiera się na AFP."
+    },
+    {
+      "id": "dw",
+      "nazwa": "Deutsche Welle",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Niemcy",
+      "domeny": [
+        "dw.com"
+      ],
+      "wzorce": [
+        "DW",
+        "Deutsche Welle"
+      ],
+      "uzasadnienie": "Publiczny nadawca z jawnymi standardami."
+    },
+    {
+      "id": "euronews",
+      "nazwa": "Euronews",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "UE",
+      "domeny": [
+        "euronews.com"
+      ],
+      "wzorce": [
+        "Euronews"
+      ],
+      "uzasadnienie": "Własne relacje z instytucji UE; w innych tematach często opiera się na agencjach."
+    },
+    {
+      "id": "ansa",
+      "nazwa": "ANSA",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Włochy",
+      "domeny": [
+        "ansa.it"
+      ],
+      "wzorce": [
+        "ANSA"
+      ],
+      "uzasadnienie": "Główna włoska agencja prasowa, spółdzielnia wydawców."
+    },
+    {
+      "id": "sp-global",
+      "nazwa": "S&P Global Commodity Insights",
+      "poziom": 2,
+      "typ": "redakcja branżowa",
+      "kraj": "USA",
+      "domeny": [
+        "spglobal.com"
+      ],
+      "wzorce": [
+        "S&P Global"
+      ],
+      "uzasadnienie": "Wyspecjalizowana redakcja rynków energii z własnymi danymi."
+    },
+    {
+      "id": "err",
+      "nazwa": "ERR",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Estonia",
+      "domeny": [
+        "err.ee"
+      ],
+      "wzorce": [
+        "ERR"
+      ],
+      "uzasadnienie": "Estoński nadawca publiczny, niezależny statutowo."
+    },
+    {
+      "id": "lsm",
+      "nazwa": "LSM",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Łotwa",
+      "domeny": [
+        "lsm.lv"
+      ],
+      "wzorce": [
+        "LSM"
+      ],
+      "uzasadnienie": "Łotewski nadawca publiczny."
+    },
+    {
+      "id": "lrt",
+      "nazwa": "LRT",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "Litwa",
+      "domeny": [
+        "lrt.lt"
+      ],
+      "wzorce": [
+        "LRT"
+      ],
+      "uzasadnienie": "Litewski nadawca publiczny."
+    },
+    {
+      "id": "tasr",
+      "nazwa": "TASR",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Słowacja",
+      "domeny": [
+        "tasr.sk",
+        "teraz.sk"
+      ],
+      "wzorce": [
+        "TASR"
+      ],
+      "uzasadnienie": "Publiczna agencja prasowa; rzetelna co do przebiegu wydarzeń w parlamencie i rządzie."
+    },
+    {
+      "id": "dennik-n",
+      "nazwa": "Denník N",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Słowacja",
+      "domeny": [
+        "dennikn.sk"
+      ],
+      "wzorce": [
+        "Denník N",
+        "Deník N"
+      ],
+      "uzasadnienie": "Niezależna redakcja z własnymi ustaleniami; krytyczna wobec rządu Fico — przy ocenach zaznaczać autora."
+    },
+    {
+      "id": "meduza",
+      "nazwa": "Meduza",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Rosja (na emigracji)",
+      "domeny": [
+        "meduza.io"
+      ],
+      "wzorce": [
+        "Meduza"
+      ],
+      "uzasadnienie": "Niezależna rosyjska redakcja na emigracji, staranna w atrybucji; często relacjonuje cudze depesze — wtedy liczy się źródło pierwotne."
+    },
+    {
+      "id": "kyiv-independent",
+      "nazwa": "Kyiv Independent",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Ukraina",
+      "domeny": [
+        "kyivindependent.com"
+      ],
+      "wzorce": [
+        "Kyiv Independent"
+      ],
+      "uzasadnienie": "Niezależna redakcja z jawnymi standardami i sprostowaniami. Perspektywa ukraińska: dane o stratach i skutkach ataków podaje za stroną ukraińską."
+    },
+    {
+      "id": "rferl",
+      "nazwa": "Radio Wolna Europa (RFE/RL)",
+      "poziom": 2,
+      "typ": "media publiczne",
+      "kraj": "USA",
+      "domeny": [
+        "rferl.org",
+        "svoboda.org"
+      ],
+      "wzorce": [
+        "RFE/RL",
+        "Radio Wolna Europa"
+      ],
+      "uzasadnienie": "Rozbudowana sieć korespondentów w Europie Wschodniej, jawne standardy. Finansowane przez rząd USA — przy tematach dotyczących polityki USA ostrożniej."
+    },
+    {
+      "id": "osw",
+      "nazwa": "OSW",
+      "poziom": 2,
+      "typ": "think tank",
+      "kraj": "Polska",
+      "domeny": [
+        "osw.waw.pl"
+      ],
+      "wzorce": [
+        "OSW"
+      ],
+      "uzasadnienie": "Państwowy ośrodek analityczny ze starannym udokumentowaniem; publikuje głównie oceny — zawsze z autorem."
+    },
+    {
+      "id": "pism",
+      "nazwa": "PISM",
+      "poziom": 2,
+      "typ": "think tank",
+      "kraj": "Polska",
+      "domeny": [
+        "pism.pl"
+      ],
+      "wzorce": [
+        "PISM"
+      ],
+      "uzasadnienie": "Państwowy instytut analityczny; publikuje głównie oceny — zawsze z autorem."
+    },
+    {
+      "id": "agence-europe",
+      "nazwa": "Agence Europe",
+      "poziom": 2,
+      "typ": "redakcja branżowa",
+      "kraj": "UE",
+      "domeny": [
+        "agenceurope.eu"
+      ],
+      "wzorce": [
+        "Agence Europe"
+      ],
+      "uzasadnienie": "Wyspecjalizowany serwis o instytucjach UE z własnymi ustaleniami."
+    },
+    {
+      "id": "al-jazeera",
+      "nazwa": "Al Jazeera",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Katar",
+      "domeny": [
+        "aljazeera.com"
+      ],
+      "wzorce": [
+        "Al Jazeera"
+      ],
+      "uzasadnienie": "Duża sieć korespondentów i dobre relacje na żywo; finansowana przez państwo Katar, z wyraźną linią w sprawach Bliskiego Wschodu."
+    },
+    {
+      "id": "moscow-times",
+      "nazwa": "The Moscow Times",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Rosja (na emigracji)",
+      "domeny": [
+        "themoscowtimes.com"
+      ],
+      "wzorce": [
+        "Moscow Times"
+      ],
+      "uzasadnienie": "Niezależna, ale mała redakcja na emigracji; wiele tekstów to opracowania depesz — wtedy liczy się źródło pierwotne."
+    },
+    {
+      "id": "kyiv-post",
+      "nazwa": "Kyiv Post",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Ukraina",
+      "domeny": [
+        "kyivpost.com"
+      ],
+      "wzorce": [
+        "Kyiv Post"
+      ],
+      "uzasadnienie": "Szybkie relacje za komunikatami ukraińskimi; mniejsza staranność niż Kyiv Independent (rozbieżne liczby w wydaniu z 30.09)."
+    },
+    {
+      "id": "ukrainska-pravda",
+      "nazwa": "Ukraińska Prawda / Eurointegration",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Ukraina",
+      "domeny": [
+        "pravda.com.ua",
+        "eurointegration.com.ua"
+      ],
+      "wzorce": [
+        "Ukraińska Prawda",
+        "Ukrainska Pravda",
+        "Eurointegration"
+      ],
+      "uzasadnienie": "Znana redakcja śledcza, ale w wiadomościach dużo przedruku i perspektywa ukraińska."
+    },
+    {
+      "id": "unn",
+      "nazwa": "UNN",
+      "poziom": 3,
+      "typ": "agencja",
+      "kraj": "Ukraina",
+      "domeny": [
+        "unn.ua"
+      ],
+      "wzorce": [
+        "UNN"
+      ],
+      "uzasadnienie": "Ukraińska agencja; szybka, ale głównie przekazuje komunikaty władz i cudze doniesienia."
+    },
+    {
+      "id": "axios",
+      "nazwa": "Axios",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "USA",
+      "domeny": [
+        "axios.com"
+      ],
+      "wzorce": [
+        "Axios"
+      ],
+      "uzasadnienie": "Wiele pierwszych doniesień o dyplomacji USA, ale często oparte na anonimowych źródłach — wymaga potwierdzenia."
+    },
+    {
+      "id": "times-of-israel",
+      "nazwa": "Times of Israel",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Izrael",
+      "domeny": [
+        "timesofisrael.com"
+      ],
+      "wzorce": [
+        "Times of Israel"
+      ],
+      "uzasadnienie": "Rzetelna w faktach, perspektywa izraelska w sprawach regionu."
+    },
+    {
+      "id": "isw",
+      "nazwa": "ISW (Institute for the Study of War)",
+      "poziom": 3,
+      "typ": "think tank",
+      "kraj": "USA",
+      "domeny": [
+        "understandingwar.org",
+        "criticalthreats.org"
+      ],
+      "wzorce": [
+        "ISW"
+      ],
+      "uzasadnienie": "Codzienne oceny frontu z jawną metodą, ale to oceny think tanku, nie ustalenia; zawsze jako OCENA."
+    },
+    {
+      "id": "defence24",
+      "nazwa": "Defence24",
+      "poziom": 3,
+      "typ": "redakcja branżowa",
+      "kraj": "Polska",
+      "domeny": [
+        "defence24.pl",
+        "defence24.com"
+      ],
+      "wzorce": [
+        "Defence24"
+      ],
+      "uzasadnienie": "Dobra znajomość sprzętu; powiązania z branżą zbrojeniową — fakty o zamówieniach potwierdzać w MON."
+    },
+    {
+      "id": "aviationist",
+      "nazwa": "The Aviationist",
+      "poziom": 3,
+      "typ": "redakcja branżowa",
+      "kraj": "Włochy",
+      "domeny": [
+        "theaviationist.com"
+      ],
+      "wzorce": [
+        "The Aviationist"
+      ],
+      "uzasadnienie": "Specjalistyczny serwis lotniczy; trafny w szczegółach technicznych, polityczne fakty przejmuje z innych mediów."
+    },
+    {
+      "id": "rmf24",
+      "nazwa": "RMF24",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "rmf24.pl"
+      ],
+      "wzorce": [
+        "RMF24",
+        "RMF FM"
+      ],
+      "uzasadnienie": "Własni reporterzy, ale szybkie, skrótowe relacje i przedruk PAP."
+    },
+    {
+      "id": "polsat-news",
+      "nazwa": "Polsat News",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "polsatnews.pl"
+      ],
+      "wzorce": [
+        "Polsat News"
+      ],
+      "uzasadnienie": "Komercyjny nadawca; relacje często za PAP."
+    },
+    {
+      "id": "money-pl",
+      "nazwa": "Money.pl",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "money.pl"
+      ],
+      "wzorce": [
+        "Money.pl"
+      ],
+      "uzasadnienie": "Portal ekonomiczny; dane rządowe przekazuje za komunikatami — weryfikować w źródle urzędowym."
+    },
+    {
+      "id": "prawo-pl",
+      "nazwa": "Prawo.pl",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "prawo.pl"
+      ],
+      "wzorce": [
+        "Prawo.pl"
+      ],
+      "uzasadnienie": "Serwis prawniczy; wiadomości głównie za PAP i komunikatami."
+    },
+    {
+      "id": "gazeta-prawna",
+      "nazwa": "Dziennik Gazeta Prawna",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "gazetaprawna.pl",
+        "dziennik.pl"
+      ],
+      "wzorce": [
+        "Gazeta Prawna",
+        "Dziennik.pl"
+      ],
+      "uzasadnienie": "Gazeta z własnymi ustaleniami w gospodarce; portal dziennik.pl w dużej mierze przedrukowy."
+    },
+    {
+      "id": "portfolio-hu",
+      "nazwa": "Portfolio.hu",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Węgry",
+      "domeny": [
+        "portfolio.hu"
+      ],
+      "wzorce": [
+        "Portfolio"
+      ],
+      "uzasadnienie": "Rzetelny serwis ekonomiczny; w polityce zależny od komunikatów."
+    },
+    {
+      "id": "index-hu",
+      "nazwa": "Index.hu",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Węgry",
+      "domeny": [
+        "index.hu"
+      ],
+      "wzorce": [
+        "Index"
+      ],
+      "uzasadnienie": "Duży portal; od zmiany właściciela w 2020 r. zarzuty utraty niezależności."
+    },
+    {
+      "id": "444-hu",
+      "nazwa": "444.hu",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Węgry",
+      "domeny": [
+        "444.hu"
+      ],
+      "wzorce": [
+        "444"
+      ],
+      "uzasadnienie": "Niezależny, ale publicystyczny portal; fakty potwierdzać."
+    },
+    {
+      "id": "agerpres",
+      "nazwa": "Agerpres",
+      "poziom": 3,
+      "typ": "agencja",
+      "kraj": "Rumunia",
+      "domeny": [
+        "agerpres.ro"
+      ],
+      "wzorce": [
+        "Agerpres"
+      ],
+      "uzasadnienie": "Państwowa agencja kraju UE; rzetelna co do przebiegu oficjalnych wydarzeń, ostrożnie z ocenami politycznymi."
+    },
+    {
+      "id": "eunews",
+      "nazwa": "Eunews",
+      "poziom": 3,
+      "typ": "redakcja branżowa",
+      "kraj": "Włochy",
+      "domeny": [
+        "eunews.it"
+      ],
+      "wzorce": [
+        "Eunews"
+      ],
+      "uzasadnienie": "Mały serwis o UE; dobre przecieki z negocjacji, potwierdzać w Radzie lub KE."
+    },
+    {
+      "id": "upi",
+      "nazwa": "UPI",
+      "poziom": 3,
+      "typ": "agencja",
+      "kraj": "USA",
+      "domeny": [
+        "upi.com"
+      ],
+      "wzorce": [
+        "UPI"
+      ],
+      "uzasadnienie": "Mała agencja, dużo opracowań cudzych doniesień."
+    },
+    {
+      "id": "trading-economics",
+      "nazwa": "TradingEconomics",
+      "poziom": 3,
+      "typ": "agregator danych",
+      "kraj": "USA",
+      "domeny": [
+        "tradingeconomics.com"
+      ],
+      "wzorce": [
+        "TradingEconomics"
+      ],
+      "uzasadnienie": "Wygodne zestawienia notowań i wskaźników; liczby potwierdzać u źródła (GUS, NBP, giełda)."
+    },
+    {
+      "id": "yahoo-finance",
+      "nazwa": "Yahoo Finance",
+      "poziom": 3,
+      "typ": "agregator",
+      "kraj": "USA",
+      "domeny": [
+        "finance.yahoo.com"
+      ],
+      "wzorce": [
+        "Yahoo Finance"
+      ],
+      "uzasadnienie": "Agregator; wiarygodność zależy od pierwotnego wydawcy tekstu — podawać go, jeśli znany."
+    },
+    {
+      "id": "notes-from-poland",
+      "nazwa": "Notes from Poland",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "notesfrompoland.com"
+      ],
+      "wzorce": [
+        "Notes from Poland"
+      ],
+      "uzasadnienie": "Anglojęzyczny serwis o Polsce, głównie opracowania polskich mediów."
+    },
+    {
+      "id": "belsat",
+      "nazwa": "Biełsat",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska / Białoruś",
+      "domeny": [
+        "belsat.eu"
+      ],
+      "wzorce": [
+        "Belsat",
+        "Biełsat"
+      ],
+      "uzasadnienie": "Najlepiej poinformowany o Białorusi, ale z wyraźną perspektywą opozycji białoruskiej."
+    },
+    {
+      "id": "interia",
+      "nazwa": "Interia",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "interia.pl"
+      ],
+      "wzorce": [
+        "Interia"
+      ],
+      "uzasadnienie": "Portal z działem własnych ustaleń; w wiadomościach dużo przedruku."
+    },
+    {
+      "id": "wnp",
+      "nazwa": "WNP.pl",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "wnp.pl",
+        "portalsamorzadowy.pl"
+      ],
+      "wzorce": [
+        "WNP",
+        "wnp.pl"
+      ],
+      "uzasadnienie": "Portal gospodarczy; wiadomości często za PAP."
+    },
+    {
+      "id": "fontanka",
+      "nazwa": "Fontanka",
+      "poziom": 3,
+      "typ": "redakcja",
+      "kraj": "Rosja",
+      "domeny": [
+        "fontanka.ru"
+      ],
+      "wzorce": [
+        "Fontanka"
+      ],
+      "uzasadnienie": "Petersburska redakcja działająca w Rosji, pod presją cenzury wojennej; fakty o dekretach potwierdzać w publikacjach urzędowych."
+    },
+    {
+      "id": "przedruk-wire",
+      "nazwa": "Serwisy przedrukowujące depesze (U.S. News, ThePrint, CP24, Arab News, Devdiscourse itp.)",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "—",
+      "domeny": [
+        "usnews.com",
+        "theprint.in",
+        "cp24.com",
+        "arabnews.com",
+        "arabnews.pk",
+        "devdiscourse.com",
+        "933thedrive.com",
+        "staradvertiser.com",
+        "krdo.com"
+      ],
+      "wzorce": [
+        "U.S. News",
+        "ThePrint",
+        "CP24",
+        "Arab News"
+      ],
+      "uzasadnienie": "Same nic nie ustalają. Gdy przytaczamy przez nie depeszę, w nazwie podajemy agencję (np. „Reuters (za U.S. News)”) i kolor bierze się z agencji; bez wskazania agencji — poziom 4."
+    },
+    {
+      "id": "sweden-herald",
+      "nazwa": "Sweden Herald",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "Szwecja",
+      "domeny": [
+        "swedenherald.com"
+      ],
+      "wzorce": [
+        "Sweden Herald"
+      ],
+      "uzasadnienie": "Opracowania cudzych doniesień bez własnych ustaleń."
+    },
+    {
+      "id": "strefa-biznesu",
+      "nazwa": "Strefa Biznesu",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "Polska",
+      "domeny": [
+        "strefabiznesu.pl"
+      ],
+      "wzorce": [
+        "Strefa Biznesu"
+      ],
+      "uzasadnienie": "Portal przedrukowy; kursy i dane brać z NBP."
+    },
+    {
+      "id": "mezha",
+      "nazwa": "Mezha",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "Ukraina",
+      "domeny": [
+        "mezha.net",
+        "mezha.media"
+      ],
+      "wzorce": [
+        "Mezha"
+      ],
+      "uzasadnienie": "Agregator wiadomości, brak własnych ustaleń."
+    },
+    {
+      "id": "mediafax",
+      "nazwa": "Mediafax",
+      "poziom": 4,
+      "typ": "agencja",
+      "kraj": "Rumunia",
+      "domeny": [
+        "mediafax.ro"
+      ],
+      "wzorce": [
+        "Mediafax"
+      ],
+      "uzasadnienie": "Komercyjna agencja o osłabionej redakcji; potwierdzać w Agerpres lub agencjach międzynarodowych."
+    },
+    {
+      "id": "brussels-signal",
+      "nazwa": "Brussels Signal",
+      "poziom": 4,
+      "typ": "redakcja",
+      "kraj": "Belgia",
+      "domeny": [
+        "brusselssignal.eu"
+      ],
+      "wzorce": [
+        "Brussels Signal"
+      ],
+      "uzasadnienie": "Serwis o wyraźnym profilu ideowym, mieszający informację z publicystyką."
+    },
+    {
+      "id": "goniec",
+      "nazwa": "Goniec",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "Polska",
+      "domeny": [
+        "goniec.pl"
+      ],
+      "wzorce": [
+        "Goniec"
+      ],
+      "uzasadnienie": "Portal o słabych standardach redakcyjnych, głównie przedruk."
+    },
+    {
+      "id": "nasza-polska",
+      "nazwa": "Nasza Polska",
+      "poziom": 4,
+      "typ": "redakcja",
+      "kraj": "Polska",
+      "domeny": [
+        "naszapolska.pl"
+      ],
+      "wzorce": [
+        "Nasza Polska"
+      ],
+      "uzasadnienie": "Tygodnik publicystyczny; informacje wymagają potwierdzenia."
+    },
+    {
+      "id": "rio-times",
+      "nazwa": "Rio Times",
+      "poziom": 4,
+      "typ": "pośrednik",
+      "kraj": "Brazylia",
+      "domeny": [
+        "riotimesonline.com"
+      ],
+      "wzorce": [
+        "Rio Times"
+      ],
+      "uzasadnienie": "Odległy agregator, brak własnych ustaleń o Europie."
+    },
+    {
+      "id": "wiedomosti",
+      "nazwa": "Wiedomosti",
+      "poziom": 4,
+      "typ": "redakcja",
+      "kraj": "Rosja",
+      "domeny": [
+        "vedomosti.ru"
+      ],
+      "wzorce": [
+        "Wiedomosti",
+        "Vedomosti"
+      ],
+      "uzasadnienie": "Dawniej niezależny dziennik; od 2020 r. właściciele bliscy Kremlowi, działa pod cenzurą wojenną."
+    },
+    {
+      "id": "interfax",
+      "nazwa": "Interfax",
+      "poziom": 4,
+      "typ": "agencja",
+      "kraj": "Rosja",
+      "domeny": [
+        "interfax.ru",
+        "interfax.com"
+      ],
+      "wzorce": [
+        "Interfax"
+      ],
+      "uzasadnienie": "Prywatna agencja działająca pod rosyjską cenzurą wojenną; przekazuje stanowisko władz."
+    },
+    {
+      "id": "agregatory",
+      "nazwa": "Agregatory i serwisy niskiej jakości (Wikipedia, NewsBeep, Vocal, Archyde, Time.news, Head Topics itp.)",
+      "poziom": 4,
+      "typ": "agregator",
+      "kraj": "—",
+      "domeny": [
+        "wikipedia.org",
+        "newsbeep.com",
+        "vocal.media",
+        "archyde.com",
+        "time.news",
+        "headtopics.com",
+        "world-today-journal.com",
+        "northeasttimes.com",
+        "tfiglobalnews.com",
+        "finchannel.com",
+        "yournews.com",
+        "moderndiplomacy.eu",
+        "logos-pres.md",
+        "ua.news",
+        "eualive.net",
+        "pkb24.pl",
+        "kredytowyporadnik.pl",
+        "112.ua"
+      ],
+      "wzorce": [
+        "Wikipedia"
+      ],
+      "uzasadnienie": "Wskazówka, gdzie szukać źródła pierwotnego — nigdy podstawa pozycji."
+    },
+    {
+      "id": "tass",
+      "nazwa": "TASS",
+      "poziom": 5,
+      "typ": "agencja państwowa",
+      "kraj": "Rosja",
+      "domeny": [
+        "tass.com",
+        "tass.ru"
+      ],
+      "wzorce": [
+        "TASS"
+      ],
+      "uzasadnienie": "Państwowa agencja Rosji. Wiarygodna wyłącznie co do tego, co mówią rosyjskie władze; zawsze z oznaczeniem „strona rosyjska”."
+    },
+    {
+      "id": "ria",
+      "nazwa": "RIA Nowosti, RT, Sputnik",
+      "poziom": 5,
+      "typ": "media państwowe",
+      "kraj": "Rosja",
+      "domeny": [
+        "ria.ru",
+        "rt.com",
+        "sputnikglobe.com",
+        "sputniknews.com"
+      ],
+      "wzorce": [
+        "RIA",
+        "RT",
+        "Sputnik"
+      ],
+      "uzasadnienie": "Aparat propagandowy państwa rosyjskiego, objęty sankcjami UE."
+    },
+    {
+      "id": "izwiestia",
+      "nazwa": "Izwiestia, Rossijskaja Gazieta, Kommiersant",
+      "poziom": 5,
+      "typ": "media prokremlowskie",
+      "kraj": "Rosja",
+      "domeny": [
+        "iz.ru",
+        "rg.ru",
+        "kommersant.ru"
+      ],
+      "wzorce": [
+        "Izwiestia",
+        "Rossijskaja Gazieta",
+        "Kommiersant"
+      ],
+      "uzasadnienie": "Media państwowe lub kontrolowane przez otoczenie Kremla."
+    },
+    {
+      "id": "belta",
+      "nazwa": "BiełTA",
+      "poziom": 5,
+      "typ": "agencja państwowa",
+      "kraj": "Białoruś",
+      "domeny": [
+        "belta.by",
+        "eng.belta.by"
+      ],
+      "wzorce": [
+        "BiełTA",
+        "BelTA"
+      ],
+      "uzasadnienie": "Państwowa agencja reżimu Łukaszenki."
+    },
+    {
+      "id": "iran-state",
+      "nazwa": "IRNA, Press TV, Tasnim, Fars",
+      "poziom": 5,
+      "typ": "media państwowe",
+      "kraj": "Iran",
+      "domeny": [
+        "irna.ir",
+        "presstv.ir",
+        "tasnimnews.com",
+        "farsnews.ir"
+      ],
+      "wzorce": [
+        "IRNA",
+        "Press TV",
+        "Tasnim",
+        "Fars"
+      ],
+      "uzasadnienie": "Media państwowe i powiązane z Korpusem Strażników Rewolucji."
+    },
+    {
+      "id": "china-state",
+      "nazwa": "Xinhua, Global Times, CGTN",
+      "poziom": 5,
+      "typ": "media państwowe",
+      "kraj": "Chiny",
+      "domeny": [
+        "xinhuanet.com",
+        "news.cn",
+        "globaltimes.cn",
+        "cgtn.com"
+      ],
+      "wzorce": [
+        "Xinhua",
+        "Global Times",
+        "CGTN"
+      ],
+      "uzasadnienie": "Media partyjno-państwowe ChRL; wiarygodne wyłącznie co do stanowiska Pekinu."
+    }
   ]
 }

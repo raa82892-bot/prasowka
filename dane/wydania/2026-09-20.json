@@ -24,25 +24,6 @@
   },
   "zarys": [
     {
-      "id": "z1",
-      "blok": "wojna",
-      "data": "2026-09-18",
-      "tagi": [
-        "rosja",
-        "ukraina",
-        "hybryda",
-        "usa"
-      ],
-      "tekst": "OSW (Marek Menkiszak, 18.09): Rosja, nie mogąc osiągnąć celów militarnych i mierząc się z problemami wewnętrznymi (według OSW ukraińskie ataki o połowę zmniejszyły jej zdolności rafineryjne), realizuje trzy zadania – dalsze wyniszczanie Ukrainy do jej faktycznej kapitulacji, zastraszanie Europy coraz intensywniejszą wojną hybrydową (dezinformacja, sabotaż, cyberataki, drony nad infrastrukturą krytyczną) oraz „przekupywanie” administracji Trumpa ofertami biznesowymi w zamian za wycofanie pomocy dla Kijowa i zniesienie sankcji. OSW zaleca stanowczą komunikację strategiczną, asymetryczne środki polityczne i gospodarcze oraz większą obecność NATO przy granicach Rosji. To ocena OSW.",
-      "zrodla": [
-        {
-          "nazwa": "OSW (M. Menkiszak), Analiza",
-          "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe",
-          "data": "2026-09-18"
-        }
-      ]
-    },
-    {
       "id": "z3",
       "blok": "wojna",
       "data": "2026-09-19",
@@ -57,6 +38,11 @@
         {
           "nazwa": "UPI",
           "url": "https://www.upi.com/Top_News/US/2026/09/19/state-department-equipment-sale-ukraine/4001789851439/",
+          "data": "2026-09-19"
+        },
+        {
+          "nazwa": "CBS",
+          "url": "https://www.cbsnews.com/news/us-ukraine-russia-war-air-defense-state-department/",
           "data": "2026-09-19"
         }
       ]

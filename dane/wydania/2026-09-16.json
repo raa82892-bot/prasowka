@@ -29,6 +29,11 @@
           "nazwa": "Yahoo Finance",
           "url": "https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-25-basis-point-interest-rate-hike-chairman-kevin-warsh-143452661.html",
           "data": "2026-09-16"
+        },
+        {
+          "nazwa": "Fed (FOMC)",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "data": "2026-09-16"
         }
       ]
     },
@@ -47,6 +52,11 @@
         {
           "nazwa": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/9/16/belarus-frees-25-political-prisoners-in-return-for-us-sanctions-relief",
+          "data": "2026-09-16"
+        },
+        {
+          "nazwa": "RFE/RL",
+          "url": "https://www.rferl.org/a/belarus-us-prisoners-release-sanctions/33857455.html",
           "data": "2026-09-16"
         }
       ]

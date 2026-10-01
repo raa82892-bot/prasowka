@@ -1,5 +1,5 @@
 {
-  "opis": "Rewizja archiwum 01.10.2026: pozycje oznaczone wcześniej jako NIEPOTWIERDZONE lub SPRZECZNE ŹRÓDŁA oraz oparte na samych tytułach sprawdzone ponownie; w zarysie zostało tylko to, co potwierdzone, a niepotwierdzone wycofano. Odchudzenie redakcyjne 01.10.2026: usunięto 23 pozycji zarysu bez następstwa dla Polski lub powtarzających wcześniejsze (szum informacyjny); nie były to korekty błędów.",
+  "opis": "Rewizja archiwum 01.10.2026: pozycje oznaczone wcześniej jako NIEPOTWIERDZONE lub SPRZECZNE ŹRÓDŁA oraz oparte na samych tytułach sprawdzone ponownie; w zarysie zostało tylko to, co potwierdzone, a niepotwierdzone wycofano. Odchudzenie redakcyjne 01.10.2026: usunięto 23 pozycji zarysu bez następstwa dla Polski lub powtarzających wcześniejsze (szum informacyjny); nie były to korekty błędów. Drugi przegląd (01.10.2026): wycofano 10 pozycji bez drugiego niezależnego źródła z poziomów 1–2 lub z rozbieżnością danych, resztę uzupełniono drugim źródłem.",
   "rewizje": [
     {
       "dotyczy": "2026-09-15#z1",
@@ -281,39 +281,6 @@
       ]
     },
     {
-      "dotyczy": "2026-09-30#z7",
-      "data": "2026-10-01",
-      "wynik": "POTWIERDZONE PO REWIZJI",
-      "pierwotny_status": "tylko tytuł w źródłach",
-      "bylo": "Rada Ministrów przyjęła **ostateczną wersję projektu ustawy budżetowej na 2027 r.** z deficytem 281,2 mld zł.",
-      "bylo_zrodla": [
-        {
-          "nazwa": "PAP (tytuł; treść zablokowana dla robotów)",
-          "url": "https://www.pap.pl/aktualnosci/rzad-przyjal-ostateczna-wersje-projektu-ustawy-budzetowej-na-2027-rok",
-          "data": "2026-09-30"
-        },
-        {
-          "nazwa": "Gazeta Prawna (tytuł)",
-          "url": "https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/11321511,budzet-panstwa-2027-obronnosc-zdrowie.html",
-          "data": "2026-09-30"
-        }
-      ],
-      "jest": "Rada Ministrów przyjęła 29.09 **ostateczną wersję projektu ustawy budżetowej na 2027 r.** z deficytem 281,2 mld zł; na obronność przewidziano 198,1 mld zł (4,51% PKB).",
-      "zmiana": "pierwotnie oparte na samych tytułach (PAP, Gazeta Prawna); treść potwierdzona w Prawo.pl (za PAP i KPRM) i Money.pl",
-      "zrodla": [
-        {
-          "nazwa": "Prawo.pl (za PAP i KPRM)",
-          "url": "https://www.prawo.pl/podatki/rzad-przyjal-projekt-budzetu-na-2027-rok,1551753.html",
-          "data": "2026-09-29"
-        },
-        {
-          "nazwa": "Money.pl",
-          "url": "https://www.money.pl/gospodarka/jest-budzet-na-2027-r-rzad-przyjal-ostateczna-wersje-7334618779330784a.html",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
       "dotyczy": "2026-09-30#z9",
       "data": "2026-10-01",
       "wynik": "POTWIERDZONE PO REWIZJI",
@@ -382,6 +349,435 @@
           "nazwa": "Sweden Herald (za Bloombergiem)",
           "url": "https://swedenherald.com/article/imf-calculations-show-ukraine-faces-up-to-54-billion-financing-shortfall-through-2029",
           "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-17#z1",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "OSW (Justyna Gotkowska, Lidia Gibadło, Jacek Tarociński): budżet Bundeswehry w 2026 r. wynosi 124,6 mld euro (2,69% PKB), cel na 2035 r. to 3,5% PKB; liczba żołnierzy ma wzrosnąć z ok. 185,6 tys. do 260 tys. służby czynnej plus 200 tys. rezerwistów, do 183 Eurofighterów i 9–12 okrętów podwodnych. Zdaniem OSW transformację wymusza przypisanie Niemiec do regionalnego planu NATO „Centrum”, finansowanie opiera się głównie na długu (po zmianach konstytucji z 2022 i 2025 r.), a status „najsilniejszej armii konwencjonalnej Europy” przewidziano dopiero na 2035 r.; trwałość zależy od warunków po wyborach 2029 r. Ograniczenia: zakaz broni ABC (traktat „2+4”), zgoda Bundestagu na operacje zbrojne.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "OSW (J. Gotkowska i in.), Raport",
+          "url": "https://www.osw.waw.pl/transformacja-bundeswehry/",
+          "data": "2026-09-17"
+        }
+      ],
+      "pozycja": {
+        "id": "z1",
+        "blok": "swiat",
+        "data": "2026-09-17",
+        "tagi": [
+          "niemcy",
+          "obronnosc-polski",
+          "nato"
+        ],
+        "tekst": "OSW (Justyna Gotkowska, Lidia Gibadło, Jacek Tarociński): budżet Bundeswehry w 2026 r. wynosi 124,6 mld euro (2,69% PKB), cel na 2035 r. to 3,5% PKB; liczba żołnierzy ma wzrosnąć z ok. 185,6 tys. do 260 tys. służby czynnej plus 200 tys. rezerwistów, do 183 Eurofighterów i 9–12 okrętów podwodnych. Zdaniem OSW transformację wymusza przypisanie Niemiec do regionalnego planu NATO „Centrum”, finansowanie opiera się głównie na długu (po zmianach konstytucji z 2022 i 2025 r.), a status „najsilniejszej armii konwencjonalnej Europy” przewidziano dopiero na 2035 r.; trwałość zależy od warunków po wyborach 2029 r. Ograniczenia: zakaz broni ABC (traktat „2+4”), zgoda Bundestagu na operacje zbrojne.",
+        "zrodla": [
+          {
+            "nazwa": "OSW (J. Gotkowska i in.), Raport",
+            "url": "https://www.osw.waw.pl/transformacja-bundeswehry/",
+            "data": "2026-09-17"
+          }
+        ]
+      },
+      "zmiana": "liczby OSW (budżet 124,6 mld euro) rozbieżne z danymi Ministerstwa Obrony Niemiec (ok. 108,2 mld euro, inna metodyka); bez rozstrzygnięcia nie publikujemy",
+      "zrodla": [
+        {
+          "nazwa": "OSW (J. Gotkowska i in.), Raport",
+          "url": "https://www.osw.waw.pl/transformacja-bundeswehry/",
+          "data": "2026-09-17"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-20#z1",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "OSW (Marek Menkiszak, 18.09): Rosja, nie mogąc osiągnąć celów militarnych i mierząc się z problemami wewnętrznymi (według OSW ukraińskie ataki o połowę zmniejszyły jej zdolności rafineryjne), realizuje trzy zadania – dalsze wyniszczanie Ukrainy do jej faktycznej kapitulacji, zastraszanie Europy coraz intensywniejszą wojną hybrydową (dezinformacja, sabotaż, cyberataki, drony nad infrastrukturą krytyczną) oraz „przekupywanie” administracji Trumpa ofertami biznesowymi w zamian za wycofanie pomocy dla Kijowa i zniesienie sankcji. OSW zaleca stanowczą komunikację strategiczną, asymetryczne środki polityczne i gospodarcze oraz większą obecność NATO przy granicach Rosji. To ocena OSW.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "OSW (M. Menkiszak), Analiza",
+          "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe",
+          "data": "2026-09-18"
+        }
+      ],
+      "pozycja": {
+        "id": "z1",
+        "blok": "wojna",
+        "data": "2026-09-18",
+        "tagi": [
+          "rosja",
+          "ukraina",
+          "hybryda",
+          "usa"
+        ],
+        "tekst": "OSW (Marek Menkiszak, 18.09): Rosja, nie mogąc osiągnąć celów militarnych i mierząc się z problemami wewnętrznymi (według OSW ukraińskie ataki o połowę zmniejszyły jej zdolności rafineryjne), realizuje trzy zadania – dalsze wyniszczanie Ukrainy do jej faktycznej kapitulacji, zastraszanie Europy coraz intensywniejszą wojną hybrydową (dezinformacja, sabotaż, cyberataki, drony nad infrastrukturą krytyczną) oraz „przekupywanie” administracji Trumpa ofertami biznesowymi w zamian za wycofanie pomocy dla Kijowa i zniesienie sankcji. OSW zaleca stanowczą komunikację strategiczną, asymetryczne środki polityczne i gospodarcze oraz większą obecność NATO przy granicach Rosji. To ocena OSW.",
+        "zrodla": [
+          {
+            "nazwa": "OSW (M. Menkiszak), Analiza",
+            "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe",
+            "data": "2026-09-18"
+          }
+        ]
+      },
+      "zmiana": "ocena jednego think tanku (OSW) w zarysie faktów; oceny należą do sekcji analiz, a tezy nie potwierdza drugie źródło",
+      "zrodla": [
+        {
+          "nazwa": "OSW (M. Menkiszak), Analiza",
+          "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe",
+          "data": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-23#z1",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Zełenski po spotkaniu z Trumpem w ONZ 22.09: „jesteśmy gotowi na każdy format rozejmu energetycznego”, ale zadziała on tylko, jeśli Rosja przyjmie te same warunki, a jej stanowiska nie zna. Rozmawiano o licencjach na produkcję pocisków Patriot – Zełenski: „nie na dziś”, Raytheon jest gotów dostarczyć licencje. Trump: relacje są „bardzo silne”, „myślę, że zawrzemy umowę”, ukraińskie uderzenia w rafinerie to „poważny cios” dla Rosji; mówił też o nowych uprawnieniach taryfowych wobec Rosji.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/zelensky-meets-trump-at-un-amid-push-for-russia-ukraine-energy-truce/",
+          "data": "2026-09-22"
+        }
+      ],
+      "pozycja": {
+        "id": "z1",
+        "blok": "wojna",
+        "data": "2026-09-22",
+        "tagi": [
+          "rozejm",
+          "ukraina",
+          "usa",
+          "uzbrojenie"
+        ],
+        "tekst": "Zełenski po spotkaniu z Trumpem w ONZ 22.09: „jesteśmy gotowi na każdy format rozejmu energetycznego”, ale zadziała on tylko, jeśli Rosja przyjmie te same warunki, a jej stanowiska nie zna. Rozmawiano o licencjach na produkcję pocisków Patriot – Zełenski: „nie na dziś”, Raytheon jest gotów dostarczyć licencje. Trump: relacje są „bardzo silne”, „myślę, że zawrzemy umowę”, ukraińskie uderzenia w rafinerie to „poważny cios” dla Rosji; mówił też o nowych uprawnieniach taryfowych wobec Rosji.",
+        "zrodla": [
+          {
+            "nazwa": "Kyiv Independent",
+            "url": "https://kyivindependent.com/zelensky-meets-trump-at-un-amid-push-for-russia-ukraine-energy-truce/",
+            "data": "2026-09-22"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła z poziomów 1–2 dla cytatów ze spotkania (sam Kyiv Independent)",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/zelensky-meets-trump-at-un-amid-push-for-russia-ukraine-energy-truce/",
+          "data": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-23#z2",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Wysłannicy USA Steve Witkoff i Jared Kushner prowadzili 22.09 w ONZ trzygodzinne pośrednie rozmowy z szefem MSZ Iranu Abbasem Araghczim; Trump nazwał je „bardzo dobrymi” i „produktywnymi”, a równocześnie groził „unicestwieniem” Iranu. Po załamaniu czerwcowego 60-dniowego memorandum Iran przedstawił nowe warunki. Al Jazeera przytacza sceptycyzm ekspertów (negocjacje trwają ponad dwa lata, dwukrotnie kończyły się wojną); mediują Katar i Oman, a każde porozumienie musi zaakceptować Korpus Strażników Rewolucji.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/9/23/flurry-of-diplomacy-trumps-fiery-threats-us-iran-war-deal-still-elusive",
+          "data": "2026-09-23"
+        }
+      ],
+      "pozycja": {
+        "id": "z2",
+        "blok": "swiat",
+        "data": "2026-09-22",
+        "tagi": [
+          "iran",
+          "usa"
+        ],
+        "tekst": "Wysłannicy USA Steve Witkoff i Jared Kushner prowadzili 22.09 w ONZ trzygodzinne pośrednie rozmowy z szefem MSZ Iranu Abbasem Araghczim; Trump nazwał je „bardzo dobrymi” i „produktywnymi”, a równocześnie groził „unicestwieniem” Iranu. Po załamaniu czerwcowego 60-dniowego memorandum Iran przedstawił nowe warunki. Al Jazeera przytacza sceptycyzm ekspertów (negocjacje trwają ponad dwa lata, dwukrotnie kończyły się wojną); mediują Katar i Oman, a każde porozumienie musi zaakceptować Korpus Strażników Rewolucji.",
+        "zrodla": [
+          {
+            "nazwa": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/9/23/flurry-of-diplomacy-trumps-fiery-threats-us-iran-war-deal-still-elusive",
+            "data": "2026-09-23"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła z poziomów 1–2 (sam Al Jazeera, poziom 3)",
+      "zrodla": [
+        {
+          "nazwa": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/9/23/flurry-of-diplomacy-trumps-fiery-threats-us-iran-war-deal-still-elusive",
+          "data": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-25#z1",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Wizyta Xi Jinpinga w USA zakończyła się 25.09 przedłużeniem rozejmu handlowego USA–Chiny do 10.01.2027 (wcześniej wygasał w listopadzie); przedstawiciel handlowy USA Jamieson Greer zapowiedział ponowną ocenę, czy kontynuować „okres względnego pokoju”. Ogłoszono też listopadowy szczyt w Shenzhen o bezpieczeństwie sztucznej inteligencji i mechanizm powiadamiania o incydentach AI. Yahoo Finance ocenia, że poza krótką zwłoką wizyta przyniosła niewiele; w tym źródle nie ma ustaleń o Tajwanie ani Iranie.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/us-china-summit-ends-with-little-progress-on-trade-and-ai--other-than-2-new-deadlines-174257772.html",
+          "data": "2026-09-25"
+        }
+      ],
+      "pozycja": {
+        "id": "z1",
+        "blok": "swiat",
+        "data": "2026-09-25",
+        "tagi": [
+          "chiny",
+          "usa",
+          "gospodarka"
+        ],
+        "tekst": "Wizyta Xi Jinpinga w USA zakończyła się 25.09 przedłużeniem rozejmu handlowego USA–Chiny do 10.01.2027 (wcześniej wygasał w listopadzie); przedstawiciel handlowy USA Jamieson Greer zapowiedział ponowną ocenę, czy kontynuować „okres względnego pokoju”. Ogłoszono też listopadowy szczyt w Shenzhen o bezpieczeństwie sztucznej inteligencji i mechanizm powiadamiania o incydentach AI. Yahoo Finance ocenia, że poza krótką zwłoką wizyta przyniosła niewiele; w tym źródle nie ma ustaleń o Tajwanie ani Iranie.",
+        "zrodla": [
+          {
+            "nazwa": "Yahoo Finance",
+            "url": "https://finance.yahoo.com/markets/article/us-china-summit-ends-with-little-progress-on-trade-and-ai--other-than-2-new-deadlines-174257772.html",
+            "data": "2026-09-25"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła z poziomów 1–2 (sam Yahoo Finance, poziom 3); drugie dostępne źródło opisuje inne ustalenia (Tajwan, Iran)",
+      "zrodla": [
+        {
+          "nazwa": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/us-china-summit-ends-with-little-progress-on-trade-and-ai--other-than-2-new-deadlines-174257772.html",
+          "data": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-28#z4",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Wiceministra obrony Magdalena Sobkowiak-Czarnecka podtrzymała ofertę produkcji pocisków do Patriotów na terytorium Polski, jako bezpieczniejszej alternatywy dla zakładu na Ukrainie. Pierwszy raz ofertę (format trójstronny USA–Polska–Ukraina) przedstawiła w lipcu po rozmowach w Waszyngtonie (Defence24, 24.07); potwierdzenia ze strony USA na wrzesień nie znaleziono.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Defence24",
+          "url": "https://defence24.pl/przemysl/sobkowiak-czarnecka-zlozylismy-usa-propozycje-produkcji-patriotow-w-polsce",
+          "data": "2026-07-24"
+        }
+      ],
+      "pozycja": {
+        "id": "z4",
+        "blok": "polska",
+        "data": "2026-09-28",
+        "tagi": [
+          "uzbrojenie",
+          "usa",
+          "ukraina"
+        ],
+        "etap": "PROPOZYCJA",
+        "tekst": "Wiceministra obrony Magdalena Sobkowiak-Czarnecka podtrzymała ofertę produkcji pocisków do Patriotów na terytorium Polski, jako bezpieczniejszej alternatywy dla zakładu na Ukrainie. Pierwszy raz ofertę (format trójstronny USA–Polska–Ukraina) przedstawiła w lipcu po rozmowach w Waszyngtonie (Defence24, 24.07); potwierdzenia ze strony USA na wrzesień nie znaleziono.",
+        "zrodla": [
+          {
+            "nazwa": "Defence24",
+            "url": "https://defence24.pl/przemysl/sobkowiak-czarnecka-zlozylismy-usa-propozycje-produkcji-patriotow-w-polsce",
+            "data": "2026-07-24"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła z poziomów 1–2 (sam Defence24, poziom 3)",
+      "zrodla": [
+        {
+          "nazwa": "Defence24",
+          "url": "https://defence24.pl/przemysl/sobkowiak-czarnecka-zlozylismy-usa-propozycje-produkcji-patriotow-w-polsce",
+          "data": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-29#z3",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Według dokumentów rządu rosyjskiego (Reuters) projekt budżetu na 2027 r. przewiduje **wydatki obronne 17,1 bln rubli**, czyli 27% więcej niż wcześniej planowane 13,5 bln; na lata 2027–29 łącznie ok. 50 bln rubli. Dla porównania: w budżecie 2026 na obronę przeznaczono 12,93 bln rubli.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Meduza za Reuters",
+          "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "Moscow Times",
+          "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
+          "data": "2026-09-28"
+        }
+      ],
+      "pozycja": {
+        "id": "z3",
+        "blok": "wojna",
+        "data": "2026-09-28",
+        "tagi": [
+          "rosja",
+          "uzbrojenie",
+          "gospodarka"
+        ],
+        "tekst": "Według dokumentów rządu rosyjskiego (Reuters) projekt budżetu na 2027 r. przewiduje **wydatki obronne 17,1 bln rubli**, czyli 27% więcej niż wcześniej planowane 13,5 bln; na lata 2027–29 łącznie ok. 50 bln rubli. Dla porównania: w budżecie 2026 na obronę przeznaczono 12,93 bln rubli.",
+        "zrodla": [
+          {
+            "nazwa": "Meduza za Reuters",
+            "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
+            "data": "2026-09-28"
+          },
+          {
+            "nazwa": "Moscow Times",
+            "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
+            "data": "2026-09-28"
+          }
+        ]
+      },
+      "zmiana": "jedyne źródło to Reuters; pozostałe odczytane serwisy to jego przedruki, a liczby Moscow Times (poziom 3) nie są niezależnym potwierdzeniem",
+      "zrodla": [
+        {
+          "nazwa": "Meduza za Reuters",
+          "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "Moscow Times",
+          "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-29#z11",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Czechy: Izba Poselska debatuje nad **wotum nieufności dla rządu Andreja Babiša** (wniosek ODS, STAN, Piratów, TOP 09 i chadeków; zarzuty: deficyt budżetu 386 mld koron, konflikt interesów premiera, niezależność sądów, ataki na media). Opozycja ma 92 z 200 mandatów, do obalenia rządu potrzeba 101 głosów.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Washington Post",
+          "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
+          "data": "2026-09-29"
+        }
+      ],
+      "pozycja": {
+        "id": "z11",
+        "blok": "instytucje",
+        "data": "2026-09-29",
+        "tagi": [
+          "czechy"
+        ],
+        "etap": "W TOKU",
+        "tekst": "Czechy: Izba Poselska debatuje nad **wotum nieufności dla rządu Andreja Babiša** (wniosek ODS, STAN, Piratów, TOP 09 i chadeków; zarzuty: deficyt budżetu 386 mld koron, konflikt interesów premiera, niezależność sądów, ataki na media). Opozycja ma 92 z 200 mandatów, do obalenia rządu potrzeba 101 głosów.",
+        "zrodla": [
+          {
+            "nazwa": "Washington Post",
+            "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
+            "data": "2026-09-29"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła; wniosek o wotum nieufności mógł być już rozstrzygnięty (PAP: opozycja nie zdołała przeforsować wotum), więc opis „debatuje” jest nieaktualny",
+      "zrodla": [
+        {
+          "nazwa": "Washington Post",
+          "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-30#z7",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "tylko tytuł w źródłach; potem brak drugiego niezależnego źródła",
+      "bylo": "Rada Ministrów przyjęła 29.09 **ostateczną wersję projektu ustawy budżetowej na 2027 r.** z deficytem 281,2 mld zł; na obronność przewidziano 198,1 mld zł (4,51% PKB).",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Prawo.pl (za PAP i KPRM)",
+          "url": "https://www.prawo.pl/podatki/rzad-przyjal-projekt-budzetu-na-2027-rok,1551753.html",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Money.pl",
+          "url": "https://www.money.pl/gospodarka/jest-budzet-na-2027-r-rzad-przyjal-ostateczna-wersje-7334618779330784a.html",
+          "data": "2026-09-29"
+        }
+      ],
+      "pozycja": {
+        "id": "z7",
+        "blok": "polska",
+        "data": "2026-09-29",
+        "tagi": [
+          "obronnosc-polski",
+          "gospodarka"
+        ],
+        "tekst": "Rada Ministrów przyjęła 29.09 **ostateczną wersję projektu ustawy budżetowej na 2027 r.** z deficytem 281,2 mld zł; na obronność przewidziano 198,1 mld zł (4,51% PKB).",
+        "zrodla": [
+          {
+            "nazwa": "Prawo.pl (za PAP i KPRM)",
+            "url": "https://www.prawo.pl/podatki/rzad-przyjal-projekt-budzetu-na-2027-rok,1551753.html",
+            "data": "2026-09-29"
+          },
+          {
+            "nazwa": "Money.pl",
+            "url": "https://www.money.pl/gospodarka/jest-budzet-na-2027-r-rzad-przyjal-ostateczna-wersje-7334618779330784a.html",
+            "data": "2026-09-29"
+          }
+        ]
+      },
+      "zmiana": "Wcześniej (rewizja z 01.10) pozycję oparto na treści Prawo.pl i Money.pl zamiast na tytułach PAP i Gazety Prawnej. Przy drugim przeglądzie nadal brak źródła poziomów 1–2 (komunikat KPRM/PAP niedostępny, dostępne źródła dotyczą wersji wstępnej z sierpnia), więc pozycję wycofano. liczby (deficyt 281,2 mld zł, obronność 198,1 mld zł) mają tylko źródła poziomu 3 (Prawo.pl, Money.pl); komunikat KPRM/PAP nie był dostępny, a dostępne źródła dotyczą wersji wstępnej z sierpnia",
+      "zrodla": [
+        {
+          "nazwa": "Prawo.pl (za PAP i KPRM)",
+          "url": "https://www.prawo.pl/podatki/rzad-przyjal-projekt-budzetu-na-2027-rok,1551753.html",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Money.pl",
+          "url": "https://www.money.pl/gospodarka/jest-budzet-na-2027-r-rzad-przyjal-ostateczna-wersje-7334618779330784a.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "dotyczy": "2026-09-30#z8",
+      "data": "2026-10-01",
+      "wynik": "WYCOFANE",
+      "pierwotny_status": "brak drugiego niezależnego źródła",
+      "bylo": "Minister spraw zagranicznych Radosław Sikorski: Polska **nie powinna bojkotować szczytu G20** mimo zaproszenia Putina – „nie Polska jest gospodarzem”; zaproszenie nazwał złym pomysłem, a Putina – kimś, kogo nie należy traktować jak mile widzianego gościa w trakcie wojny z Ukrainą. Zasugerował rozmowy z amerykańskimi gospodarzami o udziale prezydenta Nawrockiego we wspólnym zdjęciu.",
+      "bylo_zrodla": [
+        {
+          "nazwa": "Polsat News",
+          "url": "https://www.polsatnews.pl/wiadomosc/2026-09-30/nawrocki-i-putin-razem-na-szczycie-g20-sikorski-komentuje/",
+          "data": "2026-09-30"
+        }
+      ],
+      "pozycja": {
+        "id": "z8",
+        "blok": "polska",
+        "data": "2026-09-30",
+        "tagi": [
+          "dyplomacja-rp",
+          "usa"
+        ],
+        "tekst": "Minister spraw zagranicznych Radosław Sikorski: Polska **nie powinna bojkotować szczytu G20** mimo zaproszenia Putina – „nie Polska jest gospodarzem”; zaproszenie nazwał złym pomysłem, a Putina – kimś, kogo nie należy traktować jak mile widzianego gościa w trakcie wojny z Ukrainą. Zasugerował rozmowy z amerykańskimi gospodarzami o udziale prezydenta Nawrockiego we wspólnym zdjęciu.",
+        "zrodla": [
+          {
+            "nazwa": "Polsat News",
+            "url": "https://www.polsatnews.pl/wiadomosc/2026-09-30/nawrocki-i-putin-razem-na-szczycie-g20-sikorski-komentuje/",
+            "data": "2026-09-30"
+          }
+        ]
+      },
+      "zmiana": "brak drugiego niezależnego źródła z poziomów 1–2 (sam Polsat News, poziom 3)",
+      "zrodla": [
+        {
+          "nazwa": "Polsat News",
+          "url": "https://www.polsatnews.pl/wiadomosc/2026-09-30/nawrocki-i-putin-razem-na-szczycie-g20-sikorski-komentuje/",
+          "data": "2026-09-30"
         }
       ]
     }

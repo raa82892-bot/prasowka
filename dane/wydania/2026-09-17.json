@@ -20,26 +20,7 @@
     ],
     "pism": []
   },
-  "zarys": [
-    {
-      "id": "z1",
-      "blok": "swiat",
-      "data": "2026-09-17",
-      "tagi": [
-        "niemcy",
-        "obronnosc-polski",
-        "nato"
-      ],
-      "tekst": "OSW (Justyna Gotkowska, Lidia Gibadło, Jacek Tarociński): budżet Bundeswehry w 2026 r. wynosi 124,6 mld euro (2,69% PKB), cel na 2035 r. to 3,5% PKB; liczba żołnierzy ma wzrosnąć z ok. 185,6 tys. do 260 tys. służby czynnej plus 200 tys. rezerwistów, do 183 Eurofighterów i 9–12 okrętów podwodnych. Zdaniem OSW transformację wymusza przypisanie Niemiec do regionalnego planu NATO „Centrum”, finansowanie opiera się głównie na długu (po zmianach konstytucji z 2022 i 2025 r.), a status „najsilniejszej armii konwencjonalnej Europy” przewidziano dopiero na 2035 r.; trwałość zależy od warunków po wyborach 2029 r. Ograniczenia: zakaz broni ABC (traktat „2+4”), zgoda Bundestagu na operacje zbrojne.",
-      "zrodla": [
-        {
-          "nazwa": "OSW (J. Gotkowska i in.), Raport",
-          "url": "https://www.osw.waw.pl/transformacja-bundeswehry/",
-          "data": "2026-09-17"
-        }
-      ]
-    }
-  ],
+  "zarys": [],
   "czego_nie_ma": [
     {
       "tekst": "Atak na Kijów 16/17.09, alert RCB 17.09 i zmiany procedur MON, ofensywa dyplomatyczna Tuska i Kosiniaka-Kamysza, Warsh i kurs złotego, Iran, Trump–Xi, 25 więźniów (por. wydanie z 16.09) – nie otwarto czołowych źródeł z treścią.",

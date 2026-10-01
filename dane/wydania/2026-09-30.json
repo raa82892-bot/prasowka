@@ -80,6 +80,11 @@
           "nazwa": "Axios",
           "url": "https://www.axios.com/2026/09/29/trump-iran-war-qatar-diplomacy",
           "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Reuters (za Investing.com)",
+          "url": "https://www.investing.com/news/commodities-news/iran-receives-us-feedback-on-sevenday-trustbuilding-plan-4924251",
+          "data": "2026-09-30"
         }
       ]
     },
@@ -96,44 +101,10 @@
           "nazwa": "Dziennik.pl / Gazeta Prawna",
           "url": "https://wiadomosci.dziennik.pl/polityka/artykuly/11322248,zmiany-w-obronie-polskiego-nieba-wojsko-wprowadza-nowe-zasady.html",
           "data": "2026-09-30"
-        }
-      ]
-    },
-    {
-      "id": "z7",
-      "blok": "polska",
-      "data": "2026-09-29",
-      "tagi": [
-        "obronnosc-polski",
-        "gospodarka"
-      ],
-      "tekst": "Rada Ministrów przyjęła 29.09 **ostateczną wersję projektu ustawy budżetowej na 2027 r.** z deficytem 281,2 mld zł; na obronność przewidziano 198,1 mld zł (4,51% PKB).",
-      "zrodla": [
-        {
-          "nazwa": "Prawo.pl (za PAP i KPRM)",
-          "url": "https://www.prawo.pl/podatki/rzad-przyjal-projekt-budzetu-na-2027-rok,1551753.html",
-          "data": "2026-09-29"
         },
         {
-          "nazwa": "Money.pl",
-          "url": "https://www.money.pl/gospodarka/jest-budzet-na-2027-r-rzad-przyjal-ostateczna-wersje-7334618779330784a.html",
-          "data": "2026-09-29"
-        }
-      ]
-    },
-    {
-      "id": "z8",
-      "blok": "polska",
-      "data": "2026-09-30",
-      "tagi": [
-        "dyplomacja-rp",
-        "usa"
-      ],
-      "tekst": "Minister spraw zagranicznych Radosław Sikorski: Polska **nie powinna bojkotować szczytu G20** mimo zaproszenia Putina – „nie Polska jest gospodarzem”; zaproszenie nazwał złym pomysłem, a Putina – kimś, kogo nie należy traktować jak mile widzianego gościa w trakcie wojny z Ukrainą. Zasugerował rozmowy z amerykańskimi gospodarzami o udziale prezydenta Nawrockiego we wspólnym zdjęciu.",
-      "zrodla": [
-        {
-          "nazwa": "Polsat News",
-          "url": "https://www.polsatnews.pl/wiadomosc/2026-09-30/nawrocki-i-putin-razem-na-szczycie-g20-sikorski-komentuje/",
+          "nazwa": "Polska Zbrojna (MON)",
+          "url": "https://polska-zbrojna.pl/home/articleshow/47316?title=Obrona-powietrzna-bedzie-strzelac-szybciej",
           "data": "2026-09-30"
         }
       ]
@@ -156,6 +127,11 @@
           "nazwa": "AFP (za Arab News)",
           "url": "https://www.arabnews.com/world/romanian-parliament-rejects-pro-eu-pm-candidate-amid-political-deadlock-3003917",
           "data": "2026-09-30"
+        },
+        {
+          "nazwa": "Reuters (za Internazionale)",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/30/romanian-pm-designate-muresan-loses-confidence-vote",
+          "data": "2026-09-30"
         }
       ]
     },
@@ -172,6 +148,11 @@
         {
           "nazwa": "ERR (estońska telewizja publiczna)",
           "url": "https://news.err.ee/1610151220/estonia-russia-responsible-for-arson-attack-on-defense-contractor-milrem",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/29/estonia-slams-russian-sabotage-after-arson-attack-on-defence-company-milrem-robotics",
           "data": "2026-09-29"
         }
       ]

@@ -38,6 +38,11 @@
           "nazwa": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/9/22/us-signs-tremendous-arctic-security-deal-with-denmark-greenland",
           "data": "2026-09-22"
+        },
+        {
+          "nazwa": "CBS",
+          "url": "https://www.cbsnews.com/news/trump-greenland-deal-denmark-united-nations/",
+          "data": "2026-09-22"
         }
       ]
     },
@@ -50,12 +55,17 @@
         "ukraina",
         "rosja"
       ],
-      "tekst": "OSW (22.09): 20.09 Ukraina przeprowadziła największy nalot od początku wojny – 1300–1600 dronów i pociski manewrujące – przeciążając obronę powietrzną Moskwy i zatrzymując rafinerię w Kapotni. Rosja atakuje ukraińskie huty i rafinerie (Zaporiżstal, ArcelorMittal w Krzywym Rogu); z ok. 52 rosyjskich rakiet z 15–22.09 przechwycono tylko 1–2. Finlandia ogłosiła 290 mln euro pomocy wojskowej, Polska przygotowuje pakiet 50 mln euro (amunicja do F-16), a USA zatwierdziły sprzedaż systemów obrony powietrznej za 2,68 mld USD (wg OSW).",
+      "tekst": "Ukraina przeprowadziła 20.09 największy dotąd atak dronami na Moskwę; uszkodzona została rafineria w Kapotni, a przetwarzanie ropy wstrzymano. Mer Moskwy Siergiej Sobianin podał, że zestrzelono ponad 1600 dronów (Kyiv Independent nie mógł tej liczby zweryfikować). OSW (22.09) opisuje to jako przeciążenie obrony powietrznej Moskwy.",
       "zrodla": [
         {
           "nazwa": "OSW, Analiza (zespół)",
           "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-22/ukraincy-przeciazaja-obrone-powietrzna-moskwy-1672-dzien-wojny",
           "data": "2026-09-22"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/russia-says-dozens-of-ukrainian-drones-targeted-moscow-as-broader-attack-hit-multiple-regions/",
+          "data": "2026-09-20"
         }
       ]
     },
@@ -74,6 +84,11 @@
           "nazwa": "OSW, Analiza z 24.09",
           "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/azerbejdzan-francja-szansa-na-nowe-otwarcie",
           "data": "2026-09-24"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/22/eu-renews-russia-sanctions-but-removes-usmanov-at-frances-request",
+          "data": "2026-09-22"
         }
       ]
     }

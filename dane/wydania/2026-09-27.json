@@ -25,7 +25,7 @@
         "iran",
         "usa"
       ],
-      "tekst": "Trump odrzucił 26.09 irański plan 7-dniowy (otwarcie Cieśniny Ormuz w zamian za zniesienie blokady morskiej, sankcji na ropę i odmrożenie środków), mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”, a propozycja jest „nie do przyjęcia”. Szef MSZ Iranu Abbas Araghczi odpowiedział, że Iran „nie ustąpi” i czeka na „ostateczne stanowisko” przekazane przez mediatorów; prezydent Masud Pezeszkian powiedział Al Jazeera, że Teheran nie ufa stronie amerykańskiej. Axios (27.09): Trump spodziewa się rozmów w tym tygodniu, a pośredniczy Katar.",
+      "tekst": "Trump odrzucił 26.09 irański plan 7-dniowy (otwarcie Cieśniny Ormuz w zamian za zniesienie blokady morskiej, sankcji na ropę i odmrożenie środków), mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”, a propozycja jest „nie do przyjęcia”. Szef MSZ Iranu Abbas Araghczi powiedział, że Iran jest gotowy na dyplomację, ale i na wznowienie wojny; prezydent Masud Pezeszkian powiedział Al Jazeera, że Teheran nie ufa stronie amerykańskiej. Axios (27.09): Trump spodziewa się rozmów w tym tygodniu, a pośredniczy Katar.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
@@ -35,6 +35,11 @@
         {
           "nazwa": "Axios",
           "url": "https://www.axios.com/2026/09/27/trump-iran-war-hormuz-blockade-negotiations",
+          "data": "2026-09-27"
+        },
+        {
+          "nazwa": "CBS",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-7-day-proposal/",
           "data": "2026-09-27"
         }
       ]
@@ -53,6 +58,11 @@
           "nazwa": "Euronews",
           "url": "https://www.euronews.com/2026/09/28/serbias-president-aleksandar-vucic-resigns-to-run-for-prime-minister-in-snap-elections",
           "data": "2026-09-28"
+        },
+        {
+          "nazwa": "AP (za ValleyCentral)",
+          "url": "https://www.valleycentral.com/news/international/ap-international/ap-serbias-populist-president-vucic-resigns-to-run-for-prime-minister-at-early-vote/amp/",
+          "data": "2026-09-28"
         }
       ]
     },
@@ -70,6 +80,11 @@
           "nazwa": "TASR (agencja państwowa)",
           "url": "https://newsnow.tasr.sk/premier-ready-to-go-to-snap-election-in-january/",
           "data": "2026-09-27"
+        },
+        {
+          "nazwa": "Reuters (za Internazionale)",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/29/slovak-coalition-frays-with-minister-s-removal-early-election-mooted",
+          "data": "2026-09-29"
         }
       ]
     },
@@ -111,6 +126,11 @@
           "nazwa": "Polsat News",
           "url": "https://www.polsatnews.pl/gosc-wydarzen/2026-09-25/nawrocki-poda-reke-putinowi-na-szczycie-g20-kazdy-bedzie-mial-problem/",
           "data": "2026-09-25"
+        },
+        {
+          "nazwa": "PAP (za Rzeczpospolitą)",
+          "url": "https://www.rp.pl/polityka/art45194991-putin-zaproszony-na-szczyt-g20-palac-prezydencki-nam-sie-to-nie-podoba",
+          "data": "2026-09-26"
         }
       ]
     },
@@ -129,6 +149,11 @@
           "nazwa": "Eunews",
           "url": "https://www.eunews.it/en/2026/09/23/ukraine-eu-funds-are-tied-to-reforms-if-kyiv-implements-them-we-will-release-20-billion/",
           "data": "2026-09-23"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/25/brussels-dials-up-pressure-on-kyiv-to-speed-up-reforms-amid-budget-crunch",
+          "data": "2026-09-25"
         }
       ]
     }

@@ -25,25 +25,6 @@
   },
   "zarys": [
     {
-      "id": "z4",
-      "blok": "polska",
-      "data": "2026-09-28",
-      "tagi": [
-        "uzbrojenie",
-        "usa",
-        "ukraina"
-      ],
-      "etap": "PROPOZYCJA",
-      "tekst": "Wiceministra obrony Magdalena Sobkowiak-Czarnecka podtrzymała ofertę produkcji pocisków do Patriotów na terytorium Polski, jako bezpieczniejszej alternatywy dla zakładu na Ukrainie. Pierwszy raz ofertę (format trójstronny USA–Polska–Ukraina) przedstawiła w lipcu po rozmowach w Waszyngtonie (Defence24, 24.07); potwierdzenia ze strony USA na wrzesień nie znaleziono.",
-      "zrodla": [
-        {
-          "nazwa": "Defence24",
-          "url": "https://defence24.pl/przemysl/sobkowiak-czarnecka-zlozylismy-usa-propozycje-produkcji-patriotow-w-polsce",
-          "data": "2026-07-24"
-        }
-      ]
-    },
-    {
       "id": "z5",
       "blok": "polska",
       "data": "2026-09-24",
@@ -57,6 +38,11 @@
           "nazwa": "Polsat News",
           "url": "https://www.polsatnews.pl/wiadomosc/2026-09-24/atak-w-klasztorze-piec-osob-rannych-wsrod-nich-ksieza/",
           "data": "2026-09-24"
+        },
+        {
+          "nazwa": "AFP (za Yahoo News)",
+          "url": "https://sg.news.yahoo.com/deadly-abbey-attack-feeds-anti-145840067.html",
+          "data": "2026-09-26"
         }
       ]
     },
@@ -86,12 +72,17 @@
         "wegry",
         "wybory"
       ],
-      "tekst": "Parlament Węgier uchylił 28.09 niemal jednomyślnie immunitet premierowi Péterowi Magyarowi (sprawa kradzieży telefonu z 2024 r.) oraz byłym ministrom Balázsowi Hankó (zarzut defraudacji ponad 40 mln euro) i Miklósowi Seszták (zarzut przyjęcia łapówek). Fidesz i KDNP zbojkotowały głosowanie.",
+      "tekst": "Parlament Węgier uchylił 28.09 przytłaczającą większością głosów immunitet premierowi Péterowi Magyarowi (sprawa kradzieży telefonu z 2024 r.) oraz byłym ministrom Balázsowi Hankó (zarzut defraudacji ponad 40 mln euro) i Miklósowi Seszták (zarzut przyjęcia łapówek). Fidesz i KDNP zbojkotowały głosowanie.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/9/29/hungary-lifts-immunity-of-prime-minister-magyar-two-orban-era-ministers",
           "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/28/hungarian-parliament-lifts-immunity-of-pm-and-orban-era-ministers-in-separate-criminal-cas",
+          "data": "2026-09-28"
         }
       ]
     }

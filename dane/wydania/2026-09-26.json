@@ -60,6 +60,11 @@
           "nazwa": "RMF24",
           "url": "https://www.rmf24.pl/regiony/warszawa/news-sabotaz-przestepstwo-terrorystyczne-rosyjskie-sluzby-jest-sl,nIdn,1019237",
           "data": "2026-09-25"
+        },
+        {
+          "nazwa": "Prokuratura Krajowa (gov.pl)",
+          "url": "https://www.gov.pl/web/prokuratura-krajowa/wszczecie-sledztwa-w-sprawie-pozaru-stacji-starlink-w-woli-krobowskiej",
+          "data": "2026-09-24"
         }
       ]
     },
@@ -71,11 +76,16 @@
         "iran",
         "usa"
       ],
-      "tekst": "Iran zaproponował USA plan: zniesienie blokady, sankcji na ropę i odmrożenie środków w 4–5 dni, otwarcie Cieśniny Ormuz i negocjacje do siódmego dnia. Trump odrzucił go 26.09 jako „nie do przyjęcia”. Szef MSZ Araghczi czeka na odpowiedź mediatorów.",
+      "tekst": "Iran zaproponował USA plan: zniesienie blokady, sankcji na ropę i odmrożenie środków w 4–5 dni, otwarcie Cieśniny Ormuz i rozmowy (m.in. nuklearne) od siódmego dnia. Trump odrzucił go 26.09 jako „nie do przyjęcia”. Szef MSZ Araghczi czeka na odpowiedź mediatorów.",
       "zrodla": [
         {
           "nazwa": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/9/26/trump-rejects-irans-seven-day-roadmap-to-reopen-strait-of-hormuz",
+          "data": "2026-09-26"
+        },
+        {
+          "nazwa": "CBS",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-7-day-proposal/",
           "data": "2026-09-26"
         }
       ]

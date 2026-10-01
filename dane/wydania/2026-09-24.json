@@ -44,6 +44,11 @@
           "nazwa": "OSW (P. Szymański, A. Kohut), Analiza",
           "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/wywazanie-otwartych-drzwi-umowa-miedzy-usa-dania-i-grenlandia",
           "data": "2026-09-24"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/09/22/trump-signs-greenland-security-deal-allowing-us-to-expand-military-presence",
+          "data": "2026-09-22"
         }
       ]
     },
@@ -85,12 +90,17 @@
         "hybryda",
         "rosja"
       ],
-      "tekst": "Rosyjski śmigłowiec Mi-8 z obwodu kaliningradzkiego wleciał 23.09 o 11:08 w polską przestrzeń powietrzną na północ od Braniewa na ok. 300 m i przebywał tam 42 sekundy; Dowództwo Operacyjne wykryło go radarami i poderwało myśliwce. Komunikat wojska: incydent sugeruje, że Rosja ponownie testuje gotowość obrony powietrznej. Dzień wcześniej polskie myśliwce przechwyciły rosyjski samolot rozpoznawczy Ił-20 ok. 40 km od wybrzeża.",
+      "tekst": "Rosyjski śmigłowiec Mi-8 z obwodu kaliningradzkiego wleciał 23.09 o 11:08 w polską przestrzeń powietrzną na północ od Braniewa; Polska poderwała myśliwce. RFE/RL opisuje to na tle innych incydentów (Mołdawia zgłosiła w 2026 r. 44 naruszenia przestrzeni, w Rumunii 24.09 spadł dron).",
       "zrodla": [
         {
           "nazwa": "Defence24",
           "url": "https://defence24.pl/polityka-obronna/rosyjski-smiglowiec-naruszyl-polska-przestrzen-powietrzna",
           "data": "2026-09-23"
+        },
+        {
+          "nazwa": "RFE/RL",
+          "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html",
+          "data": "2026-09-25"
         }
       ]
     }
