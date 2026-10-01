@@ -1,0 +1,72 @@
+{
+  "nr": 5,
+  "data": "2026-09-24",
+  "godzina": "20:10",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "OSW ocenia, że umowa **USA–Dania–Grenlandia** dała Waszyngtonowi dostęp do baz, ale znacznie mniej niż zakładał Trump; Rada UE objęła sankcjami b. szefową RT France **Ksenię Fiodorową**.",
+    "Duński wywiad ostrzega przed rosnącym ryzykiem ograniczonego rosyjskiego ataku na państwo NATO; Polska poderwała myśliwce po wlocie rosyjskiego **Mi-8** koło Braniewa (23.09).",
+    "Azerbejdżan ułaskawił Francuza Martina Ryana dzień po delistingu Usmanowa; Hashim Thaçi dostał w Hadze 25 lat."
+  ],
+  "korekty": [],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {
+    "osw": [
+      {"tytul": "Wyważanie otwartych drzwi: umowa między USA, Danią i Grenlandią", "autor": "Piotr Szymański, Andrzej Kohut", "data": "2026-09-24", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/wywazanie-otwartych-drzwi-umowa-miedzy-usa-dania-i-grenlandia"},
+      {"tytul": "Azerbejdżan–Francja: szansa na nowe otwarcie", "autor": "OSW (autorów nie ustalono przy ponownym sprawdzeniu)", "data": "2026-09-24", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/azerbejdzan-francja-szansa-na-nowe-otwarcie"}
+    ],
+    "pism": []
+  },
+  "zarys": [
+    {
+      "id": "z1", "blok": "swiat", "data": "2026-09-24", "tagi": ["usa", "nato", "nordyckie"],
+      "tekst": "OSW (P. Szymański, A. Kohut, 24.09) o umowie USA–Dania–Grenlandia, uzupełniającej traktat obronny z 1951 r. po ośmiu miesiącach rozmów: potwierdza pełny dostęp wojskowy USA, w tym rozbudowę bazy Sił Kosmicznych w Pituffik oraz nowe obiekty w Narsarsuaq i Mestersvig; nowa infrastruktura wymaga konsultacji trójstronnych, zakazana jest stała obecność wojskowa państw spoza NATO, a inwestycje spoza NATO i UE w infrastrukturze krytycznej i górnictwie wymagają zgody. Ocena OSW: dla USA to potwierdzenie interesów arktycznych, ale znacznie mniej, niż deklarował Trump (przejęcie wyspy).",
+      "zrodla": [
+        {"nazwa": "OSW (P. Szymański, A. Kohut), Analiza", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/wywazanie-otwartych-drzwi-umowa-miedzy-usa-dania-i-grenlandia", "data": "2026-09-24"}
+      ]
+    },
+    {
+      "id": "z2", "blok": "swiat", "data": "2026-09-23", "tagi": ["francja", "sankcje", "balkany"],
+      "tekst": "Prezydent Azerbejdżanu Ilham Alijew ułaskawił 23.09 obywatela Francji Martina Ryana, skazanego na 10 lat za szpiegostwo. OSW ocenia, że to wymiana: Francja zgodziła się na zdjęcie z unijnej listy sankcyjnej oligarchy Alishera Usmanowa, o co zabiegał Baku; OSW widzi w tym szansę na normalizację relacji, ale zastrzega, że Azerbejdżan nadal będzie traktował krytykę spraw wewnętrznych jako ingerencję.",
+      "zrodla": [
+        {"nazwa": "OSW, Analiza", "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/azerbejdzan-francja-szansa-na-nowe-otwarcie", "data": "2026-09-24"}
+      ]
+    },
+    {
+      "id": "z3", "blok": "instytucje", "data": "2026-09-24", "tagi": ["ue", "sankcje", "francja", "rosja"],
+      "tekst": "Rada UE objęła 24.09 sankcjami (zamrożenie aktywów, zakaz wjazdu) Ksenię Fiodorową, byłą szefową RT France; wniosek złożyły Francja i Niemcy, a francuskie MSZ nazwało ją „aktywnym agentem rosyjskich wpływów”. Zarzuty UE: rozpowszechnianie prorosyjskich narracji, m.in. że pomoc dla Ukrainy przedłuża wojnę, i podważanie relacji o deportacjach ukraińskich dzieci.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/24/eu-sanctions-former-rt-france-chief-xenia-fedorova-over-pro-russian-propaganda", "data": "2026-09-24"}
+      ]
+    },
+    {
+      "id": "z4", "blok": "swiat", "data": "2026-09-24", "tagi": ["nordyckie", "nato", "rosja"],
+      "etap": "W TOKU",
+      "tekst": "Duński wywiad wojskowy (DDIS) ostrzega, że rośnie ryzyko ograniczonego rosyjskiego ataku na jedno z państw NATO w ciągu miesięcy (według tytułów CNBC z 25.09 i Bloomberga z 24.09; treść artykułów była niedostępna, więc nie podajemy szczegółów oceny).",
+      "status": "NIEPOTWIERDZONE",
+      "zrodla": [
+        {"nazwa": "Bloomberg (tytuł)", "url": "https://www.bloomberg.com/news/articles/2026-09-24/denmark-warns-of-rising-risk-of-russian-attack-on-a-nato-state", "data": "2026-09-24"},
+        {"nazwa": "CNBC (tytuł)", "url": "https://www.cnbc.com/2026/09/25/russia-ukraine-war-nato-denmark-putin.html", "data": "2026-09-25"}
+      ]
+    },
+    {
+      "id": "z5", "blok": "polska", "data": "2026-09-23", "tagi": ["obronnosc-polski", "hybryda", "rosja"],
+      "tekst": "Rosyjski śmigłowiec Mi-8 z obwodu kaliningradzkiego wleciał 23.09 o 11:08 w polską przestrzeń powietrzną na północ od Braniewa na ok. 300 m i przebywał tam 42 sekundy; Dowództwo Operacyjne wykryło go radarami i poderwało myśliwce. Komunikat wojska: incydent sugeruje, że Rosja ponownie testuje gotowość obrony powietrznej. Dzień wcześniej polskie myśliwce przechwyciły rosyjski samolot rozpoznawczy Ił-20 ok. 40 km od wybrzeża.",
+      "zrodla": [
+        {"nazwa": "Defence24", "url": "https://defence24.pl/polityka-obronna/rosyjski-smiglowiec-naruszyl-polska-przestrzen-powietrzna", "data": "2026-09-23"}
+      ]
+    },
+    {
+      "id": "z6", "blok": "swiat", "data": "2026-09-16", "tagi": ["balkany"],
+      "tekst": "Specjalne Izby dla Kosowa w Hadze skazały 16.09 byłego prezydenta Kosowa Hashima Thaçiego na 25 lat więzienia za zbrodnie wojenne (morderstwa, tortury, okrutne traktowanie, bezprawne zatrzymania); skazano też Jakupa Krasniqiego (25 lat), Kadriego Veselego (18) i Rexhepa Selimiego (13), a od zarzutów zbrodni przeciwko ludzkości uniewinniono. Szef MSZ Kosowa nazwał wyrok niesprawiedliwym.",
+      "zrodla": [
+        {"nazwa": "Euronews", "url": "https://www.euronews.com/2026/09/16/kosovos-former-president-thaci-convicted-of-war-crimes-at-hague-court", "data": "2026-09-16"}
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {"tekst": "Oświadczenie 51 państw w ONZ o rozejmie (podpis Polski), walkout przy przemówieniu Netanjahu, Trump–Xi, Poczobut, Nawrocki w ONZ, Zełenski o G20 i kurs ropy – nie otwarto czołowych źródeł z treścią.", "prog": "dokumentacja"}
+  ],
+  "nota": "Wydanie nr 5 (wieczorne) z 24.09.2026 (stan na 20:10 CEST), przeniesione na stronę 1.10.2026 z archiwum projektu. Tego dnia ukazało się też wydanie nr 4 (stan na 18:00), którego osobno nie przenoszono. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026, wyłącznie w czołowych mediach, agencjach i instytucjach; zakres jest znacznie węższy niż w oryginale (bez analiz Dla Polski, kalendarza i danych rynkowych). Sprostowanie z oryginalnego wydania (data dymisji Vučicia 27.09) nie było przenoszone jako osobna korekta."
+}
