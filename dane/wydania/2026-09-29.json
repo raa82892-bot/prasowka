@@ -1,332 +1,282 @@
 {
- "nr": 10,
- "data": "2026-09-29",
- "godzina": "20:30",
- "typ": "dzienne",
- "w_skrocie": [
-  "Na Słowacji **SNS razem z opozycją odwołała 29.09 ministra Tarabę** 77 głosami; premier Fico zwołuje na 30.09 prezydium Smeru, a opozycja żąda przedterminowych wyborów.",
-  "Iran rozmawiał w Nowym Jorku z mediatorami z Kataru; USA uzależniają porozumienie od kwestii programu jądrowego, a Cieśnina Ormuz pozostaje zamknięta.",
-  "Putin podpisał 28.09 czwarty w tym roku **dekret zwiększający armię** (do 2,44 mln etatów); projekt budżetu Rosji zakłada wydatki na obronę o 27% wyższe niż wcześniejszy plan.",
-  "Po uderzeniu rosyjskiego drona ok. 2 km od Dorohuska MON zapowiedział **zestrzeliwanie po identyfikacji pozytywnej**; Ławrow na polskie plany produkcji pocisków Patriot odpowiedział odesłaniem do rosyjskiej doktryny wojennej."
- ],
- "korekty": [],
- "zarys": [
-  {
-   "id": "z1",
-   "blok": "swiat",
-   "data": "2026-09-29",
-   "tagi": [
-    "iran",
-    "usa"
-   ],
-   "tekst": "Minister spraw zagranicznych Iranu Abbas Araghczi spotkał się 28.09 w Nowym Jorku z mediatorami z Kataru podczas Zgromadzenia Ogólnego ONZ i czeka na oficjalną odpowiedź USA na irański **plan otwarcia Cieśniny Ormuz w 7 dni** (w zamian za zniesienie sankcji, odmrożenie aktywów i regionalne zawieszenie broni). USA chcą rozstrzygnąć w jednym pakiecie wszystkie sporne sprawy, w tym program jądrowy Iranu; Iran chce kolejności: najpierw Ormuz. Cieśnina jest blokowana przez obie strony.",
-   "zrodla": [
-    {
-     "nazwa": "Al Jazeera",
-     "url": "https://aljazeera.com/news/2026/9/29/us-iran-talks-in-new-york-whats-the-latest",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Armenpress",
-     "url": "https://armenpress.am/en/article/1261530",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z2",
-   "blok": "wojna",
-   "data": "2026-09-28",
-   "tagi": [
-    "rosja"
-   ],
-   "tekst": "Prezydent Władimir Putin podpisał dekret zwiększający liczebność sił zbrojnych Rosji do **2 441 630 etatów**, w tym 1 550 500 wojskowych (ok. 15,5 tys. więcej niż od lipca). To czwarte takie zwiększenie w 2026 r. Prezydent Ukrainy Wołodymyr Zełenski ostrzega, że Rosja rozpoczęła już dodatkową mobilizację i przygotowuje wysłanie ok. 10 tys. żołnierzy z Korei Północnej.",
-   "zrodla": [
-    {
-     "nazwa": "Kyiv Independent",
-     "url": "https://kyivindependent.com/putin-signs-latest-decree-increasing-russian-military-staff-in-wake-of-monster-military-budget-looming-mobilization/",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Meduza",
-     "url": "https://meduza.io/en/news/2026/09/28/putin-orders-fourth-expansion-of-russia-s-armed-forces-this-year",
-     "data": "2026-09-28"
-    },
-    {
-     "nazwa": "CNBC",
-     "url": "https://www.cnbc.com/2026/09/29/putin-russia-army-ukraine-zelenskyy-north-korea.html",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z3",
-   "blok": "wojna",
-   "data": "2026-09-28",
-   "tagi": [
-    "rosja",
-    "uzbrojenie",
-    "gospodarka"
-   ],
-   "tekst": "Według dokumentów rządu rosyjskiego (Reuters) projekt budżetu na 2027 r. przewiduje **wydatki obronne 17,1 bln rubli**, czyli 27% więcej niż wcześniej planowane 13,5 bln; na lata 2027–29 łącznie ok. 50 bln rubli. Dla porównania: w budżecie 2026 na obronę przeznaczono 12,93 bln rubli.",
-   "zrodla": [
-    {
-     "nazwa": "Meduza za Reuters",
-     "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
-     "data": "2026-09-28"
-    },
-    {
-     "nazwa": "Moscow Times",
-     "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
-     "data": "2026-09-28"
-    }
-   ]
-  },
-  {
-   "id": "z4",
-   "blok": "polska",
-   "data": "2026-09-28",
-   "tagi": [
-    "hybryda",
-    "ukraina",
-    "obronnosc-polski"
-   ],
-   "tekst": "Rosyjski dron odrzutowy uderzył 28.09 ok. **2 km od polsko-ukraińskiego przejścia granicznego w Dorohusku** (po stronie ukraińskiej, rejon Jagodzina). Informację potwierdził wicepremier, minister obrony narodowej Władysław Kosiniak-Kamysz; naruszenia polskiej przestrzeni powietrznej nie było. Przejścia w Dorohusku i Zosinie ewakuowano i ok. 17:20 otwarto ponownie.",
-   "zrodla": [
-    {
-     "nazwa": "RMF24",
-     "url": "https://www.rmf24.pl/fakty/swiat/news-rosyjski-dron-uderzyl-tuz-przy-polskiej-granicy-incydent-w-p,nIdn,1019550",
-     "data": "2026-09-28"
-    },
-    {
-     "nazwa": "Opoka",
-     "url": "https://opoka.org.pl/News/Polska/2026/szef-mon-dron-uderzyl-ok-2-km-od-polskiej-granicy",
-     "data": "2026-09-28"
-    }
-   ]
-  },
-  {
-   "id": "z5",
-   "blok": "polska",
-   "data": "2026-09-28",
-   "tagi": [
-    "obronnosc-polski"
-   ],
-   "etap": "ZAPOWIEDŹ",
-   "tekst": "Wiceminister obrony narodowej Cezary Tomczyk zapowiedział, że MON zmieni procedury użycia broni przez polskie samoloty i śmigłowce wobec obiektów wlatujących od strony Rosji: **identyfikacja pozytywna** (m.in. dane z radarów) zamiast wizualnej. Zmiana nie wymaga, by pilot widział cel przed strzałem.",
-   "zrodla": [
-    {
-     "nazwa": "RMF24",
-     "url": "https://www.rmf24.pl/fakty/polska/news-tomczyk-mon-zmieni-procedury-strzelania-do-obiektow-wlatujac,nIdn,1019454",
-     "data": "2026-09-28"
-    },
-    {
-     "nazwa": "Do Rzeczy",
-     "url": "https://dorzeczy.pl/opinie/949426/mon-zmienia-procedury-wojsko-bedzie-stracac-rosyjskie-drony.html",
-     "data": "2026-09-28"
-    }
-   ]
-  },
-  {
-   "id": "z6",
-   "blok": "polska",
-   "data": "2026-09-29",
-   "tagi": [
-    "uzbrojenie",
-    "rosja",
-    "dyplomacja-rp"
-   ],
-   "tekst": "Minister spraw zagranicznych Rosji Siergiej Ławrow, pytany na forum Klubu Wałdajskiego o polskie plany produkcji rakiet do systemu Patriot we współpracy z USA, Niemcami, Holandią i Szwecją, odpowiedział: „Mamy doktrynę wojenną w tej sprawie, na którą prezydent wielokrotnie się powoływał”.",
-   "zrodla": [
-    {
-     "nazwa": "Interia",
-     "url": "https://wydarzenia.interia.pl/ukraina-rosja/news-kreml-reaguje-na-plany-polski-przestudiujcie-nasza-doktryne,nId,23551024",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Goniec",
-     "url": "https://goniec.pl/szef-rosyjskiego-msz-apeluje-do-polski-w-tle-centrum-serwisowe-rakiet-patriot-mamy-doktryne-w-tej-sprawie-mt-wmp-290926",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z7",
-   "blok": "instytucje",
-   "data": "2026-09-29",
-   "tagi": [
-    "nato",
-    "litwa",
-    "hybryda"
-   ],
-   "tekst": "Sekretarz generalny NATO Mark Rutte po spotkaniu z premierem Litwy Mindaugasem Sinkevičiusem: Sojusz wzmocni **tańszą obronę przeciwdronową**, by nie używać „wysokiej klasy samolotów przeciw tanim zagrożeniom” (inicjatywa „Drone Edge”). Kontekst: włoskie myśliwce NATO z bazy w Szawlach zestrzeliły dwa tygodnie wcześniej dron naruszający litewską przestrzeń; Litwa przeznacza w tym roku 5,38% PKB na obronę.",
-   "zrodla": [
-    {
-     "nazwa": "NATO",
-     "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Anadolu (anews)",
-     "url": "https://www.anews.com.tr/world/2026/09/29/nato-to-strengthen-lower-cost-counter-drone-defenses-rutte-says",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z8",
-   "blok": "instytucje",
-   "data": "2026-09-29",
-   "tagi": [
-    "mfw",
-    "ukraina"
-   ],
-   "tekst": "Według szacunku MFW (Bloomberg) Ukraina będzie miała do końca 2029 r. **lukę finansowania zewnętrznego rzędu 54 mld USD**, największą w 2027 r.; darczyńcy spotkali się w Brukseli, by omówić dodatkową pomoc.",
-   "zrodla": [
-    {
-     "nazwa": "LIGA.net",
-     "url": "https://finance.liga.net/en/state-finance/news/imf-estimates-ukraines-financing-gap-through-2029-largest-in-2027",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "UNN za Bloomberg",
-     "url": "https://unn.ua/en/news/the-imf-forecasts-a-dollar54-billion-funding-gap-for-ukraine-through-2029-bloomberg",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z9",
-   "blok": "instytucje",
-   "data": "2026-09-29",
-   "tagi": [
-    "ukraina",
-    "uzbrojenie"
-   ],
-   "tekst": "Zełenski: **Belgia przekaże Ukrainie trzy myśliwce F-16** do końca 2026 r. w przyspieszonej procedurze; do tej pory Ukraina nie otrzymała od Belgii żadnego samolotu (Belgia zobowiązała się w grudniu 2023 do przekazania łącznie 30 F-16 po zakupie F-35).",
-   "zrodla": [
-    {
-     "nazwa": "Mezha",
-     "url": "https://mezha.net/eng/news/8a11346c_belgium_will_deliver_three/",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Voice of Emirates",
-     "url": "https://www.voiceofemirates.com/en/news/2026/09/29/zelenskyy-belgium-to-deliver-3-f-16-fighter-jets-to-ukraine-by-year-end/",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z10",
-   "blok": "instytucje",
-   "data": "2026-09-29",
-   "tagi": [
-    "slowacja"
-   ],
-   "tekst": "Słowacja: parlament **odwołał ministra środowiska Tomáša Tarabę 77 głosami**; za odwołaniem głosowali posłowie opozycji i część posłów koalicyjnej Słowackiej Partii Narodowej (SNS). Premier Robert Fico zwołał na środę (30.09) spotkanie kierownictwa Smeru i SNS; opozycja żąda przedterminowych wyborów.",
-   "zrodla": [
-    {
-     "nazwa": "Noviny.sk",
-     "url": "https://www.noviny.sk/slovensko/1265782-poslanci-vyslovili-nedoveru-ministrovi-zivotneho-prostredia-tomasovi-tarabovi",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "TASR / teraz.sk",
-     "url": "https://www.teraz.sk/slovensko/poslanci-budu-rokovat-o-odvolavani-t/995968-clanok.html",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Parlamentné listy",
-     "url": "https://www.parlamentnelisty.sk/spravy/682692/za-odvolanie-tarabu-hlasovalo-77-poslancov-sns-sa-spojila-s-opoziciou-ktora-vola-po-predcasnych-volbach-video/",
-     "data": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "id": "z11",
-   "blok": "instytucje",
-   "data": "2026-09-29",
-   "tagi": [
-    "czechy"
-   ],
-   "etap": "W TOKU",
-   "tekst": "Czechy: Izba Poselska debatuje nad **wotum nieufności dla rządu Andreja Babiša** (wniosek ODS, STAN, Piratów, TOP 09 i chadeków; zarzuty: deficyt budżetu 386 mld koron, konflikt interesów premiera, niezależność sądów, ataki na media). Opozycja ma 92 z 200 mandatów, do obalenia rządu potrzeba 101 głosów.",
-   "zrodla": [
-    {
-     "nazwa": "Washington Post",
-     "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
-     "data": "2026-09-29"
-    },
-    {
-     "nazwa": "Around Prague",
-     "url": "https://aroundprague.cz/en/news/politics/czech-chamber-of-deputies-continues-no-confidence-debate-on-babis-government",
-     "data": "2026-09-30"
-    }
-   ]
-  },
-  {
-   "id": "z12",
-   "blok": "instytucje",
-   "data": "2026-09-28",
-   "tagi": [
-    "wegry"
-   ],
-   "tekst": "Węgry: 28.09 zatrzymano byłych ministrów rządu Viktora Orbána: **Balázsa Hankó** (kultury i innowacji; podejrzenie sprzeniewierzenia 17 mld forintów z Narodowego Funduszu Kultury) i **Miklósa Sesztáka** (rozwoju narodowego; podejrzenie przyjęcia ok. 12,6 mld forintów łapówek przy zamówieniach na autobusy) oraz b. sekretarz stanu Veronikę Varga-Bajusz. Sąd zdecydował o areszcie Sesztáka 30.09, wniosek o areszt Hankó trafił do sądu (por. wyd. nr 11).",
-   "zrodla": [
-    {
-     "nazwa": "444.hu",
-     "url": "https://444.hu/2026/09/28/sesztak-miklos-utan-hanko-balazst-is-orizetbe-vettek",
-     "data": "2026-09-28"
-    },
-    {
-     "nazwa": "Portfolio.hu",
-     "url": "https://www.portfolio.hu/gazdasag/20260930/hanko-balazs-letartoztatasat-inditvanyozta-az-ugyeszseg-sesztakorol-mar-a-birosag-dontott-866310",
-     "data": "2026-09-30"
-    }
-   ]
-  }
- ],
- "analizy": [],
- "kalendarz": [],
- "zrodla_analityczne": {
-  "osw": [
-   {
-    "tytul": "Rosjanie atakują centra danych w Kijowie. 1679. dzień wojny",
-    "autor": "zespół",
-    "data": "2026-09-29",
-    "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-29/rosjanie-atakuja-centra-danych-w-kijowie-1679-dzien-wojny"
-   },
-   {
-    "tytul": "Dymisja prezydenta Vučicia w Serbii – teatr jednego aktora",
-    "autor": "Jan Nowinowski",
-    "data": "2026-09-28",
-    "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-28/dymisja-prezydenta-vucicia-w-serbii-teatr-jednego-aktora"
-   }
+  "nr": 10,
+  "data": "2026-09-29",
+  "godzina": "20:30",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Na Słowacji **SNS razem z opozycją odwołała 29.09 ministra Tarabę** 77 głosami; premier Fico zwołuje na 30.09 prezydium Smeru, a opozycja żąda przedterminowych wyborów.",
+    "Iran rozmawiał w Nowym Jorku z mediatorami z Kataru; USA uzależniają porozumienie od kwestii programu jądrowego, a Cieśnina Ormuz pozostaje zamknięta.",
+    "Putin podpisał 28.09 czwarty w tym roku **dekret zwiększający armię** (do 2,44 mln etatów); projekt budżetu Rosji zakłada wydatki na obronę o 27% wyższe niż wcześniejszy plan.",
+    "Po uderzeniu rosyjskiego drona ok. 2 km od Dorohuska MON zapowiedział **zestrzeliwanie po identyfikacji pozytywnej**; Ławrow na polskie plany produkcji pocisków Patriot odpowiedział odesłaniem do rosyjskiej doktryny wojennej."
   ],
-  "pism": [
-   {
-    "tytul": "Rosyjski potencjał eskalacyjny",
-    "autor": "Anna Maria Dyner",
-    "numer": "Biuletyn nr 65 (2697)",
-    "data": "2026-09-28",
-    "url": "https://pism.pl/publikacje/rosyjski-potencjal-eskalacyjny"
-   }
-  ]
- },
- "czego_nie_ma": [
-  {
-   "tekst": "Strajk we Francji 29.09 (206 tys. wg MSW, 300 tys. wg CGT) – tylko tytuł.",
-   "prog": "dokumentacja"
+  "korekty": [],
+  "zarys": [
+    {
+      "id": "z1",
+      "blok": "swiat",
+      "data": "2026-09-29",
+      "tagi": [
+        "iran",
+        "usa"
+      ],
+      "tekst": "Minister spraw zagranicznych Iranu Abbas Araghczi spotkał się 28.09 w Nowym Jorku z mediatorami z Kataru podczas Zgromadzenia Ogólnego ONZ i czeka na oficjalną odpowiedź USA na irański **plan otwarcia Cieśniny Ormuz w 7 dni** (w zamian za zniesienie sankcji, odmrożenie aktywów i regionalne zawieszenie broni). USA chcą rozstrzygnąć w jednym pakiecie wszystkie sporne sprawy, w tym program jądrowy Iranu; Iran chce kolejności: najpierw Ormuz. Cieśnina jest blokowana przez obie strony.",
+      "zrodla": [
+        {
+          "nazwa": "Al Jazeera",
+          "url": "https://aljazeera.com/news/2026/9/29/us-iran-talks-in-new-york-whats-the-latest",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z2",
+      "blok": "wojna",
+      "data": "2026-09-28",
+      "tagi": [
+        "rosja"
+      ],
+      "tekst": "Prezydent Władimir Putin podpisał dekret zwiększający liczebność sił zbrojnych Rosji do **2 441 630 etatów**, w tym 1 550 500 wojskowych (ok. 15,5 tys. więcej niż od lipca). To czwarte takie zwiększenie w 2026 r. Prezydent Ukrainy Wołodymyr Zełenski ostrzega, że Rosja rozpoczęła już dodatkową mobilizację i przygotowuje wysłanie ok. 10 tys. żołnierzy z Korei Północnej.",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/putin-signs-latest-decree-increasing-russian-military-staff-in-wake-of-monster-military-budget-looming-mobilization/",
+          "data": "2026-09-29"
+        },
+        {
+          "nazwa": "Meduza",
+          "url": "https://meduza.io/en/news/2026/09/28/putin-orders-fourth-expansion-of-russia-s-armed-forces-this-year",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/29/putin-russia-army-ukraine-zelenskyy-north-korea.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z3",
+      "blok": "wojna",
+      "data": "2026-09-28",
+      "tagi": [
+        "rosja",
+        "uzbrojenie",
+        "gospodarka"
+      ],
+      "tekst": "Według dokumentów rządu rosyjskiego (Reuters) projekt budżetu na 2027 r. przewiduje **wydatki obronne 17,1 bln rubli**, czyli 27% więcej niż wcześniej planowane 13,5 bln; na lata 2027–29 łącznie ok. 50 bln rubli. Dla porównania: w budżecie 2026 na obronę przeznaczono 12,93 bln rubli.",
+      "zrodla": [
+        {
+          "nazwa": "Meduza za Reuters",
+          "url": "https://meduza.io/en/news/2026/09/28/reuters-russia-plans-record-defense-spending-of-17-trillion-rubles-in-2027-27-more-than-previously-budgeted",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "Moscow Times",
+          "url": "https://www.themoscowtimes.com/2026/09/28/russia-raises-2027-military-spending-by-27-budget-documents-show-a93810",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "z4",
+      "blok": "polska",
+      "data": "2026-09-28",
+      "tagi": [
+        "hybryda",
+        "ukraina",
+        "obronnosc-polski"
+      ],
+      "tekst": "Rosyjski dron odrzutowy uderzył 28.09 ok. **2 km od polsko-ukraińskiego przejścia granicznego w Dorohusku** (po stronie ukraińskiej, rejon Jagodzina). Informację potwierdził wicepremier, minister obrony narodowej Władysław Kosiniak-Kamysz; naruszenia polskiej przestrzeni powietrznej nie było. Przejścia w Dorohusku i Zosinie ewakuowano i ok. 17:20 otwarto ponownie.",
+      "zrodla": [
+        {
+          "nazwa": "RMF24",
+          "url": "https://www.rmf24.pl/fakty/swiat/news-rosyjski-dron-uderzyl-tuz-przy-polskiej-granicy-incydent-w-p,nIdn,1019550",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "z5",
+      "blok": "polska",
+      "data": "2026-09-28",
+      "tagi": [
+        "obronnosc-polski"
+      ],
+      "etap": "ZAPOWIEDŹ",
+      "tekst": "Wiceminister obrony narodowej Cezary Tomczyk zapowiedział, że MON zmieni procedury użycia broni przez polskie samoloty i śmigłowce wobec obiektów wlatujących od strony Rosji: **identyfikacja pozytywna** (m.in. dane z radarów) zamiast wizualnej. Zmiana nie wymaga, by pilot widział cel przed strzałem.",
+      "zrodla": [
+        {
+          "nazwa": "RMF24",
+          "url": "https://www.rmf24.pl/fakty/polska/news-tomczyk-mon-zmieni-procedury-strzelania-do-obiektow-wlatujac,nIdn,1019454",
+          "data": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "z6",
+      "blok": "polska",
+      "data": "2026-09-29",
+      "tagi": [
+        "uzbrojenie",
+        "rosja",
+        "dyplomacja-rp"
+      ],
+      "tekst": "Minister spraw zagranicznych Rosji Siergiej Ławrow, pytany na forum Klubu Wałdajskiego o polskie plany produkcji rakiet do systemu Patriot we współpracy z USA, odpowiedział: „Mamy doktrynę wojenną w tej sprawie, na którą prezydent wielokrotnie się powoływał”.",
+      "zrodla": [
+        {
+          "nazwa": "TASS (wypowiedź Ławrowa, strona rosyjska)",
+          "url": "https://tass.com/politics/2194529",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z7",
+      "blok": "instytucje",
+      "data": "2026-09-29",
+      "tagi": [
+        "nato",
+        "litwa",
+        "hybryda"
+      ],
+      "tekst": "Sekretarz generalny NATO Mark Rutte po spotkaniu z premierem Litwy Mindaugasem Sinkevičiusem: Sojusz wzmocni **tańszą obronę przeciwdronową**, by nie używać „wysokiej klasy samolotów przeciw tanim zagrożeniom” (inicjatywa „Drone Edge”). Kontekst: włoskie myśliwce NATO z bazy w Szawlach zestrzeliły dwa tygodnie wcześniej dron naruszający litewską przestrzeń; Litwa przeznacza w tym roku 5,38% PKB na obronę.",
+      "zrodla": [
+        {
+          "nazwa": "NATO",
+          "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/09/29/joint-press-conference-by-nato-secretary-general-mark-rutte-and-the-prime-minister-of-lithuania",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z8",
+      "blok": "instytucje",
+      "data": "2026-09-29",
+      "tagi": [
+        "mfw",
+        "ukraina"
+      ],
+      "tekst": "Według szacunku MFW, podanego przez Bloomberga 29.09, Ukraina będzie miała do końca 2029 r. **lukę finansowania zewnętrznego rzędu 54 mld USD**.",
+      "zrodla": [
+        {
+          "nazwa": "Bloomberg (tytuł; treść zablokowana dla robotów)",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-29/ukraine-to-have-54-billion-funding-gap-by-2029-imf-predicts",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z9",
+      "blok": "instytucje",
+      "data": "2026-09-29",
+      "tagi": [
+        "ukraina",
+        "uzbrojenie"
+      ],
+      "tekst": "Zełenski: **Belgia przekaże Ukrainie trzy myśliwce F-16** do końca 2026 r.",
+      "zrodla": [
+        {
+          "nazwa": "Reuters (za U.S. News; tytuł)",
+          "url": "https://www.usnews.com/news/world/articles/2026-09-29/belgium-to-transfer-three-f-16s-to-ukraine-this-year-zelenskiy-says",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z10",
+      "blok": "instytucje",
+      "data": "2026-09-29",
+      "tagi": [
+        "slowacja"
+      ],
+      "tekst": "Słowacja: parlament **odwołał ministra środowiska Tomáša Tarabę 77 głosami**; za odwołaniem głosowali posłowie opozycji i część posłów koalicyjnej Słowackiej Partii Narodowej (SNS). Premier Robert Fico zwołał na środę (30.09) spotkanie kierownictwa Smeru i SNS; opozycja żąda przedterminowych wyborów.",
+      "zrodla": [
+        {
+          "nazwa": "TASR / teraz.sk",
+          "url": "https://www.teraz.sk/slovensko/poslanci-budu-rokovat-o-odvolavani-t/995968-clanok.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z11",
+      "blok": "instytucje",
+      "data": "2026-09-29",
+      "tagi": [
+        "czechy"
+      ],
+      "etap": "W TOKU",
+      "tekst": "Czechy: Izba Poselska debatuje nad **wotum nieufności dla rządu Andreja Babiša** (wniosek ODS, STAN, Piratów, TOP 09 i chadeków; zarzuty: deficyt budżetu 386 mld koron, konflikt interesów premiera, niezależność sądów, ataki na media). Opozycja ma 92 z 200 mandatów, do obalenia rządu potrzeba 101 głosów.",
+      "zrodla": [
+        {
+          "nazwa": "Washington Post",
+          "url": "https://www.washingtonpost.com/world/2026/09/29/czech-government-babis-noconfidence-vote/d224f138-bc20-11f1-81fc-9b76f8343b6c_story.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "z12",
+      "blok": "instytucje",
+      "data": "2026-09-28",
+      "tagi": [
+        "wegry"
+      ],
+      "tekst": "Węgry: 28.09 zatrzymano byłych ministrów rządu Viktora Orbána: **Balázsa Hankó** (kultury i innowacji; podejrzenie sprzeniewierzenia 17 mld forintów z Narodowego Funduszu Kultury) i **Miklósa Sesztáka** (rozwoju narodowego; podejrzenie przyjęcia ok. 12,6 mld forintów łapówek przy zamówieniach na autobusy) oraz b. sekretarz stanu Veronikę Varga-Bajusz. Sąd zdecydował o areszcie Sesztáka 30.09, wniosek o areszt Hankó trafił do sądu (por. wyd. nr 11).",
+      "zrodla": [
+        {
+          "nazwa": "444.hu",
+          "url": "https://444.hu/2026/09/28/sesztak-miklos-utan-hanko-balazst-is-orizetbe-vettek",
+          "data": "2026-09-28"
+        },
+        {
+          "nazwa": "Portfolio.hu",
+          "url": "https://www.portfolio.hu/gazdasag/20260930/hanko-balazs-letartoztatasat-inditvanyozta-az-ugyeszseg-sesztakorol-mar-a-birosag-dontott-866310",
+          "data": "2026-09-30"
+        }
+      ]
+    }
+  ],
+  "analizy": [],
+  "kalendarz": [],
+  "zrodla_analityczne": {
+    "osw": [
+      {
+        "tytul": "Rosjanie atakują centra danych w Kijowie. 1679. dzień wojny",
+        "autor": "zespół",
+        "data": "2026-09-29",
+        "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-29/rosjanie-atakuja-centra-danych-w-kijowie-1679-dzien-wojny"
+      },
+      {
+        "tytul": "Dymisja prezydenta Vučicia w Serbii – teatr jednego aktora",
+        "autor": "Jan Nowinowski",
+        "data": "2026-09-28",
+        "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-28/dymisja-prezydenta-vucicia-w-serbii-teatr-jednego-aktora"
+      }
+    ],
+    "pism": [
+      {
+        "tytul": "Rosyjski potencjał eskalacyjny",
+        "autor": "Anna Maria Dyner",
+        "numer": "Biuletyn nr 65 (2697)",
+        "data": "2026-09-28",
+        "url": "https://pism.pl/publikacje/rosyjski-potencjal-eskalacyjny"
+      }
+    ]
   },
-  {
-   "tekst": "Sondaż przed wyborami na Łotwie (AS 23,8%, Latvijas Fakti) – źródło wtórne.",
-   "prog": "dokumentacja"
-  },
-  {
-   "tekst": "Wiadomości o premierze Burnhamie z 29.09 (zakres: Narodowa Służba Opieki, woda) – źródła sprzeczne.",
-   "prog": "dokumentacja"
-  }
- ],
- "nota": "Wydanie nr 10 z 29.09.2026 (stan na 20:30 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu i wysłanego maila. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026; zakres jest węższy niż w oryginalnym wydaniu (bez analiz i kalendarza, bo ich treść nie zachowała się w pełnej postaci). W pozycji o Czechach zastosowano źródło z 30.09, bo wcześniejsze strony były niedostępne (403)."
+  "czego_nie_ma": [
+    {
+      "tekst": "Strajk we Francji 29.09 (206 tys. wg MSW, 300 tys. wg CGT) – tylko tytuł.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Sondaż przed wyborami na Łotwie (AS 23,8%, Latvijas Fakti) – źródło wtórne.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Wiadomości o premierze Burnhamie z 29.09 (zakres: Narodowa Służba Opieki, woda) – źródła sprzeczne.",
+      "prog": "dokumentacja"
+    }
+  ],
+  "nota": "Wydanie nr 10 z 29.09.2026 (stan na 20:30 CEST) przeniesione na stronę 1.10.2026 z archiwum projektu i wysłanego maila. Źródła każdej pozycji odnaleziono i otwarto ponownie 1.10.2026; zakres jest węższy niż w oryginalnym wydaniu (bez analiz i kalendarza, bo ich treść nie zachowała się w pełnej postaci). W pozycji o Czechach zastosowano źródło z 30.09, bo wcześniejsze strony były niedostępne (403). Źródła z mniejszych portali zastąpiono 1.10.2026 źródłami z czołowych mediów; przy pozycjach o MFW i F-16 treść artykułów (Bloomberg, Reuters) była niedostępna, więc opisano wyłącznie to, co potwierdza ich tytuł."
 }
