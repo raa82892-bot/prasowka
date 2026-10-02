@@ -765,20 +765,22 @@ class Budowa:
                 f'<tr><td class="kal-d">{data_krotka(k["data"])}</td><td>{T(k["tekst"])} {html_tagi(k.get("tagi"), self.tagi, prefix)}</td></tr>'
                 for k in sorted(w["kalendarz"], key=lambda k: k["data"])) + "</table>")
         if w.get("poza_oknem"):
-            cz.append('<p class="poza"><strong>Poza oknem, ale przesądzające:</strong> ' +
-                      "; ".join(f'{data_dluga(k["data"])} – {T(k["tekst"])}' for k in w["poza_oknem"]) + "</p>")
+            cz.append('<div class="nota"><h3>Poza oknem, ale przesądzające</h3><table class="kal poza">' + "".join(
+                f'<tr><td class="kal-d">{data_krotka(k["data"])}</td><td>{T(k["tekst"])}</td></tr>'
+                for k in sorted(w["poza_oknem"], key=lambda k: k["data"])) + "</table></div>")
         za = w.get("zrodla_analityczne") or {}
         def lista_pub(pub):
             if not pub:
-                return "brak nowych publikacji w ostatnich 3 dniach"
-            return "; ".join(f'<a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">{e(p["tytul"])}</a>'
-                             f'{(" (" + e(p["autor"]) + ")") if p.get("autor") else ""}, {data_krotka(p["data"])}'
-                             f'{(", " + e(p["numer"])) if p.get("numer") else ""}' for p in pub)
-        cz.append(f'<div class="nota"><h3>Stan źródeł analitycznych</h3><p><strong>OSW:</strong> {lista_pub(za.get("osw"))}.</p>'
-                  f'<p><strong>PISM:</strong> {lista_pub(za.get("pism"))}.</p></div>')
+                return '<p class="pub-brak">Brak nowych publikacji w ostatnich 3 dniach.</p>'
+            return '<ul class="pub">' + "".join(
+                f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">{e(p["tytul"])}</a>'
+                f'<span class="pub-meta">' + " · ".join(x for x in (e(p.get("autor") or ""), data_krotka(p["data"]), e(p.get("numer") or "")) if x) +
+                '</span></li>' for p in pub) + "</ul>"
+        cz.append(f'<div class="nota"><h3>Stan źródeł analitycznych</h3><h4 class="pub-wyd">OSW</h4>{lista_pub(za.get("osw"))}'
+                  f'<h4 class="pub-wyd">PISM</h4>{lista_pub(za.get("pism"))}</div>')
         if w.get("czego_nie_ma"):
-            cz.append('<div class="nota"><h3>Czego tu nie ma</h3><ul>' + "".join(
-                f'<li>{T(c["tekst"])} <span class="prog">odpadło na progu: {e(c["prog"])}</span></li>' for c in w["czego_nie_ma"]) + "</ul></div>")
+            cz.append('<div class="nota"><h3>Czego tu nie ma</h3><ul class="brak">' + "".join(
+                f'<li><span class="prog">próg: {e(c["prog"])}</span> {T(c["tekst"])}</li>' for c in w["czego_nie_ma"]) + "</ul></div>")
         if w.get("nota"):
             cz.append(f'<div class="nota"><h3>Nota metodyczna</h3><p>{T(w["nota"])}</p></div>')
         prev = self.wydania[i-1] if i > 0 else None

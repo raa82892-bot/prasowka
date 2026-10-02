@@ -14,7 +14,7 @@
   --ochra-t: #F6ECDD;
   --czerwien: #A8261B;
   --czerwien-t: #FBECEA;
-  --zolty: #FFE9A3;
+  --zolty: #FFF0B8;
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
 }
@@ -32,18 +32,20 @@
     --ochra-t: #3A2C18;
     --czerwien: #F08A80;
     --czerwien-t: #3A1D1B;
-    --zolty: #5A4A10;
+    --zolty: rgba(224, 170, 98, 0.24);
   }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--papier); color: var(--tekst);
-  font: 17px/1.62 var(--serif);
+  font: 18px/1.6 var(--serif);
+  text-rendering: optimizeLegibility;
 }
+p, li { hanging-punctuation: first; }
 a { color: var(--morze); text-underline-offset: 2px; }
 a:focus-visible, input:focus-visible { outline: 3px solid var(--morze); outline-offset: 2px; }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 0 16px; }
 
 /* nagłówek */
 .gora { background: var(--atrament); color: #fff; }
@@ -70,7 +72,7 @@ a:focus-visible, input:focus-visible { outline: 3px solid var(--morze); outline-
 .skrot p { margin: 0 0 8px; }
 .skrot p:last-child { margin-bottom: 0; }
 .dalej { font-family: var(--sans); font-size: 15px; }
-mark { background: var(--zolty); color: inherit; padding: 0 2px; border-radius: 2px; font-weight: 600; }
+mark { background: var(--zolty); color: var(--atrament); padding: 0 3px; border-radius: 3px; font-weight: 600; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* paski sekcji */
 .pasek { background: var(--atrament); color: #fff; font: 600 15px/1.4 var(--sans); padding: 7px 12px; margin: 30px 0 6px; }
@@ -79,12 +81,12 @@ mark { background: var(--zolty); color: inherit; padding: 0 2px; border-radius: 
 .uwaga { color: var(--szary); font-style: italic; font-size: 15px; }
 
 /* pozycja: oś czasu */
-.poz { display: grid; grid-template-columns: 62px 1fr; gap: 0 14px; position: relative; padding: 12px 0 10px; }
+.poz { display: grid; grid-template-columns: 62px 1fr; gap: 0 14px; position: relative; padding: 14px 0 16px; }
 .poz::before { content: ""; position: absolute; left: 76px; top: 0; bottom: 0; border-left: 2px solid var(--linia); }
 .poz-data { font: 600 14px/1.5 var(--sans); color: var(--atrament); text-align: right; padding-top: 2px; font-variant-numeric: tabular-nums; }
 .poz-tresc { position: relative; padding-left: 12px; }
 .poz-tresc::before { content: ""; position: absolute; left: -6px; top: 9px; width: 10px; height: 10px; border-radius: 50%; background: var(--papier); border: 2px solid var(--atrament); }
-.poz-tekst { margin: 4px 0 4px; }
+.poz-tekst { margin: 6px 0 6px; }
 .poz-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; font: 13px/1.5 var(--sans); }
 .skorygowana .poz-tresc::before { border-color: var(--czerwien); background: var(--czerwien); }
 .kor-znak { color: var(--czerwien); font: 14px/1.45 var(--sans); margin: 4px 0; }
@@ -109,8 +111,8 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .odznaka.sprzeczne { color: var(--czerwien); border-color: var(--czerwien); }
 
 /* źródła */
-.zrodla { margin: 2px 0 0; font: italic 13px/1.5 var(--sans); color: var(--szary); }
-.zrodla a { color: var(--szary); }
+.zrodla { margin: 4px 0 0; font: italic 14px/1.55 var(--sans); color: var(--szary); }
+.zrodla a { color: var(--tekst); }
 
 /* analizy */
 .analiza { background: var(--karta); padding: 14px 18px; margin: 12px 0; border-top: 3px solid var(--morze); }
@@ -126,14 +128,24 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 
 /* kalendarz, noty */
 .kal { width: 100%; border-collapse: collapse; margin: 8px 0; }
-.kal td { padding: 6px 0; border-bottom: 1px solid var(--linia); vertical-align: top; }
+.kal td { padding: 8px 0; border-bottom: 1px solid var(--linia); vertical-align: top; }
 .kal-d { width: 96px; font: 600 14px/1.6 var(--sans); color: var(--atrament); font-variant-numeric: tabular-nums; }
-.poza { font-size: 15px; }
-.nota { margin: 18px 0; font-size: 15px; color: var(--tekst); }
+.poza td { font-size: 16px; }
+.nota { margin: 22px 0; font-size: 16px; color: var(--tekst); }
 .nota h3 { font: 600 15px/1.4 var(--sans); color: var(--atrament); margin: 0 0 4px; }
 .nota p { margin: 4px 0; }
 .nota ul { margin: 4px 0; padding-left: 18px; }
-.prog { color: var(--szary); font: 13px/1.4 var(--sans); }
+.nota li { margin: 0 0 8px; }
+.prog { display: inline-block; color: var(--szary); font: 600 12px/1.5 var(--sans); padding: 0 6px; border: 1px solid var(--linia); border-radius: 3px; margin-right: 4px; vertical-align: 1px; white-space: nowrap; }
+.brak { list-style: none; padding-left: 0 !important; }
+.brak li { padding-bottom: 8px; border-bottom: 1px solid var(--linia); }
+.brak li:last-child { border-bottom: 0; }
+.pub-wyd { font: 600 14px/1.4 var(--sans); color: var(--szary); margin: 12px 0 4px; letter-spacing: 0.04em; }
+.pub { list-style: none; padding-left: 0 !important; margin: 0; }
+.pub li { margin: 0 0 8px; }
+.pub a { font-weight: 600; }
+.pub-meta { display: block; font: 14px/1.45 var(--sans); color: var(--szary); }
+.pub-brak { color: var(--szary); font-style: italic; margin: 0; }
 
 /* listy */
 .archiwum { list-style: none; padding: 0; margin: 6px 0 12px; }
@@ -153,12 +165,19 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .stopka { margin-top: 48px; padding: 18px 0 28px; border-top: 1px solid var(--linia); font: 14px/1.55 var(--sans); color: var(--szary); }
 .stopka a { color: var(--szary); }
 
-@media (max-width: 520px) {
-  body { font-size: 16px; }
-  .poz { grid-template-columns: 44px 1fr; gap: 0 10px; }
-  .poz::before { left: 54px; }
-  .poz-data { font-size: 13px; }
+@media (max-width: 600px) {
+  body { font-size: 17px; line-height: 1.58; }
+  /* oś czasu: data nad treścią, cała szerokość dla tekstu */
+  .poz { display: block; padding: 14px 0 14px 20px; }
+  .poz::before { left: 5px; }
+  .poz-data { text-align: left; padding: 0; font-size: 14px; }
+  .poz-data:empty { display: none; }
+  .poz-tresc { position: static; padding-left: 0; }
+  .poz-tresc::before { left: -1px; top: 19px; }
   .analiza, .skrot { padding: 12px 14px; }
+  .dla-polski { margin-left: 0 !important; }
+  .kal-d { width: 64px; }
+  .winieta { padding-top: 20px; }
 }
 @media print {
   .gora .menu, .stopka, .kolejne { display: none; }
@@ -240,7 +259,7 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .wz1 { background: var(--wz1); } .wz2 { background: var(--wz2); } .wz3 { background: var(--wz3); }
 .wz4 { background: var(--wz4); } .wz5 { background: var(--wz5); }
 .wzt1 { background: var(--wz1); } .wzt2 { background: var(--wz2); } .wzt3 { background: var(--wz3); } .wzt4 { background: var(--wz4); } .wzt5 { background: var(--wz5); }
-.zrodla a { text-decoration-color: var(--linia); }
+.zrodla a { text-decoration-color: var(--szary); text-decoration-thickness: 1px; }
 .wz-leg .wz { margin-left: 6px; }
 .rk-pasek { display: flex; height: 14px; gap: 2px; margin: 8px 0 6px; }
 .rk-seg { display: block; min-width: 4px; }
