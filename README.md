@@ -108,6 +108,8 @@ Walidacja odrzuca źródło spoza rankingu (nowe trzeba świadomie dopisać z po
 
 ## Grafiki
 
+- **Kalendarz wydań** — na górze każdego wydania (pasek: poprzednie / kalendarz miesiąca / następne) i w archiwum na stronie głównej (`#archiwum`, wszystkie miesiące). Dzień z wydaniem jest odnośnikiem; tygodniówka (`RRRR-MM-DD-tydzien`) ma kolor ochry i znacznik T obok dziennika z tego samego dnia. Bez JavaScriptu poza zamykaniem panelu kliknięciem obok i klawiszem Esc.
+
 `build.py` rysuje dwie grafiki SVG z tych samych danych (bez JavaScriptu poza przewinięciem osi do końca):
 
 - **Mapa Europy** — na stronie głównej (pozycje z 7 dni) i w każdym wydaniu. Kraj z hashtagiem-miejscem jest zabarwiony liczbą pozycji (1 / 2–3 / 4+) i prowadzi do strony wątku; Polska liczy pozycje z bloku „Polska”. Przypisanie hashtagów do krajów: `MAPA_TAGI` w `build.py`; miejsca poza kadrem (USA, Iran, Chiny) są wymienione pod mapą.

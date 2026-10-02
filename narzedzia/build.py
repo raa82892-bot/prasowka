@@ -14,6 +14,7 @@ Znaczniki w tekstach:
     {{p:id|tekst}}    pojęcie, własny tekst linku
 """
 import argparse
+import calendar
 import datetime as dt
 import html
 import json
@@ -895,6 +896,23 @@ class Budowa:
   <h1>{data_pelna(w['data']).capitalize()}</h1>
   <p class="w-stan">stan na godz. {e(w['godzina'])} CEST{(' · okres ' + e(w['okres'])) if w.get('okres') else ''}</p>
 </section>""")
+        prev = self.wydania[i-1] if i > 0 else None
+        nxt = self.wydania[i+1] if i + 1 < len(self.wydania) else None
+        def krotko(x):
+            return ("tyg. " if x.get("typ") == "tygodniowe" else "") + f'nr {x["nr"]}<span class="wn-d"> · {data_krotka(x["data"])}</span>'
+        d0 = data_(w["data"])
+        cz.append('<nav class="wyd-nav" aria-label="Nawigacja między wydaniami">'
+                  + (f'<a class="wn" rel="prev" href="{prev["_slug"]}.html" title="{e(self.etykieta_wydania(prev))}">← {krotko(prev)}</a>' if prev
+                     else '<span class="wn wn-0">← brak wcześniejszych</span>')
+                  + '<details class="wn-kal"><summary>Kalendarz wydań</summary><div class="wn-panel">'
+                  + self.kalendarz_html(d0.year, d0.month, "", aktualny=w, nawigacja=True) + self.kalendarz_legenda()
+                  + '<p class="kal-wszystkie"><a href="../index.html#archiwum">Wszystkie miesiące i lista wydań</a></p></div></details>'
+                  + (f'<a class="wn" rel="next" href="{nxt["_slug"]}.html" title="{e(self.etykieta_wydania(nxt))}">{krotko(nxt)} →</a>' if nxt
+                     else '<span class="wn wn-0">najnowsze</span>')
+                  + "</nav>"
+                  + "<script>(function(){var d=document.querySelector('.wn-kal');if(!d)return;"
+                    "document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});"
+                    "document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.open=false;d.querySelector('summary').focus();}});})();</script>")
         cz.append('<section class="skrot"><h2>W skrócie</h2>' +
                   "".join(f"<p>{T(z)}</p>" for z in w["w_skrocie"]) + "</section>")
         poz_spisu = len(cz)
@@ -1002,8 +1020,6 @@ class Budowa:
             cz.append(f'<div class="nota" id="nota"><h3>Nota metodyczna</h3><p>{T(w["nota"])}</p></div>')
         cz[poz_spisu] = ('<nav class="spis" aria-label="Na tej stronie"><span class="spis-t">Na tej stronie</span>' +
                          "".join(f'<a href="#{k}">{e(n)}</a>' for k, n in spis) + '</nav>')
-        prev = self.wydania[i-1] if i > 0 else None
-        nxt = self.wydania[i+1] if i + 1 < len(self.wydania) else None
         cz.append('<nav class="kolejne">' +
                   (f'<a href="{prev["_slug"]}.html">← nr {prev["nr"]}, {data_dluga(prev["data"])}</a>' if prev else "<span></span>") +
                   (f'<a href="{nxt["_slug"]}.html">nr {nxt["nr"]}, {data_dluga(nxt["data"])} →</a>' if nxt else "<span></span>") + "</nav>")
@@ -1042,7 +1058,9 @@ class Budowa:
                 cz.append('<h2 class="pasek">Gorące wątki z ostatnich 7 dni</h2><div class="chmura">' + "".join(
                     f'<a class="tag tag-{self.tagi[t]["grupa"]} duzy" href="watki/{t}.html">#{e(self.tagi[t]["nazwa"])} <span>{n}</span></a>'
                     for t, n in gorace) + "</div>")
-            cz.append('<h2 class="pasek">Archiwum wydań</h2>')
+            cz.append('<h2 class="pasek" id="archiwum">Archiwum wydań</h2><div class="kal-siatka">' + "".join(
+                self.kalendarz_html(r, m, "wydania/", aktualny=self.wydania[-1]) for r, m in reversed(self.miesiace_wydan()))
+                + "</div>" + self.kalendarz_legenda().replace("to wydanie", "najnowsze"))
             miesiac = None
             lista = ""
             for w in reversed(self.wydania):
@@ -1066,6 +1084,77 @@ class Budowa:
 <p><strong>Hashtagi</strong> łączą wydania: kliknięcie <span class="tag tag-miejsce">#Słowacja</span> pokazuje całą historię wątku na jednej stronie, z aktualnym stanem na górze.</p>
 <p>Osoby i pojęcia w tekście są klikalne i prowadzą do kart w działach „Kto jest kim” i „Pojęcia”.</p></section>""")
         self.zapisz("index.html", strona("Wydania", "\n".join(cz), "", "", "wydania"))
+
+    # ---- kalendarz wydań
+
+    def wydania_wg_dni(self):
+        dni = {}
+        for w in self.wydania:
+            dni.setdefault(w["data"], []).append(w)
+        for lst in dni.values():
+            lst.sort(key=lambda w: (w.get("typ") == "tygodniowe", w.get("godzina", "")))
+        return dni
+
+    def miesiace_wydan(self):
+        ms = sorted({(data_(w["data"]).year, data_(w["data"]).month) for w in self.wydania})
+        if not ms:
+            return []
+        (r, m), koniec, wynik = ms[0], ms[-1], []
+        while (r, m) <= koniec:
+            wynik.append((r, m))
+            r, m = (r + 1, 1) if m == 12 else (r, m + 1)
+        return wynik
+
+    @staticmethod
+    def etykieta_wydania(w):
+        return ("Wydanie tygodniowe" if w.get("typ") == "tygodniowe" else "Wydanie") + f" nr {w['nr']} – {data_dluga(w['data'])}"
+
+    def kalendarz_html(self, rok, mies, sciezka, aktualny=None, nawigacja=False):
+        """Siatka miesiąca (pon–nd). Dni z wydaniem są odnośnikami; tygodniówka ma znacznik T.
+        sciezka: prefiks do katalogu wydania/ ('wydania/' ze strony głównej, '' ze strony wydania)."""
+        dni = self.wydania_wg_dni()
+        nazwa = f"{MIESIACE_MIAN[mies-1]} {rok}"
+        glowa = f'<span class="kal-mies">{nazwa}</span>'
+        if nawigacja:
+            klucz = f"{rok:04d}-{mies:02d}"
+            wcz = [w for w in self.wydania if w["data"][:7] < klucz]
+            pozn = [w for w in self.wydania if w["data"][:7] > klucz]
+            lewo = (f'<a class="kal-strz" href="{sciezka}{wcz[-1]["_slug"]}.html" title="Poprzedni miesiąc: {e(self.etykieta_wydania(wcz[-1]))}">‹ <span class="sr">poprzedni miesiąc</span></a>'
+                    if wcz else '<span class="kal-strz kal-strz-0" aria-hidden="true">‹</span>')
+            prawo = (f'<a class="kal-strz" href="{sciezka}{pozn[0]["_slug"]}.html" title="Następny miesiąc: {e(self.etykieta_wydania(pozn[0]))}"><span class="sr">następny miesiąc</span> ›</a>'
+                     if pozn else '<span class="kal-strz kal-strz-0" aria-hidden="true">›</span>')
+            glowa = lewo + glowa + prawo
+        wiersze = ""
+        for tydzien in calendar.Calendar(firstweekday=0).monthdayscalendar(rok, mies):
+            wiersze += "<tr>"
+            for d in tydzien:
+                if not d:
+                    wiersze += "<td></td>"
+                    continue
+                data = f"{rok:04d}-{mies:02d}-{d:02d}"
+                lst = dni.get(data, [])
+                if not lst:
+                    wiersze += f'<td><span class="kd-0">{d}</span></td>'
+                    continue
+                pierwsze, reszta = lst[0], lst[1:]
+                klasy = "kd" + (" tyg" if pierwsze.get("typ") == "tygodniowe" else "") + (" akt" if pierwsze is aktualny else "")
+                biez = ' aria-current="page"' if pierwsze is aktualny else ""
+                kom = (f'<a class="{klasy}" href="{sciezka}{pierwsze["_slug"]}.html" title="{e(self.etykieta_wydania(pierwsze))}"{biez}>{d}</a>')
+                for w in reszta:
+                    akt = w is aktualny
+                    kom += (f'<a class="kd-t{" akt" if akt else ""}" href="{sciezka}{w["_slug"]}.html" '
+                            f'title="{e(self.etykieta_wydania(w))}"' + (' aria-current="page"' if akt else "") + '>T</a>')
+                wiersze += f"<td>{kom}</td>"
+            wiersze += "</tr>"
+        naglowki = "".join(f'<th scope="col" abbr="{n}">{k}</th>' for k, n in
+                           zip(["pn", "wt", "śr", "cz", "pt", "so", "nd"], DNI))
+        return (f'<div class="kal-m"><div class="kal-gl">{glowa}</div>'
+                f'<table aria-label="Wydania – {nazwa}"><thead><tr>{naglowki}</tr></thead><tbody>{wiersze}</tbody></table></div>')
+
+    @staticmethod
+    def kalendarz_legenda():
+        return ('<p class="kal-leg"><span><i class="kd-i"></i>wydanie dzienne</span><span><i class="kd-i tyg"></i>wydanie tygodniowe (T)</span>'
+                '<span><i class="kd-i akt"></i>to wydanie</span><span><i class="kd-i zero"></i>bez wydania</span></p>')
 
     @staticmethod
     def top_okres(p):

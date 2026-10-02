@@ -375,3 +375,48 @@ a.pub-tytul:hover { color: var(--morze); text-decoration: underline; }
   .top-spis { padding: 10px 14px; }
 }
 @media print { .top-gora { display: none; } .top { break-inside: avoid-page; } }
+
+/* nawigacja między wydaniami i kalendarz */
+.wyd-nav { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 12px 0 4px; font: 14px/1.4 var(--sans); }
+.wn, .wn-kal summary { display: inline-block; padding: 6px 12px; border: 1px solid var(--linia); border-radius: 999px; background: var(--karta); color: var(--atrament); text-decoration: none; white-space: nowrap; }
+a.wn:hover, .wn-kal summary:hover { border-color: var(--morze); color: var(--morze); }
+.wn-0 { color: var(--szary); background: transparent; border-style: dashed; }
+.wn-kal summary { cursor: pointer; font-weight: 600; list-style: none; }
+.wn-kal summary::-webkit-details-marker { display: none; }
+.wn-kal summary::after { content: " ▾"; font-size: 12px; }
+.wn-kal[open] summary { background: var(--atrament); color: var(--papier); border-color: var(--atrament); }
+.wn-kal[open] summary::after { content: " ▴"; }
+.wn-panel { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 30; background: var(--karta); border: 1px solid var(--linia);
+  box-shadow: 0 10px 28px rgba(10, 20, 35, 0.18); padding: 14px 16px 10px; display: grid; justify-items: center; }
+.kal-wszystkie { margin: 6px 0 0; font: 14px/1.4 var(--sans); }
+.kal-m { width: 100%; max-width: 340px; }
+.kal-gl { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 6px; }
+.kal-mies { font: 600 15px/1.4 var(--sans); color: var(--atrament); flex: 1; text-align: center; }
+.kal-siatka .kal-mies { text-align: left; }
+.kal-strz { font: 700 18px/1 var(--sans); color: var(--atrament); text-decoration: none; padding: 4px 10px; border-radius: 6px; }
+a.kal-strz:hover { background: var(--morze-t); }
+.kal-strz-0 { color: var(--linia); }
+.kal-m table { width: 100%; border-collapse: separate; border-spacing: 3px; table-layout: fixed; font: 14px/1 var(--sans); }
+.kal-m th { font: 600 11px/1 var(--sans); color: var(--szary); padding: 2px 0 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+.kal-m td { height: 38px; padding: 0; position: relative; text-align: center; }
+.kd, .kd-0 { display: flex; align-items: center; justify-content: center; height: 38px; border-radius: 6px; font-variant-numeric: tabular-nums; }
+.kd { background: var(--morze-t); color: var(--atrament); font-weight: 700; text-decoration: none; }
+.kd:hover, .kd:focus-visible { background: var(--morze); color: var(--wyd-tekst); }
+.kd.tyg { background: var(--ochra-t); }
+.kd.akt { background: var(--atrament); color: var(--papier); }
+.kd-0 { color: var(--szary); opacity: 0.5; }
+.kd-t { position: absolute; top: 2px; right: 3px; font: 700 10px/1 var(--sans); color: var(--ochra); background: var(--karta); border-radius: 3px; padding: 1px 2px; text-decoration: none; }
+.kd-t.akt { background: var(--atrament); color: var(--papier); }
+.kal-leg { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 12px/1.5 var(--sans); color: var(--szary); margin: 6px 0 0; }
+.kd-i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; background: var(--morze-t); }
+.kd-i.tyg { background: var(--ochra-t); }
+.kd-i.akt { background: var(--atrament); }
+.kd-i.zero { background: transparent; border: 1px solid var(--linia); }
+.kal-siatka { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px 32px; margin: 12px 0 4px; }
+.kal-siatka .kal-m { max-width: none; }
+@media (max-width: 600px) {
+  .wn-d { display: none; }
+  .wn, .wn-kal summary { padding: 6px 10px; }
+  .wn-panel { padding: 12px 8px 8px; }
+}
+@media print { .wyd-nav { display: none; } }
