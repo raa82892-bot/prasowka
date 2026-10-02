@@ -57,7 +57,7 @@ MAPA_TAGI = {
     "wielka-brytania": ["GB"], "rumunia": ["RO"], "balkany": ["RS", "BA", "ME", "MK", "AL", "XK", "HR"],
 }
 EUROPA = json.loads((Path(__file__).resolve().parent / "europa.json").read_text("utf-8"))
-GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "top", "czytelnia.html", "korekty.html", "zrodla.html",
+GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "top", "czytelnia.html", "kalendarz.html", "korekty.html", "zrodla.html",
               "jak-weryfikujemy.html", "szukaj.html", "szukaj.json", "feed.xml",
               "robots.txt", ".nojekyll", "assets", "404.html"]
 
@@ -562,7 +562,7 @@ def html_odznaki(it):
 
 
 def strona(tytul, tresc, prefix="", opis="", aktywne=""):
-    nav = [("index.html", "Wydania", "wydania"), ("top/index.html", "Top 10", "top"), ("czytelnia.html", "Czytelnia", "czytelnia"), ("watki/index.html", "Wątki", "watki"),
+    nav = [("index.html", "Wydania", "wydania"), ("kalendarz.html", "Kalendarz", "kalendarz"), ("top/index.html", "Top 10", "top"), ("czytelnia.html", "Czytelnia", "czytelnia"), ("watki/index.html", "Wątki", "watki"),
            ("osoby/index.html", "Kto jest kim", "osoby"), ("pojecia/index.html", "Pojęcia", "pojecia"),
            ("korekty.html", "Korekty", "korekty"), ("zrodla.html", "Źródła", "zrodla"), ("jak-weryfikujemy.html", "Jak weryfikujemy", "jak"),
            ("szukaj.html", "Szukaj", "szukaj")]
@@ -911,7 +911,7 @@ class Budowa:
                      else '<span class="wn wn-0">← brak wcześniejszych</span>')
                   + '<details class="wn-kal"><summary>Kalendarz wydań</summary><div class="wn-panel">'
                   + self.kalendarz_html(d0.year, d0.month, "", aktualny=w, nawigacja=True) + self.kalendarz_legenda()
-                  + '<p class="kal-wszystkie"><a href="../index.html#kalendarz">Kalendarz na stronie głównej i lista wydań</a></p></div></details>'
+                  + '<p class="kal-wszystkie"><a href="../kalendarz.html">Pełny kalendarz – wszystkie miesiące</a></p></div></details>'
                   + (f'<a class="wn" rel="next" href="{nxt["_slug"]}.html" title="{e(self.etykieta_wydania(nxt))}">{krotko(nxt)} →</a>' if nxt
                      else '<span class="wn wn-0">najnowsze</span>')
                   + "</nav>"
@@ -1053,7 +1053,7 @@ class Budowa:
             cz.append(f'<h2 class="pasek" id="kalendarz">Kalendarz wydań</h2><div class="gl-wydania">'
                       f'<div><div class="kal-karuzela">{kal}</div>{self.kalendarz_legenda().replace("to wydanie", "najnowsze")}</div>'
                       f'<div><h3 class="blok">Ostatnie wydania</h3><ul class="ostatnie">{ostatnie}</ul>'
-                      f'<p class="dalej"><a href="#archiwum">Wszystkie wydania</a></p></div></div>'
+                      f'<p class="dalej"><a href="kalendarz.html">Pełny kalendarz</a> · <a href="#archiwum">Wszystkie wydania</a></p></div></div>'
                       "<script>(function(){var k=document.querySelector('.kal-karuzela');if(!k)return;k.classList.add('js');"
                       "var m=[].slice.call(k.querySelectorAll('.kal-m')),i=0;"
                       "function pokaz(){m.forEach(function(x,j){x.hidden=j!==i;"
@@ -1304,6 +1304,23 @@ class Budowa:
                               for r in lista) + "</ul></div>")
         self.zapisz("czytelnia.html", strona("Czytelnia OSW i PISM", "\n".join(cz), "",
                                              "Teksty OSW i PISM odnotowane w wydaniach Prasówki, z linkami do oryginałów i omówień.", "czytelnia"))
+
+    def kalendarz_strona(self):
+        mies = list(reversed(self.miesiace_wydan()))
+        n = len(self.wydania)
+        cz = [f"""<section class="winieta">
+  <p class="w-nr">Kalendarz</p>
+  <h1>Kalendarz wydań</h1>
+  <p class="w-stan">Wszystkie miesiące na jednej stronie, od najnowszego: {n} wydań. Dzień z wydaniem jest odnośnikiem.</p>
+</section>"""]
+        if not mies:
+            cz.append('<p class="uwaga">Kalendarz wypełni się z pierwszym wydaniem.</p>')
+        else:
+            cz.append(self.kalendarz_legenda().replace("to wydanie", "najnowsze"))
+            cz.append('<div class="kal-siatka">' + "".join(self.kalendarz_html(r, m, "wydania/", aktualny=self.wydania[-1]) for r, m in mies) + "</div>")
+            cz.append('<p class="dalej"><a href="index.html#archiwum">Lista wszystkich wydań</a></p>')
+        self.zapisz("kalendarz.html", strona("Kalendarz wydań", "\n".join(cz), "",
+                                             "Kalendarz wydań Prasówki – wszystkie miesiące, z odnośnikami do wydań.", "kalendarz"))
 
     def gorace_watki(self, dni):
         if not self.wydania:
@@ -1605,6 +1622,7 @@ class Budowa:
         self.index()
         self.top_strony()
         self.czytelnia()
+        self.kalendarz_strona()
         self.watki()
         self.osoby_strony()
         self.pojecia_strony()
