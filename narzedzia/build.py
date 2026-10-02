@@ -432,6 +432,35 @@ def html_tagi(lista, tagi, prefix):
                    for t in lista or [])
 
 
+def klucz_url(u):
+    """Adres bez schematu, „www.” i końcowego ukośnika – do łączenia publikacji z ich omówieniami."""
+    m = re.match(r"^(?:https?://)?(?:www\.)?([^/?#]+)([^?#]*)", (u or "").strip())
+    return (m.group(1).lower() + m.group(2).rstrip("/")) if m else ""
+
+
+WYDAWCY = (("osw.waw.pl", "OSW"), ("pism.pl", "PISM"), ("understandingwar.org", "ISW"))
+
+
+def wydawca(url="", autor=""):
+    """Skrót instytucji autora analizy: z domeny źródła, a w braku – z początku pola „autor”."""
+    k = klucz_url(url)
+    for dom, nazwa in WYDAWCY:
+        if k.startswith(dom):
+            return nazwa
+    m = re.match(r"\s*(OSW|PISM|ISW)\b", autor or "")
+    return m.group(1) if m else ""
+
+
+def w_cudzyslowie(t):
+    """Tytuł w polskim cudzysłowie, chyba że już się od niego zaczyna."""
+    t = (t or "").strip()
+    return t if t[:1] in ("„", '"', "«") else f"„{t}”"
+
+
+def html_wydawca(nazwa):
+    return f'<span class="wyd wyd-{nazwa.lower()}">{e(nazwa)}</span>' if nazwa else ""
+
+
 def html_odznaki(it):
     s = ""
     if it.get("etap"):
@@ -440,7 +469,7 @@ def html_odznaki(it):
 
 
 def strona(tytul, tresc, prefix="", opis="", aktywne=""):
-    nav = [("index.html", "Wydania", "wydania"), ("watki/index.html", "Wątki", "watki"),
+    nav = [("index.html", "Wydania", "wydania"), ("czytelnia.html", "Czytelnia", "czytelnia"), ("watki/index.html", "Wątki", "watki"),
            ("osoby/index.html", "Kto jest kim", "osoby"), ("pojecia/index.html", "Pojęcia", "pojecia"),
            ("korekty.html", "Korekty", "korekty"), ("zrodla.html", "Źródła", "zrodla"), ("jak-weryfikujemy.html", "Jak weryfikujemy", "jak"),
            ("szukaj.html", "Szukaj", "szukaj")]
@@ -493,6 +522,48 @@ class Budowa:
             for k in self.wszystkie_korekty(w):
                 if k.get("dotyczy"):
                     self.korekty_poz.setdefault(k["dotyczy"], []).append((w, k))
+        self.publikacje = self.zbierz_publikacje()
+
+    def zbierz_publikacje(self):
+        """Teksty OSW i PISM ze wszystkich wydań (stan źródeł + czytelnia tygodniowa), bez powtórzeń,
+        z odnośnikami do wydań, w których je odnotowano, i do naszych omówień w sekcji analiz."""
+        pub = {}
+        def dodaj(w, p, wyd):
+            k = klucz_url(p.get("url"))
+            if not k:
+                return
+            r = pub.setdefault(k, {"url": p["url"], "tytul": p.get("tytul", ""), "autor": p.get("autor", ""),
+                                   "data": p.get("data", ""), "numer": p.get("numer", ""), "wydawca": wyd,
+                                   "po_co": "", "wydania": [], "omowienia": []})
+            for pole in ("autor", "numer", "tytul"):
+                if not r[pole] and p.get(pole):
+                    r[pole] = p[pole]
+            if p.get("po_co") and not r["po_co"]:
+                r["po_co"] = p["po_co"]
+            if w not in r["wydania"]:
+                r["wydania"].append(w)
+        for w in self.wydania:
+            za = w.get("zrodla_analityczne") or {}
+            for klucz, nazwa in (("osw", "OSW"), ("pism", "PISM")):
+                for p in za.get(klucz) or []:
+                    dodaj(w, p, nazwa)
+            for c in w.get("czytelnia") or []:
+                dodaj(w, c, c.get("wydawca") or wydawca(c.get("url", "")))
+        for w in self.wydania:
+            for j, a in enumerate(w.get("analizy") or []):
+                for z in a.get("zrodla") or []:
+                    r = pub.get(klucz_url(z["url"]))
+                    if r and (w, j) not in r["omowienia"]:
+                        r["omowienia"].append((w, j))
+        return pub
+
+    def publikacja_analizy(self, a):
+        """Oryginalny tekst, na którym opiera się analiza (pierwsze źródło znalezione w czytelni)."""
+        for z in a.get("zrodla") or []:
+            r = self.publikacje.get(klucz_url(z["url"]))
+            if r:
+                return r
+        return None
 
     @staticmethod
     def wszystkie_korekty(w):
@@ -527,11 +598,11 @@ class Budowa:
         """Sekcje tygodniówki po analizach: tracker i czytelnia."""
         cz = []
         if w.get("tracker"):
-            cz.append('<h2 class="pasek">Tracker wątków</h2><div class="mapa-wrap"><table class="kal tracker"><tr><th>Wątek</th><th>Tydzień temu</th><th>Dziś</th><th></th></tr>' + "".join(
+            cz.append('<h2 class="pasek" id="tracker">Tracker wątków</h2><div class="mapa-wrap"><table class="kal tracker"><tr><th>Wątek</th><th>Tydzień temu</th><th>Dziś</th><th></th></tr>' + "".join(
                 f'<tr><td>{html_tagi([t["tag"]], self.tagi, prefix)}</td><td>{T(t["tydzien_temu"])}</td><td>{T(t["dzis"])}</td><td class="kier">{e(t["kierunek"])}</td></tr>'
                 for t in w["tracker"]) + "</table></div>")
         if w.get("czytelnia"):
-            cz.append('<h2 class="pasek">Czytelnia OSW i PISM</h2>' + "".join(
+            cz.append('<h2 class="pasek" id="czytelnia-tygodnia">Czytelnia tygodnia: OSW i PISM</h2>' + "".join(
                 f'<article class="poz"><div class="poz-data">{data_krotka(c["data"])}</div><div class="poz-tresc">'
                 f'<p class="poz-tekst"><a href="{e(c["url"])}" target="_blank" rel="noopener noreferrer"><strong>{e(c["tytul"])}</strong></a>'
                 f'{(" · " + e(c["autor"])) if c.get("autor") else ""}{(" · " + e(c["wydawca"])) if c.get("wydawca") else ""}{(", " + e(c["numer"])) if c.get("numer") else ""}</p>'
@@ -549,7 +620,7 @@ class Budowa:
     def stopien(n):
         return 0 if n <= 0 else 1 if n == 1 else 2 if n <= 3 else 3
 
-    def mapa_europy(self, pozycje, prefix, naglowek, opis):
+    def mapa_europy(self, pozycje, prefix, naglowek, opis, kotwica=""):
         """Mapa Europy: kraje z hashtagów-miejsc zabarwione liczbą pozycji, klikalne do stron wątków."""
         licz = {}
         for it in pozycje:
@@ -599,7 +670,8 @@ class Budowa:
                         sorted(poza.items(), key=lambda x: -x[1])) + ".</p>")
         legenda = "".join(f'<span><i class="m{i}"></i>{n}</span>' for i, n in
                           ((1, "1 poz."), (2, "2–3"), (3, "4 i więcej")))
-        return (f'<h2 class="pasek">{e(naglowek)}</h2><figure class="mapa-eu">{svg}'
+        idk = f' id="{kotwica}"' if kotwica else ""
+        return (f'<h2 class="pasek"{idk}>{e(naglowek)}</h2><figure class="mapa-eu">{svg}'
                 f'<figcaption class="m-leg">{legenda}<span><i class="pl"></i>Polska (blok „Polska”)</span></figcaption></figure>'
                 f'<p class="uwaga">{e(opis)} Kliknij kraj, żeby zobaczyć historię wątku.</p>'
                 f'<div class="chmura">{lista}</div>{poza_txt}')
@@ -692,12 +764,27 @@ class Budowa:
   </div>
 </article>"""
 
-    def analiza(self, w, a, T, prefix, z_wydaniem=False):
-        skad = (f' · <a href="{prefix}wydania/{w["_slug"]}.html#analizy">wyd. nr {w["nr"]}, {data_dluga(w["data"])}</a>'
+    def analiza(self, w, a, T, prefix, z_wydaniem=False, j=None):
+        if j is None:
+            j = next((i for i, x in enumerate(w.get("analizy") or []) if x is a), 0)
+        skad = (f' · <a href="{prefix}wydania/{w["_slug"]}.html#analiza-{j+1}">wyd. nr {w["nr"]}, {data_dluga(w["data"])}</a>'
                 if z_wydaniem else "")
-        return f"""<article class="analiza">
+        zr = a.get("zrodla") or []
+        wyd = wydawca(zr[0]["url"] if zr else "", a.get("autor", ""))
+        pub = self.publikacja_analizy(a)
+        if pub:
+            czytaj = (f'<p class="an-czytaj"><a href="{e(pub["url"])}" target="_blank" rel="noopener noreferrer">'
+                      f'<span class="an-czytaj-t">Przeczytaj tekst {e(pub["wydawca"] or wyd)}</span> {e(w_cudzyslowie(pub["tytul"]))}</a></p>')
+        elif wyd and zr:
+            czytaj = (f'<p class="an-czytaj"><a href="{e(zr[0]["url"])}" target="_blank" rel="noopener noreferrer">'
+                      f'<span class="an-czytaj-t">Przeczytaj tekst {e(wyd)}</span> ({e(zr[0]["nazwa"])}, {data_krotka(zr[0]["data"])})</a></p>')
+        else:
+            czytaj = ""
+        kotwica = "" if z_wydaniem else f' id="analiza-{j+1}"'
+        return f"""<article class="analiza"{kotwica}>
+  <p class="autor">{html_wydawca(wyd)}Ocena: {e(a['autor'])}{skad}</p>
   <h3>{e(a['tytul'])}</h3>
-  <p class="autor">Ocena: {e(a['autor'])}{skad}</p>
+  {czytaj}
   <div class="poz-meta">{html_tagi(a.get('tagi'), self.tagi, prefix)}</div>
   <p>{T(a['tekst'])}</p>
   <p class="dla-polski"><strong>Dla Polski:</strong> {T(a['dla_polski'])}</p>
@@ -718,9 +805,13 @@ class Budowa:
 </section>""")
         cz.append('<section class="skrot"><h2>W skrócie</h2>' +
                   "".join(f"<p>{T(z)}</p>" for z in w["w_skrocie"]) + "</section>")
-        cz.append(self.mapa_html(w, prefix))
-        cz.append(self.mapa_europy(w["zarys"], prefix, "Mapa wydania",
-                                   "Liczba przy kraju to liczba pozycji zarysu z hashtagiem tego miejsca."))
+        poz_spisu = len(cz)
+        cz.append("")  # spis sekcji – uzupełniany na końcu, gdy wiadomo, co jest w wydaniu
+        spis = []
+        cieplo = self.mapa_html(w, prefix)
+        if cieplo:
+            cz.append(cieplo.replace('<h2 class="pasek">', '<h2 class="pasek" id="mapa-ciepla">', 1))
+            spis.append(("mapa-ciepla", "Mapa ciepła"))
         if w.get("weryfikacja"):
             li = ""
             for k in w["weryfikacja"]:
@@ -734,6 +825,7 @@ class Budowa:
                        f'<p class="poz-tekst"><strong>Pisaliśmy:</strong> {e(k["bylo"])}</p><p class="poz-tekst"><strong>Jak jest:</strong> {e(k["jest"])}</p>'
                        f'{html_zrodla(k["zrodla"])}</div></article>')
             cz.append(f'<h2 class="pasek" id="korekty">Weryfikacja tygodnia</h2>{li}')
+            spis.append(("korekty", "Weryfikacja tygodnia"))
         if w.get("korekty"):
             li = ""
             for k in w["korekty"]:
@@ -743,7 +835,11 @@ class Budowa:
                     cel = f' <a href="{s}.html#{pid}">(pozycja z {data_dluga(s)})</a>'
                 li += f"<li><strong>Było:</strong> {e(k['bylo'])}{cel}<br><strong>Jest:</strong> {e(k['jest'])}{html_zrodla(k['zrodla'])}</li>"
             cz.append(f'<section class="korekta" id="korekty"><h2>Korekta</h2><ul>{li}</ul></section>')
-        cz.append('<h2 class="pasek">' + ("I. Najważniejsze przesunięcia tygodnia" if w.get("typ") == "tygodniowe" else "I. Zarys wydarzeń") + '</h2>')
+            if not w.get("weryfikacja"):
+                spis.append(("korekty", "Korekta"))
+        tyg = w.get("typ") == "tygodniowe"
+        cz.append('<h2 class="pasek" id="zarys">' + ("I. Najważniejsze przesunięcia tygodnia" if tyg else "I. Zarys wydarzeń") + '</h2>')
+        spis.append(("zarys", f'{"I. Przesunięcia tygodnia" if tyg else "I. Zarys"} ({len(w["zarys"])})'))
         for kod, nazwa in BLOKI:
             poz = sorted([it for it in w["zarys"] if it["blok"] == kod], key=lambda x: x["data"])
             if not poz:
@@ -755,11 +851,49 @@ class Budowa:
             cz.append('<div class="nota wycofane"><h3>Wycofane po rewizji</h3><ul>' + "".join(
                 f'<li id="{e(r["dotyczy"].split("#")[1])}">{data_dluga(r["data"])}: wycofano pozycję o treści „{e(czysty(r["bylo"], self.osoby, self.pojecia))}” – '
                 f'{e(r["zmiana"])}. <a href="{prefix}korekty.html#rewizja">Rejestr korekt</a></li>' for r in wyc) + "</ul></div>")
+        mapa = self.mapa_europy(w["zarys"], prefix, "Mapa wydania",
+                                "Liczba przy kraju to liczba pozycji zarysu z hashtagiem tego miejsca.", "mapa")
+        if mapa:
+            cz.append(mapa)
+        za = w.get("zrodla_analityczne") or {}
+        n_pub = len(za.get("osw") or []) + len(za.get("pism") or [])
         if w.get("analizy"):
-            cz.append('<h2 class="pasek" id="analizy">II. Analizy</h2><p class="uwaga">Poniżej interpretacje, nie ustalenia. Każda ma autora.</p>')
-            cz.extend(self.analiza(w, a, T, prefix) for a in w["analizy"])
-        cz.append(self.tygodniowe_html(w, T, prefix))
-        cz.append('<h2 class="pasek">III. Kalendarz i zastrzeżenia</h2>')
+            cz.append('<h2 class="pasek" id="analizy">II. Analizy</h2><p class="uwaga">Poniżej interpretacje, nie ustalenia. '
+                      'Każda ma autora oceny i link do tekstu, na którym się opiera.</p>')
+            cz.extend(self.analiza(w, a, T, prefix, j=j) for j, a in enumerate(w["analizy"]))
+            spis.append(("analizy", f'II. Analizy ({len(w["analizy"])})'))
+            cz.append('<h3 class="pod-pasek" id="publikacje">Nowe teksty OSW i PISM z ostatnich 3 dni</h3>')
+        else:
+            cz.append('<h2 class="pasek" id="publikacje">Nowe teksty OSW i PISM z ostatnich 3 dni</h2>')
+        spis.append(("publikacje", f"Teksty OSW i PISM ({n_pub})" if n_pub else "Teksty OSW i PISM (brak nowych)"))
+
+        def lista_pub(lst):
+            if not lst:
+                return '<p class="pub-brak">Brak nowych publikacji w ostatnich 3 dniach.</p>'
+            li = ""
+            for p in lst:
+                r = self.publikacje.get(klucz_url(p["url"])) or {"omowienia": []}
+                om = []
+                for w2, j2 in r["omowienia"]:
+                    if w2 is w:
+                        om.append(f'<a class="pub-om" href="#analiza-{j2+1}">omówienie wyżej</a>')
+                    else:
+                        om.append(f'<a class="pub-om" href="{w2["_slug"]}.html#analiza-{j2+1}">omówienie w wyd. nr {w2["nr"]}</a>')
+                meta = " · ".join(x for x in (e(p.get("autor") or ""), data_krotka(p["data"]), e(p.get("numer") or "")) if x)
+                li += (f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">{e(p["tytul"])}</a>'
+                       f'<span class="pub-meta">{meta}{(" · " + " · ".join(om)) if om else ""}</span></li>')
+            return f'<ul class="pub">{li}</ul>'
+        cz.append(f'<div class="publikacje"><h4 class="pub-wyd">{html_wydawca("OSW")}Ośrodek Studiów Wschodnich</h4>{lista_pub(za.get("osw"))}'
+                  f'<h4 class="pub-wyd">{html_wydawca("PISM")}Polski Instytut Spraw Międzynarodowych</h4>{lista_pub(za.get("pism"))}'
+                  f'<p class="dalej"><a href="{prefix}czytelnia.html">Wszystkie teksty OSW i PISM z poprzednich wydań – Czytelnia</a></p></div>')
+        tyg_html = self.tygodniowe_html(w, T, prefix)
+        cz.append(tyg_html)
+        if w.get("tracker"):
+            spis.append(("tracker", "Tracker"))
+        if w.get("czytelnia"):
+            spis.append(("czytelnia-tygodnia", "Czytelnia tygodnia"))
+        cz.append('<h2 class="pasek" id="kalendarz">III. Kalendarz i zastrzeżenia</h2>')
+        spis.append(("kalendarz", "III. Kalendarz"))
         if w.get("kalendarz"):
             cz.append('<table class="kal">' + "".join(
                 f'<tr><td class="kal-d">{data_krotka(k["data"])}</td><td>{T(k["tekst"])} {html_tagi(k.get("tagi"), self.tagi, prefix)}</td></tr>'
@@ -768,21 +902,14 @@ class Budowa:
             cz.append('<div class="nota"><h3>Poza oknem, ale przesądzające</h3><table class="kal poza">' + "".join(
                 f'<tr><td class="kal-d">{data_krotka(k["data"])}</td><td>{T(k["tekst"])}</td></tr>'
                 for k in sorted(w["poza_oknem"], key=lambda k: k["data"])) + "</table></div>")
-        za = w.get("zrodla_analityczne") or {}
-        def lista_pub(pub):
-            if not pub:
-                return '<p class="pub-brak">Brak nowych publikacji w ostatnich 3 dniach.</p>'
-            return '<ul class="pub">' + "".join(
-                f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">{e(p["tytul"])}</a>'
-                f'<span class="pub-meta">' + " · ".join(x for x in (e(p.get("autor") or ""), data_krotka(p["data"]), e(p.get("numer") or "")) if x) +
-                '</span></li>' for p in pub) + "</ul>"
-        cz.append(f'<div class="nota"><h3>Stan źródeł analitycznych</h3><h4 class="pub-wyd">OSW</h4>{lista_pub(za.get("osw"))}'
-                  f'<h4 class="pub-wyd">PISM</h4>{lista_pub(za.get("pism"))}</div>')
         if w.get("czego_nie_ma"):
-            cz.append('<div class="nota"><h3>Czego tu nie ma</h3><ul class="brak">' + "".join(
+            spis.append(("czego-nie-ma", f'Czego tu nie ma ({len(w["czego_nie_ma"])})'))
+            cz.append('<div class="nota" id="czego-nie-ma"><h3>Czego tu nie ma</h3><ul class="brak">' + "".join(
                 f'<li><span class="prog">próg: {e(c["prog"])}</span> {T(c["tekst"])}</li>' for c in w["czego_nie_ma"]) + "</ul></div>")
         if w.get("nota"):
-            cz.append(f'<div class="nota"><h3>Nota metodyczna</h3><p>{T(w["nota"])}</p></div>')
+            cz.append(f'<div class="nota" id="nota"><h3>Nota metodyczna</h3><p>{T(w["nota"])}</p></div>')
+        cz[poz_spisu] = ('<nav class="spis" aria-label="Na tej stronie"><span class="spis-t">Na tej stronie</span>' +
+                         "".join(f'<a href="#{k}">{e(n)}</a>' for k, n in spis) + '</nav>')
         prev = self.wydania[i-1] if i > 0 else None
         nxt = self.wydania[i+1] if i + 1 < len(self.wydania) else None
         cz.append('<nav class="kolejne">' +
@@ -804,6 +931,11 @@ class Budowa:
 </section>
 <section class="skrot"><h2>W skrócie</h2>{''.join(f'<p>{T(z)}</p>' for z in w['w_skrocie'])}
 <p class="dalej"><a href="wydania/{w['_slug']}.html">Czytaj całe wydanie</a></p></section>""")
+            nowe = self.publikacje_posortowane()[:5]
+            if nowe:
+                cz.append('<h2 class="pasek">Nowe teksty OSW i PISM</h2><ul class="pub pub-glowna">' +
+                          "".join(self.publikacja_li(r, "") for r in nowe) +
+                          f'</ul><p class="dalej"><a href="czytelnia.html">Wszystkie teksty ({len(self.publikacje)}) w Czytelni</a></p>')
             koniec = data_(w["data"])
             ostatnie = [it for x in self.wydania for it in x["zarys"] if 0 <= (koniec - data_(it["data"])).days < 7]
             cz.append(self.mapa_europy(ostatnie, "", "Mapa wątków z ostatnich 7 dni",
@@ -837,6 +969,54 @@ class Budowa:
 <p><strong>Hashtagi</strong> łączą wydania: kliknięcie <span class="tag tag-miejsce">#Słowacja</span> pokazuje całą historię wątku na jednej stronie, z aktualnym stanem na górze.</p>
 <p>Osoby i pojęcia w tekście są klikalne i prowadzą do kart w działach „Kto jest kim” i „Pojęcia”.</p></section>""")
         self.zapisz("index.html", strona("Wydania", "\n".join(cz), "", "", "wydania"))
+
+    def publikacje_posortowane(self):
+        return sorted(self.publikacje.values(), key=lambda r: (r["data"], r["wydawca"], r["tytul"]), reverse=True)
+
+    def publikacja_li(self, r, prefix, pelna=False):
+        """Jeden tekst OSW/PISM: wydawca, tytuł z linkiem do oryginału, autor i numer, nasze omówienia."""
+        meta = " · ".join(x for x in (e(r["autor"]), e(r["numer"])) if x)
+        om = "".join(
+            f'<a class="pub-om" href="{prefix}wydania/{w["_slug"]}.html#analiza-{j+1}">Nasze omówienie: {e(w_cudzyslowie(w["analizy"][j]["tytul"]))} (wyd. nr {w["nr"]})</a>'
+            for w, j in r["omowienia"])
+        if pelna:
+            dla = "".join(f'<p class="pub-dla"><strong>Dla Polski:</strong> {Tekst(self.osoby, self.pojecia, prefix)(w["analizy"][j]["dla_polski"])}</p>'
+                          for w, j in r["omowienia"][:1])
+            gdzie = "" if r["omowienia"] else (
+                '<span class="pub-gdzie">Odnotowany w ' + ", ".join(
+                    f'<a href="{prefix}wydania/{w["_slug"]}.html#publikacje">wyd. nr {w["nr"]}</a>' for w in r["wydania"]) + "</span>")
+            po_co = f'<p class="pub-dla">{Tekst(self.osoby, self.pojecia, prefix)(r["po_co"])}</p>' if r["po_co"] else ""
+        else:
+            dla = gdzie = po_co = ""
+        klasa = f' class="w-{r["wydawca"].lower()}"' if r["wydawca"] else ""
+        return (f'<li{klasa}><span class="pub-glowa">{html_wydawca(r["wydawca"])}<span class="pub-data">{data_krotka(r["data"])}</span></span>'
+                f'<a class="pub-tytul" href="{e(r["url"])}" target="_blank" rel="noopener noreferrer">{e(r["tytul"])}</a>'
+                f'<span class="pub-meta">{meta}</span>{po_co}{om}{dla}{gdzie}</li>')
+
+    def czytelnia(self):
+        lista = self.publikacje_posortowane()
+        n = {k: sum(1 for r in lista if r["wydawca"] == k) for k in ("OSW", "PISM")}
+        n_om = sum(1 for r in lista if r["omowienia"])
+        cz = [f"""<section class="winieta">
+  <p class="w-nr">Czytelnia</p>
+  <h1>Teksty OSW i PISM</h1>
+  <p class="w-stan">Wszystkie nowe analizy Ośrodka Studiów Wschodnich i Polskiego Instytutu Spraw Międzynarodowych odnotowane w wydaniach, od najnowszych: {len(lista)} tekstów, w tym {n_om} z naszym omówieniem i wnioskiem „Dla Polski”. Tytuł prowadzi do oryginału.</p>
+</section>"""]
+        if not lista:
+            cz.append('<p class="uwaga">Czytelnia wypełni się z kolejnymi wydaniami.</p>')
+        else:
+            cz.append('<div class="czyt-wrap">'
+                      '<input type="radio" name="czyt-f" id="f-all" class="filtr-r" checked>'
+                      '<input type="radio" name="czyt-f" id="f-osw" class="filtr-r">'
+                      '<input type="radio" name="czyt-f" id="f-pism" class="filtr-r">'
+                      '<input type="radio" name="czyt-f" id="f-om" class="filtr-r">'
+                      f'<p class="filtr"><label for="f-all">Wszystkie ({len(lista)})</label><label for="f-osw">OSW ({n["OSW"]})</label>'
+                      f'<label for="f-pism">PISM ({n["PISM"]})</label><label for="f-om">Z omówieniem ({n_om})</label></p>'
+                      '<ul class="pub pub-czyt">' +
+                      "".join(self.publikacja_li(r, "", pelna=True).replace("<li", f'<li data-om="{1 if r["omowienia"] else 0}"', 1)
+                              for r in lista) + "</ul></div>")
+        self.zapisz("czytelnia.html", strona("Czytelnia OSW i PISM", "\n".join(cz), "",
+                                             "Teksty OSW i PISM odnotowane w wydaniach Prasówki, z linkami do oryginałów i omówień.", "czytelnia"))
 
     def gorace_watki(self, dni):
         if not self.wydania:
@@ -1118,6 +1298,7 @@ class Budowa:
         for i, w in enumerate(self.wydania):
             self.wydanie(i, w)
         self.index()
+        self.czytelnia()
         self.watki()
         self.osoby_strony()
         self.pojecia_strony()

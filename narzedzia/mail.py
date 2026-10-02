@@ -143,13 +143,40 @@ def main():
                      f'<td valign="top"><div>{tagi_html(it["tagi"])}{odz}</div><div style="margin-top:2px;">{T(it["tekst"])}</div>'
                      + (f'<div style="margin:4px 0 0;padding:5px 8px;background:#E1EEF5;border-left:3px solid {MORZE};font-size:14px;"><b>Dla Polski:</b> {T(it["dla_polski"])}</div>' if it.get("dla_polski") else "")
                      + f'{zrodla(it["zrodla"])}</td></tr></table></td></tr>')
+    za = w.get("zrodla_analityczne") or {}
+    pub_wszystkie = (za.get("osw") or []) + (za.get("pism") or [])
     if w.get("analizy"):
         r.append(pasek("II. Analizy"))
         r.append(f'<tr><td style="padding:4px 20px;font-size:13px;color:{SZARY};font-style:italic;">Interpretacje, nie ustalenia. Każda ma autora.</td></tr>')
         for x in w["analizy"]:
-            r.append(f'<tr><td style="padding:8px 20px;"><div style="font-family:Georgia,serif;font-size:17px;font-weight:bold;color:{GRANAT};">{e(x["tytul"])}</div>'
-                     f'<div style="font-size:13px;color:{SZARY};">Ocena: {e(x["autor"])}</div><div style="margin-top:4px;">{T(x["tekst"])}</div>'
+            zr = x.get("zrodla") or []
+            wyd = B.wydawca(zr[0]["url"] if zr else "", x.get("autor", ""))
+            org = next((p for z in zr for p in pub_wszystkie if B.klucz_url(p["url"]) == B.klucz_url(z["url"])), None)
+            czytaj = ""
+            if org:
+                czytaj = (f'<div style="margin:6px 0;padding:6px 10px;border:1px solid #D3DCE1;background:#EEF2F3;">'
+                          f'<a href="{e(org["url"])}" style="color:{MORZE};text-decoration:none;"><span style="font-size:12px;font-weight:bold;">PRZECZYTAJ TEKST {e(wyd)} &#8599;</span><br>'
+                          f'<span style="font-family:Georgia,serif;font-size:15px;font-weight:bold;color:{GRANAT};">{e(B.w_cudzyslowie(org["tytul"]))}</span></a></div>')
+            elif wyd and zr:
+                czytaj = (f'<div style="margin:6px 0;"><a href="{e(zr[0]["url"])}" style="color:{MORZE};font-weight:bold;font-size:13px;">'
+                          f'Przeczytaj tekst {e(wyd)} &#8599;</a></div>')
+            etyk = (f'<span style="font-size:11px;font-weight:bold;color:#FFFFFF;background:{MORZE if wyd == "OSW" else ("#9A5B12" if wyd == "PISM" else SZARY)};'
+                    f'padding:1px 5px;margin-right:6px;">{e(wyd)}</span>') if wyd else ""
+            r.append(f'<tr><td style="padding:8px 20px;"><div style="font-size:13px;color:{SZARY};">{etyk}Ocena: {e(x["autor"])}</div>'
+                     f'<div style="font-family:Georgia,serif;font-size:17px;font-weight:bold;color:{GRANAT};">{e(x["tytul"])}</div>{czytaj}'
+                     f'<div style="margin-top:4px;">{T(x["tekst"])}</div>'
                      f'<div style="margin:6px 0 0 10px;padding:6px 10px;background:#E1EEF5;border-left:3px solid {MORZE};"><b>Dla Polski:</b> {T(x["dla_polski"])}</div>{zrodla(x.get("zrodla"))}</td></tr>')
+    def pub_lista(nazwa, lst):
+        if not lst:
+            return f'<div style="margin:8px 0 2px;font-weight:bold;color:{GRANAT};">{nazwa}</div><div style="color:{SZARY};font-style:italic;">brak nowych publikacji w ostatnich 3 dniach</div>'
+        return (f'<div style="margin:8px 0 2px;font-weight:bold;color:{GRANAT};">{nazwa}</div>' + "".join(
+            f'<div style="padding:4px 0 4px 10px;border-left:2px solid #D3DCE1;margin:2px 0;"><a href="{e(p["url"])}" style="color:{MORZE};font-weight:bold;">{e(p["tytul"])}</a>'
+            f'<br><span style="font-size:13px;color:{SZARY};">{" · ".join(e(v) for v in (p.get("autor"), B.data_krotka(p["data"]), p.get("numer")) if v)}</span></div>'
+            for p in lst))
+    r.append(f'<tr><td style="padding:12px 20px 4px;"><div style="font-size:15px;font-weight:bold;color:{GRANAT};border-bottom:2px solid {GRANAT};padding-bottom:3px;">'
+             f'Nowe teksty OSW i PISM z ostatnich 3 dni</div>'
+             f'<div style="font-size:14px;">{pub_lista("OSW – Ośrodek Studiów Wschodnich", za.get("osw"))}{pub_lista("PISM – Polski Instytut Spraw Międzynarodowych", za.get("pism"))}</div>'
+             f'<div style="font-size:13px;margin-top:8px;"><a href="{B.BASE_URL}czytelnia.html" style="color:{MORZE};">Wszystkie teksty z poprzednich wydań – Czytelnia</a></div></td></tr>')
     if w.get("tracker"):
         r.append(pasek("Tracker wątków"))
         r.append(f'<tr><td style="padding:6px 20px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:13px;">'
@@ -173,17 +200,11 @@ def main():
         poza = (f'<div style="font-size:13px;color:{SZARY};margin-top:8px;"><b>Poza oknem, ale przesądzające:</b> ' +
                 "; ".join(f'{B.data_dluga(k["data"])} – {T(k["tekst"])}' for k in w["poza_oknem"]) + "</div>")
     r.append(f'<tr><td style="padding:6px 20px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">{kal}</table>{poza}</td></tr>')
-    za = w.get("zrodla_analityczne") or {}
-
-    def pub(lst):
-        if not lst:
-            return "brak nowych publikacji w ostatnich 3 dniach"
-        return "; ".join(f'<a href="{e(p["url"])}" style="color:{SZARY};">{e(p["tytul"])}</a>, {B.data_krotka(p["data"])}' for p in lst)
     nie_ma = ""
     if w.get("czego_nie_ma"):
         nie_ma = "<b>Czego tu nie ma.</b> " + "; ".join(f'{T(c["tekst"])} (próg: {e(c["prog"])})' for c in w["czego_nie_ma"]) + "<br><br>"
     r.append(f'<tr><td style="padding:14px 20px 18px;font-size:12px;color:{SZARY};border-top:1px solid #D3DCE1;">'
-             f'<b>Stan źródeł analitycznych.</b> OSW: {pub(za.get("osw"))}. PISM: {pub(za.get("pism"))}.<br><br>{nie_ma}'
+             f'{nie_ma}'
              f'<b>Nota.</b> {T(w.get("nota", ""))} Jak weryfikujemy: <a href="{B.BASE_URL}jak-weryfikujemy.html" style="color:{SZARY};">opis procedury</a>. '
              f'Archiwum i wątki: <a href="{B.BASE_URL}" style="color:{SZARY};">{B.BASE_URL}</a></td></tr>')
     html = ('<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>'
@@ -206,6 +227,13 @@ def main():
         t += ["", "ANALIZY (interpretacje, nie ustalenia)"]
         for x in w["analizy"]:
             t += [f"{x['tytul']} (ocena: {x['autor']}): {C(x['tekst'])}", f"   Dla Polski: {C(x['dla_polski'])}"]
+            if x.get("zrodla"):
+                t.append(f"   Tekst źródłowy: {x['zrodla'][0]['url']}")
+    t += ["", "NOWE TEKSTY OSW I PISM (ostatnie 3 dni)"]
+    for kl, nz in (("osw", "OSW"), ("pism", "PISM")):
+        lst = za.get(kl) or []
+        t += [f"{nz}: brak nowych publikacji"] if not lst else [f"{nz}: {p['tytul']} ({', '.join(v for v in (p.get('autor'), B.data_krotka(p['data']), p.get('numer')) if v)}) {p['url']}" for p in lst]
+    t += [f"Czytelnia: {B.BASE_URL}czytelnia.html"]
     t += ["", "KALENDARZ"] + [f"{B.data_krotka(k['data'])} {C(k['tekst'])}" for k in sorted(w.get("kalendarz", []), key=lambda k: k["data"])]
     tekst = "\n".join(t) + "\n"
 

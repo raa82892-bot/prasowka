@@ -143,7 +143,7 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .pub-wyd { font: 600 14px/1.4 var(--sans); color: var(--szary); margin: 12px 0 4px; letter-spacing: 0.04em; }
 .pub { list-style: none; padding-left: 0 !important; margin: 0; }
 .pub li { margin: 0 0 8px; }
-.pub a { font-weight: 600; }
+.pub > li > a, .pub-tytul { font-weight: 600; }
 .pub-meta { display: block; font: 14px/1.45 var(--sans); color: var(--szary); }
 .pub-brak { color: var(--szary); font-style: italic; margin: 0; }
 
@@ -270,3 +270,61 @@ a.osoba, a.pojecie { color: inherit; text-decoration: underline dotted var(--mor
 .rk td:first-child { white-space: nowrap; }
 .rk-n { font: 600 14px/1.5 var(--sans); font-variant-numeric: tabular-nums; text-align: center; }
 @media (max-width: 520px) { .rk td:first-child { white-space: normal; } .rk td { font-size: 14px; } }
+
+/* spis sekcji wydania */
+.spis { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 16px 0 4px; font: 14px/1.4 var(--sans); }
+.spis-t { color: var(--szary); margin-right: 2px; }
+.spis a { color: var(--atrament); text-decoration: none; background: var(--karta); border: 1px solid var(--linia); border-radius: 999px; padding: 4px 11px; }
+.spis a:hover { border-color: var(--morze); color: var(--morze); }
+:target { scroll-margin-top: 12px; }
+
+/* wydawca analizy: OSW / PISM / ISW */
+:root { --wyd-tekst: #FFFFFF; }
+@media (prefers-color-scheme: dark) { :root { --wyd-tekst: #10161F; } }
+.wyd { display: inline-block; font: 700 11px/1.7 var(--sans); letter-spacing: 0.05em; padding: 0 6px; border-radius: 3px; margin-right: 8px; vertical-align: 1px; color: var(--wyd-tekst); background: var(--szary); }
+.wyd-osw { background: var(--morze); }
+.wyd-pism { background: var(--ochra); }
+
+/* karta analizy: link do tekstu źródłowego */
+.analiza .autor { margin: 0 0 4px; }
+.an-czytaj { margin: 8px 0 10px; }
+.an-czytaj a { display: block; padding: 8px 12px; border: 1px solid var(--linia); border-radius: 4px; background: var(--papier); color: var(--atrament); text-decoration: none; font: 600 16px/1.4 var(--serif); }
+.an-czytaj a:hover { border-color: var(--morze); }
+.an-czytaj a:hover .an-czytaj-t { text-decoration: underline; }
+.an-czytaj-t { display: block; font: 600 13px/1.5 var(--sans); color: var(--morze); }
+.an-czytaj-t::after { content: " ↗"; }
+
+/* teksty OSW i PISM w wydaniu */
+.pod-pasek { font: 600 16px/1.4 var(--sans); color: var(--atrament); margin: 28px 0 6px; padding-bottom: 4px; border-bottom: 2px solid var(--atrament); }
+.publikacje { margin: 0 0 8px; }
+.publikacje .pub-wyd { color: var(--atrament); letter-spacing: 0; margin-top: 14px; }
+.publikacje .pub li { padding: 2px 0 2px 12px; border-left: 2px solid var(--linia); }
+.pub-om { font: 600 14px/1.45 var(--sans); color: var(--morze); }
+
+/* czytelnia i blok na stronie głównej */
+.pub-czyt li, .pub-glowna li { margin: 0; padding: 14px 0; border-bottom: 1px solid var(--linia); }
+.pub-glowna { margin-top: 6px; }
+.pub-glowna li { padding: 10px 0; }
+.pub-glowa { display: flex; align-items: center; gap: 0; font: 13px/1.5 var(--sans); }
+.pub-data { color: var(--szary); font-variant-numeric: tabular-nums; font-weight: 600; }
+.pub-tytul { display: block; margin: 4px 0 2px; font: 600 19px/1.35 var(--serif); color: var(--atrament); text-decoration: none; }
+.pub-glowna .pub-tytul { font-size: 17px; }
+a.pub-tytul:hover { color: var(--morze); text-decoration: underline; }
+.pub-tytul::after { content: " ↗"; font: 400 14px var(--sans); color: var(--szary); }
+.pub-czyt .pub-om, .pub-glowna .pub-om { display: block; margin-top: 6px; }
+.pub-dla { margin: 6px 0 0; padding: 6px 10px; background: var(--morze-t); border-left: 3px solid var(--morze); font-size: 16px; }
+.pub-gdzie { display: block; margin-top: 4px; font: 13px/1.5 var(--sans); color: var(--szary); }
+.pub-gdzie a { color: var(--szary); }
+
+/* filtr w czytelni – bez JavaScriptu */
+.czyt-wrap { position: relative; }
+.filtr-r { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.filtr { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; font: 14px/1.4 var(--sans); }
+.filtr label { padding: 5px 12px; border: 1px solid var(--linia); border-radius: 999px; background: var(--karta); color: var(--atrament); cursor: pointer; user-select: none; }
+.filtr label:hover { border-color: var(--morze); }
+#f-all:checked ~ .filtr label[for="f-all"], #f-osw:checked ~ .filtr label[for="f-osw"],
+#f-pism:checked ~ .filtr label[for="f-pism"], #f-om:checked ~ .filtr label[for="f-om"] { background: var(--atrament); color: var(--papier); border-color: var(--atrament); }
+#f-all:focus-visible ~ .filtr label[for="f-all"], #f-osw:focus-visible ~ .filtr label[for="f-osw"],
+#f-pism:focus-visible ~ .filtr label[for="f-pism"], #f-om:focus-visible ~ .filtr label[for="f-om"] { outline: 3px solid var(--morze); outline-offset: 2px; }
+#f-osw:checked ~ .pub-czyt li:not(.w-osw), #f-pism:checked ~ .pub-czyt li:not(.w-pism), #f-om:checked ~ .pub-czyt li[data-om="0"] { display: none; }
+@media print { .spis, .filtr { display: none; } }
