@@ -454,6 +454,11 @@ def data_krotka(s):
     return f"{d.day:02d}.{d.month:02d}"
 
 
+def skroc(t, n):
+    t = " ".join(t.split())
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
+
+
 def data_slownie(s, rok=True):
     d = data_(s)
     return f"{d.day} {MIESIACE[d.month-1]}" + (f" {d.year}" if rok else "")
@@ -906,7 +911,7 @@ class Budowa:
                      else '<span class="wn wn-0">← brak wcześniejszych</span>')
                   + '<details class="wn-kal"><summary>Kalendarz wydań</summary><div class="wn-panel">'
                   + self.kalendarz_html(d0.year, d0.month, "", aktualny=w, nawigacja=True) + self.kalendarz_legenda()
-                  + '<p class="kal-wszystkie"><a href="../index.html#archiwum">Wszystkie miesiące i lista wydań</a></p></div></details>'
+                  + '<p class="kal-wszystkie"><a href="../index.html#kalendarz">Kalendarz na stronie głównej i lista wydań</a></p></div></details>'
                   + (f'<a class="wn" rel="next" href="{nxt["_slug"]}.html" title="{e(self.etykieta_wydania(nxt))}">{krotko(nxt)} →</a>' if nxt
                      else '<span class="wn wn-0">najnowsze</span>')
                   + "</nav>"
@@ -1039,6 +1044,25 @@ class Budowa:
 </section>
 <section class="skrot"><h2>W skrócie</h2>{''.join(f'<p>{T(z)}</p>' for z in w['w_skrocie'])}
 <p class="dalej"><a href="wydania/{w['_slug']}.html">Czytaj całe wydanie</a></p></section>""")
+            kal = "".join(self.kalendarz_html(r, m, "wydania/", aktualny=w, przyciski=True) for r, m in reversed(self.miesiace_wydan()))
+            ostatnie = "".join(
+                f'<li><a href="wydania/{x["_slug"]}.html"><span class="a-d">{DNI_KROTKO[data_(x["data"]).weekday()]} {data_krotka(x["data"])}</span> '
+                f'{"tyg. " if x.get("typ") == "tygodniowe" else ""}nr {x["nr"]}</a>'
+                f'<span class="ost-t">{e(skroc(czysty(x["w_skrocie"][0], self.osoby, self.pojecia), 140))}</span></li>'
+                for x in list(reversed(self.wydania))[:5])
+            cz.append(f'<h2 class="pasek" id="kalendarz">Kalendarz wydań</h2><div class="gl-wydania">'
+                      f'<div><div class="kal-karuzela">{kal}</div>{self.kalendarz_legenda().replace("to wydanie", "najnowsze")}</div>'
+                      f'<div><h3 class="blok">Ostatnie wydania</h3><ul class="ostatnie">{ostatnie}</ul>'
+                      f'<p class="dalej"><a href="#archiwum">Wszystkie wydania</a></p></div></div>'
+                      "<script>(function(){var k=document.querySelector('.kal-karuzela');if(!k)return;k.classList.add('js');"
+                      "var m=[].slice.call(k.querySelectorAll('.kal-m')),i=0;"
+                      "function pokaz(){m.forEach(function(x,j){x.hidden=j!==i;"
+                      "var s=x.querySelector('[data-kier=\"1\"]'),n=x.querySelector('[data-kier=\"-1\"]');"
+                      "s.disabled=j>=m.length-1;n.disabled=j<=0;});}"
+                      "k.addEventListener('click',function(e){var b=e.target.closest('[data-kier]');if(!b||b.disabled)return;"
+                      "i=Math.max(0,Math.min(m.length-1,i+parseInt(b.getAttribute('data-kier'),10)));pokaz();"
+                      "var f=m[i].querySelector('[data-kier=\"'+b.getAttribute('data-kier')+'\"]');(f.disabled?m[i].querySelector('.kal-strz:not([disabled])'):f).focus();});"
+                      "pokaz();})();</script>")
             if self.topy:
                 z = self.topy[-1]
                 cz.append(f'<h2 class="pasek">Top 10 · {e(okres_slownie(z["od"], z["do"]))}</h2><ol class="top-lista">' + "".join(
@@ -1058,9 +1082,7 @@ class Budowa:
                 cz.append('<h2 class="pasek">Gorące wątki z ostatnich 7 dni</h2><div class="chmura">' + "".join(
                     f'<a class="tag tag-{self.tagi[t]["grupa"]} duzy" href="watki/{t}.html">#{e(self.tagi[t]["nazwa"])} <span>{n}</span></a>'
                     for t, n in gorace) + "</div>")
-            cz.append('<h2 class="pasek" id="archiwum">Archiwum wydań</h2><div class="kal-siatka">' + "".join(
-                self.kalendarz_html(r, m, "wydania/", aktualny=self.wydania[-1]) for r, m in reversed(self.miesiace_wydan()))
-                + "</div>" + self.kalendarz_legenda().replace("to wydanie", "najnowsze"))
+            cz.append('<h2 class="pasek" id="archiwum">Archiwum wydań</h2>')
             miesiac = None
             lista = ""
             for w in reversed(self.wydania):
@@ -1109,7 +1131,7 @@ class Budowa:
     def etykieta_wydania(w):
         return ("Wydanie tygodniowe" if w.get("typ") == "tygodniowe" else "Wydanie") + f" nr {w['nr']} – {data_dluga(w['data'])}"
 
-    def kalendarz_html(self, rok, mies, sciezka, aktualny=None, nawigacja=False):
+    def kalendarz_html(self, rok, mies, sciezka, aktualny=None, nawigacja=False, przyciski=False):
         """Siatka miesiąca (pon–nd). Dni z wydaniem są odnośnikami; tygodniówka ma znacznik T.
         sciezka: prefiks do katalogu wydania/ ('wydania/' ze strony głównej, '' ze strony wydania)."""
         dni = self.wydania_wg_dni()
@@ -1124,6 +1146,9 @@ class Budowa:
             prawo = (f'<a class="kal-strz" href="{sciezka}{pozn[0]["_slug"]}.html" title="Następny miesiąc: {e(self.etykieta_wydania(pozn[0]))}"><span class="sr">następny miesiąc</span> ›</a>'
                      if pozn else '<span class="kal-strz kal-strz-0" aria-hidden="true">›</span>')
             glowa = lewo + glowa + prawo
+        elif przyciski:
+            glowa = ('<button type="button" class="kal-strz" data-kier="1" aria-label="Poprzedni miesiąc">‹</button>' + glowa
+                     + '<button type="button" class="kal-strz" data-kier="-1" aria-label="Następny miesiąc">›</button>')
         wiersze = ""
         for tydzien in calendar.Calendar(firstweekday=0).monthdayscalendar(rok, mies):
             wiersze += "<tr>"
@@ -1148,7 +1173,7 @@ class Budowa:
             wiersze += "</tr>"
         naglowki = "".join(f'<th scope="col" abbr="{n}">{k}</th>' for k, n in
                            zip(["pn", "wt", "śr", "cz", "pt", "so", "nd"], DNI))
-        return (f'<div class="kal-m"><div class="kal-gl">{glowa}</div>'
+        return (f'<div class="kal-m" id="kal-{rok:04d}-{mies:02d}"><div class="kal-gl">{glowa}</div>'
                 f'<table aria-label="Wydania – {nazwa}"><thead><tr>{naglowki}</tr></thead><tbody>{wiersze}</tbody></table></div>')
 
     @staticmethod

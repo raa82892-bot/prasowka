@@ -108,7 +108,7 @@ Walidacja odrzuca źródło spoza rankingu (nowe trzeba świadomie dopisać z po
 
 ## Grafiki
 
-- **Kalendarz wydań** — na górze każdego wydania (pasek: poprzednie / kalendarz miesiąca / następne) i w archiwum na stronie głównej (`#archiwum`, wszystkie miesiące). Dzień z wydaniem jest odnośnikiem; tygodniówka (`RRRR-MM-DD-tydzien`) ma kolor ochry i znacznik T obok dziennika z tego samego dnia. Bez JavaScriptu poza zamykaniem panelu kliknięciem obok i klawiszem Esc.
+- **Kalendarz wydań** — na górze każdego wydania (pasek: poprzednie / kalendarz miesiąca / następne) i na stronie głównej pod „W skrócie” (`#kalendarz`, miesiące przełączane strzałkami, obok pięć ostatnich wydań). Dzień z wydaniem jest odnośnikiem; tygodniówka (`RRRR-MM-DD-tydzien`) ma kolor ochry i znacznik T obok dziennika z tego samego dnia. Bez JavaScriptu poza zamykaniem panelu kliknięciem obok i klawiszem Esc.
 
 `build.py` rysuje dwie grafiki SVG z tych samych danych (bez JavaScriptu poza przewinięciem osi do końca):
 

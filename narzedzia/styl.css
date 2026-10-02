@@ -420,3 +420,20 @@ a.kal-strz:hover { background: var(--morze-t); }
   .wn-panel { padding: 12px 8px 8px; }
 }
 @media print { .wyd-nav { display: none; } }
+
+/* strona główna: kalendarz i ostatnie wydania */
+.gl-wydania { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 16px 36px; align-items: start; margin: 12px 0 6px; }
+.gl-wydania .blok { margin-top: 0; }
+.kal-karuzela .kal-m + .kal-m { margin-top: 14px; }
+.kal-karuzela.js .kal-m + .kal-m { margin-top: 0; }
+.kal-karuzela:not(.js) button.kal-strz { visibility: hidden; }
+button.kal-strz { background: none; border: 0; cursor: pointer; }
+button.kal-strz:hover:not([disabled]) { background: var(--morze-t); }
+button.kal-strz[disabled] { color: var(--linia); cursor: default; }
+.kal-karuzela .kal-mies { text-align: center; }
+.ostatnie { list-style: none; padding: 0; margin: 6px 0 0; }
+.ostatnie li { padding: 8px 0; border-bottom: 1px solid var(--linia); }
+.ostatnie li > a { font: 600 15px/1.4 var(--sans); color: var(--atrament); text-decoration: none; }
+.ostatnie li > a:hover { text-decoration: underline; }
+.ost-t { display: block; font-size: 15px; line-height: 1.45; color: var(--tekst); margin-top: 2px; }
+@media (max-width: 640px) { .gl-wydania { grid-template-columns: 1fr; } .kal-karuzela .kal-m { max-width: none; } }
