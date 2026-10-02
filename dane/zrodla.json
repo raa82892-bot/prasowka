@@ -1432,6 +1432,20 @@
         "ONZ"
       ],
       "uzasadnienie": "Oficjalne serwisy i dokumenty Organizacji Narodów Zjednoczonych."
+    },
+    {
+      "id": "stvr",
+      "nazwa": "STVR",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Słowacja",
+      "domeny": [
+        "stvr.sk"
+      ],
+      "wzorce": [
+        "STVR"
+      ],
+      "uzasadnienie": "Słowacki nadawca publiczny (Slovenská televízia a rozhlas); serwis informacyjny z redakcją i korektami. Dodane 2.10.2026."
     }
   ]
 }

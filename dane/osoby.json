@@ -622,6 +622,45 @@
       "historia": [
         "Wicepremier i minister środowiska Słowacji do 30.09.2026."
       ]
+    },
+    {
+      "id": "maciej-wewior",
+      "imie": "Maciej Wewiór",
+      "funkcja": "Rzecznik prasowy Ministerstwa Spraw Zagranicznych RP.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "PAP (za WP)",
+          "url": "https://wiadomosci.wp.pl/rzecznik-msz-o-pismie-moskwy-cyniczna-proba-eskalacji-7335530154125632a",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "filip-kuffa",
+      "imie": "Filip Kuffa",
+      "funkcja": "Sekretarz stanu w Ministerstwie Środowiska Słowacji; jedyny kandydat SNS na ministra środowiska (stan na 2.10.2026, bez nominacji).",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/vlada-je-v-pondelok-pripravena-schval/996859-clanok.html",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "nicusor-dan",
+      "imie": "Nicușor Dan",
+      "funkcja": "Prezydent Rumunii.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/kolejna-odslona-kryzysu-politycznego-w-rumunii",
+          "data": "2026-10-01"
+        }
+      ]
     }
   ]
 }

@@ -174,6 +174,66 @@
       "nazwa": "cła wtórne",
       "pelna": "cła wtórne (secondary tariffs)",
       "definicja": "Cła nakładane na państwa trzecie za handel z państwem objętym sankcjami, np. za kupowanie jego ropy; mają skłonić je do ograniczenia tego handlu."
+    },
+    {
+      "id": "obwod-krolewiecki",
+      "nazwa": "Obwód królewiecki",
+      "pelna": "Obwód kaliningradzki Federacji Rosyjskiej",
+      "definicja": "Rosyjska eksklawa między Polską a Litwą nad Morzem Bałtyckim, bez lądowego połączenia z resztą Rosji; siedziba Floty Bałtyckiej i miejsce rozmieszczenia rosyjskich systemów rakietowych."
+    },
+    {
+      "id": "g7",
+      "nazwa": "G7",
+      "pelna": "Grupa Siedmiu",
+      "definicja": "Nieformalne forum siedmiu dużych gospodarek demokratycznych: USA, Japonii, Niemiec, Wielkiej Brytanii, Francji, Włoch i Kanady; w spotkaniach uczestniczy także UE."
+    },
+    {
+      "id": "mae",
+      "nazwa": "MAE",
+      "pelna": "Międzynarodowa Agencja Energetyczna (International Energy Agency, IEA)",
+      "definicja": "Organizacja przy OECD koordynująca bezpieczeństwo energetyczne państw członkowskich, w tym wspólne uwalnianie strategicznych zapasów ropy i paliw w sytuacjach kryzysowych. Polska jest jej członkiem."
+    },
+    {
+      "id": "hicp",
+      "nazwa": "HICP",
+      "pelna": "Zharmonizowany wskaźnik cen konsumpcyjnych",
+      "definicja": "Miara inflacji obliczana według jednolitej metodologii we wszystkich państwach UE przez Eurostat; na jej podstawie EBC ocenia realizację celu inflacyjnego (2%)."
+    },
+    {
+      "id": "ukraine-facility",
+      "nazwa": "Ukraine Facility",
+      "pelna": "Instrument na rzecz Ukrainy",
+      "definicja": "Unijny instrument wsparcia Ukrainy na lata 2024–2027 (dotacje i pożyczki) na stabilność budżetową, odbudowę i reformy; kolejne transze są wypłacane po spełnieniu warunków reformatorskich."
+    },
+    {
+      "id": "hcfp",
+      "nazwa": "HCFP",
+      "pelna": "Wysoka Rada Finansów Publicznych (Haut Conseil des finances publiques)",
+      "definicja": "Niezależny organ przy francuskim Trybunale Obrachunkowym, który opiniuje prognozy makroekonomiczne i zgodność projektów budżetu Francji z regułami fiskalnymi."
+    },
+    {
+      "id": "sns-sk",
+      "nazwa": "SNS (Słowacja)",
+      "pelna": "Słowacka Partia Narodowa (Slovenská národná strana)",
+      "definicja": "Narodowa partia słowacka, koalicjant partii Smer-SD w rządzie Roberta Fico."
+    },
+    {
+      "id": "sns-rs",
+      "nazwa": "SNS (Serbia)",
+      "pelna": "Serbska Partia Postępowa (Srpska napredna stranka)",
+      "definicja": "Partia rządząca w Serbii od 2012 r., założona m.in. przez Aleksandra Vučicia."
+    },
+    {
+      "id": "aur",
+      "nazwa": "AUR",
+      "pelna": "Sojusz na rzecz Jedności Rumunów (Alianța pentru Unirea Românilor)",
+      "definicja": "Nacjonalistyczna, prawicowa partia rumuńska, w opozycji wobec partii proeuropejskich."
+    },
+    {
+      "id": "purl",
+      "nazwa": "PURL",
+      "pelna": "Prioritized Ukraine Requirements List",
+      "definicja": "Mechanizm NATO, w którym sojusznicy finansują zakup amerykańskiego uzbrojenia dla Ukrainy z listy jej priorytetowych potrzeb."
     }
   ]
 }

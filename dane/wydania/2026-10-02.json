@@ -1,0 +1,529 @@
+{
+  "nr": 13,
+  "data": "2026-10-02",
+  "godzina": "20:25",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "{{o:wladimir-putin|Władimir Putin}} na forum Wałdaj zapowiedział, że przy bezpośrednim ataku na Rosję na porządku dnia stanie użycie **„wszystkich rodzajów broni”** – dzień po ujawnieniu rosyjskiego pisma do NATO, które grozi bronią jądrową w razie izolowania {{p:obwod-krolewiecki|obwodu królewieckiego}}; MSZ RP nazwało groźby z pisma „cyniczną i lekkomyślną próbą eskalacji”.",
+    "Przywódcy {{p:g7|G7}} uzgodnili uwolnienie przez {{p:mae|MAE}} **100 mln baryłek** rezerw w ciągu czterech miesięcy, z dużą porcją oleju napędowego w pierwszych 20 dniach, i zobowiązali się nie ograniczać eksportu energii między sobą.",
+    "Inflacja w strefie euro wzrosła we wrześniu do **3,8%** ({{p:hicp|HICP}}, szybki szacunek Eurostatu), ciągnięta przez energię (+18,8% r/r).",
+    "Komisja Europejska wypłaciła Ukrainie **2,9 mld euro**; w Kijowie po pierwszych od 2022 r. atakach dronów na most przez Dniepr zamknięto dwa mosty.",
+    "Rząd Francji przedstawił, a słowacka koalicja uzgodniła projekty budżetów na 2027 r. z deficytem ok. 5% PKB; w Słowacji koalicja wskazała też następcę odwołanego ministra środowiska."
+  ],
+  "korekty": [],
+  "zarys": [
+    {
+      "id": "z1",
+      "blok": "wojna",
+      "data": "2026-10-01",
+      "tagi": [
+        "krolewiec",
+        "rosja",
+        "nato",
+        "dyplomacja-rp"
+      ],
+      "tekst": "Prezydent Rosji {{o:wladimir-putin|Władimir Putin}} na forum klubu Wałdaj 1.10 powiedział, że przy „bezpośrednim ataku na Federację Rosyjską” kwestia użycia **„wszystkich rodzajów broni”** stanie „nieuchronnie i natychmiast” na porządku dnia. Dzień wcześniej ujawniono rosyjskie pismo do NATO grożące bronią jądrową w razie izolowania {{p:obwod-krolewiecki|obwodu królewieckiego}}; odnosząc się do niego, rzecznik MSZ RP {{o:maciej-wewior|Maciej Wewiór}} napisał 2.10, że „retoryka nuklearna i kolejne groźby użycia siły to cyniczna i lekkomyślna próba eskalacji”.",
+      "zrodla": [
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/putin-says-all-weapons-on-agenda-if-russias-kaliningrad-attacked",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "AFP (za Arab News)",
+          "url": "https://www.arabnews.pk/world/all-types-of-weapons-on-agenda-if-russias-kaliningrad-attacked-putin-3002905",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "PAP (za WP)",
+          "url": "https://wiadomosci.wp.pl/rzecznik-msz-o-pismie-moskwy-cyniczna-proba-eskalacji-7335530154125632a",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "z2",
+      "blok": "wojna",
+      "data": "2026-10-02",
+      "tagi": [
+        "ukraina",
+        "hybryda"
+      ],
+      "tekst": "Rosyjskie drony 1.10 uderzyły w kijowski **Most Południowy** (drogowy i metra) – to pierwszy atak dronów na most w Kijowie od początku pełnoskalowej inwazji; uderzenie powtórzono w nocy na 2.10. Władze zamknęły w obu kierunkach mosty Południowy i Patona, a most metra w kierunku prawego brzegu; w nocnym ataku w rejonie darnyckim zginęła 1 osoba.",
+      "zrodla": [
+        {
+          "nazwa": "Meduza",
+          "url": "https://meduza.io/en/feature/2026/10/01/russian-drones-strike-kyiv-s-southern-bridge-in-first-drone-attack-on-a-kyiv-bridge-since-the-full-scale-invasion-a-subway-train-was-crossing-it-at-the-time",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/russian-strike-kills-1-injures-2-in-kyiv-as-southern-bridge-hit-again-overnight/",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "z3",
+      "blok": "wojna",
+      "data": "2026-10-02",
+      "tagi": [
+        "ukraina",
+        "ue"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Komisja Europejska **wypłaciła Ukrainie 2,9 mld euro** na potrzeby budżetowe i funkcjonowanie administracji, w tym – po raz pierwszy – 800 mln euro z komponentu {{p:ukraine-facility|Instrumentu na rzecz Ukrainy}} w ramach pożyczki wsparcia dla Ukrainy; wypłatę ogłosiła przewodnicząca KE {{o:ursula-von-der-leyen|Ursula von der Leyen}}.",
+      "zrodla": [
+        {
+          "nazwa": "Komisja Europejska (komunikat IP/26/2047)",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2047",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/ukraine-nets-2-9-billion-euros-from-eu-after-passing-reforms/",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "z4",
+      "blok": "instytucje",
+      "data": "2026-10-02",
+      "tagi": [
+        "energia",
+        "iran",
+        "usa"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Przywódcy {{p:g7|G7}} uzgodnili skoordynowane przez {{p:mae|Międzynarodową Agencję Energetyczną}} **uwolnienie 100 mln baryłek** rezerw w ciągu czterech miesięcy, z „istotną” porcją oleju napędowego w pierwszych 20 dniach. Państwa G7 nie będą ograniczać eksportu energii między sobą, utrzymają sankcje wobec Rosji i wzywają do pełnego przywrócenia żeglugi przez cieśninę {{p:ormuz|Ormuz}}; MAE ma przedstawić raport w ciągu 20 dni.",
+      "zrodla": [
+        {
+          "nazwa": "Rada UE (oświadczenie przywódców G7)",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/02/g7-leaders-statement-on-global-energy-security-and-market-stability/",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/2/trump-says-europe-agrees-to-release-massive-amount-diesel-stockpile",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "z5",
+      "blok": "gospodarka",
+      "data": "2026-10-02",
+      "tagi": [
+        "gospodarka",
+        "ue",
+        "energia"
+      ],
+      "tekst": "Według szybkiego szacunku Eurostatu inflacja {{p:hicp|HICP}} w strefie euro wzrosła we wrześniu do **3,8% r/r** (sierpień: 3,2%); ceny energii wzrosły o 18,8% r/r, inflacja bazowa wyniosła 2,5%. Najwyższą inflację odnotowała Litwa (6,1%).",
+      "zrodla": [
+        {
+          "nazwa": "Komisja Europejska (Eurostat, szybki szacunek HICP)",
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-02102026-ap",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/eurozone-inflation-spikes-to-38-is-your-country-on-the-worst-list",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "z6",
+      "blok": "instytucje",
+      "data": "2026-10-01",
+      "tagi": [
+        "francja"
+      ],
+      "etap": "PROPOZYCJA",
+      "tekst": "Rząd Francji przedstawił **projekt budżetu na 2027 r.** z deficytem 5,0% PKB (2026: 5,4%) i działaniami o wartości 54 mld euro, w tym 43 mld euro nowych. Prognozę wzrostu 1,0% {{p:hcfp|Wysoka Rada Finansów Publicznych}} uznała za „optymistyczną”; o budżecie zdecyduje rozdrobnione Zgromadzenie Narodowe.",
+      "zrodla": [
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/french-government-forecasts-1-growth-in-2027-what-do-experts-think",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Agence Europe",
+          "url": "https://agenceurope.eu/en/bulletin/article/13950/23/paris-sets-new-public-deficit-target-of-50-of-gdp-in-2027",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "z7",
+      "blok": "instytucje",
+      "data": "2026-10-02",
+      "tagi": [
+        "slowacja"
+      ],
+      "etap": "ZAPOWIEDŹ",
+      "tekst": "Słowacka rada koalicyjna uzgodniła **budżet na 2027 r. z deficytem 4,94% PKB**. {{p:sns-sk|SNS}} wskazuje jako jedynego kandydata na ministra środowiska w miejsce odwołanego {{o:tomas-taraba|Tomáša Taraby}} sekretarza stanu {{o:filip-kuffa|Filipa Kuffę}}; rząd ma zająć się budżetem i zmianami personalnymi w resorcie w poniedziałek 5.10.",
+      "zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/vlada-je-v-pondelok-pripravena-schval/996859-clanok.html",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "STVR",
+          "url": "https://spravy.stvr.sk/2026/10/koalicia-sa-dohodla-na-rozpocte-transakcna-dan-sa-ma-zrusit-az-v-roku-2028",
+          "data": "2026-10-02"
+        }
+      ]
+    }
+  ],
+  "analizy": [
+    {
+      "tytul": "Rumunia: prezydent unika wyborów, które mogłyby dać władzę AUR",
+      "autor": "PISM (Jakub Pieńkowski), tekst z 1.10.2026",
+      "tagi": [
+        "rumunia"
+      ],
+      "tekst": "Po trzecim nieudanym głosowaniu nad rządem (30.09: rząd {{o:siegfried-muresan|Siegfrieda Mureșana}} bez wotum zaufania) prezydent {{o:nicusor-dan|Nicușor Dan}} – jak przypomina Pieńkowski – mógłby rozwiązać parlament po dwukrotnym odrzuceniu kandydata na premiera, ale według autora „nie chce przejęcia samodzielnych rządów przez {{p:aur|AUR}}, do czego zapewne doprowadziłyby przedterminowe wybory”. Autor odnotowuje bardziej pojednawcze stanowisko USR i UDMR, które jego zdaniem prawdopodobnie obawiają się rozwiązania parlamentu.",
+      "dla_polski": "Przedłużający się brak pełnoprawnego rządu w Bukareszcie osłabia drugi filar wschodniej flanki NATO i Bukareszteńskiej Dziewiątki przed Radą Europejską 15–16.10 (WRF 2028–34); Warszawa powinna uzgadniać stanowiska wschodniej flanki z prezydentem Danem, a nie czekać na nowy gabinet (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/kolejna-odslona-kryzysu-politycznego-w-rumunii",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "tytul": "Serbia: dymisja Vučicia jako manewr wyborczy",
+      "autor": "PISM (Tomasz Żornaczuk), tekst z 1.10.2026",
+      "tagi": [
+        "balkany",
+        "wybory"
+      ],
+      "tekst": "Według Żornaczuka dymisja {{o:aleksandar-vucic|Aleksandra Vučicia}} (27.09) pozwoli mu startować jako kandydat {{p:sns-rs|SNS}} na premiera w wyborach 25.10, a „tegoroczne głosowanie jest pierwszym w tym okresie, kiedy zwycięstwo SNS nie jest przesądzone”. Autor przypomina, że władza od lat wykorzystuje w wyborach zasoby państwa i kontrolowane media.",
+      "dla_polski": "Wynik 25.10 przesądzi o tempie rozszerzenia UE na Bałkanach, które Polska popiera; przy ocenie wyborów w ramach UE i OBWE warto wspierać pełną misję obserwacyjną, bo wiarygodność głosowania będzie warunkiem dalszych rozmów akcesyjnych (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/taktyczna-dymisja-prezydenta-serbii",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "tytul": "Ukraina planuje wojnę w 2027 r. ponad własne możliwości budżetowe",
+      "autor": "PISM (Maria Piechowska), tekst z 1.10.2026",
+      "tagi": [
+        "ukraina"
+      ],
+      "tekst": "Piechowska opisuje przyjęty przez rząd Ukrainy projekt budżetu na 2027 r. z wydatkami obronnymi 4,8 bln hrywien (ok. 109 mld USD) i przytacza szacunki, według których rzeczywiste potrzeby wojenne, łącznie z dostawami partnerów (format Ramstein, {{p:purl|PURL}}), sięgają ok. 7,9 bln hrywien (175 mld USD). Na niepewność prognoz z powodu problemów mobilizacyjnych wskazuje, według tekstu, ukraiński wiceminister finansów.",
+      "dla_polski": "Luka między budżetem Ukrainy a jej potrzebami będzie pokrywana głównie przez Europę – dzisiejsza wypłata 2,9 mld euro z KE to tylko część; w negocjacjach WRF 2028–34 Polska powinna bronić osobnej puli na Ukrainę, by finansowanie wojny nie było brane z funduszy spójności (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/wojenny-budzet-ukrainy",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Komisja Europejska (komunikat IP/26/2047)",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2047",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "tytul": "UE chce europejskich operatorów łączności satelitarnej dla administracji",
+      "autor": "PISM (Aleksandra Wójtowicz), tekst z 1.10.2026",
+      "tagi": [
+        "ue",
+        "hybryda"
+      ],
+      "tekst": "Wójtowicz opisuje projekt regulacji, według którego operatorzy obsługujący łączność rządową mieliby działać i przechowywać dane wyłącznie w UE, a KE proponowała zarezerwować większość pasma 2 GHz, zdominowanego dziś przez firmy z USA, dla podmiotów europejskich. Autorka ocenia to jako element dążenia do suwerenności cyfrowej i uniezależnienia od podmiotów chińskich i amerykańskich oraz spodziewa się krytyki ze strony administracji USA.",
+      "dla_polski": "Polska administracja i wojsko korzystają z amerykańskich usług satelitarnych; przed przyjęciem regulacji MON i MC powinny ocenić, które usługi wymagałyby zmiany dostawcy, i zabiegać o okres przejściowy dla łączności wojskowej (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/panstwa-ue-zaostrzaja-wymogi-bezpieczenstwa-dla-operatorow-satelitarnych",
+          "data": "2026-10-01"
+        }
+      ]
+    }
+  ],
+  "kalendarz": [
+    {
+      "data": "2026-10-03",
+      "tekst": "Wybory do Saeimy (parlamentu) Łotwy; lokale otwarte 8:00–20:00.",
+      "tagi": [
+        "lotwa",
+        "wybory"
+      ],
+      "zrodla": [
+        {
+          "nazwa": "LSM",
+          "url": "https://eng.lsm.lv/article/politics/election/02.10.2026-final-day-of-advance-voting-in-latvia.a665792/",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-04",
+      "tekst": "Wybory powszechne w Bośni i Hercegowinie.",
+      "tagi": [
+        "balkany",
+        "wybory"
+      ]
+    },
+    {
+      "data": "2026-10-05",
+      "tekst": "Przewodniczący Rady Europejskiej António Costa w Warszawie: inauguracja roku w Kolegium Europejskim, spotkania z premierem i prezydentem Warszawy.",
+      "tagi": [
+        "ue",
+        "dyplomacja-rp"
+      ],
+      "zrodla": [
+        {
+          "nazwa": "Rada UE",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/02/weekly-schedule-of-president-antonio-costa/",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-05",
+      "tekst": "Rumunia: konsultacje prezydenta z partiami i wskazanie kandydata na premiera; Słowacja: posiedzenie rządu (budżet 2027, zmiany w resorcie środowiska).",
+      "tagi": [
+        "rumunia",
+        "slowacja"
+      ],
+      "zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/vlada-je-v-pondelok-pripravena-schval/996859-clanok.html",
+          "data": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "tekst": "Litwa: planowane pierwsze z dwóch rozstrzygających głosowań Sejmu nad uchyleniem art. 137 konstytucji (min. 94 głosy).",
+      "tagi": [
+        "litwa"
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "tekst": "6–7.10: posiedzenie Rady Polityki Pieniężnej (stopa referencyjna 3,75%).",
+      "tagi": [
+        "gospodarka"
+      ]
+    },
+    {
+      "data": "2026-10-08",
+      "tekst": "Eurogrupa (8.10) i ECOFIN (9.10).",
+      "tagi": [
+        "ue"
+      ]
+    },
+    {
+      "data": "2026-10-09",
+      "tekst": "9–10.10: Czechy – I tura wyborów do Senatu i wybory samorządowe; II tura 16–17.10.",
+      "tagi": [
+        "czechy",
+        "wybory"
+      ]
+    }
+  ],
+  "poza_oknem": [
+    {
+      "data": "2026-10-12",
+      "tekst": "12–18.10: doroczne zgromadzenia MFW i Banku Światowego (Bangkok)",
+      "tagi": [
+        "mfw"
+      ]
+    },
+    {
+      "data": "2026-10-15",
+      "tekst": "15–16.10: Rada Europejska – negocjacje WRF 2028–34",
+      "tagi": [
+        "ue"
+      ]
+    },
+    {
+      "data": "2026-10-25",
+      "tekst": "wybory parlamentarne w Serbii",
+      "tagi": [
+        "balkany",
+        "wybory"
+      ]
+    },
+    {
+      "data": "2026-10-28",
+      "tekst": "27–28.10 posiedzenie FOMC (Fed), 28–29.10 posiedzenie EBC – pierwsze decyzje po wzroście inflacji w strefie euro do 3,8%",
+      "tagi": [
+        "gospodarka"
+      ]
+    },
+    {
+      "data": "2026-11-03",
+      "tekst": "wybory połowy kadencji w USA",
+      "tagi": [
+        "usa",
+        "wybory"
+      ]
+    }
+  ],
+  "zrodla_analityczne": {
+    "osw": [
+      {
+        "tytul": "Kryzys wokół Iranu – wojna na wielu frontach (Komentarze OSW)",
+        "autor": "Krzysztof Strachota",
+        "data": "2026-10-01",
+        "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-10-01/kryzys-wokol-iranu-wojna-na-wielu-frontach"
+      },
+      {
+        "tytul": "Wstrząs na tureckiej giełdzie: kolejny kryzys zaufania do rynku",
+        "autor": "Adam Michalski",
+        "data": "2026-10-01",
+        "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-10-01/wstrzas-na-tureckiej-gieldzie-kolejny-kryzys-zaufania-do-rynku"
+      }
+    ],
+    "pism": [
+      {
+        "tytul": "Kolejna odsłona kryzysu politycznego w Rumunii",
+        "autor": "Jakub Pieńkowski",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/kolejna-odslona-kryzysu-politycznego-w-rumunii"
+      },
+      {
+        "tytul": "Taktyczna dymisja prezydenta Serbii",
+        "autor": "Tomasz Żornaczuk",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/taktyczna-dymisja-prezydenta-serbii"
+      },
+      {
+        "tytul": "Wojenny budżet Ukrainy",
+        "autor": "Maria Piechowska",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/wojenny-budzet-ukrainy"
+      },
+      {
+        "tytul": "Państwa UE zaostrzają wymogi bezpieczeństwa dla operatorów satelitarnych",
+        "autor": "Aleksandra Wójtowicz",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/panstwa-ue-zaostrzaja-wymogi-bezpieczenstwa-dla-operatorow-satelitarnych"
+      },
+      {
+        "tytul": "Socjaldemokraci zrezygnowali z tworzenia rządu w Szwecji",
+        "autor": "Tomasz Zduńczyk",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/socjaldemokraci-zrezygnowali-z-tworzenia-rzadu-w-szwecji"
+      },
+      {
+        "tytul": "Zakończyły się ćwiczenia „Siła Jedności 2026”",
+        "autor": "Anna Maria Dyner",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/zakonczyly-sie-cwiczenia-sila-jednosci-2026"
+      },
+      {
+        "tytul": "Aliko Dangote inauguruje budowę rafinerii w Kenii",
+        "autor": "Jędrzej Czerep",
+        "numer": "krótki tekst",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/aliko-dangote-inauguruje-budowe-rafinerii-w-kenii"
+      },
+      {
+        "tytul": "„Strategiczna stabilizacja” w polityce administracji USA wobec Chin",
+        "autor": "Paul Balawajder",
+        "numer": "Biuletyn nr 67 (3201)",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/strategiczna-stabilizacja-w-polityce-administracji-usa-wobec-chin"
+      },
+      {
+        "tytul": "Reindustrializacja elementem strategii Trumpa przed wyborami do Kongresu",
+        "autor": "Paul Balawajder",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/reindustrializacja-elementem-strategii-trumpa-przed-wyborami-do-kongresu"
+      },
+      {
+        "tytul": "Kolejne próby rozszerzenia wpływu władz federalnych na organizację wyborów",
+        "autor": "Michał Doliński",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/kolejne-proby-rozszerzenia-wplywu-wladz-federalnych-na-organizacje-wyborow"
+      },
+      {
+        "tytul": "Korea Płd. oskarża Koreę Płn. o podłożenie min w DMZ",
+        "autor": "Oskar Pietrewicz",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/korea-pld-oskarza-koree-pln-o-podlozenie-min-w-dmz"
+      },
+      {
+        "tytul": "W wyborach parlamentarnych w Maroku zwyciężyła partia z koalicji rządzącej",
+        "autor": "Julia Sochacka",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/w-wyborach-parlamentarnych-w-maroku-zwyciezyla-partia-z-koalicji-rzadzacej"
+      },
+      {
+        "tytul": "Przyszłość rosyjskiej bazy wojskowej w Armenii",
+        "autor": "Wojciech Wojtasiewicz",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/przyszlosc-rosyjskiej-bazy-wojskowej-w-armenii"
+      }
+    ]
+  },
+  "czego_nie_ma": [
+    {
+      "tekst": "OSW 2.10 i PISM 2.10: brak nowych publikacji (stan ok. 20:30); OSW 30.09 – brak publikacji.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Areszt tymczasowy b. ministra Balázsa Hankó (Węgry, 1.10) – areszt potwierdzają tylko MTI, Telex i OCCRP; Reuters (29.09) podał jedynie zatrzymanie.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Projekt „ustawy przedwojennej” MON (wypowiedź wicepremiera Kosiniaka-Kamysza 2.10) – jedna agencja (PAP), brak tekstu projektu.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Projekt budżetu Rosji 2027–29 w Dumie i termin I czytania 29.10 – wydatki obronne potwierdza Reuters (28.09), wniesienie Meduza (30.09), termin tylko Interfax; brak dwóch niezależnych źródeł dla tych samych faktów.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Zmasowane uderzenia na ukraińską energetykę 30.09–1.10 – liczby dronów i ofiar różnią się między źródłami (Reuters, Siły Powietrzne Ukrainy, ISW); dron w Instytucie Badań Jądrowych w Kijowie (30.09) – nadal bez komunikatu MAEA.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Trzeci amerykański lotniskowiec (USS Theodore Roosevelt) kierowany na Bliski Wschód – otwarta tylko depesza AP; atak na tankowiec w cieśninie Ormuz (2.10) – tylko AFP.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Łotwa: limit kosztów Rail Baltica 20 mln euro/km (decyzja rządu 1.10) – tylko LSM.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Spotkanie „Bergen Group” Pentagonu w Polsce w październiku – jedno źródło pierwotne (Politico), bez potwierdzenia MON i Departamentu Obrony USA.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Nowe sankcje Departamentu Skarbu USA wobec 27 podmiotów i osób z irańskiego przemysłu (1.10) oraz dane z rynku pracy USA za wrzesień (+29 tys. miejsc pracy, BLS) – udokumentowane, ale bez bezpośredniego skutku dla Polski.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Cena ropy Brent 2.10 – notowania śróddzienne w źródłach rozbieżne (ok. 99–103 USD), brak notowania zamknięcia z agencji.",
+      "prog": "dokumentacja"
+    }
+  ],
+  "nota": "Wydanie przygotowane 2.10.2026 między 20:10 a 20:25 CEST na podstawie stron otwartych tego dnia: komunikaty Rady UE (G7), Komisji Europejskiej i Eurostatu, Euronews, AFP, PAP, Meduza, Kyiv Independent, TASR, STVR, Agence Europe, LSM, OSW, PISM. Niedostępne: Reuters, Bloomberg, CNBC, CNN (blokada lub paywall), wpis rzecznika MSZ na X (cytat za depeszą PAP), api.nbp.pl. Fakty stałe z rejestru użyte w kalendarzu sprawdzono w ciągu ostatnich 7 dni. Korekt brak. Kontrola niezależna przed wysyłką: 4 błędy poprawione (przypisanie reakcji MSZ RP do pisma Moskwy, nie do wystąpienia Putina; data przedstawienia budżetu Francji – 1.10; etapy budżetów Francji i Słowacji w „W skrócie”; szacunek 175 mld USD i ocena niepewności przypisane źródłom cytowanym przez PISM, nie autorce) i 4 doprecyzowania (data ujawnienia pisma, 800 mln euro z Ukraine Facility, kierunek zamknięcia mostu metra, analiza o Rumunii). Strona: push do repozytorium niemożliwy w tej sesji – dane czekają na publikację."
+}

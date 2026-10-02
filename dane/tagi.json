@@ -5,7 +5,31 @@
       "id": "ukraina",
       "nazwa": "Ukraina",
       "grupa": "miejsce",
-      "opis": "Wojna Rosji z Ukrainą: ataki, obrona powietrzna, polityka Kijowa, pomoc zachodnia."
+      "opis": "Wojna Rosji z Ukrainą: ataki, obrona powietrzna, polityka Kijowa, pomoc zachodnia.",
+      "stan": "Rosja rozpoczęła jesienne uderzenia na energetykę i po raz pierwszy od 2022 r. atakuje mosty w Kijowie; UE 2.10 wypłaciła Ukrainie 2,9 mld euro.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Meduza",
+          "url": "https://meduza.io/en/feature/2026/10/01/russian-drones-strike-kyiv-s-southern-bridge-in-first-drone-attack-on-a-kyiv-bridge-since-the-full-scale-invasion-a-subway-train-was-crossing-it-at-the-time",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/russian-strike-kills-1-injures-2-in-kyiv-as-southern-bridge-hit-again-overnight/",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Komisja Europejska (komunikat IP/26/2047)",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2047",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/ukraine-nets-2-9-billion-euros-from-eu-after-passing-reforms/",
+          "data": "2026-10-02"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "front",
@@ -29,7 +53,26 @@
       "id": "krolewiec",
       "nazwa": "Królewiec",
       "grupa": "miejsce",
-      "opis": "Obwód królewiecki: militaryzacja, tranzyt, napięcia z NATO."
+      "opis": "Obwód królewiecki: militaryzacja, tranzyt, napięcia z NATO.",
+      "stan": "Rosja grozi NATO bronią jądrową w razie izolowania obwodu (pismo ujawnione 30.09); Putin 1.10 na forum Wałdaj zapowiedział, że przy bezpośrednim ataku na Rosję na porządku dnia stanie użycie „wszystkich rodzajów broni”; MSZ RP mówi o „cynicznej próbie eskalacji”.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/putin-says-all-weapons-on-agenda-if-russias-kaliningrad-attacked",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "AFP (za Arab News)",
+          "url": "https://www.arabnews.pk/world/all-types-of-weapons-on-agenda-if-russias-kaliningrad-attacked-putin-3002905",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "PAP (za WP)",
+          "url": "https://wiadomosci.wp.pl/rzecznik-msz-o-pismie-moskwy-cyniczna-proba-eskalacji-7335530154125632a",
+          "data": "2026-10-02"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "bialorus",
@@ -176,7 +219,21 @@
       "id": "slowacja",
       "nazwa": "Słowacja",
       "grupa": "miejsce",
-      "opis": "Polityka Słowacji: koalicja, rząd, relacje z UE."
+      "opis": "Polityka Słowacji: koalicja, rząd, relacje z UE.",
+      "stan": "Koalicja uzgodniła 2.10 budżet 2027 (deficyt 4,94% PKB); SNS wskazuje Filipa Kuffę na ministra środowiska po odwołanym Tomášu Tarabie; rząd zbiera się 5.10.",
+      "stan_zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/vlada-je-v-pondelok-pripravena-schval/996859-clanok.html",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "STVR",
+          "url": "https://spravy.stvr.sk/2026/10/koalicia-sa-dohodla-na-rozpocte-transakcna-dan-sa-ma-zrusit-az-v-roku-2028",
+          "data": "2026-10-02"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "wegry",
@@ -240,7 +297,21 @@
       "id": "francja",
       "nazwa": "Francja",
       "grupa": "miejsce",
-      "opis": "Polityka Francji: rząd, budżet, stanowisko w UE."
+      "opis": "Polityka Francji: rząd, budżet, stanowisko w UE.",
+      "stan": "Rząd przedstawił 1.10 projekt budżetu na 2027 r. z deficytem 5,0% PKB (2026: 5,4%); o jego losie zdecyduje rozdrobnione Zgromadzenie Narodowe.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/french-government-forecasts-1-growth-in-2027-what-do-experts-think",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Agence Europe",
+          "url": "https://agenceurope.eu/en/bulletin/article/13950/23/paris-sets-new-public-deficit-target-of-50-of-gdp-in-2027",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "wielka-brytania",
@@ -279,13 +350,41 @@
       "id": "energia",
       "nazwa": "Energia",
       "grupa": "temat",
-      "opis": "Ropa, gaz, infrastruktura energetyczna, ceny paliw."
+      "opis": "Ropa, gaz, infrastruktura energetyczna, ceny paliw.",
+      "stan": "G7 uzgodniła 2.10 uwolnienie przez MAE 100 mln baryłek rezerw w ciągu 4 miesięcy (z olejem napędowym na początku) i rezygnację z ograniczeń eksportu energii między państwami G7; cieśnina Ormuz pozostaje zablokowana.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rada UE (oświadczenie przywódców G7)",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/02/g7-leaders-statement-on-global-energy-security-and-market-stability/",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/2/trump-says-europe-agrees-to-release-massive-amount-diesel-stockpile",
+          "data": "2026-10-02"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "gospodarka",
       "nazwa": "Gospodarka",
       "grupa": "temat",
-      "opis": "Tylko zdarzenia nadzwyczajne: inflacja, kurs złotego, decyzje banków centralnych, cła."
+      "opis": "Tylko zdarzenia nadzwyczajne: inflacja, kurs złotego, decyzje banków centralnych, cła.",
+      "stan": "Inflacja w strefie euro we wrześniu 3,8% (energia +18,8%); w Polsce szybki szacunek GUS 4,0%; RPP obraduje 6–7.10, EBC 28–29.10.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Komisja Europejska (Eurostat, szybki szacunek HICP)",
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-02102026-ap",
+          "data": "2026-10-02"
+        },
+        {
+          "nazwa": "Euronews",
+          "url": "https://www.euronews.com/2026/10/02/eurozone-inflation-spikes-to-38-is-your-country-on-the-worst-list",
+          "data": "2026-10-02"
+        }
+      ],
+      "stan_data": "2026-10-02"
     },
     {
       "id": "inne",
