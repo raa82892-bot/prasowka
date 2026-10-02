@@ -501,6 +501,35 @@
       "uzasadnienie": "Publiczna agencja prasowa; rzetelna co do przebiegu wydarzeń w parlamencie i rządzie."
     },
     {
+      "id": "ctk",
+      "nazwa": "ČTK",
+      "poziom": 2,
+      "typ": "agencja",
+      "kraj": "Czechy",
+      "domeny": [
+        "ceskenoviny.cz",
+        "ctk.cz"
+      ],
+      "wzorce": [
+        "ČTK"
+      ],
+      "uzasadnienie": "Publiczna czeska agencja prasowa (odpowiednik TASR); rzetelna co do przebiegu głosowań w parlamencie i decyzji rządu. Dodana 01.10.2026."
+    },
+    {
+      "id": "svt",
+      "nazwa": "SVT",
+      "poziom": 2,
+      "typ": "redakcja",
+      "kraj": "Szwecja",
+      "domeny": [
+        "svt.se"
+      ],
+      "wzorce": [
+        "SVT"
+      ],
+      "uzasadnienie": "Szwedzka telewizja publiczna z własnymi ustaleniami i praktyką sprostowań; rzetelna co do decyzji szwedzkiego rządu i sił zbrojnych. Dodana 01.10.2026."
+    },
+    {
       "id": "dennik-n",
       "nazwa": "Denník N",
       "poziom": 2,
@@ -1373,7 +1402,9 @@
         "vlada.gov.cz",
         "srbija.gov.rs",
         "valitsus.ee",
-        "president.az"
+        "president.az",
+        "regeringen.se",
+        "gov.uk"
       ],
       "wzorce": [
         "Prezydent Ukrainy",
@@ -1382,7 +1413,9 @@
         "Rząd Republiki Czeskiej",
         "Rząd Serbii",
         "Rząd Estonii",
-        "Prezydent Azerbejdżanu"
+        "Prezydent Azerbejdżanu",
+        "Rząd Szwecji",
+        "Rząd Wielkiej Brytanii"
       ],
       "uzasadnienie": "Strony urzędowe prezydentów i rządów: potwierdzają ich obsadę, decyzje i komunikaty; wypowiedzi to wersja strony."
     },

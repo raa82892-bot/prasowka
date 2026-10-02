@@ -1,0 +1,438 @@
+{
+  "nr": 12,
+  "data": "2026-10-01",
+  "godzina": "21:40",
+  "typ": "dzienne",
+  "w_skrocie": [
+    "Szwecja wysyła **myśliwce {{p:gripen|Gripen}}** do natowskiej obrony powietrznej nad Polską – od października, na około dwa miesiące, m.in. do ochrony węzła logistycznego pomocy dla Ukrainy.",
+    "Wielka Brytania objęła sankcjami **31 nowych celów** (22 osoby, 1 podmiot, 8 statków, w tym gazowce przewożące rosyjski {{p:lng|LNG}}), a Estonia zakazała **tranzytu zboża z Rosji i Białorusi**.",
+    "Rada UE ostatecznie przyjęła **rozporządzenie powrotowe**, które pozwala tworzyć {{p:huby-powrotowe|centra powrotowe}} poza Unią.",
+    "W Czechach rząd {{o:andrej-babis|Andreja Babiša}} przetrwał głosowanie nad wotum nieufności (83 głosy za odwołaniem przy wymaganych 101).",
+    "Dzień z małą liczbą zdarzeń, które przeszły próg dokumentacji – zarys ma 5 pozycji; resztę wymienia nota „Czego tu nie ma”."
+  ],
+  "korekty": [
+    {
+      "bylo": "Wydania z 29.09 i 30.09 podały numer biuletynu PISM A.M. Dyner „Rosyjski potencjał eskalacyjny” jako „Biuletyn nr 65 (2697)”.",
+      "jest": "Prawidłowo: Biuletyn PISM nr 65 (3199) z 28.09.2026 (numeracja ciągła: nr 66 to 3200, nr 67 to 3201). Treść oceny bez zmian.",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://pism.pl/publikacje/rosyjski-potencjal-eskalacyjny",
+          "data": "2026-09-28"
+        }
+      ]
+    }
+  ],
+  "zarys": [
+    {
+      "id": "z1",
+      "blok": "wojna",
+      "data": "2026-10-01",
+      "tagi": [
+        "sankcje",
+        "wielka-brytania",
+        "rosja"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Wielka Brytania wpisała na listę sankcji wobec Rosji **31 nowych celów**: 22 osoby, 1 podmiot i 8 statków. Wśród statków są gazowce przewożące rosyjski {{p:lng|LNG}} do państw trzecich, podmiotem jest spółka Novatek Gas and Power Asia (sektor energetyczny), a wśród osób – odpowiedzialni za przetrzymywanie i tortury Ukraińców oraz deportacje dzieci.",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Wielkiej Brytanii (Sanctions Notice, Russia)",
+          "url": "https://assets.publishing.service.gov.uk/media/6abe173e9c196f81005e5d7c/Sanctions_Notice__Russia__01_October_2026.pdf",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/uk-passes-new-russia-sanctions-but-with-lng-loophole-for-asian-allies/",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "z2",
+      "blok": "wojna",
+      "data": "2026-10-01",
+      "tagi": [
+        "sankcje",
+        "estonia",
+        "rosja",
+        "bialorus"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Rząd Estonii wprowadził **zakaz tranzytu zboża z Rosji i Białorusi**; obowiązuje od dnia po publikacji w dzienniku urzędowym Riigi Teataja. Minister spraw zagranicznych {{o:margus-tsahkna|Margus Tsahkna}}: Rosja atakuje porty Ukrainy, więc „cyniczne” byłoby pozwolić jej eksportować własne zboże przez porty estońskie.",
+      "zrodla": [
+        {
+          "nazwa": "ERR",
+          "url": "https://news.err.ee/1610153278/estonia-bans-grain-transit-from-russia-and-belarus",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/estonia-bans-transit-of-grain-from-russia-belarus/",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "z3",
+      "blok": "polska",
+      "data": "2026-09-30",
+      "tagi": [
+        "obronnosc-polski",
+        "nato",
+        "nordyckie"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Rząd Szwecji zdecydował, że **myśliwce {{p:gripen|JAS 39 Gripen}}** od października wesprą natowską obronę powietrzną nad Polską i ochronę węzła logistycznego pomocy wojskowej dla Ukrainy; mają działać głównie ze Szwecji, z małą bazą wysuniętą w Polsce. Według SVT misja potrwa około dwóch miesięcy, a samoloty pochodzą ze skrzydła F 17 (Blekinge); liczby maszyn nie podano. Minister obrony {{o:pal-jonson|Pål Jonson}}: szwedzkie samoloty „przyczyniają się do obrony powietrznej nad Polską i do ochrony ważnych przepływów logistycznych z pomocą wojskową dla Ukrainy”.",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Szwecji",
+          "url": "https://www.regeringen.se/pressmeddelanden/2026/09/sverige-bidrar-med-stridsflyg-till-natoinsats-i-polen/",
+          "data": "2026-09-30"
+        },
+        {
+          "nazwa": "SVT",
+          "url": "https://www.svt.se/nyheter/utrikes/sverige-skickar-gripen-till-polen-igen",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "z4",
+      "blok": "instytucje",
+      "data": "2026-10-01",
+      "tagi": [
+        "ue"
+      ],
+      "etap": "PRZYJĘTE",
+      "tekst": "Rada UE ostatecznie przyjęła **rozporządzenie w sprawie powrotów** osób bez prawa pobytu w Unii. Wprowadza europejski nakaz powrotu (jego wzajemne uznawanie na razie dobrowolne), pozwala tworzyć {{p:huby-powrotowe|centra powrotowe}} w państwach trzecich (bez małoletnich bez opieki) i dłużej niż 24 miesiące zatrzymywać osoby stanowiące zagrożenie dla bezpieczeństwa. Przepisy o centrach obowiązują od wejścia w życie (dzień po publikacji w Dzienniku Urzędowym UE), pozostałe po roku.",
+      "zrodla": [
+        {
+          "nazwa": "Rada UE",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/01/council-adopts-new-rules-on-return-for-those-with-no-right-to-stay-in-the-eu/",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "z5",
+      "blok": "instytucje",
+      "data": "2026-10-01",
+      "tagi": [
+        "czechy"
+      ],
+      "tekst": "Czechy: rząd {{o:andrej-babis|Andreja Babiša}} (ANO, SPD, Motoristé) **przetrwał głosowanie nad {{p:wotum-nieufnosci|wotum nieufności}}** – za odwołaniem głosowało 83 posłów opozycji przy wymaganych 101 w 200-osobowej Izbie Poselskiej. Opozycja zarzucała rządowi m.in. deficyt 386 mld koron w projekcie budżetu na 2027 i konflikt interesów premiera.",
+      "zrodla": [
+        {
+          "nazwa": "AP (za Infonews)",
+          "url": "https://infonews.ca/news/7900014/czech-prime-minister-andrej-babis-government-survives-no-confidence-vote/",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "ČTK",
+          "url": "https://www.ceskenoviny.cz/zpravy/snemovni-opozici-se-ani-napodruhe-nepodarilo-svrhnout-babisovu-vladu/2881493",
+          "data": "2026-10-01"
+        }
+      ]
+    }
+  ],
+  "analizy": [
+    {
+      "tytul": "Iran: wojna na wyczerpanie zamiast rozstrzygnięcia",
+      "autor": "OSW (Krzysztof Strachota), Komentarz z 1.10.2026",
+      "tagi": [
+        "iran",
+        "usa",
+        "energia"
+      ],
+      "tekst": "Według Strachoty działania militarne i presja na destabilizację systemu irańskiego okazały się niewystarczające, a konflikt USA i Izraela z Iranem przeszedł w fazę wyczerpywania na wielu frontach, w której głównym polem nacisku jest cieśnina {{p:ormuz|Ormuz}} (blokada irańska i amerykańska jednocześnie); polityczne rozwiązanie kryzysu autor uznaje za mało prawdopodobne.",
+      "dla_polski": "Wysokie ceny paliw nie są epizodem: po wrześniowym wzroście inflacji (szybki szacunek GUS z 30.09) RPP na posiedzeniu 6–7.10 i rząd w budżecie powinny przyjmować scenariusz drogiej ropy w horyzoncie wielu miesięcy (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "OSW",
+          "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-10-01/kryzys-wokol-iranu-wojna-na-wielu-frontach",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "tytul": "Bałtyk: ryzyko ograniczonych prowokacji, nie inwazji",
+      "autor": "PISM (Marcin Andrzej Piotrowski), Komentarz z 29.09.2026",
+      "tagi": [
+        "rosja",
+        "nato",
+        "hybryda"
+      ],
+      "tekst": "Piotrowski referuje ocenę duńskiego wywiadu wojskowego z 24.09: według Duńczyków bezpieczeństwo w regionie bałtyckim szybko się pogarsza, a Rosja może przeprowadzić ograniczone uderzenia rakietowe lub dronowe na wschodnią flankę, także pod fałszywą flagą ukraińską, a nawet wprowadzić nieoznakowane siły lądowe do państwa NATO jako test spójności Sojuszu; takie operacje wymagałyby od kilku do sześciu miesięcy wykrywalnych przygotowań. Autor ocenia, że wnioski te są zbieżne z ocenami Francji, Polski, Niemiec i Litwy.",
+      "dla_polski": "Szwedzkie Gripeny i nowe procedury obrony powietrznej odpowiadają na scenariusz ograniczonych uderzeń; kilkumiesięczny czas przygotowań, jaki zakłada duński wywiad, przemawia za stałym monitorowaniem wskaźników ostrzegawczych w obwodzie królewieckim i na Białorusi oraz szybką, jawną atrybucją incydentów (wniosek redakcji).",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/wywiad-danii-aktualizuje-ocene-zagrozen-z-rosji",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "tytul": "USA–Chiny: „strategiczna stabilizacja” bez rozwiązania sporów",
+      "autor": "PISM (Paul Balawajder), Biuletyn nr 67 (3201), 1.10.2026",
+      "tagi": [
+        "usa",
+        "chiny"
+      ],
+      "tekst": "Według Balawajdera ograniczone rezultaty wrześniowego szczytu w Waszyngtonie świadczą o słabości strategii negocjacyjnej administracji {{o:donald-trump|Donalda Trumpa}}; spory o kontrolę eksportu technologii, dostęp do półprzewodników i chińskie licencje na metale ziem rzadkich pozostają nierozwiązane.",
+      "dla_polski": "PISM zaleca Polsce i UE dywersyfikację dostaw surowców krytycznych (Afryka, Ameryka Łacińska, Azja Południowo-Wschodnia, Australia) i instrumenty ochrony rynku przed gwałtownym napływem importu.",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/strategiczna-stabilizacja-w-polityce-administracji-usa-wobec-chin",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "tytul": "Ochrona wyborów przed obcymi operacjami informacyjnymi – model francuski",
+      "autor": "PISM (Amanda Dziubińska, Aleksandra Wójtowicz), Biuletyn nr 66 (3200), 29.09.2026",
+      "tagi": [
+        "hybryda",
+        "francja"
+      ],
+      "tekst": "Autorki opisują francuski system, w którym zagraniczne manipulacje informacyjne traktuje się jako zagrożenie bezpieczeństwa państwa, a reakcję koordynuje {{p:viginum|VIGINUM}} i sieć ochrony wyborów; system skutecznie wykrywa pojedyncze operacje, natomiast jego zdolność reagowania na masowe kampanie nie została jeszcze sprawdzona – sprawdzianem będą wybory prezydenckie w 2027.",
+      "dla_polski": "PISM rekomenduje stały międzyinstytucjonalny mechanizm ochrony wyborów z udziałem PKW, wzmocnienie {{p:nask|NASK}} jako koordynatora przeciwdziałania dezinformacji i jawne wskazywanie autorów operacji wpływu.",
+      "zrodla": [
+        {
+          "nazwa": "PISM",
+          "url": "https://www.pism.pl/publikacje/francuski-model-przeciwdzialania-zagranicznym-operacjom-informacyjnym",
+          "data": "2026-09-29"
+        }
+      ]
+    }
+  ],
+  "kalendarz": [
+    {
+      "data": "2026-10-02",
+      "tekst": "Rada UE ds. Wymiaru Sprawiedliwości i Spraw Wewnętrznych (część: sprawiedliwość).",
+      "tagi": [
+        "ue"
+      ]
+    },
+    {
+      "data": "2026-10-02",
+      "tekst": "Słowacja: wstępnie zaplanowana rada koalicyjna; wniosek premiera Roberta Fico o nominację Filipa Kuffy (SNS) na ministra środowiska w miejsce odwołanego Tomáša Taraby oczekiwany na początku przyszłego tygodnia.",
+      "tagi": [
+        "slowacja"
+      ],
+      "zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/danko-veri-ze-fico-zaciatkom-tyzd/996488-clanok.html",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-03",
+      "tekst": "Wybory do Sejmu Łotwy.",
+      "tagi": [
+        "lotwa",
+        "wybory"
+      ]
+    },
+    {
+      "data": "2026-10-04",
+      "tekst": "Wybory powszechne w Bośni i Hercegowinie.",
+      "tagi": [
+        "balkany",
+        "wybory"
+      ]
+    },
+    {
+      "data": "2026-10-05",
+      "tekst": "Rumunia: zapowiedziane konsultacje prezydenta Nicușora Dana z partiami i wskazanie nowego kandydata na premiera.",
+      "tagi": [
+        "rumunia"
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "tekst": "Litwa: planowane (zapowiedź przewodniczącego Sejmu) pierwsze z dwóch rozstrzygających głosowań Sejmu nad uchyleniem art. 137 konstytucji (wymagane min. 94 głosy).",
+      "tagi": [
+        "litwa"
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "tekst": "6–7.10: posiedzenie Rady Polityki Pieniężnej.",
+      "tagi": [
+        "gospodarka"
+      ]
+    },
+    {
+      "data": "2026-10-08",
+      "tekst": "Eurogrupa (8.10) i ECOFIN (9.10).",
+      "tagi": [
+        "ue"
+      ]
+    },
+    {
+      "data": "2026-10-09",
+      "tekst": "9–10.10: Czechy – I tura wyborów do Senatu i wybory samorządowe; II tura 16–17.10.",
+      "tagi": [
+        "czechy",
+        "wybory"
+      ]
+    }
+  ],
+  "poza_oknem": [
+    {
+      "data": "2026-10-12",
+      "tekst": "12–18.10: doroczne zgromadzenia MFW i Banku Światowego (Bangkok)",
+      "tagi": [
+        "mfw"
+      ]
+    },
+    {
+      "data": "2026-10-15",
+      "tekst": "15–16.10: Rada Europejska – negocjacje WRF 2028–34",
+      "tagi": [
+        "ue"
+      ]
+    },
+    {
+      "data": "2026-10-25",
+      "tekst": "wybory parlamentarne w Serbii",
+      "tagi": [
+        "balkany",
+        "wybory"
+      ]
+    },
+    {
+      "data": "2026-11-03",
+      "tekst": "wybory połowy kadencji w USA",
+      "tagi": [
+        "usa",
+        "wybory"
+      ]
+    }
+  ],
+  "zrodla_analityczne": {
+    "osw": [
+      {
+        "tytul": "Kryzys wokół Iranu – wojna na wielu frontach (Komentarze OSW)",
+        "autor": "Krzysztof Strachota",
+        "data": "2026-10-01",
+        "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-10-01/kryzys-wokol-iranu-wojna-na-wielu-frontach"
+      },
+      {
+        "tytul": "Wstrząs na tureckiej giełdzie: kolejny kryzys zaufania do rynku",
+        "autor": "Adam Michalski",
+        "data": "2026-10-01",
+        "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-10-01/wstrzas-na-tureckiej-gieldzie-kolejny-kryzys-zaufania-do-rynku"
+      },
+      {
+        "tytul": "Rosjanie atakują centra danych w Kijowie. 1679. dzień wojny",
+        "autor": "zespół",
+        "data": "2026-09-29",
+        "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-29/rosjanie-atakuja-centra-danych-w-kijowie-1679-dzien-wojny"
+      }
+    ],
+    "pism": [
+      {
+        "tytul": "„Strategiczna stabilizacja” w polityce administracji USA wobec Chin",
+        "autor": "Paul Balawajder",
+        "numer": "Biuletyn nr 67 (3201)",
+        "data": "2026-10-01",
+        "url": "https://www.pism.pl/publikacje/strategiczna-stabilizacja-w-polityce-administracji-usa-wobec-chin"
+      },
+      {
+        "tytul": "Korea Płd. oskarża Koreę Płn. o podłożenie min w DMZ",
+        "autor": "Oskar Pietrewicz",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/korea-pld-oskarza-koree-pln-o-podlozenie-min-w-dmz"
+      },
+      {
+        "tytul": "W wyborach parlamentarnych w Maroku zwyciężyła partia z koalicji rządzącej",
+        "autor": "Julia Sochacka",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/w-wyborach-parlamentarnych-w-maroku-zwyciezyla-partia-z-koalicji-rzadzacej"
+      },
+      {
+        "tytul": "Przyszłość rosyjskiej bazy wojskowej w Armenii",
+        "autor": "Wojciech Wojtasiewicz",
+        "numer": "krótki tekst",
+        "data": "2026-09-30",
+        "url": "https://www.pism.pl/publikacje/przyszlosc-rosyjskiej-bazy-wojskowej-w-armenii"
+      },
+      {
+        "tytul": "Francuski model przeciwdziałania zagranicznym operacjom informacyjnym",
+        "autor": "Amanda Dziubińska, Aleksandra Wójtowicz",
+        "numer": "Biuletyn nr 66 (3200)",
+        "data": "2026-09-29",
+        "url": "https://www.pism.pl/publikacje/francuski-model-przeciwdzialania-zagranicznym-operacjom-informacyjnym"
+      },
+      {
+        "tytul": "Wywiad Danii aktualizuje ocenę zagrożeń z Rosji",
+        "autor": "Marcin Andrzej Piotrowski",
+        "numer": "Komentarz",
+        "data": "2026-09-29",
+        "url": "https://www.pism.pl/publikacje/wywiad-danii-aktualizuje-ocene-zagrozen-z-rosji"
+      },
+      {
+        "tytul": "Szczyt BRICS w Indiach pokazał przydatność grupy mimo podziałów",
+        "autor": "Patryk Kugiel",
+        "numer": "krótki tekst",
+        "data": "2026-09-29",
+        "url": "https://www.pism.pl/publikacje/szczyt-brics-w-indiach-pokazal-przydatnosc-grupy-mimo-podzialow"
+      }
+    ]
+  },
+  "czego_nie_ma": [
+    {
+      "tekst": "Wniesienie projektu budżetu Rosji na 2027–2029 do Dumy (Meduza: 30.09, wydatki obronne 17,1 bln rub.; Moscow Times podaje 1.10) – poza Meduzą tylko Interfax i media państwowe; brak drugiego niezależnego źródła z poziomów 1–2.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Dron na terenie Instytutu Badań Jądrowych w Kijowie (30.09; reaktor badawczy WWR-M nieuszkodzony wg ukraińskiego dozoru jądrowego) – z poziomów 1–2 tylko Kyiv Independent, brak komunikatu MAEA.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Nocny atak 30.09/1.10 (107 dronów wg Sił Powietrznych Ukrainy, co najmniej 6 zabitych) – jedno źródło i kolejny atak z tego samego ciągu.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "„Ultimatum” sześciu płatników netto (Niemcy, Austria, Dania, Finlandia, Holandia, Szwecja) w sprawie cięć WRF 2028–34 o „kilkaset mld euro” – PAP (30.09) przedstawia je jako nowe, Reuters opisał wspólne stanowisko tych państw już 27.08; nie ustalono, czy powstał nowy dokument.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Francja: projekt budżetu na 2027 (deficyt 5,0% PKB, ok. 54 mld euro oszczędności) – z 1.10 jedno źródło agencyjne (Reuters).",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Węgry: areszt byłego ministra Balázsa Hankó (sąd rejonowy w Kecskemét, 1.10) – tylko serwisy węgierskie spoza rankingu; nazwisko nowego kandydata na prokuratora generalnego nieogłoszone.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Reakcje na rosyjskie ostrzeżenie w sprawie obwodu królewieckiego z 1.10 (minister obrony Łotwy – jedno źródło); komunikatu MSZ RP nie znaleziono.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Wyjątek dla LNG z Sachalinu-2 w nowych sankcjach brytyjskich (Kyiv Independent) – nota sankcyjna rządu brytyjskiego go nie zawiera; zapowiedź cła 300% na rosyjskie zboże na Łotwie – jedno źródło.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Rumunia: prezydent nie rozwiązał parlamentu, zapowiedział konsultacje 5.10 (w kalendarzu); Słowacja: następca Taraby nienominowany; Serbia: wybory prezydenckie nierozpisane do 1.10.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Kursy NBP z 1.10 (tabela 191/A/NBP/2026: EUR 4,3770, USD 3,8762) i Brent ok. 102 USD (TradingEconomics, notowanie śróddzienne) – bez zdarzenia nadzwyczajnego.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Dziewiąty polski F-35A w Łasku (1.10) – dostawa planowa; orędzie prezydenta Karola Nawrockiego i podpis ustawy o nadmiarowych zyskach koncernów paliwowych – sprawa krajowa.",
+      "prog": "następstwo"
+    }
+  ],
+  "nota": "Wydanie przygotowane 1.10.2026 między 21:20 a 21:40 CEST (z opóźnieniem wobec planowanej 20:00) na podstawie stron otwartych tego dnia: komunikaty Rady UE, rządów Szwecji i Wielkiej Brytanii, AP, ČTK, ERR, SVT, Kyiv Independent, OSW, PISM, NBP, TASR. Niedostępne: Reuters (wyszukiwanie zablokowane), France 24 (robots.txt), US News (403), lista publikacji PISM (błąd 500 – publikacje zebrano ze strony głównej i otwarto osobno). Fakty stałe z rejestru użyte w kalendarzu sprawdzono w ciągu ostatnich 7 dni. Korekta: numer Biuletynu PISM nr 65. Kontrola niezależna przed wysyłką: 3 błędy poprawione (liczby w sankcjach brytyjskich: 22 osoby i 8 statków zamiast 14 i 16; przypisanie tez duńskiemu wywiadowi zamiast autorowi PISM; streszczenie Biuletynu nr 66) i 5 doprecyzowań (streszczenie OSW, cytat ministra Jonsona z komunikatu rządu, kalendarz: Litwa, Słowacja, Rada WSiSW)."
+}

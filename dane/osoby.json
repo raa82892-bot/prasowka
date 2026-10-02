@@ -471,6 +471,32 @@
           "data": "2026-09-21"
         }
       ]
+    },
+    {
+      "id": "margus-tsahkna",
+      "imie": "Margus Tsahkna",
+      "funkcja": "Minister spraw zagranicznych Estonii.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "ERR",
+          "url": "https://news.err.ee/1610153278/estonia-bans-grain-transit-from-russia-and-belarus",
+          "data": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "pal-jonson",
+      "imie": "Pål Jonson",
+      "funkcja": "Minister obrony Szwecji.",
+      "zweryfikowano": "2026-10-01",
+      "zrodla": [
+        {
+          "nazwa": "Rząd Szwecji",
+          "url": "https://www.regeringen.se/pressmeddelanden/2026/09/sverige-bidrar-med-stridsflyg-till-natoinsats-i-polen/",
+          "data": "2026-09-30"
+        }
+      ]
     }
   ]
 }

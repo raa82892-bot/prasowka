@@ -53,7 +53,21 @@
       "id": "obronnosc-polski",
       "nazwa": "ObronnośćPolski",
       "grupa": "temat",
-      "opis": "Siły zbrojne RP, procedury obrony powietrznej, budżet obronny."
+      "opis": "Siły zbrojne RP, procedury obrony powietrznej, budżet obronny.",
+      "stan": "Od 1.10 obowiązują nowe procedury obrony powietrznej; od października szwedzkie Gripeny wspierają obronę powietrzną nad Polską.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rząd Szwecji",
+          "url": "https://www.regeringen.se/pressmeddelanden/2026/09/sverige-bidrar-med-stridsflyg-till-natoinsats-i-polen/",
+          "data": "2026-09-30"
+        },
+        {
+          "nazwa": "SVT",
+          "url": "https://www.svt.se/nyheter/utrikes/sverige-skickar-gripen-till-polen-igen",
+          "data": "2026-09-30"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "dyplomacja-rp",
@@ -65,7 +79,21 @@
       "id": "sankcje",
       "nazwa": "Sankcje",
       "grupa": "temat",
-      "opis": "Sankcje UE, USA i innych państw oraz ich omijanie."
+      "opis": "Sankcje UE, USA i innych państw oraz ich omijanie.",
+      "stan": "1.10 Wielka Brytania objęła sankcjami 31 nowych celów (w tym 8 statków), Estonia zakazała tranzytu zboża z Rosji i Białorusi. Nowego pakietu UE (po 21. z lipca) brak.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rząd Wielkiej Brytanii (Sanctions Notice, Russia)",
+          "url": "https://assets.publishing.service.gov.uk/media/6abe173e9c196f81005e5d7c/Sanctions_Notice__Russia__01_October_2026.pdf",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "ERR",
+          "url": "https://news.err.ee/1610153278/estonia-bans-grain-transit-from-russia-and-belarus",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "iran",
@@ -95,7 +123,16 @@
       "id": "ue",
       "nazwa": "UE",
       "grupa": "temat",
-      "opis": "Unia Europejska: Rada, Komisja, obronność, budżet WRF 2028–2034."
+      "opis": "Unia Europejska: Rada, Komisja, obronność, budżet WRF 2028–2034.",
+      "stan": "1.10 Rada UE przyjęła rozporządzenie powrotowe z centrami powrotowymi poza UE; przed Radą Europejską 15–16.10 trwa spór o wielkość WRF 2028–34.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rada UE",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/01/council-adopts-new-rules-on-return-for-those-with-no-right-to-stay-in-the-eu/",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "onz",
@@ -119,7 +156,21 @@
       "id": "czechy",
       "nazwa": "Czechy",
       "grupa": "miejsce",
-      "opis": "Polityka Czech: rząd, parlament, wybory."
+      "opis": "Polityka Czech: rząd, parlament, wybory.",
+      "stan": "Rząd Babiša przetrwał 1.10 wotum nieufności (83 głosy za odwołaniem, potrzeba 101). Przed nim wybory do Senatu 9–10.10.",
+      "stan_zrodla": [
+        {
+          "nazwa": "AP (za Infonews)",
+          "url": "https://infonews.ca/news/7900014/czech-prime-minister-andrej-babis-government-survives-no-confidence-vote/",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "ČTK",
+          "url": "https://www.ceskenoviny.cz/zpravy/snemovni-opozici-se-ani-napodruhe-nepodarilo-svrhnout-babisovu-vladu/2881493",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "slowacja",
@@ -149,13 +200,41 @@
       "id": "estonia",
       "nazwa": "Estonia",
       "grupa": "miejsce",
-      "opis": "Polityka i bezpieczeństwo Estonii."
+      "opis": "Polityka i bezpieczeństwo Estonii.",
+      "stan": "Rząd zakazał 1.10 tranzytu zboża z Rosji i Białorusi przez terytorium Estonii.",
+      "stan_zrodla": [
+        {
+          "nazwa": "ERR",
+          "url": "https://news.err.ee/1610153278/estonia-bans-grain-transit-from-russia-and-belarus",
+          "data": "2026-10-01"
+        },
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/estonia-bans-transit-of-grain-from-russia-belarus/",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "nordyckie",
       "nazwa": "Nordyckie",
       "grupa": "miejsce",
-      "opis": "Szwecja, Finlandia, Norwegia, Dania, Islandia."
+      "opis": "Szwecja, Finlandia, Norwegia, Dania, Islandia.",
+      "stan": "Szwecja od października kieruje Gripeny do natowskiej obrony powietrznej nad Polską (ok. dwa miesiące).",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rząd Szwecji",
+          "url": "https://www.regeringen.se/pressmeddelanden/2026/09/sverige-bidrar-med-stridsflyg-till-natoinsats-i-polen/",
+          "data": "2026-09-30"
+        },
+        {
+          "nazwa": "SVT",
+          "url": "https://www.svt.se/nyheter/utrikes/sverige-skickar-gripen-till-polen-igen",
+          "data": "2026-09-30"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "francja",
@@ -167,7 +246,16 @@
       "id": "wielka-brytania",
       "nazwa": "WielkaBrytania",
       "grupa": "miejsce",
-      "opis": "Polityka Wielkiej Brytanii i jej bezpieczeństwo."
+      "opis": "Polityka Wielkiej Brytanii i jej bezpieczeństwo.",
+      "stan": "1.10 rząd wpisał na listę sankcji wobec Rosji 31 nowych celów, m.in. gazowce z rosyjskim LNG.",
+      "stan_zrodla": [
+        {
+          "nazwa": "Rząd Wielkiej Brytanii (Sanctions Notice, Russia)",
+          "url": "https://assets.publishing.service.gov.uk/media/6abe173e9c196f81005e5d7c/Sanctions_Notice__Russia__01_October_2026.pdf",
+          "data": "2026-10-01"
+        }
+      ],
+      "stan_data": "2026-10-01"
     },
     {
       "id": "rumunia",

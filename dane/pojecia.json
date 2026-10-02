@@ -132,6 +132,36 @@
       "nazwa": "fundusze spójności",
       "pelna": "fundusze spójności",
       "definicja": "Środki UE na wyrównywanie różnic w rozwoju regionów. Komisja Europejska może je wstrzymać, gdy państwo łamie praworządność, i odblokować po usunięciu naruszeń."
+    },
+    {
+      "id": "lng",
+      "nazwa": "LNG",
+      "pelna": "skroplony gaz ziemny (liquefied natural gas)",
+      "definicja": "Gaz ziemny schłodzony do ok. −162°C i przewożony w postaci ciekłej gazowcami; pozwala sprzedawać gaz bez gazociągów."
+    },
+    {
+      "id": "huby-powrotowe",
+      "nazwa": "Centra powrotowe",
+      "pelna": "centra powrotowe (return hubs) w państwach trzecich",
+      "definicja": "Ośrodki poza UE, do których państwa członkowskie mogą kierować osoby z ostateczną decyzją o powrocie, na podstawie umowy z państwem przyjmującym i przy poszanowaniu zasady non-refoulement."
+    },
+    {
+      "id": "gripen",
+      "nazwa": "JAS 39 Gripen",
+      "pelna": "wielozadaniowy samolot myśliwski JAS 39 Gripen (Saab, Szwecja)",
+      "definicja": "Jednosilnikowy myśliwiec wielozadaniowy produkcji szwedzkiego koncernu Saab, podstawowy samolot bojowy szwedzkich sił powietrznych."
+    },
+    {
+      "id": "viginum",
+      "nazwa": "VIGINUM",
+      "pelna": "Service de vigilance et de protection contre les ingérences numériques étrangères",
+      "definicja": "Francuska służba rządowa (przy Sekretariacie Generalnym Obrony i Bezpieczeństwa Narodowego) wykrywająca i analizująca zagraniczne operacje informacyjne w sieci."
+    },
+    {
+      "id": "nask",
+      "nazwa": "NASK",
+      "pelna": "Naukowa i Akademicka Sieć Komputerowa – Państwowy Instytut Badawczy",
+      "definicja": "Polski instytut badawczy nadzorowany przez ministra cyfryzacji; prowadzi m.in. zespół CERT Polska i działania przeciw dezinformacji."
     }
   ]
 }
