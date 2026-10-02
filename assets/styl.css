@@ -328,3 +328,50 @@ a.pub-tytul:hover { color: var(--morze); text-decoration: underline; }
 #f-pism:focus-visible ~ .filtr label[for="f-pism"], #f-om:focus-visible ~ .filtr label[for="f-om"] { outline: 3px solid var(--morze); outline-offset: 2px; }
 #f-osw:checked ~ .pub-czyt li:not(.w-osw), #f-pism:checked ~ .pub-czyt li:not(.w-pism), #f-om:checked ~ .pub-czyt li[data-om="0"] { display: none; }
 @media print { .spis, .filtr { display: none; } }
+
+/* Top 10 – zestawienia okresowe */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.top-spis { background: var(--karta); padding: 12px 18px; margin: 16px 0 10px; }
+.top-spis ol, .top-lista { margin: 4px 0; padding-left: 28px; }
+.top-spis li, .top-lista li { margin: 5px 0; padding-left: 2px; }
+.top-spis li::marker, .top-lista li::marker { font: 700 15px var(--sans); color: var(--ochra); }
+.top-spis a, .top-lista a { color: var(--atrament); font-weight: 600; text-decoration: none; }
+.top-spis a:hover, .top-lista a:hover { color: var(--morze); text-decoration: underline; }
+.top-spis .top-okres { margin-left: 4px; font-weight: 400; }
+.top { background: var(--karta); padding: 18px 22px 14px; margin: 26px 0; border-top: 3px solid var(--atrament); }
+.top-glowa { display: flex; gap: 16px; align-items: flex-start; }
+.top-nr { font: 700 46px/0.95 var(--serif); color: var(--ochra); min-width: 1.15em; text-align: right; font-variant-numeric: tabular-nums; }
+.top-tytul { margin: 2px 0 6px; font-size: 24px; line-height: 1.25; color: var(--atrament); }
+.top-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; font: 13px/1.5 var(--sans); }
+.top-okres { font: 600 13px/1.5 var(--sans); color: var(--szary); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.top-lead { font-size: 19px; line-height: 1.55; margin: 14px 0 10px; color: var(--atrament); }
+.top > p { margin: 10px 0; }
+.top-h { font: 600 13px/1.4 var(--sans); text-transform: uppercase; letter-spacing: 0.06em; color: var(--szary); margin: 22px 0 8px; }
+.przebieg { list-style: none; margin: 0 0 0 5px; padding: 0; border-left: 2px solid var(--linia); }
+.przebieg li { display: grid; grid-template-columns: 50px 1fr; gap: 0 10px; padding: 6px 0 10px 14px; position: relative; font-size: 16px; }
+.przebieg li::before { content: ""; position: absolute; left: -7px; top: 12px; width: 8px; height: 8px; border-radius: 50%; background: var(--karta); border: 2px solid var(--atrament); }
+.pb-d { font: 600 14px/1.65 var(--sans); color: var(--atrament); font-variant-numeric: tabular-nums; }
+.pb-t p { margin: 0; }
+.pb-t .zrodla { margin-top: 3px; }
+.top-ocena { border-left: 3px solid var(--morze); padding: 2px 0 2px 14px; margin: 10px 0 14px; }
+.top-ocena p { margin: 4px 0; }
+.top-ocena .an-czytaj { margin: 8px 0; }
+.top .dla-polski { margin: 18px 0 6px !important; }
+.top-wyd { font: 14px/1.55 var(--sans); color: var(--szary); margin: 16px 0 0; }
+.top-wyd a { color: var(--szary); }
+.top-gora { font: 13px/1.4 var(--sans); margin: 8px 0 0; text-align: right; }
+.top-gora a { color: var(--szary); }
+.top-karta { background: var(--karta); padding: 14px 20px; margin: 16px 0; }
+.top-karta h2 { margin: 0; font-size: 22px; line-height: 1.3; }
+.top-karta h2 a { color: var(--atrament); text-decoration: none; }
+.top-karta .uwaga { margin: 2px 0 6px; }
+@media (max-width: 600px) {
+  .top { padding: 14px 14px 12px; }
+  .top-glowa { gap: 10px; }
+  .top-nr { font-size: 34px; }
+  .top-tytul { font-size: 20px; }
+  .top-lead { font-size: 17px; }
+  .przebieg li { grid-template-columns: 1fr; padding-left: 12px; }
+  .top-spis { padding: 10px 14px; }
+}
+@media print { .top-gora { display: none; } .top { break-inside: avoid-page; } }

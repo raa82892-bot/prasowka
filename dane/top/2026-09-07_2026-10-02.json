@@ -1,0 +1,1209 @@
+{
+  "od": "2026-09-07",
+  "do": "2026-10-02",
+  "opublikowano": "2026-10-02",
+  "godzina": "09:00",
+  "tytul": "Top 10: najważniejsze wydarzenia od 7 września do 2 października 2026",
+  "wstep": [
+    "Dziesięć wydarzeń, które w tym okresie najbardziej zmieniły sytuację z perspektywy Polski. Każde ma przebieg z datami i źródłami, oceny ekspertów z podpisem oraz wniosek „Dla Polski”.",
+    "Oś okresu to eskalacja Rosji wobec NATO: **groźba jądrowa w sprawie Królewca**, uderzenia tuż przy polskiej granicy i przygotowania do dłuższej wojny po wyborach do Dumy. Amerykańska mediacja nie przyniosła rozejmu."
+  ],
+  "kryteria": "Kolejność ustaliła redakcja według trzech pytań: jak bezpośrednio wydarzenie dotyczy bezpieczeństwa i interesów Polski, czy zapadła decyzja zmieniająca stan rzeczy i jak trwałe będą jej skutki. Ranking jest więc oceną, a nie faktem; fakty w każdej pozycji mają źródła, oceny – autora.",
+  "pozycje": [
+    {
+      "id": "krolewiec",
+      "tytul": "Rosja grozi NATO bronią jądrową w sprawie Królewca",
+      "tagi": [
+        "krolewiec",
+        "nato",
+        "rosja"
+      ],
+      "lead": "Rosja przekazała NATO pisemne ostrzeżenie: na próbę **odizolowania obwodu królewieckiego** odpowie „całym arsenałem, w tym bronią jądrową”. Dzień później {{o:wladimir-putin|Władimir Putin}} powtórzył tę groźbę publicznie.",
+      "omowienie": [
+        "W dokumencie, który widział Reuters, Moskwa oskarża Sojusz o „niebezpieczny i lekkomyślny kurs” grożący bezpośrednim konfliktem i zastrzega możliwość uderzeń na „ośrodki decyzyjne” państw członkowskich od samego początku takiego konfliktu. Ostrzeżenie powtórzyły rosyjskie ambasady w kilku stolicach, a rzecznik Kremla {{o:dmitrij-pieskow|Dmitrij Pieskow}} wiązał je z wypowiedziami o obwodzie płynącymi z Europy.",
+        "NATO potwierdziło otrzymanie dokumentu. Rzeczniczka Sojuszu {{o:allison-hart|Allison Hart}} oświadczyła, że NATO „stanowczo potępia groźbę użycia siły, w tym nieodpowiedzialną retorykę jądrową”, a jego ćwiczenia nie zagrażają terytorium Rosji. 1.10 na forum Klubu Wałdajskiego Putin mówił, że przy bezpośrednim ataku na Rosję, „w tym przypadku na Królewiec”, kwestia użycia całego arsenału „nieuchronnie” stanie na porządku dnia; za eskalację uznał kolejne ćwiczenia na Bałtyku i próby zatrzymywania rosyjskich statków."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-30",
+          "tekst": "Rosja przekazała NATO pisemny dokument: w razie próby odizolowania obwodu królewieckiego użyje całego arsenału, w tym broni jądrowej, i zastrzega możliwość uderzeń na „ośrodki decyzyjne” państw NATO.",
+          "zrodla": [
+            {
+              "nazwa": "Reuters (za The Moscow Times)",
+              "url": "https://www.themoscowtimes.com/2026/09/30/moscow-sends-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic-a93828",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "AP (za CP24)",
+              "url": "https://www.cp24.com/news/world/2026/09/30/russia-warns-nato-of-a-possible-nuclear-response-if-kaliningrad-is-cut-off/",
+              "data": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "NATO potwierdziło otrzymanie dokumentu; rzeczniczka Allison Hart potępiła groźbę użycia siły i „nieodpowiedzialną retorykę jądrową”.",
+          "zrodla": [
+            {
+              "nazwa": "AP (za CP24)",
+              "url": "https://www.cp24.com/news/world/2026/09/30/russia-warns-nato-of-a-possible-nuclear-response-if-kaliningrad-is-cut-off/",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russia-issues-new-nuclear-threat-over-kaliningrad-as-tensions-with-nato-rise/",
+              "data": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "data": "2026-10-01",
+          "tekst": "Putin na forum Klubu Wałdajskiego: przy bezpośrednim ataku na Rosję, „w tym przypadku na Królewiec”, kwestia użycia całego arsenału stanie na porządku dnia.",
+          "zrodla": [
+            {
+              "nazwa": "CNN (za KVIA)",
+              "url": "https://kvia.com/news/us-world/cnn-world/2026/10/01/putin-warns-west-that-russia-is-prepared-to-use-all-weapons-to-protect-baltic-exclave/",
+              "data": "2026-10-01"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/putin-vows-russia-will-respond-with-all-weapons-at-our-disposal-if-attacked-by-nato/",
+              "data": "2026-10-02"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "PISM (Anna Maria Dyner), Biuletyn nr 65 (3199), 28.09.2026",
+          "tekst": "Według Dyner wynik wyborów do Dumy pokazuje, że Moskwa nie jest zainteresowana deeskalacją. Autorka spodziewa się nasilenia uderzeń na Ukrainę i skoordynowanych działań hybrydowych wobec Polski, państw bałtyckich, Wielkiej Brytanii i Francji – wymierzonych w infrastrukturę krytyczną i w wybory w 2027 r.",
+          "zrodla": [
+            {
+              "nazwa": "PISM",
+              "url": "https://pism.pl/publikacje/rosyjski-potencjal-eskalacyjny",
+              "data": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "autor": "PISM (Marcin Andrzej Piotrowski), Komentarz z 29.09.2026, za oceną duńskiego wywiadu wojskowego z 24.09",
+          "tekst": "Piotrowski referuje ocenę Duńczyków: Rosja może przeprowadzić ograniczone uderzenia rakietowe lub dronowe na wschodnią flankę NATO, także pod fałszywą flagą, a przygotowania do takich operacji trwałyby od kilku do sześciu miesięcy i byłyby wykrywalne. Autor uznaje te wnioski za zbieżne z ocenami Francji, Polski, Niemiec i Litwy.",
+          "zrodla": [
+            {
+              "nazwa": "PISM",
+              "url": "https://www.pism.pl/publikacje/wywiad-danii-aktualizuje-ocene-zagrozen-z-rosji",
+              "data": "2026-09-29"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Obwód królewiecki graniczy z Polską, a groźba dotyczy właśnie scenariusza jego izolacji – każda polska decyzja o ćwiczeniach, kontroli żeglugi na Bałtyku czy obronie przesmyku suwalskiego będzie w Moskwie czytana w tym kluczu. Wniosek redakcji: takie kroki warto uzgadniać w NATO i jawnie komunikować ich obronny charakter, nie rezygnując z nich pod presją groźby.",
+      "w_wydaniach": [
+        "2026-09-30#z2",
+        "2026-09-24#z4"
+      ]
+    },
+    {
+      "id": "granica-niebo",
+      "tytul": "Wojna tuż przy polskiej granicy i nowe zasady obrony nieba",
+      "tagi": [
+        "obronnosc-polski",
+        "hybryda",
+        "rosja",
+        "nordyckie"
+      ],
+      "etap": "PRZYJĘTE",
+      "lead": "Rosyjskie drony dwa razy uderzyły tuż przy przejściu Dorohusk–Jagodzin, a śmigłowiec Mi-8 na krótko naruszył polską przestrzeń powietrzną. Od 1.10 wojsko stosuje **{{p:identyfikacja-pozytywna|identyfikację pozytywną}}** zamiast wzrokowej, a szwedzkie {{p:gripen|Gripeny}} wspierają obronę nieba nad Polską.",
+      "omowienie": [
+        "We wrześniu rosyjskie uderzenia na zachodnią Ukrainę kilka razy padły tuż przy Polsce. 13.09 drony uszkodziły lokomotywę pociągu Kijów–Warszawa na stacji Jagodzin, ok. 2 km od granicy, i stację paliw przy przejściu; 28.09 dron odrzutowy uderzył – według ministra obrony – ok. 2 km od przejścia w Dorohusku, po stronie ukraińskiej. 23.09 rosyjski Mi-8 z obwodu królewieckiego przez 42 sekundy leciał nad Polską na północ od Braniewa. W nocy z 23 na 24.09 spłonęła stacja naziemna Starlink pod Grójcem; prokuratura bada to jako sabotaż na rzecz obcego wywiadu.",
+        "Odpowiedzią jest zmiana zasad. Wicepremier, minister obrony {{o:wladyslaw-kosiniak-kamysz|Władysław Kosiniak-Kamysz}} ogłosił, że od 1.10 decyzja o zestrzeleniu może zapaść na podstawie danych z radarów i systemów elektronicznych, także informacji z Ukrainy, bez zbliżania się pilota do obiektu. Zmianę wprowadzają rozkazy dowództwa, bez ustawy. 30.09 Szwecja zdecydowała, że jej myśliwce od października wesprą natowską obronę powietrzną nad Polską i ochronę węzła logistycznego pomocy dla Ukrainy."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-13",
+          "tekst": "Rosyjskie drony uderzyły przy przejściu Dorohusk–Jagodzin: uszkodzona lokomotywa pociągu Kijów–Warszawa na stacji Jagodzin, ok. 2 km od granicy, i stacja paliw.",
+          "zrodla": [
+            {
+              "nazwa": "PAP (za portalsamorzadowy.pl)",
+              "url": "https://www.portalsamorzadowy.pl/wydarzenia-lokalne/pilna-narada-na-najwyzszym-szczeblu-panstwowym-chodzi-o-bezpieczenstwo-polski,676731.html",
+              "data": "2026-09-18"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-15/rosjanie-uderzaja-przy-granicy-z-polska-1665-dzien-wojny",
+              "data": "2026-09-15"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russias-strike-near-poland-put-ukraines-railway-lifeline-in-focus-but-the-bigger-threat-lies-elsewhere/",
+              "data": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-23",
+          "tekst": "Rosyjski śmigłowiec Mi-8 z obwodu królewieckiego naruszył polską przestrzeń powietrzną na północ od Braniewa (ok. 300 m w głąb, 42 sekundy); Dowództwo Operacyjne RSZ poderwało myśliwce.",
+          "zrodla": [
+            {
+              "nazwa": "PAP (za portalsamorzadowy.pl)",
+              "url": "https://www.portalsamorzadowy.pl/wydarzenia-lokalne/rosja-naruszyla-polska-przestrzen-powietrzna-mysliwce-ruszyly-za-smiglowcem-mi-8,677294.html",
+              "data": "2026-09-23"
+            },
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "Defence24",
+              "url": "https://defence24.pl/polityka-obronna/rosyjski-smiglowiec-naruszyl-polska-przestrzen-powietrzna",
+              "data": "2026-09-23"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-24",
+          "tekst": "W nocy z 23 na 24.09 spłonęła stacja naziemna Starlink w Woli Krobowskiej (pow. grójecki); prokuratura prowadzi śledztwo w sprawie sabotażu i przestępstwa o charakterze terrorystycznym na rzecz obcego wywiadu.",
+          "zrodla": [
+            {
+              "nazwa": "Prokuratura Krajowa (gov.pl)",
+              "url": "https://www.gov.pl/web/prokuratura-krajowa/wszczecie-sledztwa-w-sprawie-pozaru-stacji-starlink-w-woli-krobowskiej",
+              "data": "2026-09-24"
+            },
+            {
+              "nazwa": "RMF24",
+              "url": "https://www.rmf24.pl/regiony/warszawa/news-sabotaz-przestepstwo-terrorystyczne-rosyjskie-sluzby-jest-sl,nIdn,1019237",
+              "data": "2026-09-25"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-28",
+          "tekst": "Według ministra obrony rosyjski dron odrzutowy uderzył po stronie ukraińskiej ok. 2 km od przejścia w Dorohusku; nie doszło do naruszenia polskiej przestrzeni powietrznej.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russian-drone-strikes-near-ukraine-poland-border-crossing-in-volyn-oblast/",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "PAP (za portalsamorzadowy.pl)",
+              "url": "https://www.portalsamorzadowy.pl/polityka-i-spoleczenstwo/szef-mon-dron-uderzyl-ok-2-km-od-polskiej-granicy,677836.html",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "RMF24",
+              "url": "https://www.rmf24.pl/fakty/swiat/news-rosyjski-dron-uderzyl-tuz-przy-polskiej-granicy-incydent-w-p,nIdn,1019550",
+              "data": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "Od 1.10 piloci i obrona powietrzna stosują identyfikację pozytywną (radary, systemy elektroniczne, informacje m.in. z Ukrainy) zamiast wzrokowej; zmiana na poziomie rozkazów dowództwa, bez ustawy (zapowiedź MON z 28.09).",
+          "zrodla": [
+            {
+              "nazwa": "PAP (za portalsamorzadowy.pl)",
+              "url": "https://www.portalsamorzadowy.pl/wydarzenia-lokalne/koniec-samego-odstraszania-wrogich-samolotow-od-1-pazdziernika-mysliwce-moga-strzelac,678097.html",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "AFP (za Insider Paper)",
+              "url": "https://insiderpaper.com/poland-to-allow-fighter-pilots-to-shoot-down-foreign-aircraft-defense-minister-says",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "Dziennik.pl / Gazeta Prawna",
+              "url": "https://wiadomosci.dziennik.pl/polityka/artykuly/11322248,zmiany-w-obronie-polskiego-nieba-wojsko-wprowadza-nowe-zasady.html",
+              "data": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "Rząd Szwecji: myśliwce JAS 39 Gripen ze skrzydła F 17 od października wspierają natowską obronę powietrzną nad Polską i ochronę węzła logistycznego w południowo-wschodniej Polsce; działają głównie ze Szwecji, misja ma trwać ok. dwóch miesięcy (SVT).",
+          "zrodla": [
+            {
+              "nazwa": "Rząd Szwecji",
+              "url": "https://www.regeringen.se/pressmeddelanden/2026/09/sverige-bidrar-med-stridsflyg-till-natoinsats-i-polen/",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "SVT",
+              "url": "https://www.svt.se/nyheter/utrikes/sverige-skickar-gripen-till-polen-igen",
+              "data": "2026-09-30"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Marek Menkiszak), Analiza z 18.09.2026",
+          "tekst": "Menkiszak ocenia, że Rosja, która utknęła militarnie, prowadzi trójtorową strategię: nasilać uderzenia na Ukrainę, destabilizować Europę działaniami hybrydowymi – dezinformacją, sabotażem, cyberatakami i wlotami dronów – oraz zjednywać administrację USA perspektywą interesów. Sygnały słabości Zachodu Moskwa odczytuje według niego jako potwierdzenie, że eskalacja się opłaca.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-18/rosyjski-plan-wojny-podporzadkowac-ukraine-zastraszyc-europe",
+              "data": "2026-09-18"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Nowe procedury skracają czas reakcji, ale przenoszą ciężar decyzji na dowódców i dane z czujników – pomyłka w identyfikacji przy granicy miałaby poważne skutki polityczne. Wniosek redakcji: równie ważne jak szybkie strzelanie jest szybkie i jawne informowanie o każdym incydencie (co, gdzie, kiedy) oraz stała wymiana danych radarowych z Ukrainą, na którą MON już się powołuje.",
+      "w_wydaniach": [
+        "2026-09-24#z5",
+        "2026-09-26#z3",
+        "2026-09-29#z4",
+        "2026-09-29#z5",
+        "2026-09-30#z5",
+        "2026-10-01#z3"
+      ]
+    },
+    {
+      "id": "mediacja-usa",
+      "tytul": "Biały Dom wznawia mediację – bez przełomu",
+      "tagi": [
+        "rozejm",
+        "usa",
+        "rosja",
+        "ukraina"
+      ],
+      "lead": "Wysłannicy prezydenta USA {{o:steve-witkoff|Steve Witkoff}} i {{o:jared-kushner|Jared Kushner}} rozmawiali 5.09 z Putinem w Moskwie, a 6.09 z {{o:wolodymyr-zelenski|Wołodymyrem Zełenskim}} w Kijowie. Do 2.10 nie ogłoszono **ani rozejmu, ani daty rozmów trójstronnych**.",
+      "omowienie": [
+        "Na czas wizyty Kreml ogłosił trzydniową przerwę w atakach na Kijów, od północy 6.09. Rozmowy w Kijowie, z udziałem doradców ds. bezpieczeństwa Wielkiej Brytanii, Francji i Niemiec, nie przyniosły przełomu: Zełenski mówił, że Ukraina spodziewa się dalszej wojny i liczy na zimowy pakiet pomocy. W nocy na 8.09, po wyjeździe wysłanników, Rosja zaatakowała Kijów pociskami i dronami; zginęli cywile.",
+        "8.09 {{o:donald-trump|Donald Trump}} rozmawiał z Putinem przez około godzinę. Doradca Kremla {{o:jurij-uszakow|Jurij Uszakow}} zapewniał po niej, że Rosja nie ma „agresywnych planów” wobec Europy. 14.09 Trump ogłosił, że Ukraina i Rosja zgodziły się nie atakować swoich obiektów energetycznych – żadna ze stron tego nie potwierdziła, a pod koniec września Rosja zaatakowała ukraińską energetykę na dużą skalę. Równolegle Departament Stanu zatwierdził 19.09 możliwą sprzedaż Ukrainie sprzętu obrony powietrznej za 2,68 mld USD, finansowaną z wpłat europejskich i programu {{p:fmf|FMF}}."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-05",
+          "tekst": "Witkoff i Kushner u Putina w Moskwie; Kreml ogłosił trzydniową przerwę w atakach na Kijów od północy 6.09.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-07/witkoff-i-kushner-w-moskwie-oraz-kijowie-bialy-dom-wznawia",
+              "data": "2026-09-07"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russia-pounds-kyiv-in-overnight-attack-as-brief-truce-ends-in-missile-fire/",
+              "data": "2026-09-08"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-06",
+          "tekst": "Rozmowy wysłanników w Kijowie z Zełenskim i doradcami Wielkiej Brytanii, Francji i Niemiec – bez przełomu; strony chcą rozmów trójstronnych, bez terminu.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/us-envoys-witkoff-kushner-arrive-in-ukraine/",
+              "data": "2026-09-06"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-07/witkoff-i-kushner-w-moskwie-oraz-kijowie-bialy-dom-wznawia",
+              "data": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-08",
+          "tekst": "Po zakończeniu przerwy zmasowany atak pociskami i dronami na Kijów, z ofiarami śmiertelnymi wśród cywilów.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russia-pounds-kyiv-in-overnight-attack-as-brief-truce-ends-in-missile-fire/",
+              "data": "2026-09-08"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-08/trzy-dni-spokoju-w-kijowie-1658-dzien-wojny",
+              "data": "2026-09-08"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-08",
+          "tekst": "Godzinna rozmowa telefoniczna Trump–Putin; doradca Kremla Uszakow: Rosja nie ma „agresywnych planów” wobec Europy.",
+          "zrodla": [
+            {
+              "nazwa": "AFP (za Citizen Digital)",
+              "url": "https://citizen.digital/article/russia-says-putin-trump-had-frank-call-after-us-envoys-visit-n389806",
+              "data": "2026-09-09"
+            },
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/9/8/trump-putin-hold-frank-phone-call-as-us-restarts-ukraine-deal-efforts",
+              "data": "2026-09-08"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-14",
+          "tekst": "Trump: Ukraina i Rosja zgodziły się nie atakować celów energetycznych; ani Kijów, ani Moskwa tego nie potwierdziły.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/breaking-trump-claims-ukraine-russia-agree-to-halt-strikes-on-energy-targets/",
+              "data": "2026-09-14"
+            },
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/14/trump-says-ukraine-and-russia-agree-to-halt-strikes-on-energy-targets",
+              "data": "2026-09-14"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-19",
+          "tekst": "Departament Stanu zatwierdził możliwą sprzedaż Ukrainie sprzętu obrony powietrznej za 2,68 mld USD (m.in. pociski do systemów typu S-300, radary przeciwdronowe RPS-202), finansowaną z wpłat europejskich i FMF; sprzedaż podlega jeszcze przeglądowi w Kongresie.",
+          "etap": "ZAPOWIEDŹ",
+          "zrodla": [
+            {
+              "nazwa": "CBS",
+              "url": "https://www.cbsnews.com/news/us-ukraine-russia-war-air-defense-state-department/",
+              "data": "2026-09-19"
+            },
+            {
+              "nazwa": "Meduza",
+              "url": "https://meduza.io/en/news/2026/09/20/u-s-approves-potential-2-7-billion-air-defense-sale-to-ukraine-funded-by-european-contributions-and-biden-era-military-aid",
+              "data": "2026-09-19"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Witold Rodkiewicz, Marek Menkiszak, Krzysztof Nieczypor, Andrzej Kohut), Analiza z 7.09.2026",
+          "tekst": "Autorzy oceniają, że wizyty wysłanników nie przybliżą szybko porozumienia: Moskwa przedstawia się jako strona wygrywająca, nie rezygnuje z maksymalistycznych celów i dalej prowadzi działania hybrydowe wobec Europy, wykorzystując zarazem to, że Waszyngton zabiega o sukces dyplomatyczny przed wyborami połowy kadencji.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-07/witkoff-i-kushner-w-moskwie-oraz-kijowie-bialy-dom-wznawia",
+              "data": "2026-09-07"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Rozmowy o końcu wojny toczą się bez Polski, a ich wynik przesądzi o bezpieczeństwie wschodniej granicy i o przyszłości sankcji. Wniosek redakcji: Polska powinna zabiegać o stały udział europejskich doradców w każdym formacie rozmów – tak jak 6.09 w Kijowie – i łączyć poparcie dla mediacji z naciskiem na dostawy obrony powietrznej dla Ukrainy przed zimą.",
+      "co_dalej": [
+        {
+          "data": "2026-11-03",
+          "tekst": "wybory połowy kadencji w USA"
+        }
+      ],
+      "w_wydaniach": [
+        "2026-09-15#z1",
+        "2026-09-20#z3",
+        "2026-09-26#z2"
+      ]
+    },
+    {
+      "id": "wojna-powietrzna",
+      "tytul": "Wojna powietrzna przed zimą: energetyka i internet Ukrainy kontra rafinerie i Moskwa",
+      "tagi": [
+        "front",
+        "ukraina",
+        "rosja",
+        "energia"
+      ],
+      "lead": "Rosja zakończyła wrzesień **zmasowanym uderzeniem w energetykę Kijowa**. Wcześniej Ukraina przeprowadziła rekordowy atak dronów na Moskwę, który zatrzymał tamtejszą rafinerię.",
+      "omowienie": [
+        "20.09 Ukraina przeprowadziła największy dotąd atak dronów na Moskwę. Uszkodzona została rafineria w Kapotni, która zaopatruje stołeczny rynek paliw, i wstrzymano tam przerób ropy. Mer Moskwy twierdził, że w całej Rosji zestrzelono ponad 1600 dronów – tej liczby nie da się sprawdzić. Od 23.09 rosyjskie drony i rakiety uderzały w kijowskie centra danych, co przerwało dostęp do internetu w części miasta i pracę kilku mediów.",
+        "25.09 dron trafił w blok mieszkalny w Kijowie: zginęło co najmniej siedem osób, w tym 14-latek. W nocy na 30.09 Rosja użyła według Sił Powietrznych Ukrainy 188 dronów i pocisków balistycznych; głównym celem była energetyka Kijowa i obwodu kijowskiego, zginęły co najmniej cztery osoby, w tym dziecko."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-20",
+          "tekst": "Największy dotąd ukraiński atak dronów na Moskwę: uszkodzona rafineria w Kapotni wstrzymała przerób; mer Moskwy podał – bez możliwości weryfikacji – ponad 1600 zestrzelonych dronów w całej Rosji.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russia-says-dozens-of-ukrainian-drones-targeted-moscow-as-broader-attack-hit-multiple-regions/",
+              "data": "2026-09-20"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-22/ukraincy-przeciazaja-obrone-powietrzna-moskwy-1672-dzien-wojny",
+              "data": "2026-09-22"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-23",
+          "tekst": "Seria rosyjskich uderzeń w centra danych w Kijowie (od 23.09): uszkodzone obiekty kilku operatorów, przerwy w internecie i w nadawaniu części mediów.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russian-strikes-on-kyiv-data-centers-disrupt-operations-at-several-ukrainian-media-outlets/",
+              "data": "2026-09-26"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-29/rosjanie-atakuja-centra-danych-w-kijowie-1679-dzien-wojny",
+              "data": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-25",
+          "tekst": "Atak dronów na Kijów: trafiony 16-piętrowy blok w dzielnicy Peczerskiej; co najmniej siedem ofiar śmiertelnych, w tym 14-latek.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russian-overnight-attack-on-kyiv-sets-fires-damages-buildings/",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://www.rferl.org/a/ukraie-russia-attacks-civilians-killed-drone-threats/33864157.html",
+              "data": "2026-09-25"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "Noc 29/30.09: według Sił Powietrznych Ukrainy 188 dronów i pociski balistyczne; uderzenia głównie w energetykę Kijowa i obwodu kijowskiego; co najmniej cztery ofiary śmiertelne, w tym dziecko.",
+          "zrodla": [
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://www.rferl.org/a/russia-drone-missile-stirke-ukraine-kyiv/33866974.html",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/russian-attacks-kill-at-least-6-injure-34-across-ukraine-as-kyiv-faces-another-overnight-missile-drone-attack/",
+              "data": "2026-09-30"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Andrzej Wilk, Krzysztof Nieczypor, Jacek Tarociński), Analiza z 22.09.2026",
+          "tekst": "Według autorów Ukraina po raz pierwszy od miesięcy przeciążyła obronę powietrzną Moskwy. Zarazem ukraińska obrona słabo radzi sobie z pociskami manewrującymi poza Kijowem – w tygodniu 15–22.09 z około 52 pocisków przechwycono najwyżej dwa.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-22/ukraincy-przeciazaja-obrone-powietrzna-moskwy-1672-dzien-wojny",
+              "data": "2026-09-22"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Zima z przerwami w dostawach prądu i internetu w Ukrainie to większa presja na polskie przejścia graniczne, więcej transportów pomocy przez Polskę i – jak pokazał wrzesień – więcej rosyjskich uderzeń w szlaki tuż przy granicy. Wniosek redakcji: warto już teraz przygotować zimowe scenariusze dla przejść i węzła logistycznego na Podkarpaciu oraz rozważyć polski wkład w ochronę ukraińskiej energetyki (generatory, transformatory, obrona powietrzna).",
+      "w_wydaniach": [
+        "2026-09-22#z3",
+        "2026-09-25#z4",
+        "2026-09-30#z1"
+      ]
+    },
+    {
+      "id": "sankcje",
+      "tytul": "Sankcje: ustawa Grahama, trzy lata unijnych list i nowe zakazy",
+      "tagi": [
+        "sankcje",
+        "usa",
+        "ue",
+        "wielka-brytania",
+        "estonia"
+      ],
+      "etap": "PRZYJĘTE",
+      "lead": "{{o:donald-trump|Donald Trump}} podpisał 18.09 ustawę Lindseya Grahama, która pozwala nałożyć **{{p:cla-wtorne|cła wtórne}} do 100%** na największych nabywców rosyjskiej ropy i gazu. UE przedłużyła sankcje indywidualne wobec Rosji od razu na trzy lata, a Wielka Brytania i Estonia dodały nowe restrykcje.",
+      "omowienie": [
+        "Ustawę przyjął Senat w sierpniu, a Izba Reprezentantów 16.09. Upoważnia prezydenta do ceł do 100% na towary z państw należących do pięciu największych importerów rosyjskiej ropy lub gazu (głównie Chiny i Indie) i do 500% na import z Rosji, rozszerza sankcje na urzędników, banki i statki pomagające obchodzić restrykcje, a irańską ustawę sankcyjną przedłuża o pięć lat. Prezydent może z ceł i sankcji zwolnić, przedstawiając Kongresowi certyfikat interesu narodowego.",
+        "22.09 państwa UE uzgodniły przedłużenie sankcji indywidualnych wobec Rosji na 36 miesięcy zamiast dotychczasowych sześciu. Zapłaciły za to skreśleniem z listy dwóch oligarchów – jednego na wniosek Francji, drugiego po wecie Słowacji. 1.10 Wielka Brytania wpisała na swoją listę 31 nowych celów, w tym gazowce przewożące rosyjski {{p:lng|LNG}}, a Estonia zakazała tranzytu zboża z Rosji i Białorusi."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-18",
+          "tekst": "Trump podpisał ustawę Lindseya Grahama o sankcjach wobec Rosji i Iranu: cła do 100% na towary z pięciu największych importerów rosyjskiej ropy lub gazu, do 500% na import z Rosji, nowe sankcje na urzędników, banki i statki; możliwe zwolnienia z uwagi na interes narodowy.",
+          "zrodla": [
+            {
+              "nazwa": "CBS",
+              "url": "https://www.cbsnews.com/news/trump-signs-russia-sanctions-bill-lindsey-graham/",
+              "data": "2026-09-18"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/trump-signs-sweeping-russia-sanctions-bill-into-law/",
+              "data": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-22",
+          "tekst": "UE przedłużyła sankcje indywidualne wobec Rosji na trzy lata; z listy skreślono dwóch oligarchów: jednego na wniosek Francji (w związku z uwolnieniem jej obywateli w Azerbejdżanie), drugiego po wecie Słowacji.",
+          "zrodla": [
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/22/eu-renews-russia-sanctions-but-removes-usmanov-at-frances-request",
+              "data": "2026-09-22"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-24/azerbejdzan-francja-szansa-na-nowe-otwarcie",
+              "data": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "data": "2026-10-01",
+          "tekst": "Wielka Brytania wpisała na listę sankcji wobec Rosji 31 nowych celów: 22 osoby, 1 podmiot i 8 statków, w tym gazowce przewożące rosyjski LNG.",
+          "zrodla": [
+            {
+              "nazwa": "Rząd Wielkiej Brytanii (Sanctions Notice, Russia)",
+              "url": "https://assets.publishing.service.gov.uk/media/6abe173e9c196f81005e5d7c/Sanctions_Notice__Russia__01_October_2026.pdf",
+              "data": "2026-10-01"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/uk-passes-new-russia-sanctions-but-with-lng-loophole-for-asian-allies/",
+              "data": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "data": "2026-10-01",
+          "tekst": "Rząd Estonii zakazał tranzytu zboża z Rosji i Białorusi przez swoje terytorium.",
+          "zrodla": [
+            {
+              "nazwa": "ERR",
+              "url": "https://news.err.ee/1610153278/estonia-bans-grain-transit-from-russia-and-belarus",
+              "data": "2026-10-01"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/estonia-bans-transit-of-grain-from-russia-belarus/",
+              "data": "2026-10-01"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Iwona Wiśniewska, Filip Rudnik, Andrzej Kohut), Analiza z 17.09.2026",
+          "tekst": "Autorzy oceniają ustawę przede wszystkim jako demonstrację polityczną i potencjalne narzędzie nacisku: daje prezydentowi dużą swobodę, a niechęć Białego Domu do zaostrzania restrykcji energetycznych w czasie drogiej ropy osłabia jej wiarygodność jako dźwigni wobec Kremla.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-17/ustawa-sankcyjna-usa-na-rosje-narzedzie-polityczne-bez-gwarancji",
+              "data": "2026-09-17"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Cła wtórne uderzyłyby w Chiny i Indie, nie w Europę, ale ich użycie zależy wyłącznie od decyzji Trumpa. Trzyletnie przedłużenie list UE ogranicza ryzyko wet co pół roku, a wrześniowe skreślenia pokazują, że miejsca na liście mogą stać się walutą w innych sporach. Wniosek redakcji: Polska powinna przy kolejnych przeglądach pilnować, by nie powtarzały się wymiany „skreślenie za ustępstwo”, i rozważyć – jak Estonia – własne zakazy tranzytu rosyjskich i białoruskich towarów.",
+      "co_dalej": [
+        {
+          "data": "2026-10-18",
+          "tekst": "upływa 30 dni od podpisu ustawy Grahama – termin na nałożenie przewidzianych w niej ceł"
+        }
+      ],
+      "w_wydaniach": [
+        "2026-09-23#z6",
+        "2026-09-22#z4",
+        "2026-10-01#z1",
+        "2026-10-01#z2"
+      ]
+    },
+    {
+      "id": "rosja-duma-armia",
+      "tytul": "Rosja po wyborach do Dumy: większość konstytucyjna i większa armia",
+      "tagi": [
+        "rosja",
+        "wybory"
+      ],
+      "lead": "W wyborach do Dumy (18–20.09) Jedna Rosja zdobyła według ostatecznych wyników **349 z 450 mandatów**. Tydzień później Putin czwarty raz w tym roku zwiększył etatową liczebność armii, a projekt budżetu na 2027 r. przewiduje wyraźnie wyższe wydatki na obronę.",
+      "omowienie": [
+        "Centralna Komisja Wyborcza ogłosiła 25.09, że partia władzy ma rekordową większość konstytucyjną; komuniści mają 37 mandatów, LDPR 23, Nowi Ludzie 19, Sprawiedliwa Rosja 17. Wstępnie Jednej Rosji przypisywano 355 mandatów. Oficjalna frekwencja wyniosła 59,8%, a do Dumy weszło 46 uczestników wojny.",
+        "Dekretem z 28.09 Putin ustalił liczebność sił zbrojnych na 2 441 630 etatów, w tym 1 550 500 wojskowych – o około 15,5 tys. więcej niż od lipca. Projekt budżetu na 2027 r. przewiduje według Reutersa i CNN 17,1 bln rubli na obronę, o 27% więcej, niż wcześniej planowano. Prezydent Francji {{o:emmanuel-macron|Emmanuel Macron}} mówił 24.09, że raporty wywiadów wskazują na możliwą mobilizację ok. 300 tys. ludzi po wyborach."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-24",
+          "tekst": "Macron: raporty wywiadów europejskich, amerykańskich i dane ukraińskie wskazują, że Rosja po wyborach może zmobilizować ok. 300 tys. ludzi – jawnie albo po cichu.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/macron-cites-several-signs-russia-is-preparing-to-mobilize-300-000-people/",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/24/french-president-emmanuel-macron-denies-claims-the-cia-informed-france-of-a-possible-russi",
+              "data": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-25",
+          "tekst": "CKW ogłosiła ostateczne wyniki wyborów do Dumy: Jedna Rosja 349 z 450 mandatów (wstępnie 355), KPRF 37, LDPR 23, Nowi Ludzie 19, Sprawiedliwa Rosja 17; frekwencja 59,8%; 46 uczestników wojny w Dumie.",
+          "zrodla": [
+            {
+              "nazwa": "Meduza",
+              "url": "https://meduza.io/en/news/2026/09/25/united-russia-won-349-of-450-seats-in-russia-s-new-state-duma-parliament-will-include-46-war-participants",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "Meduza (wyniki wstępne)",
+              "url": "https://meduza.io/en/news/2026/09/21/united-russia-secures-constitutional-majority-in-state-duma-with-355-seats-as-election-officials-report-record-59-turnout",
+              "data": "2026-09-21"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-09-25/specjalna-operacja-wyborcza-kreml-wybral-nowych-deputowanych",
+              "data": "2026-09-25"
+            },
+            {
+              "nazwa": "The Moscow Times",
+              "url": "https://www.themoscowtimes.com/2026/09/25/united-russia-wins-record-state-duma-majority-in-elections-dubbed-as-the-most-uncompetitive-in-modern-history-a93791",
+              "data": "2026-09-25"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-28",
+          "tekst": "Dekret Putina: 2 441 630 etatów w siłach zbrojnych, w tym 1 550 500 wojskowych (ok. 15,5 tys. więcej niż od lipca) – czwarte zwiększenie w 2026 r.",
+          "zrodla": [
+            {
+              "nazwa": "Meduza",
+              "url": "https://meduza.io/en/news/2026/09/28/putin-orders-fourth-expansion-of-russia-s-armed-forces-this-year",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/putin-signs-latest-decree-increasing-russian-military-staff-in-wake-of-monster-military-budget-looming-mobilization/",
+              "data": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-29",
+          "tekst": "Projekt budżetu Rosji na 2027 r. przewiduje 17,1 bln rubli na obronę, o 27% więcej niż wcześniej planowano.",
+          "zrodla": [
+            {
+              "nazwa": "Reuters (za Kyiv Independent)",
+              "url": "https://kyivindependent.com/putin-signs-latest-decree-increasing-russian-military-staff-in-wake-of-monster-military-budget-looming-mobilization/",
+              "data": "2026-09-29"
+            },
+            {
+              "nazwa": "CNN (za KVIA)",
+              "url": "https://kvia.com/news/us-world/cnn-world/2026/10/01/putin-warns-west-that-russia-is-prepared-to-use-all-weapons-to-protect-baltic-exclave/",
+              "data": "2026-10-01"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Maria Domańska), Komentarz z 25.09.2026",
+          "tekst": "Domańska ocenia wybory jako zmanipulowany „plebiscyt wojenny”; według przytaczanych przez nią niezależnych analityków wynik Jednej Rosji zawyżono 1,5–1,7 raza. Kreml wykorzysta go jej zdaniem do uzasadnienia niepopularnych decyzji: kolejnych fal mobilizacji, podwyżek podatków i dalszej militaryzacji gospodarki.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-09-25/specjalna-operacja-wyborcza-kreml-wybral-nowych-deputowanych",
+              "data": "2026-09-25"
+            }
+          ]
+        },
+        {
+          "autor": "PISM (Jakub Benedyczak), Spotlight nr 48/2026, 21.09.2026",
+          "tekst": "Benedyczak przewiduje, że weterani i przedstawiciele resortów siłowych zdominują komisje obrony i spraw zagranicznych Dumy, co oznacza jeszcze ostrzejszą retorykę wobec Polski, Niemiec i Wielkiej Brytanii – łącznie z wezwaniami do rozmieszczenia broni jądrowej i ataków rakietowych na państwa UE.",
+          "zrodla": [
+            {
+              "nazwa": "PISM",
+              "url": "https://pism.pl/publications/russian-state-duma-elections-the-militarisation-of-politics-continues",
+              "data": "2026-09-21"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Większość konstytucyjna, rosnąca armia i wyższy budżet obronny dają Kremlowi narzędzia do dłuższej wojny i kolejnej mobilizacji bez kosztów w parlamencie. Wniosek redakcji: polskie planowanie obronne i wsparcie dla Ukrainy warto opierać na scenariuszu wojny trwającej co najmniej przez cały 2027 r., a nie na rychłym rozejmie.",
+      "w_wydaniach": [
+        "2026-09-21#z2",
+        "2026-09-25#z3",
+        "2026-09-25#z2",
+        "2026-09-29#z2"
+      ]
+    },
+    {
+      "id": "ormuz-ropa",
+      "tytul": "Ormuz, droga ropa i powrót inflacji",
+      "tagi": [
+        "iran",
+        "usa",
+        "energia",
+        "gospodarka"
+      ],
+      "lead": "Rozmowy USA–Iran o otwarciu **Cieśniny Ormuz** utknęły na kolejności kroków. Wysokie ceny paliw widać w decyzjach banków centralnych i w inflacji – w Polsce wzrosła we wrześniu do 4,0%.",
+      "omowienie": [
+        "Iran zaproponował plan: otwarcie {{p:ormuz|Cieśniny Ormuz}} w ciągu siedmiu dni w zamian za zniesienie amerykańskiej blokady irańskich portów i sankcji na ropę oraz odmrożenie aktywów. 26.09 Trump go odrzucił, mówiąc, że Iran chce układu, bo „tak bardzo przegrywa”. Mediatorzy przekazali jednak Teheranowi oficjalną odpowiedź USA; według Reutersa strony zgadzają się co do kroków, ale nie co do ich kolejności.",
+        "16.09 Fed jednogłośnie podniósł stopy o 25 pkt bazowych, do 3,75–4,00%, wskazując na podwyższoną inflację. 30.09 GUS podał w szybkim szacunku, że ceny w Polsce wzrosły we wrześniu o 4,0% rok do roku i o 0,7% w ciągu miesiąca – wyraźnie powyżej celu NBP (2,5% ±1 pkt proc.)."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-16",
+          "tekst": "Fed (FOMC) jednogłośnie podniósł przedział stóp o 25 pkt bazowych, do 3,75–4,00%.",
+          "zrodla": [
+            {
+              "nazwa": "Fed (FOMC)",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+              "data": "2026-09-16"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-26",
+          "tekst": "Trump odrzucił irański plan 7-dniowy (otwarcie Cieśniny Ormuz w zamian za zniesienie blokady portów, sankcji naftowych i odmrożenie aktywów): „Odrzucam ich układ”.",
+          "zrodla": [
+            {
+              "nazwa": "CBS",
+              "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-7-day-proposal/",
+              "data": "2026-09-27"
+            },
+            {
+              "nazwa": "CNN (za ABC17 News)",
+              "url": "https://abc17news.com/news/national-world/cnn-world/2026/09/26/trump-rejects-irans-latest-proposal-to-reopen-the-strait-of-hormuz/",
+              "data": "2026-09-26"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "USA przekazały przez mediatorów oficjalną odpowiedź na irański plan; minister spraw zagranicznych {{o:abbas-araghczi|Abbas Araghczi}} przedstawił ją rządowi. Spór dotyczy kolejności kroków.",
+          "zrodla": [
+            {
+              "nazwa": "AP (za Boston Globe)",
+              "url": "https://www.bostonglobe.com/2026/09/30/world/iran-us-response-end-war/",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "Reuters (za Investing.com)",
+              "url": "https://www.investing.com/news/commodities-news/iran-receives-us-feedback-on-sevenday-trustbuilding-plan-4924251",
+              "data": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "GUS, szybki szacunek: inflacja CPI we wrześniu 4,0% r/r i 0,7% m/m.",
+          "zrodla": [
+            {
+              "nazwa": "GUS",
+              "url": "https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/szybki-szacunek-wskaznika-cen-towarow-i-uslug-konsumpcyjnych-we-wrzesniu-2026-r-,21,45.html",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "RMF24",
+              "url": "https://www.rmf24.pl/fakty/ekonomia/news-zle-wiesci-o-inflacji-w-polsce-gus-podal-nowe-dane,nIdn,1019786",
+              "data": "2026-09-30"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Krzysztof Strachota), Komentarz z 1.10.2026",
+          "tekst": "Strachota ocenia, że działania militarne i presja na destabilizację Iranu okazały się niewystarczające, a konflikt przeszedł w fazę wyczerpywania na wielu frontach, w której głównym polem nacisku jest Ormuz – z blokadą irańską i amerykańską jednocześnie. Polityczne rozwiązanie uznaje za mało prawdopodobne.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2026-10-01/kryzys-wokol-iranu-wojna-na-wielu-frontach",
+              "data": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "autor": "OSW (Agata Łoskot-Strachota), Analiza z 17.09.2026",
+          "tekst": "Autorka zwraca uwagę, że po wyłączeniu 10.09 saudyjskiego rurociągu Wschód–Zachód, głównej drogi omijającej Ormuz, notowania ropy Brent przekroczyły 109 USD za baryłkę. Szczególnie uderza to w rafinerie korzystające z ropy saudyjskiej, w tym w Orlen.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-17/jeszcze-mniej-ropy-z-bliskiego-wschodu",
+              "data": "2026-09-17"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Droga ropa bezpośrednio podbija inflację w Polsce i komplikuje decyzje RPP. Wniosek redakcji: przed posiedzeniem 6–7.10 trzeba liczyć się z dłuższym utrzymaniem stóp, a w polityce energetycznej – z wieloma miesiącami wysokich cen; dywersyfikacja dostaw ropy dla polskich rafinerii przestaje być kwestią ceny, a staje się kwestią bezpieczeństwa.",
+      "co_dalej": [
+        {
+          "data": "2026-10-06",
+          "tekst": "6–7.10: posiedzenie Rady Polityki Pieniężnej"
+        },
+        {
+          "data": "2026-10-14",
+          "tekst": "GUS: pełne dane o inflacji za wrzesień"
+        },
+        {
+          "data": "2026-10-27",
+          "tekst": "27–28.10: posiedzenie FOMC (Fed)"
+        }
+      ],
+      "w_wydaniach": [
+        "2026-09-16#z1",
+        "2026-09-26#z6",
+        "2026-09-27#z1",
+        "2026-09-29#z1",
+        "2026-09-30#z4",
+        "2026-09-30#z13"
+      ]
+    },
+    {
+      "id": "bialorus",
+      "tytul": "Białoruś: więźniowie za sankcje i pierwsze od dekady rozmowy z Polską",
+      "tagi": [
+        "bialorus",
+        "dyplomacja-rp",
+        "usa",
+        "litwa"
+      ],
+      "lead": "Białoruś uwolniła 25 więźniów politycznych w zamian za zdjęcie amerykańskich sankcji z dwóch firm, a szefowie dyplomacji Polski i Białorusi spotkali się **po raz pierwszy od około dekady**. W tym samym czasie dron, który wleciał z Białorusi, został zestrzelony nad Litwą.",
+      "omowienie": [
+        "16.09 specjalny wysłannik USA {{o:john-coale|John Coale}} ogłosił uwolnienie 25 osób, które trafiły na Litwę; w zamian USA zdjęły sankcje z producenta farb Lakokraska i grupy leśnej Biełlesbumprom. Coale zapowiada kolejne zwolnienia, a według organizacji praw człowieka w białoruskich więzieniach pozostaje ponad 900 więźniów politycznych.",
+        "23.09 w siedzibie ONZ {{o:radoslaw-sikorski|Radosław Sikorski}} rozmawiał z {{o:maksim-ryzenkow|Maksimem Ryżenkowem}} o sytuacji na granicy i bezpieczeństwie regionu. Sikorski podkreślał, że Polska uznaje państwo białoruskie, a nie reżim w Mińsku, i zapowiedział otwarcie nowego budynku ambasady. Tydzień wcześniej, 15.09, rosyjski dron Gerbera, który wleciał z Białorusi, zestrzeliły nad Litwą włoskie myśliwce z bazy w Szawlach; prezydent {{o:gitanas-nauseda|Gitanas Nausėda}} uznał, że zboczył z kursu na Ukrainę."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-15",
+          "tekst": "Rosyjski dron Gerbera, który wleciał z Białorusi, zestrzelony nad Litwą przez włoskie myśliwce z Szawli; według prezydenta Nausėdy dron zboczył z kursu na Ukrainę.",
+          "zrodla": [
+            {
+              "nazwa": "LRT",
+              "url": "https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine",
+              "data": "2026-09-16"
+            },
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/nato-shoots-down-drone-over-lithuanian-airspace-that-flew-in-from-belarus/",
+              "data": "2026-09-15"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-16",
+          "tekst": "Białoruś uwolniła 25 więźniów politycznych (przewiezionych na Litwę); USA zdjęły sankcje z firm Lakokraska i Biełlesbumprom.",
+          "zrodla": [
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://www.rferl.org/a/belarus-us-prisoners-release-sanctions/33857455.html",
+              "data": "2026-09-16"
+            },
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/my-europe/2026/09/16/belarus-releases-25-political-prisoners-in-exchange-for-lifting-of-us-sanctions-on-two-com",
+              "data": "2026-09-16"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-23",
+          "tekst": "Spotkanie Sikorski–Ryżenkow w ONZ – pierwsze spotkanie szefów MSZ obu państw od około dekady; rozmowa o granicy i bezpieczeństwie regionu.",
+          "zrodla": [
+            {
+              "nazwa": "Kyiv Independent",
+              "url": "https://kyivindependent.com/polish-foreign-minister-meets-belarusian-counterpart-at-un-discusses-regional-security-2/",
+              "data": "2026-09-23"
+            },
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://rferl.org/a/wider-europe-briefing-will-the-eu-soon-lift-potash-sanctions-on-belarus/33866407.html",
+              "data": "2026-09-29"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "RFE/RL (Rikard Jozwiak), Wider Europe Briefing, 29.09.2026",
+          "tekst": "Jozwiak opisuje zabiegi USA o umowę na zakup białoruskiego potasu, w tym prośbę Departamentu Stanu do Polski, Litwy i Ukrainy o zgodę na jego tranzyt. Przed przedłużeniem unijnych sankcji (do końca lutego 2027 r.) dyplomaci mówią mu, że zniesiony mógłby zostać najwyżej zakaz tranzytu; rozstrzygnąć mają stanowisko Litwy i przepustowość portów.",
+          "zrodla": [
+            {
+              "nazwa": "RFE/RL",
+              "url": "https://rferl.org/a/wider-europe-briefing-will-the-eu-soon-lift-potash-sanctions-on-belarus/33866407.html",
+              "data": "2026-09-29"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Odwilż USA–Białoruś i rozmowy Sikorski–Ryżenkow dają szansę na postęp w sprawach granicznych i humanitarnych, ale amerykańska prośba o tranzyt potasu czyni z Polski stronę targu, którego warunki ustala Waszyngton. Wniosek redakcji: ewentualną zgodę na tranzyt warto uzależnić od konkretów – uwolnienia kolejnych więźniów politycznych, w tym działaczy mniejszości polskiej, i zaprzestania wykorzystywania migrantów na granicy.",
+      "co_dalej": [
+        {
+          "data": "2027-02-28",
+          "tekst": "do końca lutego 2027 r.: decyzja UE o przedłużeniu sankcji wobec Białorusi, w tym na potas (według RFE/RL)"
+        }
+      ],
+      "w_wydaniach": [
+        "2026-09-15#z2",
+        "2026-09-16#z2",
+        "2026-09-23#z3"
+      ]
+    },
+    {
+      "id": "niemcy-afd",
+      "tytul": "Niemcy: AfD wygrywa na wschodzie i rozmawia z wysłannikiem Kremla",
+      "tagi": [
+        "niemcy",
+        "wybory",
+        "rosja",
+        "energia"
+      ],
+      "lead": "AfD wygrała wybory w Saksonii-Anhalt (6.09) i w Meklemburgii-Pomorzu Przednim (20.09), gdzie CDU kanclerza {{o:friedrich-merz|Friedricha Merza}} wypadła z parlamentu krajowego. Równolegle liderzy AfD przygotowują z wysłannikiem Putina rozmowy o **wznowieniu dostaw rosyjskiego gazu**.",
+      "omowienie": [
+        "W Saksonii-Anhalt AfD dostała 43,8% i 39 z 83 mandatów, trzy za mało do większości. W Meklemburgii-Pomorzu Przednim zdobyła 38,2% przed SPD (35,5%), a CDU z wynikiem 4,9% po raz pierwszy w historii nie weszła do parlamentu krajowego; Merz nazwał to „katastrofą”. W Berlinie tego samego dnia wygrała Lewica (25,7%) przed CDU (18,8%) i AfD (16,3%). AfD nie ma partnerów koalicyjnych, więc w Meklemburgii może dalej rządzić SPD premier {{o:manuela-schwesig|Manueli Schwesig}}.",
+        "18.09 Reuters ujawnił, że współprzewodniczący AfD przygotowują z {{o:kiryl-dmitrijew|Kiryłem Dmitrijewem}}, specjalnym wysłannikiem Putina, rozmowy o wznowieniu dostaw gazu, w tym przez Nord Stream – możliwe w marcu 2027 r., jeśli wcześniej dojdzie do porozumienia pokojowego. Pod koniec września wiceprzewodniczący klubu AfD w Bundestagu {{o:markus-frohnmaier|Markus Frohnmaier}} potwierdził – według ANSA – kontakt z Dmitrijewem i plan forum Rosja–USA–AfD w 2027 r."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-06",
+          "tekst": "Wybory w Saksonii-Anhalt: AfD 43,8% i 39 z 83 mandatów (trzy za mało do większości), CDU 17,2%.",
+          "zrodla": [
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/06/german-far-right-afd-wins-by-a-landslide-in-saxony-anhalt-exit-polls",
+              "data": "2026-09-06"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-07/niemcy-spektakularne-zwyciestwo-afd-w-saksonii-anhalt",
+              "data": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-18",
+          "tekst": "Reuters: współprzewodniczący AfD i Kirył Dmitrijew przygotowują rozmowy o wznowieniu dostaw rosyjskiego gazu i Nord Stream; według ANSA (29.09) Markus Frohnmaier potwierdził kontakt z Dmitrijewem i plan forum Rosja–USA–AfD w 2027 r.",
+          "zrodla": [
+            {
+              "nazwa": "Reuters (za Meduzą)",
+              "url": "https://meduza.io/en/news/2026/09/18/reuters-germany-s-afd-party-and-kremlin-envoy-prepare-for-talks-on-restarting-russian-gas-supplies",
+              "data": "2026-09-18"
+            },
+            {
+              "nazwa": "ANSA",
+              "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/afd-vuole-riaprire-dossier-nord-stream-previsto-forum-con-usa_a09e35a1-572f-4de7-9a04-799037eeca9e.html",
+              "data": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-20",
+          "tekst": "Meklemburgia-Pomorze Przednie: AfD 38,2%, SPD 35,5%, CDU 4,9% (poza parlamentem); Berlin: Lewica 25,7%, CDU 18,8%, AfD 16,3%.",
+          "zrodla": [
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/21/germany-the-left-triumphs-in-berlin-as-afd-surges-in-mecklenburg-western-pomerania",
+              "data": "2026-09-21"
+            },
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-21/germany-victory-die-linke-berlin-and-afd-mecklenburg-western",
+              "data": "2026-09-21"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Kamil Frymark), Analiza z 21.09.2026",
+          "tekst": "Frymark ocenia, że fatalny wynik CDU zwiększa presję na Merza, choć w partii nie ma oczywistego następcy, a różne wyniki SPD w obu landach pogłębią spory w koalicji federalnej. AfD mimo podwojenia poparcia nie może rządzić, ale zyskuje mniejszość blokującą i pozycję jedynej prawicowej opozycji.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-21/germany-victory-die-linke-berlin-and-afd-mecklenburg-western",
+              "data": "2026-09-21"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Słabnący Merz i rosnąca AfD, która otwarcie mówi o powrocie rosyjskiego gazu i Nord Stream, to ryzyko dla polsko-niemieckiej współpracy obronnej i dla jedności UE w sprawie sankcji. Wniosek redakcji: Polska powinna wiązać Berlin trwałymi zobowiązaniami – wspólnymi projektami zbrojeniowymi i finansowaniem obronności w WRF 2028–2034 – zanim zmieni się układ sił w Bundestagu.",
+      "w_wydaniach": [
+        "2026-09-21#z1",
+        "2026-09-20#z4"
+      ]
+    },
+    {
+      "id": "region-kryzysy",
+      "tytul": "Kryzysy rządowe w regionie: od Belgradu po Bratysławę",
+      "tagi": [
+        "balkany",
+        "rumunia",
+        "slowacja",
+        "wegry",
+        "czechy"
+      ],
+      "lead": "W ciągu pięciu dni {{o:aleksandar-vucic|Aleksandar Vučić}} zrezygnował z prezydentury Serbii, rumuński parlament po raz trzeci odrzucił kandydata na premiera, słowacka koalicja straciła ministra, a na Węgrzech zatrzymano dwóch byłych ministrów. **Rząd Czech przetrwał** głosowanie nad wotum nieufności.",
+      "omowienie": [
+        "27.09 Vučić ogłosił rezygnację – nie mógł ubiegać się o trzecią kadencję – i będzie kandydował na premiera w wyborach parlamentarnych 25.10; obowiązki prezydenta przejęła {{o:ana-brnabic|Ana Brnabić}}. 30.09 w Rumunii rząd {{o:siegfried-muresan|Siegfrieda Mureșana}} dostał 182 głosy przy wymaganych 233. To trzecia nieudana próba od rozpadu koalicji w maju; według Reutersa sondaże prowadzi skrajnie prawicowa AUR, krytyczna wobec UE, NATO i pomocy dla Ukrainy.",
+        "29.09 słowacki parlament 77 głosami odwołał wicepremiera i ministra środowiska {{o:tomas-taraba|Tomáša Tarabę}}, a 30.09 prezydent {{o:peter-pellegrini|Peter Pellegrini}} go zdymisjonował; resortem tymczasowo kieruje premier {{o:robert-fico|Robert Fico}}, który dopuszcza przedterminowe wybory w styczniu. Na Węgrzech parlament 28.09 uchylił immunitet premierowi {{o:peter-magyar|Péterowi Magyarowi}} i dwóm byłym ministrom, których następnie zatrzymano. 1.10 rząd {{o:andrej-babis|Andreja Babiša}} przetrwał głosowanie nad wotum nieufności: 83 głosy za odwołaniem przy wymaganych 101."
+      ],
+      "przebieg": [
+        {
+          "data": "2026-09-27",
+          "tekst": "Vučić zrezygnował z funkcji prezydenta Serbii i będzie kandydował na premiera w wyborach 25.10; obowiązki przejęła Ana Brnabić.",
+          "zrodla": [
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/28/serbias-president-aleksandar-vucic-resigns-to-run-for-prime-minister-in-snap-elections",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "AP (za ValleyCentral)",
+              "url": "https://www.valleycentral.com/news/international/ap-international/ap-serbias-populist-president-vucic-resigns-to-run-for-prime-minister-at-early-vote/amp/",
+              "data": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-28",
+          "tekst": "Parlament Węgier uchylił immunitet premierowi Magyarowi (sprawa kradzieży telefonu z 2024 r.) oraz dwóm byłym ministrom z czasów poprzedniego rządu, których następnie zatrzymano (podejrzenia sprzeniewierzenia środków i korupcji).",
+          "zrodla": [
+            {
+              "nazwa": "AP (za WRAL)",
+              "url": "https://www.wral.com/news/ap/5e424-hungarys-parliament-suspends-immunity-for-prime-minister-magyar-and-two-orb-n-era-ministers/",
+              "data": "2026-09-28"
+            },
+            {
+              "nazwa": "Euronews",
+              "url": "https://www.euronews.com/2026/09/29/with-two-orban-era-ministers-detained-magyars-operation-purge-takes-shape",
+              "data": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-29",
+          "tekst": "Parlament Słowacji odwołał 77 głosami ministra środowiska Tomáša Tarabę; 30.09 prezydent formalnie go zdymisjonował.",
+          "zrodla": [
+            {
+              "nazwa": "TASR",
+              "url": "https://www.teraz.sk/slovensko/prezident-odvolal-z-funkcie-ministra-zi/996247-clanok.html",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "Reuters (za Internazionale)",
+              "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/29/slovak-coalition-frays-with-minister-s-removal-early-election-mooted",
+              "data": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "data": "2026-09-30",
+          "tekst": "Rumunia: parlament nie udzielił wotum zaufania rządowi Siegfrieda Mureșana (182 głosy przy wymaganych 233) – trzecia nieudana próba od maja.",
+          "zrodla": [
+            {
+              "nazwa": "AFP (za Arab News)",
+              "url": "https://www.arabnews.com/world/romanian-parliament-rejects-pro-eu-pm-candidate-amid-political-deadlock-3003917",
+              "data": "2026-09-30"
+            },
+            {
+              "nazwa": "Reuters (za Internazionale)",
+              "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/30/romanian-pm-designate-muresan-loses-confidence-vote",
+              "data": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "data": "2026-10-01",
+          "tekst": "Czechy: rząd Babiša przetrwał głosowanie nad wotum nieufności – 83 głosy za odwołaniem przy wymaganych 101.",
+          "zrodla": [
+            {
+              "nazwa": "AP (za Infonews)",
+              "url": "https://infonews.ca/news/7900014/czech-prime-minister-andrej-babis-government-survives-no-confidence-vote/",
+              "data": "2026-10-01"
+            },
+            {
+              "nazwa": "ČTK",
+              "url": "https://www.ceskenoviny.cz/zpravy/snemovni-opozici-se-ani-napodruhe-nepodarilo-svrhnout-babisovu-vladu/2881493",
+              "data": "2026-10-01"
+            }
+          ]
+        }
+      ],
+      "oceny": [
+        {
+          "autor": "OSW (Jan Nowinowski), Analiza z 28.09.2026",
+          "tekst": "Nowinowski ocenia rezygnację Vučicia jako manewr dla utrzymania władzy: rządząca SNS stoi przed najtrudniejszymi wyborami od 2012 r., bo sondaże dają Liście Studenckiej ok. 45% wobec 36% dla obozu władzy, a rozdzielenie wyborów parlamentarnych i prezydenckich ma osłabić mobilizację opozycji.",
+          "zrodla": [
+            {
+              "nazwa": "OSW",
+              "url": "https://www.osw.waw.pl/pl/publikacje/analizy/2026-09-28/dymisja-prezydenta-vucicia-w-serbii-teatr-jednego-aktora",
+              "data": "2026-09-28"
+            }
+          ]
+        }
+      ],
+      "dla_polski": "Rumunia i Słowacja to partnerzy Polski w sprawach wschodniej flanki, Ukrainy i negocjacji WRF 2028–2034, a przedłużający się kryzys w Bukareszcie przy prowadzącej w sondażach AUR może osłabić rumuńskie poparcie dla pomocy Ukrainie. Wniosek redakcji: przed Radą Europejską 15–16.10 Polska powinna budować koalicje budżetowe przede wszystkim z Czechami, państwami bałtyckimi i nordyckimi, a z Bukaresztem i Bratysławą – w konkretnych sprawach obronnych.",
+      "co_dalej": [
+        {
+          "data": "2026-10-05",
+          "tekst": "Rumunia: konsultacje prezydenta z partiami i wskazanie kandydata na premiera"
+        },
+        {
+          "data": "2026-10-09",
+          "tekst": "9–10.10: Czechy – I tura wyborów do Senatu"
+        },
+        {
+          "data": "2026-10-25",
+          "tekst": "wybory parlamentarne w Serbii"
+        }
+      ],
+      "w_wydaniach": [
+        "2026-09-27#z2",
+        "2026-09-27#z3",
+        "2026-09-28#z7",
+        "2026-09-29#z12",
+        "2026-09-30#z9",
+        "2026-10-01#z5"
+      ]
+    }
+  ],
+  "czego_nie_ma": [
+    {
+      "tekst": "Umowa bezpieczeństwa USA–Dania–Grenlandia (22.09) – ważna dla Arktyki i NATO, ale jej skutki dla Polski są pośrednie.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Spór o wieloletni budżet UE 2028–2034 – rozstrzygnięcia zapadną najwcześniej na Radzie Europejskiej 15–16.10; w okresie zestawienia nie było decyzji.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Decyzje UE w sprawach obronnych i migracyjnych (pierwsze projekty EDIP 28.09, rozporządzenie powrotowe 1.10) – istotne, ale mniej ważące dla bezpieczeństwa Polski niż wybrane pozycje.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Reakcja rzecznika MSZ RP na rosyjski dokument w sprawie Królewca (2.10) – na razie tylko relacja PAP, bez drugiego niezależnego źródła ani komunikatu MSZ.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Narady bezpieczeństwa po ataku przy Jagodzinie (14.09 u premiera, 18.09 u prezydenta) i słowa premiera z 29.09 o „permanentnych” atakach przy granicy – po jednym źródle z poziomów 1–2.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Zapowiedź rozmów trójstronnych Ukraina–USA–Rosja w październiku (Biuro Prezydenta Ukrainy, 12.09) i słowa rzecznika Kremla z 25.09 o możliwym spotkaniu – po jednym niezależnym źródle.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Łączna liczba etatów dodanych w Rosji czterema tegorocznymi dekretami, liczba osób objętych przedłużonymi sankcjami UE i liczba ofiar ataku na Kijów 8.09 – źródła podają różne wartości.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Dron na terenie Instytutu Badań Jądrowych w Kijowie (30.09) – z poziomów 1–2 tylko Kyiv Independent, brak komunikatu MAEA.",
+      "prog": "dokumentacja"
+    },
+    {
+      "tekst": "Atak w opactwie w Jarosławiu (24.09) – sprawa kryminalna, mimo politycznego wymiaru w relacjach polsko-ukraińskich.",
+      "prog": "następstwo"
+    },
+    {
+      "tekst": "Ocena ISW z 30.09 o rozpoczęciu przez Rosję zimowej kampanii uderzeń – nie znaleziono jej w przytaczanym wcześniej źródle; do zestawienia po dotarciu do tekstu ISW.",
+      "prog": "dokumentacja"
+    }
+  ],
+  "nota": "Zestawienie przygotowano 2.10.2026 rano na podstawie stron otwartych tego dnia (komunikaty rządów Szwecji i Wielkiej Brytanii, Fed, GUS, Prokuratury Krajowej; depesze AP, AFP, PAP, Reuters; Kyiv Independent, RFE/RL, Euronews, Meduza, CBS, ERR, LRT, TASR, ČTK, ANSA; analizy OSW i PISM) oraz faktów z rejestru zweryfikowanych w ciągu ostatnich 7 dni. Poprzednie wydania posłużyły tylko jako lista kandydatów i adresów źródeł. Okres 7–14.09 nie ma wydań dziennych – uzupełniono go publikacjami OSW i serwisami agencyjnymi. Każdy wiersz przebiegu ma źródło urzędowe albo dwa niezależne źródła z poziomów 1–2; liczby, w których źródła się różnią, pominięto. Kontrola niezależna przed publikacją: usunięto 3 niepotwierdzone elementy (liczba ofiar ataku na Kijów 8.09 – źródła rozbieżne; poderwanie myśliwców 13.09 – brak potwierdzenia; ocena ISW – brak w źródle) i wprowadzono 9 doprecyzowań (m.in. cytat Uszakowa, typy pocisków 30.09, data śledztwa w sprawie Starlinka, atrybucja wypowiedzi Frohnmaiera, źródło PAP dla drona przy Dorohusku). Uwagę kontrolera o liczbach w sankcjach brytyjskich sprawdzono w komunikacie rządu UK: 22 osoby, 1 podmiot i 8 statków są poprawne."
+}

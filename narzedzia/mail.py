@@ -23,7 +23,7 @@ def main():
     ap.add_argument("--wyjscie", type=Path, default=Path("build"))
     a = ap.parse_args()
     B.RANKING = B.wczytaj_ranking(a.dane)
-    tagi, osoby, pojecia, wydania, rewizje = B.wczytaj(a.dane)
+    tagi, osoby, pojecia, wydania, rewizje, _topy = B.wczytaj(a.dane)
     bledy = B.waliduj(tagi, osoby, pojecia, wydania, rewizje)
     if bledy:
         print("WALIDACJA NIE PRZESZŁA:\n  - " + "\n  - ".join(bledy), file=sys.stderr)

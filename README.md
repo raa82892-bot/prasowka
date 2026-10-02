@@ -78,6 +78,28 @@ Przy każdym wydaniu aktualizuj też w `dane/tagi.json` pola `stan`, `stan_data`
 
 Werdykt SPROSTOWANE z polem `dotyczy` oznacza oryginalną pozycję znakiem ▲ i trafia do rejestru korekt.
 
+## Zestawienia Top 10 (dane/top/OD_DO.json)
+
+Dziesięć najważniejszych wydarzeń z okresu, z szerszym omówieniem. Strona `top/OD_DO.html`, lista `top/index.html`, blok na stronie głównej, odnośniki na stronach wątków, wyszukiwarka i RSS.
+
+```json
+{
+  "od": "2026-09-07", "do": "2026-10-02", "opublikowano": "2026-10-02", "godzina": "09:00",
+  "tytul": "…", "wstep": ["2–3 zdania"], "kryteria": "jak ustalono kolejność (ocena redakcji)",
+  "pozycje": [{
+    "id": "krolewiec", "tytul": "…", "tagi": ["krolewiec", "nato"], "etap": "PRZYJĘTE (opcjonalnie)",
+    "lead": "1–2 zdania z **wyróżnieniem**", "omowienie": ["akapit: kontekst", "akapit: co się zmieniło"],
+    "przebieg": [{"data": "2026-09-30", "tekst": "fakt", "etap": "opcjonalnie", "zrodla": [ZRODLO]}],
+    "oceny": [{"autor": "OSW (J. Kowalski), Analiza z 1.10.2026", "tekst": "…", "zrodla": [ZRODLO]}],
+    "dla_polski": "… Wniosek redakcji: …", "co_dalej": [{"data": "…", "tekst": "…"}],
+    "w_wydaniach": ["2026-09-30#z2"]
+  }],
+  "czego_nie_ma": [{"tekst": "…", "prog": "dokumentacja|następstwo|kompletność"}], "nota": "…"
+}
+```
+
+Walidacja jak w wydaniach: każdy wiersz `przebieg` musi mieć źródło z poziomu 1 albo dwa niezależne z poziomów 1–2 (daty w okresie zestawienia, dopuszczalny tydzień kontekstu przed jego początkiem), każda ocena – autora, osoby i pojęcia – karty, `w_wydaniach` – istniejące pozycje. Lead i omówienie mogą zawierać tylko fakty z wierszy przebiegu; interpretacja należy do ocen (z autorem) i do „Dla Polski” (oznaczonej jako wniosek redakcji). Najwyżej 10 pozycji.
+
 ## Ranking źródeł
 
 `dane/zrodla.json` ocenia każde źródło w skali 1–5 (1 urzędowe – zielony, 2 wysoka wiarygodność, 3 z zastrzeżeniami, 4 niska, 5 strona zainteresowana – czerwony), z typem, krajem i uzasadnieniem. Źródło w wydaniu jest dopasowywane po początku nazwy (`wzorce`, np. „Reuters (za U.S. News)” → Reuters), a potem po domenie linku. Strona `zrodla.html` pokazuje ranking i rozkład cytowań; przy każdym źródle na stronie i w mailu jest kolorowa kropka.

@@ -56,7 +56,7 @@ MAPA_TAGI = {
     "wielka-brytania": ["GB"], "rumunia": ["RO"], "balkany": ["RS", "BA", "ME", "MK", "AL", "XK", "HR"],
 }
 EUROPA = json.loads((Path(__file__).resolve().parent / "europa.json").read_text("utf-8"))
-GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "korekty.html", "zrodla.html",
+GENEROWANE = ["index.html", "wydania", "watki", "osoby", "pojecia", "top", "czytelnia.html", "korekty.html", "zrodla.html",
               "jak-weryfikujemy.html", "szukaj.html", "szukaj.json", "feed.xml",
               "robots.txt", ".nojekyll", "assets", "404.html"]
 
@@ -76,8 +76,15 @@ def wczytaj(katalog: Path):
     wydania.sort(key=lambda w: (w["data"], w.get("godzina", "")))
     p = katalog / "rewizje.json"
     rewizje = json.loads(p.read_text("utf-8"))["rewizje"] if p.exists() else []
+    topy = []
+    for p in sorted((katalog / "top").glob("*.json")) if (katalog / "top").exists() else []:
+        z = json.loads(p.read_text("utf-8"))
+        z["_plik"] = "top/" + p.name
+        z["_slug"] = p.stem
+        topy.append(z)
+    topy.sort(key=lambda z: (z.get("do", ""), z.get("od", "")))
     return ({t["id"]: t for t in tagi}, {o["id"]: o for o in osoby},
-            {x["id"]: x for x in pojecia}, wydania, rewizje)
+            {x["id"]: x for x in pojecia}, wydania, rewizje, topy)
 
 
 # ---------------------------------------------------------------- ranking źródeł
@@ -206,7 +213,7 @@ def sprawdz_tagi(lista, gdzie, tagi, b: Bledy, wymagane=True):
             b.dodaj(gdzie, f"hashtag „{t}” spoza słownika dane/tagi.json")
 
 
-def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
+def waliduj(tagi, osoby, pojecia, wydania, rewizje=(), topy=()) -> Bledy:
     b = Bledy()
     for t in tagi.values():
         if t.get("stan"):
@@ -333,9 +340,10 @@ def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
                 if not k.get(pole):
                     b.dodaj(g, f"brak pola {pole}")
             sprawdz_zrodla(k.get("zrodla"), g, b)
+    waliduj_topy(topy, tagi, osoby, pojecia, klucze, b)
     if RANKING:
         braki = {}
-        for nazwa_pliku, dane in ([(w["_plik"], w) for w in wydania] + [("tagi.json", list(tagi.values())),
+        for nazwa_pliku, dane in ([(w["_plik"], w) for w in wydania] + [(z["_plik"], z) for z in topy] + [("tagi.json", list(tagi.values())),
                                   ("osoby.json", list(osoby.values())), ("rewizje.json", list(rewizje))]):
             for z in wszystkie_zrodla(dane):
                 if not RANKING.ocen(z["nazwa"], z["url"]):
@@ -360,6 +368,75 @@ def waliduj(tagi, osoby, pojecia, wydania, rewizje=()) -> Bledy:
     return b
 
 
+def waliduj_topy(topy, tagi, osoby, pojecia, klucze, b: Bledy):
+    """Zestawienia Top 10: te same zasady co w wydaniach – każdy wiersz przebiegu ma źródło urzędowe albo
+    dwa niezależne źródła z poziomów 1–2, każda ocena ma autora, osoby i pojęcia mają karty."""
+    for z in topy:
+        g0 = z["_plik"]
+        for pole in ("od", "do", "opublikowano", "tytul", "wstep", "pozycje"):
+            if not z.get(pole):
+                b.dodaj(g0, f"brak pola {pole}")
+        for pole in ("od", "do", "opublikowano"):
+            try:
+                data_(z.get(pole, ""))
+            except ValueError:
+                b.dodaj(g0, f"pole {pole}: brak daty RRRR-MM-DD")
+                return
+        if len(z.get("pozycje", [])) > 10:
+            b.dodaj(g0, "zestawienie Top 10 może mieć najwyżej 10 pozycji")
+        for i, t in enumerate(z.get("wstep", [])):
+            sprawdz_tekst(t, f"{g0} wstęp {i+1}", osoby, pojecia, b)
+        od_kontekst = data_(z["od"]) - dt.timedelta(days=7)
+        ids = set()
+        for n, p in enumerate(z.get("pozycje", []), 1):
+            g = f"{g0} pozycja {n} ({p.get('id')})"
+            if not p.get("id") or p["id"] in ids:
+                b.dodaj(g, "brak lub powtórzone id pozycji")
+            ids.add(p.get("id"))
+            for pole in ("tytul", "lead", "omowienie", "przebieg", "dla_polski"):
+                if not p.get(pole):
+                    b.dodaj(g, f"brak pola {pole}")
+            if p.get("etap") not in ETAPY:
+                b.dodaj(g, f"etap musi być jednym z {sorted(x for x in ETAPY if x)}")
+            if "status" in p:
+                b.dodaj(g, "pole status – w zestawieniu są tylko informacje potwierdzone")
+            sprawdz_tagi(p.get("tagi"), g, tagi, b)
+            for t in [p.get("lead", "")] + list(p.get("omowienie", [])) + [p.get("dla_polski", "")]:
+                sprawdz_tekst(t, g, osoby, pojecia, b)
+            for k, r in enumerate(p.get("przebieg", []), 1):
+                gr = f"{g} przebieg {k}"
+                try:
+                    d = data_(r.get("data", ""))
+                    if not od_kontekst <= d <= data_(z["do"]):
+                        b.dodaj(gr, f"data {r['data']} poza okresem zestawienia (dopuszczalny tydzień kontekstu przed jego początkiem)")
+                except ValueError:
+                    b.dodaj(gr, "brak daty zdarzenia RRRR-MM-DD")
+                if r.get("etap") not in ETAPY:
+                    b.dodaj(gr, f"etap musi być jednym z {sorted(x for x in ETAPY if x)}")
+                sprawdz_tekst(r.get("tekst"), gr, osoby, pojecia, b)
+                sprawdz_zrodla(r.get("zrodla"), gr, b)
+                if RANKING and r.get("zrodla") and not podstawa_ok(r["zrodla"]):
+                    b.dodaj(gr, "za słaba podstawa: potrzebne źródło urzędowe (poziom 1) albo dwa niezależne z poziomów 1–2")
+            for k, o in enumerate(p.get("oceny", []), 1):
+                go = f"{g} ocena {k}"
+                for pole in ("autor", "tekst"):
+                    if not o.get(pole):
+                        b.dodaj(go, f"brak pola {pole} (ocena zawsze z autorem)")
+                sprawdz_tekst(o.get("tekst"), go, osoby, pojecia, b)
+                sprawdz_zrodla(o.get("zrodla"), go, b)
+            for k, c in enumerate(p.get("co_dalej", []), 1):
+                try:
+                    data_(c.get("data", ""))
+                except ValueError:
+                    b.dodaj(f"{g} co_dalej {k}", "brak daty RRRR-MM-DD")
+            for ref in p.get("w_wydaniach", []):
+                if ref not in klucze:
+                    b.dodaj(g, f"w_wydaniach: nie ma pozycji {ref} (format RRRR-MM-DD#id)")
+        for i, c in enumerate(z.get("czego_nie_ma", [])):
+            if c.get("prog") not in PROGI:
+                b.dodaj(f"{g0} czego_nie_ma {i+1}", f"prog musi być jednym z {sorted(PROGI)}")
+
+
 # ---------------------------------------------------------------- formatowanie
 
 def e(s):
@@ -374,6 +451,16 @@ def data_pelna(s):
 def data_krotka(s):
     d = data_(s)
     return f"{d.day:02d}.{d.month:02d}"
+
+
+def data_slownie(s, rok=True):
+    d = data_(s)
+    return f"{d.day} {MIESIACE[d.month-1]}" + (f" {d.year}" if rok else "")
+
+
+def okres_slownie(od, do):
+    a, b = data_(od), data_(do)
+    return f"{data_slownie(od, rok=a.year != b.year)} – {data_slownie(do)}"
 
 
 def data_dluga(s):
@@ -469,7 +556,7 @@ def html_odznaki(it):
 
 
 def strona(tytul, tresc, prefix="", opis="", aktywne=""):
-    nav = [("index.html", "Wydania", "wydania"), ("czytelnia.html", "Czytelnia", "czytelnia"), ("watki/index.html", "Wątki", "watki"),
+    nav = [("index.html", "Wydania", "wydania"), ("top/index.html", "Top 10", "top"), ("czytelnia.html", "Czytelnia", "czytelnia"), ("watki/index.html", "Wątki", "watki"),
            ("osoby/index.html", "Kto jest kim", "osoby"), ("pojecia/index.html", "Pojęcia", "pojecia"),
            ("korekty.html", "Korekty", "korekty"), ("zrodla.html", "Źródła", "zrodla"), ("jak-weryfikujemy.html", "Jak weryfikujemy", "jak"),
            ("szukaj.html", "Szukaj", "szukaj")]
@@ -511,8 +598,10 @@ def strona(tytul, tresc, prefix="", opis="", aktywne=""):
 # ---------------------------------------------------------------- budowa
 
 class Budowa:
-    def __init__(self, tagi, osoby, pojecia, wydania, wyjscie: Path, rewizje=()):
+    def __init__(self, tagi, osoby, pojecia, wydania, wyjscie: Path, rewizje=(), topy=()):
         self.tagi, self.osoby, self.pojecia, self.wydania = tagi, osoby, pojecia, wydania
+        self.topy = list(topy)
+        self.wydania_slug = {w["_slug"]: w for w in wydania}
         self.rewizje = list(rewizje)
         self.rewizje_poz = {r["dotyczy"]: r for r in self.rewizje}
         self.out = wyjscie
@@ -556,6 +645,19 @@ class Budowa:
                     if r and (w, j) not in r["omowienia"]:
                         r["omowienia"].append((w, j))
         return pub
+
+    def czytaj_html(self, a):
+        """Etykieta wydawcy oceny i link „Przeczytaj tekst …” do oryginału (tytuł z czytelni, jeśli jest)."""
+        zr = a.get("zrodla") or []
+        wyd = wydawca(zr[0]["url"] if zr else "", a.get("autor", ""))
+        pub = self.publikacja_analizy(a)
+        if pub:
+            return wyd, (f'<p class="an-czytaj"><a href="{e(pub["url"])}" target="_blank" rel="noopener noreferrer">'
+                         f'<span class="an-czytaj-t">Przeczytaj tekst {e(pub["wydawca"] or wyd)}</span> {e(w_cudzyslowie(pub["tytul"]))}</a></p>')
+        if wyd and zr:
+            return wyd, (f'<p class="an-czytaj"><a href="{e(zr[0]["url"])}" target="_blank" rel="noopener noreferrer">'
+                         f'<span class="an-czytaj-t">Przeczytaj tekst {e(wyd)}</span> ({e(zr[0]["nazwa"])}, {data_krotka(zr[0]["data"])})</a></p>')
+        return wyd, ""
 
     def publikacja_analizy(self, a):
         """Oryginalny tekst, na którym opiera się analiza (pierwsze źródło znalezione w czytelni)."""
@@ -769,17 +871,7 @@ class Budowa:
             j = next((i for i, x in enumerate(w.get("analizy") or []) if x is a), 0)
         skad = (f' · <a href="{prefix}wydania/{w["_slug"]}.html#analiza-{j+1}">wyd. nr {w["nr"]}, {data_dluga(w["data"])}</a>'
                 if z_wydaniem else "")
-        zr = a.get("zrodla") or []
-        wyd = wydawca(zr[0]["url"] if zr else "", a.get("autor", ""))
-        pub = self.publikacja_analizy(a)
-        if pub:
-            czytaj = (f'<p class="an-czytaj"><a href="{e(pub["url"])}" target="_blank" rel="noopener noreferrer">'
-                      f'<span class="an-czytaj-t">Przeczytaj tekst {e(pub["wydawca"] or wyd)}</span> {e(w_cudzyslowie(pub["tytul"]))}</a></p>')
-        elif wyd and zr:
-            czytaj = (f'<p class="an-czytaj"><a href="{e(zr[0]["url"])}" target="_blank" rel="noopener noreferrer">'
-                      f'<span class="an-czytaj-t">Przeczytaj tekst {e(wyd)}</span> ({e(zr[0]["nazwa"])}, {data_krotka(zr[0]["data"])})</a></p>')
-        else:
-            czytaj = ""
+        wyd, czytaj = self.czytaj_html(a)
         kotwica = "" if z_wydaniem else f' id="analiza-{j+1}"'
         return f"""<article class="analiza"{kotwica}>
   <p class="autor">{html_wydawca(wyd)}Ocena: {e(a['autor'])}{skad}</p>
@@ -931,6 +1023,11 @@ class Budowa:
 </section>
 <section class="skrot"><h2>W skrócie</h2>{''.join(f'<p>{T(z)}</p>' for z in w['w_skrocie'])}
 <p class="dalej"><a href="wydania/{w['_slug']}.html">Czytaj całe wydanie</a></p></section>""")
+            if self.topy:
+                z = self.topy[-1]
+                cz.append(f'<h2 class="pasek">Top 10 · {e(okres_slownie(z["od"], z["do"]))}</h2><ol class="top-lista">' + "".join(
+                    f'<li><a href="top/{z["_slug"]}.html#t{n}">{e(p["tytul"])}</a></li>' for n, p in enumerate(z["pozycje"], 1))
+                    + f'</ol><p class="dalej"><a href="top/{z["_slug"]}.html">Całe zestawienie z omówieniami</a></p>')
             nowe = self.publikacje_posortowane()[:5]
             if nowe:
                 cz.append('<h2 class="pasek">Nowe teksty OSW i PISM</h2><ul class="pub pub-glowna">' +
@@ -969,6 +1066,82 @@ class Budowa:
 <p><strong>Hashtagi</strong> łączą wydania: kliknięcie <span class="tag tag-miejsce">#Słowacja</span> pokazuje całą historię wątku na jednej stronie, z aktualnym stanem na górze.</p>
 <p>Osoby i pojęcia w tekście są klikalne i prowadzą do kart w działach „Kto jest kim” i „Pojęcia”.</p></section>""")
         self.zapisz("index.html", strona("Wydania", "\n".join(cz), "", "", "wydania"))
+
+    @staticmethod
+    def top_okres(p):
+        d = sorted(r["data"] for r in p["przebieg"])
+        a, b = data_krotka(d[0]), data_krotka(d[-1])
+        return a if a == b else f"{a}–{b}"
+
+    def top_pozycja(self, z, n, p, T, prefix):
+        etap = f'<span class="odznaka etap">{e(p["etap"])}</span>' if p.get("etap") else ""
+        cz = [f'<article class="top" id="t{n}">',
+              f'<header class="top-glowa"><span class="top-nr" aria-hidden="true">{n}</span><div>'
+              f'<h2 class="top-tytul"><span class="sr">{n}. </span>{e(p["tytul"])}</h2>'
+              f'<p class="top-meta"><span class="top-okres">{self.top_okres(p)}</span>{html_tagi(p.get("tagi"), self.tagi, prefix)}{etap}</p></div></header>',
+              f'<p class="top-lead">{T(p["lead"])}</p>']
+        cz.extend(f"<p>{T(x)}</p>" for x in p.get("omowienie", []))
+        cz.append('<h3 class="top-h">Przebieg</h3><ol class="przebieg">' + "".join(
+            f'<li><span class="pb-d">{data_krotka(r["data"])}</span><div class="pb-t"><p>{T(r["tekst"])}'
+            + (f' <span class="odznaka etap">{e(r["etap"])}</span>' if r.get("etap") else "")
+            + f'</p>{html_zrodla(r.get("zrodla"))}</div></li>'
+            for r in sorted(p["przebieg"], key=lambda r: r["data"])) + "</ol>")
+        if p.get("oceny"):
+            cz.append('<h3 class="top-h">Oceny</h3>')
+            for o in p["oceny"]:
+                wyd, czytaj = self.czytaj_html(o)
+                cz.append(f'<div class="top-ocena"><p class="autor">{html_wydawca(wyd)}Ocena: {e(o["autor"])}</p>'
+                          f'<p>{T(o["tekst"])}</p>{czytaj}{html_zrodla(o.get("zrodla"))}</div>')
+        cz.append(f'<p class="dla-polski"><strong>Dla Polski:</strong> {T(p["dla_polski"])}</p>')
+        if p.get("co_dalej"):
+            cz.append('<h3 class="top-h">Co dalej</h3><table class="kal">' + "".join(
+                f'<tr><td class="kal-d">{data_krotka(c["data"])}</td><td>{T(c["tekst"])}</td></tr>'
+                for c in sorted(p["co_dalej"], key=lambda c: c["data"])) + "</table>")
+        odn = []
+        for ref in p.get("w_wydaniach", []):
+            slug, pid = ref.split("#")
+            w = self.wydania_slug.get(slug)
+            if w:
+                odn.append((w["data"], f'<a href="{prefix}wydania/{slug}.html#{pid}">nr {w["nr"]} ({data_krotka(w["data"])})</a>'))
+        if odn:
+            cz.append('<p class="top-wyd">W wydaniach dziennych: ' + ", ".join(x for _, x in sorted(odn)) + "</p>")
+        cz.append('<p class="top-gora"><a href="#lista">↑ lista dziesięciu</a></p></article>')
+        return "\n".join(cz)
+
+    def top_strony(self):
+        prefix = "../"
+        for z in self.topy:
+            T = Tekst(self.osoby, self.pojecia, prefix)
+            okres = okres_slownie(z["od"], z["do"])
+            cz = [f"""<section class="winieta">
+  <p class="w-nr">Zestawienie · Top 10</p>
+  <h1>{e(okres)}</h1>
+  <p class="w-stan">Dziesięć najważniejszych wydarzeń z perspektywy Polski · stan na {data_dluga(z["opublikowano"])}{(", godz. " + e(z["godzina"])) if z.get("godzina") else ""}</p>
+</section>"""]
+            cz.append('<section class="skrot"><h2>W skrócie</h2>' + "".join(f"<p>{T(x)}</p>" for x in z["wstep"]) + "</section>")
+            cz.append('<nav class="top-spis" id="lista" aria-label="Dziesięć wydarzeń"><ol>' + "".join(
+                f'<li><a href="#t{n}">{e(p["tytul"])}</a> <span class="top-okres">{self.top_okres(p)}</span></li>'
+                for n, p in enumerate(z["pozycje"], 1)) + "</ol></nav>")
+            if z.get("kryteria"):
+                cz.append(f'<p class="uwaga">{T(z["kryteria"])}</p>')
+            cz.extend(self.top_pozycja(z, n, p, T, prefix) for n, p in enumerate(z["pozycje"], 1))
+            if z.get("czego_nie_ma"):
+                cz.append('<div class="nota" id="czego-nie-ma"><h3>Czego tu nie ma</h3><ul class="brak">' + "".join(
+                    f'<li><span class="prog">próg: {e(c["prog"])}</span> {T(c["tekst"])}</li>' for c in z["czego_nie_ma"]) + "</ul></div>")
+            if z.get("nota"):
+                cz.append(f'<div class="nota" id="nota"><h3>Nota metodyczna</h3><p>{T(z["nota"])}</p></div>')
+            opis = czysty(" ".join(z["wstep"]), self.osoby, self.pojecia)[:200]
+            self.zapisz(f"top/{z['_slug']}.html", strona(f"Top 10 – {okres}", "\n".join(cz), prefix, opis, "top"))
+        lista = ""
+        for z in reversed(self.topy):
+            lista += (f'<article class="top-karta"><h2><a href="{z["_slug"]}.html">{e(okres_slownie(z["od"], z["do"]))}</a></h2>'
+                      f'<p class="uwaga">Stan na {data_dluga(z["opublikowano"])}</p><ol class="top-lista">' + "".join(
+                          f'<li><a href="{z["_slug"]}.html#t{n}">{e(p["tytul"])}</a></li>' for n, p in enumerate(z["pozycje"], 1))
+                      + "</ol></article>")
+        tresc = ('<section class="winieta"><h1>Top 10</h1><p class="w-stan">Zestawienia dziesięciu najważniejszych wydarzeń z wybranego okresu – '
+                 'z przebiegiem, ocenami ekspertów i wnioskiem „Dla Polski”. Kolejność to ocena redakcji; fakty mają źródła.</p></section>'
+                 + (lista or '<p class="uwaga">Pierwsze zestawienie pojawi się wkrótce.</p>'))
+        self.zapisz("top/index.html", strona("Top 10", tresc, "../", "", "top"))
 
     def publikacje_posortowane(self):
         return sorted(self.publikacje.values(), key=lambda r: (r["data"], r["wydawca"], r["tytul"]), reverse=True)
@@ -1066,6 +1239,11 @@ class Budowa:
                 cz.append("</div>")
             else:
                 cz.append('<p class="uwaga">W wydaniach nie ma jeszcze pozycji z tym hashtagiem.</p>')
+            w_top = [(z, n, p) for z in reversed(self.topy) for n, p in enumerate(z["pozycje"], 1) if t in p.get("tagi", [])]
+            if w_top:
+                cz.append('<h2 class="pasek">W zestawieniach Top 10</h2><ul class="archiwum">' + "".join(
+                    f'<li><a href="{prefix}top/{z["_slug"]}.html#t{n}">{n}. {e(p["tytul"])}</a> '
+                    f'<span class="uwaga">{e(okres_slownie(z["od"], z["do"]))}</span></li>' for z, n, p in w_top) + "</ul>")
             if analizy[t]:
                 cz.append('<h2 class="pasek">Analizy w tym wątku</h2>')
                 cz.extend(self.analiza(w, a, T, prefix, z_wydaniem=True) for w, a in reversed(analizy[t]))
@@ -1235,6 +1413,11 @@ class Budowa:
                 idx.append({"t": a["tytul"] + ". " + czysty(a["tekst"], self.osoby, self.pojecia) + " (ocena: " + a["autor"] + ")",
                             "d": w["data"], "g": [self.tagi[t]["nazwa"] for t in a.get("tagi", [])],
                             "u": f"wydania/{w['_slug']}.html#analizy", "w": w["nr"]})
+        for z in self.topy:
+            for n, p in enumerate(z["pozycje"], 1):
+                idx.append({"t": f"Top 10: {p['tytul']}. " + czysty(p["lead"], self.osoby, self.pojecia),
+                            "d": max(r["data"] for r in p["przebieg"]), "g": [self.tagi[t]["nazwa"] for t in p.get("tagi", [])],
+                            "u": f"top/{z['_slug']}.html#t{n}", "w": ""})
         for o in self.osoby.values():
             idx.append({"t": f"{o['imie']} – {o['funkcja']}", "d": o["zweryfikowano"], "g": ["Kto jest kim"], "u": f"osoby/{o['id']}.html", "w": ""})
         for p in self.pojecia.values():
@@ -1276,6 +1459,14 @@ class Budowa:
             rodzaj = "Wydanie tygodniowe" if w.get("typ") == "tygodniowe" else "Wydanie"
             items += f"""<item><title>{xml_escape(f"{rodzaj} nr {w['nr']} – {data_dluga(w['data'])}")}</title><link>{url}</link><guid>{url}</guid>
 <pubDate>{pub.strftime('%a, %d %b %Y %H:%M:%S %z')}</pubDate><description>{xml_escape(opis)}</description></item>\n"""
+        for z in self.topy:
+            url = f"{BASE_URL}top/{z['_slug']}.html"
+            d = data_(z["opublikowano"])
+            gg, mm = (z.get("godzina") or "12:00").split(":")
+            pub = dt.datetime(d.year, d.month, d.day, int(gg), int(mm), tzinfo=dt.timezone(dt.timedelta(hours=2)))
+            opis = " ".join(czysty(x, self.osoby, self.pojecia) for x in z["wstep"])
+            items = f"""<item><title>{xml_escape("Top 10 – " + okres_slownie(z["od"], z["do"]))}</title><link>{url}</link><guid>{url}</guid>
+<pubDate>{pub.strftime('%a, %d %b %Y %H:%M:%S %z')}</pubDate><description>{xml_escape(opis)}</description></item>\n""" + items
         self.zapisz("feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>{TYTUL} – {PODTYTUL}</title><link>{BASE_URL}</link>
 <description>Codzienny przegląd sytuacji międzynarodowej ze źródłami i weryfikacją faktów.</description><language>pl</language>
@@ -1291,13 +1482,14 @@ class Budowa:
         shutil.copy(src, self.out / "assets" / "styl.css")
 
     def wszystko(self):
-        for sciezka in ("wydania", "watki", "osoby", "pojecia"):
+        for sciezka in ("wydania", "watki", "osoby", "pojecia", "top"):
             p = self.out / sciezka
             if p.exists():
                 shutil.rmtree(p)
         for i, w in enumerate(self.wydania):
             self.wydanie(i, w)
         self.index()
+        self.top_strony()
         self.czytelnia()
         self.watki()
         self.osoby_strony()
@@ -1318,18 +1510,18 @@ def main():
     a = ap.parse_args()
     global RANKING
     RANKING = wczytaj_ranking(a.dane)
-    tagi, osoby, pojecia, wydania, rewizje = wczytaj(a.dane)
-    bledy = waliduj(tagi, osoby, pojecia, wydania, rewizje)
+    tagi, osoby, pojecia, wydania, rewizje, topy = wczytaj(a.dane)
+    bledy = waliduj(tagi, osoby, pojecia, wydania, rewizje, topy)
     if bledy:
         print("WALIDACJA NIE PRZESZŁA — strona nie została zbudowana:", file=sys.stderr)
         for x in bledy:
             print("  - " + x, file=sys.stderr)
         sys.exit(1)
     print(f"Walidacja OK: {len(wydania)} wydań, {sum(len(w['zarys']) for w in wydania)} pozycji, "
-          f"{len(tagi)} hashtagów, {len(osoby)} osób, {len(pojecia)} pojęć.")
+          f"{len(tagi)} hashtagów, {len(osoby)} osób, {len(pojecia)} pojęć, {len(topy)} zestawień Top 10.")
     if a.sprawdz:
         return
-    Budowa(tagi, osoby, pojecia, wydania, a.wyjscie, rewizje).wszystko()
+    Budowa(tagi, osoby, pojecia, wydania, a.wyjscie, rewizje, topy).wszystko()
     print(f"Strona zbudowana w {a.wyjscie}")
 
 

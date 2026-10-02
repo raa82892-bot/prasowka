@@ -162,6 +162,18 @@
       "nazwa": "NASK",
       "pelna": "Naukowa i Akademicka Sieć Komputerowa – Państwowy Instytut Badawczy",
       "definicja": "Polski instytut badawczy nadzorowany przez ministra cyfryzacji; prowadzi m.in. zespół CERT Polska i działania przeciw dezinformacji."
+    },
+    {
+      "id": "identyfikacja-pozytywna",
+      "nazwa": "identyfikacja pozytywna (PID)",
+      "pelna": "identyfikacja pozytywna (positive identification)",
+      "definicja": "Uznanie obiektu w powietrzu za wrogi na podstawie danych z radarów, systemów elektronicznych i rozpoznania sojuszników, bez potrzeby zbliżenia się pilota i rozpoznania wzrokowego."
+    },
+    {
+      "id": "cla-wtorne",
+      "nazwa": "cła wtórne",
+      "pelna": "cła wtórne (secondary tariffs)",
+      "definicja": "Cła nakładane na państwa trzecie za handel z państwem objętym sankcjami, np. za kupowanie jego ropy; mają skłonić je do ograniczenia tego handlu."
     }
   ]
 }

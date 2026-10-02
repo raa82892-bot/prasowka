@@ -497,6 +497,131 @@
           "data": "2026-09-30"
         }
       ]
+    },
+    {
+      "id": "jared-kushner",
+      "imie": "Jared Kushner",
+      "funkcja": "Wysłannik prezydenta USA w rozmowach o zakończeniu wojny w Ukrainie (wraz ze Steve'em Witkoffem).",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/us-envoys-witkoff-kushner-arrive-in-ukraine/",
+          "data": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "id": "jurij-uszakow",
+      "imie": "Jurij Uszakow",
+      "funkcja": "Doradca prezydenta Rosji ds. polityki zagranicznej.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "AFP (za Citizen Digital)",
+          "url": "https://citizen.digital/article/russia-says-putin-trump-had-frank-call-after-us-envoys-visit-n389806",
+          "data": "2026-09-09"
+        }
+      ]
+    },
+    {
+      "id": "dmitrij-pieskow",
+      "imie": "Dmitrij Pieskow",
+      "funkcja": "Rzecznik prasowy prezydenta Rosji (rzecznik Kremla).",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "AP (za CP24)",
+          "url": "https://www.cp24.com/news/world/2026/09/30/russia-warns-nato-of-a-possible-nuclear-response-if-kaliningrad-is-cut-off/",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "john-coale",
+      "imie": "John Coale",
+      "funkcja": "Specjalny wysłannik prezydenta USA ds. Białorusi.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "RFE/RL",
+          "url": "https://www.rferl.org/a/belarus-us-prisoners-release-sanctions/33857455.html",
+          "data": "2026-09-16"
+        }
+      ]
+    },
+    {
+      "id": "maksim-ryzenkow",
+      "imie": "Maksim Ryżenkow",
+      "funkcja": "Minister spraw zagranicznych Białorusi.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "Kyiv Independent",
+          "url": "https://kyivindependent.com/polish-foreign-minister-meets-belarusian-counterpart-at-un-discusses-regional-security-2/",
+          "data": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "id": "allison-hart",
+      "imie": "Allison Hart",
+      "funkcja": "Rzeczniczka NATO.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "AP (za CP24)",
+          "url": "https://www.cp24.com/news/world/2026/09/30/russia-warns-nato-of-a-possible-nuclear-response-if-kaliningrad-is-cut-off/",
+          "data": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "kiryl-dmitrijew",
+      "imie": "Kirył Dmitrijew",
+      "funkcja": "Specjalny wysłannik prezydenta Rosji, szef Rosyjskiego Funduszu Inwestycji Bezpośrednich.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "Reuters (za Meduzą)",
+          "url": "https://meduza.io/en/news/2026/09/18/reuters-germany-s-afd-party-and-kremlin-envoy-prepare-for-talks-on-restarting-russian-gas-supplies",
+          "data": "2026-09-18"
+        },
+        {
+          "nazwa": "ANSA",
+          "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/afd-vuole-riaprire-dossier-nord-stream-previsto-forum-con-usa_a09e35a1-572f-4de7-9a04-799037eeca9e.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "markus-frohnmaier",
+      "imie": "Markus Frohnmaier",
+      "funkcja": "Wiceprzewodniczący klubu AfD w Bundestagu.",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "ANSA",
+          "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/afd-vuole-riaprire-dossier-nord-stream-previsto-forum-con-usa_a09e35a1-572f-4de7-9a04-799037eeca9e.html",
+          "data": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "tomas-taraba",
+      "imie": "Tomáš Taraba",
+      "funkcja": "Słowacki polityk; do 30.09.2026 wicepremier i minister środowiska (odwołany przez parlament 29.09 i prezydenta 30.09).",
+      "zweryfikowano": "2026-10-02",
+      "zrodla": [
+        {
+          "nazwa": "TASR",
+          "url": "https://www.teraz.sk/slovensko/prezident-odvolal-z-funkcie-ministra-zi/996247-clanok.html",
+          "data": "2026-09-30"
+        }
+      ],
+      "historia": [
+        "Wicepremier i minister środowiska Słowacji do 30.09.2026."
+      ]
     }
   ]
 }
